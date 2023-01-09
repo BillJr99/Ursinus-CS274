@@ -1,13 +1,13 @@
 ---
 layout: assignment
 permalink: /Assignments/Warmup
-title: "CS475: Computer Networks - Warmup"
-excerpt: "CS475: Computer Networks - Warmup"
+title: "CS274: Computer Architecture - Warmup"
+excerpt: "CS274: Computer Architecture - Warmup"
 
 info:
-  coursenum: CS475
+  coursenum: CS274
   officehourspoll: "https://www.when2meet.com/?18202444-OnqzM"
-  class_notebook: "https://ursinuscollege365-my.sharepoint.com/personal/wmongan_ursinus_edu/Documents/Class%20Notebooks/CS475%20Spring%202023"
+  class_notebook: "https://ursinuscollege365-my.sharepoint.com/personal/wmongan_ursinus_edu/Documents/Class%20Notebooks/CS274%20Spring%202023"
   class_notebook_name: "OneNote"
   chatname: "Microsoft Teams"
   submission: "We will complete this assignment using Teams, so there is no need to write up any documentation (as we will in future programming assignments) nor is it necessary to submit anything to Canvas.  It is fine to just follow the directions in each part and send me messages as appropriate!"

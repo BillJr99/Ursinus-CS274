@@ -5,51 +5,54 @@ title: "CS475: Computer Networks"
 excerpt: "CS475: Computer Networks"
     
 info:
-  course_number: CS475
-  course_number: CS475
+  course_number: CS274
   course_sections: 
   - section: "A"
-  course_title: "Computer Networks"
+  course_title: "Computer Architecture"
   credit_hours: "4 Semester Hours"
-  course_homepage: "https://www.billmongan.com/Ursinus-CS475-Spring2023/"
-  class_notebook: https://ursinuscollege365-my.sharepoint.com/personal/wmongan_ursinus_edu/Documents/Class%20Notebooks/CS475%20Spring%202023
-  ical: files/CS475.ics
-  course_prerequisites: "CS274"
+  course_homepage: "https://www.billmongan.com/Ursinus-CS274-Spring2023/"
+  class_notebook: https://ursinuscollege365-my.sharepoint.com/personal/wmongan_ursinus_edu/Documents/Class%20Notebooks/CS274%20Spring%202023
+  ical: files/CS274.ics
+  course_prerequisites: "CS174"
   course_start_date: "2023/01/16"
   course_end_date: "2023/05/03"
-  course_description: "Architecture and protocols of computer networks. Protocol layers; network topology; data-communication principles, including circuit switching, packet switching and error control techniques; sliding window protocols, protocol analysis and verification; routing and flow control; local and wide area networks; network interconnection; client-server interaction; emerging networking trends and technologies; topicsin security and privacy. This course will satisfy the College requirement for a capstone experience in the major. Prerequisite or co-requisite: CS-274. Offered in the spring of odd years. Three hours per week. Four semester hours."
-  welcome_message: "Welcome to CS475!"
+  course_description: "Hierarchical structure of computer architecture, number systems, arithmetic operations, codes, switching algebra, logic gates, assembly language programming. Prerequisite: CS-174. Offered in the spring semester. Three hours of lecture and one hour of laboratory per week. Four semester hours."
+  welcome_message: "Welcome to CS274!"
   questions: |
     Specifically, we will collectively consider questions like:
     <ul>
-    <li>What happens when one requests a webpage from a popular website like Google?</li>
+    <li>What happens inside the circuitry of the computer when one executes an instruction of code?</li>
     </ul>  
   class_meets_days:
     isM: true
     isT: false
     isW: true
-    isR: false
+    isR: true
     isF: true 
     isS: false
     isU: false
   class_meets_locations:
   - section:
     - day: "M"
-      starttime: "9:00 AM"
-      endtime: "9:50 AM"
+      starttime: "10:00 AM"
+      endtime: "10:50 AM"
       place: "PFA 007"
     - day: "W"
-      starttime: "9:00 AM"
-      endtime: "9:50 AM"
+      starttime: "10:00 AM"
+      endtime: "10:50 AM"
       place: "PFA 007"
+    - day: "R"
+      starttime: "10:00 AM"
+      endtime: "10:50 AM"
+      place: "PFA 007"      
     - day: "F"
-      starttime: "9:00 AM"
-      endtime: "9:50 AM"
+      starttime: "10:00 AM"
+      endtime: "10:50 AM"
       place: "PFA 007"
   midtermexam: 
     - mdate: "2021/02/24"
-      mstarttime: "9:00 AM"
-      mendtime: "9:50 AM"
+      mstarttime: "10:00 AM"
+      mendtime: "10:50 AM"
       mroom: "Regular Class Period"      
   finalexam: 
     - fdate: "TBD"
