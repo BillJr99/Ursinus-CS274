@@ -111,10 +111,17 @@ textbooks:
 - title: "Computer Organization and Design MIPS Edition: The Hardware/Software Interface"
   authors: "David A. Patterson and John L. Hennessy"
   edition: "6th Edition"
-  isbn: "9780128201091"
+  isbn: "978-0128201091"
   link: false
   isrequired: true 
   freelyavailable: false
+- title: "Computer System Architecture"
+  authors: "M. Morris Mano"
+  edition: "3rd Edition"
+  isbn: "978-0131755635"
+  link: false
+  isrequired: false 
+  freelyavailable: false  
 
 objectives:
 - objective: "To comprehend the design of a network protocol suitable for implementation"
