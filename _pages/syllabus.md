@@ -293,6 +293,7 @@ schedule:
       - dtitle: "Lab: Introduction to MIPS Programming Due"
         dlink: "./Labs/MIPSIntro"
         points: 100
+    readings:
       - rtitle: "How CPUs Read Machine Code by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=yl8vPW5hydQ&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=2"
   - week: "3"
@@ -362,6 +363,7 @@ schedule:
       - dtitle: "Lab: Implementing if Statements in MIPS Assembly Due"
         dlink: "./Labs/MIPSConditionals"
         points: 100
+    readings:
       - rtitle: "Controlling an LCD Screen by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=FY3zTUaykVo&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=4"
   - week: "5"
@@ -422,6 +424,7 @@ schedule:
   - week: "8"
     date: "1"
     title: "Computer Arithmetic: Multiplication and Division"
+    readings:
       - rtitle: "RAM and Bus Timing by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=i_wrxBdXTgM&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=6"
   - week: "8"
@@ -451,6 +454,7 @@ schedule:
       - dtitle: "Lab: Computer Arithmetic Due"
         dlink: "./Labs/ComputerArithmetic"
         points: 100
+    readings:
       - rtitle: "Subroutines by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=omI0MrTWiMU&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=7"
   - week: "9"
@@ -511,6 +515,7 @@ schedule:
       - dtitle: "Lab: ALU Design Due"
         dlink: "./Labs/ALUDesign"
         points: 100
+    readings:
       - rtitle: "How Assembly Language Loops Work by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=ZYJIakkcLYw&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=9"
   - week: "11"
@@ -545,6 +550,7 @@ schedule:
       - dtitle: "Lab: Single Cycle Datapath Design Due"
         dlink: "./Labs/SingleCycleDesign"
         points: 100
+    readings:
       - rtitle: "Computer Arithmetic by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=v3-a-zqKfgA&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=10"
   - week: "12"
