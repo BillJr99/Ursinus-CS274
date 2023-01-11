@@ -22,6 +22,11 @@ info:
     Specifically, we will collectively consider questions like:
     <ul>
     <li>What happens inside the circuitry of the computer when one executes an instruction of code?</li>
+    <li>How are numbers, text, and instructions represented electrically within the computer?</li>
+    <li>What is a floating point value and how is it abstracted and represented within the computer using well-known standards?</li>
+    <li>How are fixed circuits within the computer controlled dynamically to execute each custom instruction we write?</li>
+    <li>If a CPU is so fast, and our memory is comparatively slow, how do we design a memory system that can keep up with the CPU?</li>
+    <li>How do we optimize CPU and instruction designs for increased performance?</li>
     </ul>  
   class_meets_days:
     isM: true
