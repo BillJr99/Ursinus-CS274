@@ -107,7 +107,7 @@ DTSTAMP:20230118T000000Z
 DTSTART;VALUE=DATE:20230118
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/../Ursinus-CS475-Overview\nDeliverable: Programming Assignment: Warmup Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/Warmup
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/../Ursinus-CS274-Overview\nDeliverable: Programming Assignment: Warmup Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/Warmup
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -125,16 +125,16 @@ DTSTAMP:20230119T000000Z
 DTSTART;VALUE=DATE:20230119
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Dordal Ch. 1\nReading: Kurose and Ross: What is the Internet? https://youtu.be/74sEFYBBRAY\nReading: Kurose and Ross: The Network Edge https://youtu.be/k8NmM-hImBU\nReading: Kurose and Ross: The Network Core https://youtu.be/f1nUcCdQJ8Y\nReading: Kurose and Ross: Network Performance https://youtu.be/hm1y4LsphQQ\nDeliverable: Participation: Pre-Assessment Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/Participation/PreAssessment
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/555Timer\nReading: Astable 555 Timer by Ben Eater https://www.youtube.com/watch?v=kRlSFm519Bo\nDeliverable: Participation: Pre-Assessment Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/Participation/PreAssessment
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0808
-DTSTAMP:20230123T000000Z
-DTSTART;VALUE=DATE:20230123
-SUMMARY:CS274 Computer Architecture: Lab: Wireshark Overview Handed Out
+DTSTAMP:20230120T000000Z
+DTSTART;VALUE=DATE:20230120
+SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/BigIdeas\nReading: COD Chapter 1.1 - 1.5
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -143,7 +143,7 @@ DTSTAMP:20230123T000000Z
 DTSTART;VALUE=DATE:20230123
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/MotivatingExamples\nReading: Jim Kurose: Wireshark Demo https://www.youtube.com/watch?v=PYoXowOCppc\nReading: Jim Kurose: Traceroute Demo https://www.youtube.com/watch?v=wEWiYLb7pxg\nReading: Visualizing Traceroute on a Map of the Earth https://www.youtube.com/watch?v=75yKT3OuE44\nDeliverable: Lab: Wireshark Overview Handed Out http://www-net.cs.umass.edu/wireshark-labs/Wireshark_Intro_v8.0.pdf
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/NumberSystems\nReading: COD Chapter 2.4, 2.9
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -161,14 +161,14 @@ DTSTAMP:20230125T000000Z
 DTSTART;VALUE=DATE:20230125
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/Layers\nReading: Kurose and Ross: Protocol Layers https://youtu.be/IZ_PnVXtMeY\nReading: Kurose and Ross: Networks Under Attack https://youtu.be/yukwBqSwAkg\nReading: Kurose and Ross: History of Computer Networking https://youtu.be/l4q8iuqbuiQ\nDeliverable: Programming Assignment: Warmup Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/Warmup
+DESCRIPTION:\nDeliverable: Programming Assignment: Warmup Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/Warmup
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba080c
 DTSTAMP:20230126T000000Z
 DTSTART;VALUE=DATE:20230126
-SUMMARY:CS274 Computer Architecture: Participation: Pre-Assessment Due
+SUMMARY:CS274 Computer Architecture: Lab: Number Systems Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -179,731 +179,794 @@ DTSTAMP:20230126T000000Z
 DTSTART;VALUE=DATE:20230126
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/SocketProgramming\nReading: Redbook Ch. 11\nReading: Kurose and Ross: Socket Programming https://youtu.be/_iHMMo7SDfQ\nDeliverable: Participation: Pre-Assessment Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/Participation/PreAssessment
+DESCRIPTION:\nDeliverable: Lab: Number Systems Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/NumberSystems
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba080e
-DTSTAMP:20230130T000000Z
-DTSTART;VALUE=DATE:20230130
-SUMMARY:CS274 Computer Architecture: Class Meeting
+DTSTAMP:20230127T000000Z
+DTSTART;VALUE=DATE:20230127
+SUMMARY:CS274 Computer Architecture: Participation: Pre-Assessment Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba080f
-DTSTAMP:20230201T000000Z
-DTSTART;VALUE=DATE:20230201
+DTSTAMP:20230127T000000Z
+DTSTART;VALUE=DATE:20230127
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/MIPSInstructions\nReading: COD Chapter 2.1-2.3\nDeliverable: Participation: Pre-Assessment Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/Participation/PreAssessment
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0810
-DTSTAMP:20230202T000000Z
-DTSTART;VALUE=DATE:20230202
-SUMMARY:CS274 Computer Architecture: Programming Assignment: Mini Crypto Handed Out
+DTSTAMP:20230130T000000Z
+DTSTART;VALUE=DATE:20230130
+SUMMARY:CS274 Computer Architecture: Programming Assignment: Number System Conversions Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0811
-DTSTAMP:20230202T000000Z
-DTSTART;VALUE=DATE:20230202
+DTSTAMP:20230130T000000Z
+DTSTART;VALUE=DATE:20230130
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Programming Assignment: Mini Crypto Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/MiniCrypto
+DESCRIPTION:\nDeliverable: Programming Assignment: Number System Conversions Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/Programming/NumberSystemConversion
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0812
-DTSTAMP:20230206T000000Z
-DTSTART;VALUE=DATE:20230206
-SUMMARY:CS274 Computer Architecture: Class Meeting
+DTSTAMP:20230201T000000Z
+DTSTART;VALUE=DATE:20230201
+SUMMARY:CS274 Computer Architecture: Lab: Number Systems Due
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/PhysicalLayer\nReading: Dordal Ch. 2
+DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0813
-DTSTAMP:20230208T000000Z
-DTSTART;VALUE=DATE:20230208
-SUMMARY:CS274 Computer Architecture: Lab: HTTP with Wireshark Handed Out
+DTSTAMP:20230201T000000Z
+DTSTART;VALUE=DATE:20230201
+SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/MachineLanguage\nReading: COD Chapter 2.5-2.6\nReading: Hello World from Scratch on a 6502 by Ben Eater https://www.youtube.com/watch?v=LnzuMJLZRdU&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=1\nDeliverable: Lab: Number Systems Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/NumberSystems
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0814
-DTSTAMP:20230208T000000Z
-DTSTART;VALUE=DATE:20230208
-SUMMARY:CS274 Computer Architecture: Class Meeting
+DTSTAMP:20230202T000000Z
+DTSTART;VALUE=DATE:20230202
+SUMMARY:CS274 Computer Architecture: Lab: Introduction to MIPS Programming Handed Out
 LOCATION:
-DESCRIPTION:\nReading: Transoceanic Cable Video https://www.youtube.com/watch?v=T96P2d2UVsQ\nDeliverable: Lab: HTTP with Wireshark Handed Out http://www-net.cs.umass.edu/wireshark-labs/Wireshark_HTTP_v8.0.pdf
+DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0815
-DTSTAMP:20230209T000000Z
-DTSTART;VALUE=DATE:20230209
-SUMMARY:CS274 Computer Architecture: Lab: Wireshark Overview Due
+DTSTAMP:20230202T000000Z
+DTSTART;VALUE=DATE:20230202
+SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:\nDeliverable: Lab: Introduction to MIPS Programming Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/MIPSIntro
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0816
-DTSTAMP:20230209T000000Z
-DTSTART;VALUE=DATE:20230209
+DTSTAMP:20230203T000000Z
+DTSTART;VALUE=DATE:20230203
 SUMMARY:CS274 Computer Architecture: Class Meeting
-LOCATION:
-DESCRIPTION:\nDeliverable: Lab: Wireshark Overview Due http://www-net.cs.umass.edu/wireshark-labs/Wireshark_Intro_v8.0.pdf
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0817
-DTSTAMP:20230213T000000Z
-DTSTART;VALUE=DATE:20230213
-SUMMARY:CS274 Computer Architecture: Programming Assignment: Mini Crypto Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba0817
+DTSTAMP:20230206T000000Z
+DTSTART;VALUE=DATE:20230206
+SUMMARY:CS274 Computer Architecture: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/MIPSConditionals\nReading: COD Chapter 2.7
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0818
-DTSTAMP:20230213T000000Z
-DTSTART;VALUE=DATE:20230213
-SUMMARY:CS274 Computer Architecture: Programming Assignment: Introduction to the RFC Handed Out
+DTSTAMP:20230208T000000Z
+DTSTART;VALUE=DATE:20230208
+SUMMARY:CS274 Computer Architecture: Lab: Introduction to MIPS Programming Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0819
-DTSTAMP:20230213T000000Z
-DTSTART;VALUE=DATE:20230213
+DTSTAMP:20230208T000000Z
+DTSTART;VALUE=DATE:20230208
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: The RFC Video https://www.youtube.com/watch?v=8IXLpoN8Xj0\nDeliverable: Programming Assignment: Mini Crypto Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/MiniCrypto\nDeliverable: Programming Assignment: Introduction to the RFC Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/Assignments/RFC
+DESCRIPTION:\nReading: How CPUs Read Machine Code by Ben Eater https://www.youtube.com/watch?v=yl8vPW5hydQ&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=2\nDeliverable: Lab: Introduction to MIPS Programming Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/MIPSIntro
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba081a
-DTSTAMP:20230215T000000Z
-DTSTART;VALUE=DATE:20230215
-SUMMARY:CS274 Computer Architecture: Lab: HTTP with Wireshark Due
+DTSTAMP:20230209T000000Z
+DTSTART;VALUE=DATE:20230209
+SUMMARY:CS274 Computer Architecture: Lab: Bitwise Logical Operators Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba081b
-DTSTAMP:20230215T000000Z
-DTSTART;VALUE=DATE:20230215
-SUMMARY:CS274 Computer Architecture: Lab: Ethernet with Wireshark Handed Out
+DTSTAMP:20230209T000000Z
+DTSTART;VALUE=DATE:20230209
+SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:\nDeliverable: Lab: Bitwise Logical Operators Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/BitwiseLogic
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba081c
-DTSTAMP:20230215T000000Z
-DTSTART;VALUE=DATE:20230215
-SUMMARY:CS274 Computer Architecture: Class Meeting
-LOCATION:
-DESCRIPTION:\nReading: Dordal Ch. 4\nDeliverable: Lab: HTTP with Wireshark Due http://www-net.cs.umass.edu/wireshark-labs/Wireshark_HTTP_v8.0.pdf\nDeliverable: Lab: Ethernet with Wireshark Handed Out http://www-net.cs.umass.edu/wireshark-labs/Wireshark_Ethernet_ARP_v8.0.pdf
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba081d
-DTSTAMP:20230216T000000Z
-DTSTART;VALUE=DATE:20230216
-SUMMARY:CS274 Computer Architecture: Class Meeting
-LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/LinkLayer\nReading: Dordal Ch. 5
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba081e
-DTSTAMP:20230220T000000Z
-DTSTART;VALUE=DATE:20230220
-SUMMARY:CS274 Computer Architecture: Class Meeting
-LOCATION:
-DESCRIPTION:\nReading: Dordal Ch. 6\nReading: Kurose and Ross: The Link Layer https://youtu.be/lMGWJZLTulY\nReading: Kurose and Ross: Error Detection and Correction https://youtu.be/x-rQ3RiI7I0
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba081f
-DTSTAMP:20230222T000000Z
-DTSTART;VALUE=DATE:20230222
-SUMMARY:CS274 Computer Architecture: Lab: Ethernet with Wireshark Due
+DTSTAMP:20230210T000000Z
+DTSTART;VALUE=DATE:20230210
+SUMMARY:CS274 Computer Architecture: Programming Assignment: Number System Conversions Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba081d
+DTSTAMP:20230210T000000Z
+DTSTART;VALUE=DATE:20230210
+SUMMARY:CS274 Computer Architecture: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/MIPSIteration\nDeliverable: Programming Assignment: Number System Conversions Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/Programming/NumberSystemConversion
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba081e
+DTSTAMP:20230213T000000Z
+DTSTART;VALUE=DATE:20230213
+SUMMARY:CS274 Computer Architecture: Programming Assignment: MIPS Programming Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba081f
+DTSTAMP:20230213T000000Z
+DTSTART;VALUE=DATE:20230213
+SUMMARY:CS274 Computer Architecture: Class Meeting
+LOCATION:
+DESCRIPTION:\nDeliverable: Programming Assignment: MIPS Programming Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/MIPSProgramming
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0820
-DTSTAMP:20230222T000000Z
-DTSTART;VALUE=DATE:20230222
-SUMMARY:CS274 Computer Architecture: Lab: Wi-Fi with Wireshark Handed Out
+DTSTAMP:20230215T000000Z
+DTSTART;VALUE=DATE:20230215
+SUMMARY:CS274 Computer Architecture: Lab: Bitwise Logical Operators Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0821
-DTSTAMP:20230222T000000Z
-DTSTART;VALUE=DATE:20230222
+DTSTAMP:20230215T000000Z
+DTSTART;VALUE=DATE:20230215
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Dordal Ch. 7\nReading: Kurose and Ross: Multiple Access Links and Protocols https://youtu.be/X2cLpzFRMT4\nDeliverable: Lab: Ethernet with Wireshark Due http://www-net.cs.umass.edu/wireshark-labs/Wireshark_Ethernet_ARP_v8.0.pdf\nDeliverable: Lab: Wi-Fi with Wireshark Handed Out http://www-net.cs.umass.edu/wireshark-labs/Wireshark_802.11_v8.0.pdf
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/MIPSProcedures\nReading: COD Chapter 2.8, 2.10\nReading: Assembly Language to Machine Code by Ben Eater https://www.youtube.com/watch?v=oO8_2JJV0B4&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=3\nDeliverable: Lab: Bitwise Logical Operators Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/BitwiseLogic
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0822
-DTSTAMP:20230223T000000Z
-DTSTART;VALUE=DATE:20230223
-SUMMARY:CS274 Computer Architecture: Class Meeting
-LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/NetworkLayer\nReading: Dordal Ch. 9\nReading: Kurose and Ross: The Network Layer Data Plane https://youtu.be/olbr3WZwrdU\nReading: Kurose and Ross: The Internet Protocol Part 1 https://youtu.be/sdIpLuIR1ZY\nReading: Kurose and Ross: The Internet Protocol Part 2 https://youtu.be/H9DivCEFuUg
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0823
-DTSTAMP:20230227T000000Z
-DTSTART;VALUE=DATE:20230227
-SUMMARY:CS274 Computer Architecture: Programming Assignment: Introduction to the RFC Due
+DTSTAMP:20230216T000000Z
+DTSTART;VALUE=DATE:20230216
+SUMMARY:CS274 Computer Architecture: Lab: Implementing if Statements in MIPS Assembly Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba0823
+DTSTAMP:20230216T000000Z
+DTSTART;VALUE=DATE:20230216
+SUMMARY:CS274 Computer Architecture: Class Meeting
+LOCATION:
+DESCRIPTION:\nDeliverable: Lab: Implementing if Statements in MIPS Assembly Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/MIPSConditionals
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0824
-DTSTAMP:20230227T000000Z
-DTSTART;VALUE=DATE:20230227
-SUMMARY:CS274 Computer Architecture: Programming Assignment: FSM Handed Out
+DTSTAMP:20230217T000000Z
+DTSTART;VALUE=DATE:20230217
+SUMMARY:CS274 Computer Architecture: Midterm: Midterm Exam Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0825
-DTSTAMP:20230227T000000Z
-DTSTART;VALUE=DATE:20230227
+DTSTAMP:20230217T000000Z
+DTSTART;VALUE=DATE:20230217
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Kurose and Ross: Generalized Forwarding https://youtu.be/HIPVDxTrHqI\nReading: Kurose and Ross: Middleboxes https://youtu.be/kKZlPeyef0k\nDeliverable: Programming Assignment: Introduction to the RFC Due https://www.billmongan.com/Ursinus-CS274-Spring2023/Assignments/RFC\nDeliverable: Programming Assignment: FSM Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/Assignments/FSM
+DESCRIPTION:\nDeliverable: Midterm: Midterm Exam Handed Out
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0826
-DTSTAMP:20230301T000000Z
-DTSTART;VALUE=DATE:20230301
-SUMMARY:CS274 Computer Architecture: Lab: Wi-Fi with Wireshark Due
-LOCATION:
-DESCRIPTION:
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0827
-DTSTAMP:20230301T000000Z
-DTSTART;VALUE=DATE:20230301
-SUMMARY:CS274 Computer Architecture: Lab: IP with Wireshark Handed Out
-LOCATION:
-DESCRIPTION:
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0828
-DTSTAMP:20230301T000000Z
-DTSTART;VALUE=DATE:20230301
-SUMMARY:CS274 Computer Architecture: Class Meeting
-LOCATION:
-DESCRIPTION:\nDeliverable: Lab: Wi-Fi with Wireshark Due http://www-net.cs.umass.edu/wireshark-labs/Wireshark_802.11_v8.0.pdf\nDeliverable: Lab: IP with Wireshark Handed Out http://www-net.cs.umass.edu/wireshark-labs/Wireshark_IP_v8.0.pdf
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0829
-DTSTAMP:20230302T000000Z
-DTSTART;VALUE=DATE:20230302
-SUMMARY:CS274 Computer Architecture: Midterm Exam: Midterm Handed Out
-LOCATION:
-DESCRIPTION:
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba082a
-DTSTAMP:20230302T000000Z
-DTSTART;VALUE=DATE:20230302
-SUMMARY:CS274 Computer Architecture: Class Meeting
-LOCATION:
-DESCRIPTION:\nDeliverable: Midterm Exam: Midterm Handed Out
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba082b
-DTSTAMP:20230313T000000Z
-DTSTART;VALUE=DATE:20230313
-SUMMARY:CS274 Computer Architecture: Lab: IP with Wireshark Due
-LOCATION:
-DESCRIPTION:
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba082c
-DTSTAMP:20230313T000000Z
-DTSTART;VALUE=DATE:20230313
-SUMMARY:CS274 Computer Architecture: Lab: NAT with Wireshark Handed Out
-LOCATION:
-DESCRIPTION:
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba082d
-DTSTAMP:20230313T000000Z
-DTSTART;VALUE=DATE:20230313
-SUMMARY:CS274 Computer Architecture: Class Meeting
-LOCATION:
-DESCRIPTION:\nReading: Dordal Ch. 10\nReading: Redbook Ch. 12\nReading: Kurose and Ross: DNS https://youtu.be/6lRcMh5Yphg\nDeliverable: Lab: IP with Wireshark Due http://www-net.cs.umass.edu/wireshark-labs/Wireshark_IP_v8.0.pdf\nDeliverable: Lab: NAT with Wireshark Handed Out http://www-net.cs.umass.edu/wireshark-labs/Wireshark_NAT_v8.0.pdf
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba082e
-DTSTAMP:20230315T000000Z
-DTSTART;VALUE=DATE:20230315
+DTSTAMP:20230220T000000Z
+DTSTART;VALUE=DATE:20230220
 SUMMARY:CS274 Computer Architecture: Participation: First Self-Assessment Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba082f
-DTSTAMP:20230315T000000Z
-DTSTART;VALUE=DATE:20230315
-SUMMARY:CS274 Computer Architecture: Midterm Exam: Midterm Due
+UID:00000000-0000-0000-0000-027df4ba0827
+DTSTAMP:20230220T000000Z
+DTSTART;VALUE=DATE:20230220
+SUMMARY:CS274 Computer Architecture: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/Stack\nDeliverable: Participation: First Self-Assessment Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/Participation/SelfAssessment
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba0828
+DTSTAMP:20230222T000000Z
+DTSTART;VALUE=DATE:20230222
+SUMMARY:CS274 Computer Architecture: Lab: Implementing if Statements in MIPS Assembly Due
 LOCATION:
 DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba0829
+DTSTAMP:20230222T000000Z
+DTSTART;VALUE=DATE:20230222
+SUMMARY:CS274 Computer Architecture: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/DataStructures\nReading: Controlling an LCD Screen by Ben Eater https://www.youtube.com/watch?v=FY3zTUaykVo&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=4\nDeliverable: Lab: Implementing if Statements in MIPS Assembly Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/MIPSConditionals
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba082a
+DTSTAMP:20230223T000000Z
+DTSTART;VALUE=DATE:20230223
+SUMMARY:CS274 Computer Architecture: Lab: Implementing loops in MIPS Assembly Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba082b
+DTSTAMP:20230223T000000Z
+DTSTART;VALUE=DATE:20230223
+SUMMARY:CS274 Computer Architecture: Class Meeting
+LOCATION:
+DESCRIPTION:\nDeliverable: Lab: Implementing loops in MIPS Assembly Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/MIPSIteration
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba082c
+DTSTAMP:20230224T000000Z
+DTSTART;VALUE=DATE:20230224
+SUMMARY:CS274 Computer Architecture: Midterm: Midterm Exam Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba082d
+DTSTAMP:20230224T000000Z
+DTSTART;VALUE=DATE:20230224
+SUMMARY:CS274 Computer Architecture: Class Meeting
+LOCATION:
+DESCRIPTION:\nDeliverable: Midterm: Midterm Exam Due
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba082e
+DTSTAMP:20230227T000000Z
+DTSTART;VALUE=DATE:20230227
+SUMMARY:CS274 Computer Architecture: Programming Assignment: MIPS Programming Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba082f
+DTSTAMP:20230227T000000Z
+DTSTART;VALUE=DATE:20230227
+SUMMARY:CS274 Computer Architecture: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/MIPSRecursion\nDeliverable: Programming Assignment: MIPS Programming Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/MIPSProgramming
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0830
-DTSTAMP:20230315T000000Z
-DTSTART;VALUE=DATE:20230315
-SUMMARY:CS274 Computer Architecture: Class Meeting
-LOCATION:
-DESCRIPTION:\nDeliverable: Participation: First Self-Assessment Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/Participation/SelfAssessment\nDeliverable: Midterm Exam: Midterm Due
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0831
-DTSTAMP:20230316T000000Z
-DTSTART;VALUE=DATE:20230316
-SUMMARY:CS274 Computer Architecture: Lab: NAT with Wireshark Due
+DTSTAMP:20230301T000000Z
+DTSTART;VALUE=DATE:20230301
+SUMMARY:CS274 Computer Architecture: Lab: Implementing loops in MIPS Assembly Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba0831
+DTSTAMP:20230301T000000Z
+DTSTART;VALUE=DATE:20230301
+SUMMARY:CS274 Computer Architecture: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/ComputerArithmeticAddSubtract\nReading: COD Chapter 3.1-3.2\nReading: What is a Stack by Ben Eater https://www.youtube.com/watch?v=xBjQVxVxOxc&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=5\nDeliverable: Lab: Implementing loops in MIPS Assembly Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/MIPSIteration
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0832
-DTSTAMP:20230316T000000Z
-DTSTART;VALUE=DATE:20230316
-SUMMARY:CS274 Computer Architecture: Lab: DHCP with Wireshark Handed Out
+DTSTAMP:20230302T000000Z
+DTSTART;VALUE=DATE:20230302
+SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0833
-DTSTAMP:20230316T000000Z
-DTSTART;VALUE=DATE:20230316
-SUMMARY:CS274 Computer Architecture: Class Meeting
-LOCATION:
-DESCRIPTION:\nDeliverable: Lab: NAT with Wireshark Due http://www-net.cs.umass.edu/wireshark-labs/Wireshark_NAT_v8.0.pdf\nDeliverable: Lab: DHCP with Wireshark Handed Out http://www-net.cs.umass.edu/wireshark-labs/Wireshark_DHCP_v8.0.pdf
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0834
-DTSTAMP:20230320T000000Z
-DTSTART;VALUE=DATE:20230320
-SUMMARY:CS274 Computer Architecture: Programming Assignment: FSM Due
-LOCATION:
-DESCRIPTION:
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0835
-DTSTAMP:20230320T000000Z
-DTSTART;VALUE=DATE:20230320
-SUMMARY:CS274 Computer Architecture: Programming Assignment: Traceroute Handed Out
-LOCATION:
-DESCRIPTION:
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0836
-DTSTAMP:20230320T000000Z
-DTSTART;VALUE=DATE:20230320
-SUMMARY:CS274 Computer Architecture: Class Meeting
-LOCATION:
-DESCRIPTION:\nReading: Kurose and Ross: The Internet Control Message Protocol (ICMP) https://youtu.be/EHV0Q0R--Ns\nDeliverable: Programming Assignment: FSM Due https://www.billmongan.com/Ursinus-CS274-Spring2023/Assignments/FSM\nDeliverable: Programming Assignment: Traceroute Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/Traceroute
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0837
-DTSTAMP:20230322T000000Z
-DTSTART;VALUE=DATE:20230322
+DTSTAMP:20230303T000000Z
+DTSTART;VALUE=DATE:20230303
 SUMMARY:CS274 Computer Architecture: Participation: First Self-Assessment Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0838
-DTSTAMP:20230322T000000Z
-DTSTART;VALUE=DATE:20230322
+UID:00000000-0000-0000-0000-027df4ba0834
+DTSTAMP:20230303T000000Z
+DTSTART;VALUE=DATE:20230303
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Dordal Ch. 11\nDeliverable: Participation: First Self-Assessment Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/Participation/SelfAssessment
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/ComputerArithmeticAddSubtractLogicGates\nDeliverable: Participation: First Self-Assessment Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/Participation/SelfAssessment
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0839
-DTSTAMP:20230323T000000Z
-DTSTART;VALUE=DATE:20230323
-SUMMARY:CS274 Computer Architecture: Lab: DHCP with Wireshark Due
+UID:00000000-0000-0000-0000-027df4ba0835
+DTSTAMP:20230313T000000Z
+DTSTART;VALUE=DATE:20230313
+SUMMARY:CS274 Computer Architecture: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/ComputerArithmeticMultiplyDivide\nReading: COD Chapter 3.3-3.4
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba0836
+DTSTAMP:20230315T000000Z
+DTSTART;VALUE=DATE:20230315
+SUMMARY:CS274 Computer Architecture: Class Meeting
+LOCATION:
+DESCRIPTION:\nReading: RAM and Bus Timing by Ben Eater https://www.youtube.com/watch?v=i_wrxBdXTgM&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=6
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba0837
+DTSTAMP:20230316T000000Z
+DTSTART;VALUE=DATE:20230316
+SUMMARY:CS274 Computer Architecture: Lab: Computer Arithmetic Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba0838
+DTSTAMP:20230316T000000Z
+DTSTART;VALUE=DATE:20230316
+SUMMARY:CS274 Computer Architecture: Class Meeting
+LOCATION:
+DESCRIPTION:\nDeliverable: Lab: Computer Arithmetic Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/ComputerArithmetic
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba0839
+DTSTAMP:20230317T000000Z
+DTSTART;VALUE=DATE:20230317
+SUMMARY:CS274 Computer Architecture: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/ComputerArithmeticFloatingPoint\nReading: COD Chapter 3.5\nReading: What Every Computer Scientist Should Know about Floating Point Arithmetic by David Goldberg https://www.itu.dk/~sestoft/bachelor/IEEE754_article.pdf
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba083a
-DTSTAMP:20230323T000000Z
-DTSTART;VALUE=DATE:20230323
-SUMMARY:CS274 Computer Architecture: Lab: ICMP with Wireshark Handed Out
+DTSTAMP:20230320T000000Z
+DTSTART;VALUE=DATE:20230320
+SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba083b
-DTSTAMP:20230323T000000Z
-DTSTART;VALUE=DATE:20230323
-SUMMARY:CS274 Computer Architecture: Class Meeting
+DTSTAMP:20230322T000000Z
+DTSTART;VALUE=DATE:20230322
+SUMMARY:CS274 Computer Architecture: Lab: Computer Arithmetic Due
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: DHCP with Wireshark Due http://www-net.cs.umass.edu/wireshark-labs/Wireshark_DHCP_v8.0.pdf\nDeliverable: Lab: ICMP with Wireshark Handed Out http://www-net.cs.umass.edu/wireshark-labs/Wireshark_ICMP_v8.0.pdf
+DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba083c
-DTSTAMP:20230327T000000Z
-DTSTART;VALUE=DATE:20230327
+DTSTAMP:20230322T000000Z
+DTSTART;VALUE=DATE:20230322
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/Routing\nReading: Dordal Ch. 13\nReading: Kurose and Ross: The Network Layer Control Plane https://youtu.be/Aeb80Q_mJp4\nReading: Kurose and Ross: Routing Algorithms https://youtu.be/bdh2kfgxVuw\nReading: Kurose and Ross: What's Inside a Router? Part 1 https://youtu.be/NfHR94JAO-s\nReading: Kurose and Ross: What's Inside a Router? Part 2 https://youtu.be/zfzzz9KQOog
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/ComputerArithmeticCarryLookahead\nReading: Subroutines by Ben Eater https://www.youtube.com/watch?v=omI0MrTWiMU&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=7\nDeliverable: Lab: Computer Arithmetic Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/ComputerArithmetic
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba083d
-DTSTAMP:20230329T000000Z
-DTSTART;VALUE=DATE:20230329
-SUMMARY:CS274 Computer Architecture: Class Meeting
+DTSTAMP:20230323T000000Z
+DTSTART;VALUE=DATE:20230323
+SUMMARY:CS274 Computer Architecture: Lab: Floating Point Handed Out
 LOCATION:
-DESCRIPTION:\nReading: Kurose and Ross: Intra-AS Routing https://youtu.be/iUQmn3nNjaI
+DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba083e
-DTSTAMP:20230330T000000Z
-DTSTART;VALUE=DATE:20230330
-SUMMARY:CS274 Computer Architecture: Lab: ICMP with Wireshark Due
+DTSTAMP:20230323T000000Z
+DTSTART;VALUE=DATE:20230323
+SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:\nDeliverable: Lab: Floating Point Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/FloatingPoint
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba083f
-DTSTAMP:20230330T000000Z
-DTSTART;VALUE=DATE:20230330
-SUMMARY:CS274 Computer Architecture: Class Meeting
-LOCATION:
-DESCRIPTION:\nReading: Dordal Ch. 14\nDeliverable: Lab: ICMP with Wireshark Due http://www-net.cs.umass.edu/wireshark-labs/Wireshark_ICMP_v8.0.pdf
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0840
-DTSTAMP:20230403T000000Z
-DTSTART;VALUE=DATE:20230403
-SUMMARY:CS274 Computer Architecture: Programming Assignment: Traceroute Due
+DTSTAMP:20230324T000000Z
+DTSTART;VALUE=DATE:20230324
+SUMMARY:CS274 Computer Architecture: Programming Assignment: Floating Point Bit Fields Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0841
-DTSTAMP:20230403T000000Z
-DTSTART;VALUE=DATE:20230403
+UID:00000000-0000-0000-0000-027df4ba0840
+DTSTAMP:20230324T000000Z
+DTSTART;VALUE=DATE:20230324
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Dordal Ch. 15\nReading: Kurose and Ross: Routing Among the ISPs with BGP https://youtu.be/2rV4tJkP-CQ\nDeliverable: Programming Assignment: Traceroute Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/Traceroute
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/ALU\nReading: COD Chapter B.5\nDeliverable: Programming Assignment: Floating Point Bit Fields Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/FloatingPoint
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba0841
+DTSTAMP:20230327T000000Z
+DTSTART;VALUE=DATE:20230327
+SUMMARY:CS274 Computer Architecture: Class Meeting
+LOCATION:
+DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0842
-DTSTAMP:20230405T000000Z
-DTSTART;VALUE=DATE:20230405
-SUMMARY:CS274 Computer Architecture: Programming Assignment: HTTP Client Handed Out
+DTSTAMP:20230329T000000Z
+DTSTART;VALUE=DATE:20230329
+SUMMARY:CS274 Computer Architecture: Lab: Floating Point Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0843
-DTSTAMP:20230405T000000Z
-DTSTART;VALUE=DATE:20230405
+DTSTAMP:20230329T000000Z
+DTSTART;VALUE=DATE:20230329
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/TransportLayer\nReading: Dordal Ch. 16\nReading: Kurose and Ross: Introduction to Transport-Layer Services https://youtu.be/lAvhH0XJLNE\nReading: Kurose and Ross: Multiplexing https://youtu.be/CekW6ipRrGA\nDeliverable: Programming Assignment: HTTP Client Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/Assignments/HTTPClient
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/MIPSDatapath\nReading: COD Chapter 4.1-4.3\nReading: Computers on a Breadboard by Ben Eater https://www.youtube.com/watch?v=fCbAafKLqC8&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=8\nDeliverable: Lab: Floating Point Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/FloatingPoint
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0844
-DTSTAMP:20230406T000000Z
-DTSTART;VALUE=DATE:20230406
-SUMMARY:CS274 Computer Architecture: Lab: UDP with Wireshark Handed Out
+DTSTAMP:20230330T000000Z
+DTSTART;VALUE=DATE:20230330
+SUMMARY:CS274 Computer Architecture: Lab: ALU Design Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0845
-DTSTAMP:20230406T000000Z
-DTSTART;VALUE=DATE:20230406
+DTSTAMP:20230330T000000Z
+DTSTART;VALUE=DATE:20230330
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Kurose and Ross: Connectionless Transport with UDP https://youtu.be/VjBDgcNno-Q\nDeliverable: Lab: UDP with Wireshark Handed Out http://www-net.cs.umass.edu/wireshark-labs/Wireshark_UDP_v8.0.pdf
+DESCRIPTION:\nDeliverable: Lab: ALU Design Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/ALUDesign
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0846
-DTSTAMP:20230410T000000Z
-DTSTART;VALUE=DATE:20230410
+DTSTAMP:20230331T000000Z
+DTSTART;VALUE=DATE:20230331
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Dordal Ch. 17\nReading: Kurose and Ross: Principles of Reliable Data Transfer Part 1 https://youtu.be/nyUHUtmxWg0\nReading: Kurose and Ross: Principles of Reliable Data Transfer Part 2 https://youtu.be/vxgH6r-II2Q
+DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0847
-DTSTAMP:20230412T000000Z
-DTSTART;VALUE=DATE:20230412
+DTSTAMP:20230403T000000Z
+DTSTART;VALUE=DATE:20230403
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Kurose and Ross: Connection Oriented Transport with TCP Part 1 https://youtu.be/UYJP-6mhF6E\nReading: Kurose and Ross: Connection Oriented Transport with TCP Part 2 https://youtu.be/E4I6t0mI_is
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/MIPSSingleCycle\nReading: COD Chapter 4.4
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0848
-DTSTAMP:20230413T000000Z
-DTSTART;VALUE=DATE:20230413
-SUMMARY:CS274 Computer Architecture: Lab: UDP with Wireshark Due
+DTSTAMP:20230405T000000Z
+DTSTART;VALUE=DATE:20230405
+SUMMARY:CS274 Computer Architecture: Lab: ALU Design Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0849
-DTSTAMP:20230413T000000Z
-DTSTART;VALUE=DATE:20230413
-SUMMARY:CS274 Computer Architecture: Lab: TCP with Wireshark Handed Out
+DTSTAMP:20230405T000000Z
+DTSTART;VALUE=DATE:20230405
+SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:\nReading: How Assembly Language Loops Work by Ben Eater https://www.youtube.com/watch?v=ZYJIakkcLYw&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=9\nDeliverable: Lab: ALU Design Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/ALUDesign
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba084a
-DTSTAMP:20230413T000000Z
-DTSTART;VALUE=DATE:20230413
-SUMMARY:CS274 Computer Architecture: Class Meeting
-LOCATION:
-DESCRIPTION:\nReading: Dordal Ch. 8\nDeliverable: Lab: UDP with Wireshark Due http://www-net.cs.umass.edu/wireshark-labs/Wireshark_UDP_v8.0.pdf\nDeliverable: Lab: TCP with Wireshark Handed Out http://www-net.cs.umass.edu/wireshark-labs/Wireshark_TCP_v8.0.pdf
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba084b
-DTSTAMP:20230417T000000Z
-DTSTART;VALUE=DATE:20230417
-SUMMARY:CS274 Computer Architecture: Programming Assignment: HTTP Client Due
+DTSTAMP:20230406T000000Z
+DTSTART;VALUE=DATE:20230406
+SUMMARY:CS274 Computer Architecture: Lab: Single Cycle Datapath Design Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba084b
+DTSTAMP:20230406T000000Z
+DTSTART;VALUE=DATE:20230406
+SUMMARY:CS274 Computer Architecture: Class Meeting
+LOCATION:
+DESCRIPTION:\nDeliverable: Lab: Single Cycle Datapath Design Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/SingleCycleDesign
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba084c
-DTSTAMP:20230417T000000Z
-DTSTART;VALUE=DATE:20230417
-SUMMARY:CS274 Computer Architecture: Participation: Second Self-Assessment Handed Out
+DTSTAMP:20230407T000000Z
+DTSTART;VALUE=DATE:20230407
+SUMMARY:CS274 Computer Architecture: Programming Assignment: Floating Point Bit Fields Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba084d
-DTSTAMP:20230417T000000Z
-DTSTART;VALUE=DATE:20230417
+DTSTAMP:20230407T000000Z
+DTSTART;VALUE=DATE:20230407
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Dordal Ch. 18\nReading: Kurose and Ross: Principles of Congestion Control https://youtu.be/Fm92xvIp6JY\nReading: Kurose and Ross: TCP Congestion Control https://youtu.be/cIHiSR4j3g4\nReading: Kurose and Ross: Evolution of Transport Layer Functionality https://youtu.be/oRUIEmpzk0Y\nReading: Kurose and Ross: Transport Layer Summary https://youtu.be/XPPsub35eNY\nDeliverable: Programming Assignment: HTTP Client Due https://www.billmongan.com/Ursinus-CS274-Spring2023/Assignments/HTTPClient\nDeliverable: Participation: Second Self-Assessment Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/Participation/SelfAssessment
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/MIPSMultiCycle\nReading: COD Chapter 4.5\nDeliverable: Programming Assignment: Floating Point Bit Fields Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/FloatingPoint
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba084e
-DTSTAMP:20230419T000000Z
-DTSTART;VALUE=DATE:20230419
-SUMMARY:CS274 Computer Architecture: Programming Assignment: TFTP Handed Out
+DTSTAMP:20230410T000000Z
+DTSTART;VALUE=DATE:20230410
+SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/MIPSPipeline\nReading: COD Chapter 4.6-4.7
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba084f
-DTSTAMP:20230419T000000Z
-DTSTART;VALUE=DATE:20230419
-SUMMARY:CS274 Computer Architecture: Class Meeting
-LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/ApplicationLayer\nReading: Redbook Ch. 16\nReading: Kurose and Ross: Principles of Network Applications https://youtu.be/abeupgK5z48\nReading: Kurose and Ross: The Web and HTTP Part 1 https://youtu.be/S9GEPaQ1lFs\nReading: Kurose and Ross: The Web and HTTP Part 2 https://youtu.be/4M39gEPWPYs\nDeliverable: Programming Assignment: TFTP Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/Assignments/TFTP
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0850
-DTSTAMP:20230420T000000Z
-DTSTART;VALUE=DATE:20230420
-SUMMARY:CS274 Computer Architecture: Final Project: Project and Presentation Handed Out
+DTSTAMP:20230412T000000Z
+DTSTART;VALUE=DATE:20230412
+SUMMARY:CS274 Computer Architecture: Lab: Single Cycle Datapath Design Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba0850
+DTSTAMP:20230412T000000Z
+DTSTART;VALUE=DATE:20230412
+SUMMARY:CS274 Computer Architecture: Class Meeting
+LOCATION:
+DESCRIPTION:\nReading: Computer Arithmetic by Ben Eater https://www.youtube.com/watch?v=v3-a-zqKfgA&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=10\nDeliverable: Lab: Single Cycle Datapath Design Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/SingleCycleDesign
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0851
-DTSTAMP:20230420T000000Z
-DTSTART;VALUE=DATE:20230420
-SUMMARY:CS274 Computer Architecture: Lab: TCP with Wireshark Due
+DTSTAMP:20230413T000000Z
+DTSTART;VALUE=DATE:20230413
+SUMMARY:CS274 Computer Architecture: Lab: Single Cycle Control Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0852
-DTSTAMP:20230420T000000Z
-DTSTART;VALUE=DATE:20230420
-SUMMARY:CS274 Computer Architecture: Lab: DNS with Wireshark Handed Out
+DTSTAMP:20230413T000000Z
+DTSTART;VALUE=DATE:20230413
+SUMMARY:CS274 Computer Architecture: Class Meeting
+LOCATION:
+DESCRIPTION:\nDeliverable: Lab: Single Cycle Control Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/SingleCycleControl
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba0853
+DTSTAMP:20230414T000000Z
+DTSTART;VALUE=DATE:20230414
+SUMMARY:CS274 Computer Architecture: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/MIPSPipelineHazards\nReading: COD Chapter 4.8-4.9
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba0854
+DTSTAMP:20230417T000000Z
+DTSTART;VALUE=DATE:20230417
+SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0853
-DTSTAMP:20230420T000000Z
-DTSTART;VALUE=DATE:20230420
-SUMMARY:CS274 Computer Architecture: Class Meeting
-LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023//Ursinus-WebMobile-HTTP\nReading: Redbook Ch. 15\nReading: Kurose and Ross: Email https://youtu.be/D3GMrOMR2dk\nReading: Why Files Become Bigger in Emails (Encoding) from Computerphile https://www.youtube.com/watch?v=zV-fR7xA4Hc\nDeliverable: Final Project: Project and Presentation Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/Projects/Final\nDeliverable: Lab: TCP with Wireshark Due http://www-net.cs.umass.edu/wireshark-labs/Wireshark_TCP_v8.0.pdf\nDeliverable: Lab: DNS with Wireshark Handed Out http://www-net.cs.umass.edu/wireshark-labs/Wireshark_DNS_v8.0.pdf
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0854
-DTSTAMP:20230424T000000Z
-DTSTART;VALUE=DATE:20230424
-SUMMARY:CS274 Computer Architecture: Class Meeting
-LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/SecurityPrivacy\nReading: Redbook Ch. 22
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0855
-DTSTAMP:20230426T000000Z
-DTSTART;VALUE=DATE:20230426
-SUMMARY:CS274 Computer Architecture: Lab: DNS with Wireshark Due
+DTSTAMP:20230419T000000Z
+DTSTART;VALUE=DATE:20230419
+SUMMARY:CS274 Computer Architecture: Lab: Single Cycle Control Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0856
-DTSTAMP:20230426T000000Z
-DTSTART;VALUE=DATE:20230426
-SUMMARY:CS274 Computer Architecture: Lab: SSL with Wireshark Handed Out
+DTSTAMP:20230419T000000Z
+DTSTART;VALUE=DATE:20230419
+SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/Cache\nReading: COD Chapter 5.1-5.4\nDeliverable: Lab: Single Cycle Control Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/SingleCycleControl
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0857
-DTSTAMP:20230426T000000Z
-DTSTART;VALUE=DATE:20230426
-SUMMARY:CS274 Computer Architecture: Class Meeting
-LOCATION:
-DESCRIPTION:\nDeliverable: Lab: DNS with Wireshark Due http://www-net.cs.umass.edu/wireshark-labs/Wireshark_DNS_v8.0.pdf\nDeliverable: Lab: SSL with Wireshark Handed Out http://www-net.cs.umass.edu/wireshark-labs/Wireshark_SSL_v8.0.pdf
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0858
-DTSTAMP:20230427T000000Z
-DTSTART;VALUE=DATE:20230427
-SUMMARY:CS274 Computer Architecture: Participation: Second Self-Assessment Due
+DTSTAMP:20230420T000000Z
+DTSTART;VALUE=DATE:20230420
+SUMMARY:CS274 Computer Architecture: Lab: Cache Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba0858
+DTSTAMP:20230420T000000Z
+DTSTART;VALUE=DATE:20230420
+SUMMARY:CS274 Computer Architecture: Class Meeting
+LOCATION:
+DESCRIPTION:\nDeliverable: Lab: Cache Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/Cache
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0859
-DTSTAMP:20230427T000000Z
-DTSTART;VALUE=DATE:20230427
-SUMMARY:CS274 Computer Architecture: Programming Assignment: TFTP Due
+DTSTAMP:20230421T000000Z
+DTSTART;VALUE=DATE:20230421
+SUMMARY:CS274 Computer Architecture: Participation: Second Self-Assessment Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba085a
-DTSTAMP:20230427T000000Z
-DTSTART;VALUE=DATE:20230427
+DTSTAMP:20230421T000000Z
+DTSTART;VALUE=DATE:20230421
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Participation: Second Self-Assessment Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/Participation/SelfAssessment\nDeliverable: Programming Assignment: TFTP Due https://www.billmongan.com/Ursinus-CS274-Spring2023/Assignments/TFTP
+DESCRIPTION:\nDeliverable: Participation: Second Self-Assessment Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/Participation/SelfAssessment
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba085b
-DTSTAMP:20230501T000000Z
-DTSTART;VALUE=DATE:20230501
-SUMMARY:CS274 Computer Architecture: Final Project: Project and Presentation Due
+DTSTAMP:20230424T000000Z
+DTSTART;VALUE=DATE:20230424
+SUMMARY:CS274 Computer Architecture: Programming Assignment: Cache Simulator Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba085c
-DTSTAMP:20230501T000000Z
-DTSTART;VALUE=DATE:20230501
-SUMMARY:CS274 Computer Architecture: Lab: SSL with Wireshark Due
+DTSTAMP:20230424T000000Z
+DTSTART;VALUE=DATE:20230424
+SUMMARY:CS274 Computer Architecture: Class Meeting
+LOCATION:
+DESCRIPTION:\nDeliverable: Programming Assignment: Cache Simulator Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/CacheSimulator
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba085d
+DTSTAMP:20230426T000000Z
+DTSTART;VALUE=DATE:20230426
+SUMMARY:CS274 Computer Architecture: Lab: Cache Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba085d
+UID:00000000-0000-0000-0000-027df4ba085e
+DTSTAMP:20230426T000000Z
+DTSTART;VALUE=DATE:20230426
+SUMMARY:CS274 Computer Architecture: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/VirtualMemory\nReading: COD Chapter 5.7\nDeliverable: Lab: Cache Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/Cache
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba085f
+DTSTAMP:20230427T000000Z
+DTSTART;VALUE=DATE:20230427
+SUMMARY:CS274 Computer Architecture: Class Meeting
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba0860
+DTSTAMP:20230428T000000Z
+DTSTART;VALUE=DATE:20230428
+SUMMARY:CS274 Computer Architecture: Class Meeting
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba0861
+DTSTAMP:20230501T000000Z
+DTSTART;VALUE=DATE:20230501
+SUMMARY:CS274 Computer Architecture: Participation: Second Self-Assessment Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba0862
 DTSTAMP:20230501T000000Z
 DTSTART;VALUE=DATE:20230501
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Final Project: Project and Presentation Due https://www.billmongan.com/Ursinus-CS274-Spring2023/Projects/Final\nDeliverable: Lab: SSL with Wireshark Due http://www-net.cs.umass.edu/wireshark-labs/Wireshark_SSL_v8.0.pdf
+DESCRIPTION:\nDeliverable: Participation: Second Self-Assessment Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/Participation/SelfAssessment
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba085e
+UID:00000000-0000-0000-0000-027df4ba0863
+DTSTAMP:20230503T000000Z
+DTSTART;VALUE=DATE:20230503
+SUMMARY:CS274 Computer Architecture: Programming Assignment: Cache Simulator Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba0864
+DTSTAMP:20230503T000000Z
+DTSTART;VALUE=DATE:20230503
+SUMMARY:CS274 Computer Architecture: Class Meeting
+LOCATION:
+DESCRIPTION:\nDeliverable: Programming Assignment: Cache Simulator Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/CacheSimulator
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba0865
 DTSTAMP;TZID=US-Eastern:20230116T120000
 DTSTART;TZID=US-Eastern:20230116T120000
 DTEND;TZID=US-Eastern:20230116T130000
@@ -921,7 +984,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba085f
+UID:00000000-0000-0000-0000-027df4ba0866
 DTSTAMP;TZID=US-Eastern:20230116T120000
 DTSTART;TZID=US-Eastern:20230116T120000
 DTEND;TZID=US-Eastern:20230116T130000
@@ -939,7 +1002,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0860
+UID:00000000-0000-0000-0000-027df4ba0867
 DTSTAMP;TZID=US-Eastern:20230116T090000
 DTSTART;TZID=US-Eastern:20230116T090000
 DTEND;TZID=US-Eastern:20230116T100000
@@ -957,7 +1020,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0861
+UID:00000000-0000-0000-0000-027df4ba0868
 DTSTAMP;TZID=US-Eastern:20230116T110000
 DTSTART;TZID=US-Eastern:20230116T110000
 DTEND;TZID=US-Eastern:20230116T120000
@@ -975,7 +1038,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0862
+UID:00000000-0000-0000-0000-027df4ba0869
 DTSTAMP;TZID=US-Eastern:20230116T120000
 DTSTART;TZID=US-Eastern:20230116T120000
 DTEND;TZID=US-Eastern:20230116T130000
@@ -993,7 +1056,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0863
+UID:00000000-0000-0000-0000-027df4ba086a
 DTSTAMP;TZID=US-Eastern:20210224T100000
 DTSTART;TZID=US-Eastern:20210224T100000
 DTEND;TZID=US-Eastern:20210224T105000
@@ -1003,7 +1066,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0864
+UID:00000000-0000-0000-0000-027df4ba086b
 DTSTAMP:20230131T000000Z
 DTSTART;VALUE=DATE:20230131
 SUMMARY:Add Deadline
@@ -1012,7 +1075,7 @@ DESCRIPTION:Add Deadline
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0865
+UID:00000000-0000-0000-0000-027df4ba086c
 DTSTAMP:20230322T000000Z
 DTSTART;VALUE=DATE:20230322
 SUMMARY:Drop with a W Deadline
@@ -1021,7 +1084,7 @@ DESCRIPTION:Drop with a W Deadline
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0866
+UID:00000000-0000-0000-0000-027df4ba086d
 DTSTAMP:20230303T000000Z
 DTSTART;VALUE=DATE:20230303
 SUMMARY:Mid Semester Grades Posted
@@ -1030,7 +1093,7 @@ DESCRIPTION:Mid Semester Grades Posted
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0867
+UID:00000000-0000-0000-0000-027df4ba086e
 DTSTAMP:20230419T000000Z
 DTSTART;VALUE=DATE:20230419
 SUMMARY:CoSA
@@ -1039,7 +1102,7 @@ DESCRIPTION:CoSA
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0868
+UID:00000000-0000-0000-0000-027df4ba086f
 DTSTAMP:20230504T000000Z
 DTSTART;VALUE=DATE:20230504
 SUMMARY:Reading Day
@@ -1048,7 +1111,7 @@ DESCRIPTION:Reading Day
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0869
+UID:00000000-0000-0000-0000-027df4ba0870
 DTSTAMP:20230512T000000Z
 DTSTART;VALUE=DATE:20230512
 SUMMARY:Baccalaureate
@@ -1057,7 +1120,7 @@ DESCRIPTION:Baccalaureate
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba086a
+UID:00000000-0000-0000-0000-027df4ba0871
 DTSTAMP:20230513T000000Z
 DTSTART;VALUE=DATE:20230513
 SUMMARY:Commencement
@@ -1066,7 +1129,7 @@ DESCRIPTION:Commencement
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba086b
+UID:00000000-0000-0000-0000-027df4ba0872
 DTSTAMP:20230505T000000Z
 DTSTART;VALUE=DATE:20230505
 SUMMARY:Finals Week Begins
@@ -1075,7 +1138,7 @@ DESCRIPTION:Finals Week Begins
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba086c
+UID:00000000-0000-0000-0000-027df4ba0873
 DTSTAMP:20230511T000000Z
 DTSTART;VALUE=DATE:20230511
 SUMMARY:Finals Week Ends
