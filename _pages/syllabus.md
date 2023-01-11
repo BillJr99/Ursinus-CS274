@@ -1,8 +1,8 @@
 ---
 layout: syllabus
 permalink: /
-title: "CS475: Computer Networks"
-excerpt: "CS475: Computer Networks"
+title: "CS274: Computer Architecture"
+excerpt: "CS274: Computer Architecture"
     
 info:
   course_number: CS274
