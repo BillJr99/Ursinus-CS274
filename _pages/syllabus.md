@@ -65,15 +65,18 @@ info:
   banner: |
     <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
     <div style="width: 100%; display: table-row;">
-        <div style="display: table-cell; padding:5px; width:33%;">
-            <a title="Offnfopt, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:OSI_Model_v1.svg"><img width="100%" style="display:block;" alt="OSI Model v1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/OSI_Model_v1.svg/256px-OSI_Model_v1.svg.png"></a>
+        <div style="display: table-cell; padding:5px; width:25%;">
+            <a title="Own work based on:NE555 astable.png, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:555_esquema.png"><img width="512" alt="555 esquema" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/555_esquema.png/512px-555_esquema.png"></a>
         </div>
-        <div style="display: table-cell; padding:5px; width:33%;">
-            <a title="Rarelibra, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:World_map_of_submarine_cables.png"><img width="100%" style="display:block;" alt="World map of submarine cables" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/World_map_of_submarine_cables.png/512px-World_map_of_submarine_cables.png"></a>
+        <div style="display: table-cell; padding:5px; width:25%;">
+            <a title="Inductiveload, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:MIPS_Architecture_(Pipelined).svg"><img width="512" alt="MIPS Architecture (Pipelined)" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/MIPS_Architecture_%28Pipelined%29.svg/512px-MIPS_Architecture_%28Pipelined%29.svg.png"></a>
         </div>
-        <div style="display: table-cell; padding:5px; width:33%;">
-            <a title="Shiyu Ji, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:RR_BGP.svg"><img width="100%" style="display:block;" alt="RR BGP" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/RR_BGP.svg/512px-RR_BGP.svg.png"></a>
+        <div style="display: table-cell; padding:5px; width:25%;">
+            <a title="Thomas Nguyen, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Intel_C8086.jpg"><img width="512" alt="Intel C8086" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Intel_C8086.jpg/512px-Intel_C8086.jpg"></a>
         </div>
+        <div style="display: table-cell; padding:5px; width:25%;">
+            <a title="chris.jervis, CC BY-SA 2.0 &lt;https://creativecommons.org/licenses/by-sa/2.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Intel_Core_i7-940_bottom.jpg"><img width="512" alt="Intel Core i7-940 bottom" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Intel_Core_i7-940_bottom.jpg/512px-Intel_Core_i7-940_bottom.jpg"></a>
+        </div>        
     </div>
     </div>
     
@@ -124,24 +127,29 @@ textbooks:
   freelyavailable: false  
 
 objectives:
-- objective: "To comprehend the design of a network protocol suitable for implementation"
-- objective: "To select appropriate network protocols at each layer of abstraction"
-- objective: "To write multithreaded code capable of multiplexing simultaneous socket I/O requests"
+- objective: "To relate code to control signals that direct processor components and datapath to compute"
+- objective: "To design components for a computer processor at an electrical level"
+- objective: "To integrate electrical circuits into a unified datapath for a processor"
 
 goals:
-- goal: "To articulate network privacy concerns with a global context, and to identify practices and techniques to improve online privacy"
-- goal: "To differentiate between various models of network security, including authentication, authorization, and non-repudiation"
-- goal: "To identify and differentiate between approaches to fairness and quality-of-service on the Internet"
+- goal: "To optimize code for processor execution"
+- goal: "To express computer code as a series of control inputs to electrical circuits"
+- goal: "To convert numeric inputs from a decimal number system in terms of hexadecimal or binary number systems"
+- goal: "To perform computer arithmetic using electrical circuits"
+- goal: "To write code in the MIPS assembly language that use iteration, conditionals, and recursion"
+- goal: "To design components for a CPU design"
+- goal: "To resolve CPU starvation by exploiting a memory hierarchy"
+- goal: "To express floating point values according to the IEEE 754 standard"
 
 grade_breakdown:
 - category: "Programming Assignments"
   weight: "25%"
 - category: "Labs"
-  weight: "40%"
+  weight: "35%"
 - category: "Midterm Exam"
   weight: "15%"
-- category: "Final Project"
-  weight: "10%"
+- category: "Final Exam"
+  weight: "15%"
 - category: "Class Participation and Quizzes"
   weight: "10%"
 
@@ -174,515 +182,449 @@ letter_grades:
   range: "0-59.49"  
 
 schedule:
-- week: "0"
-  date: "1"
-  title: "Course Overview"
-  link: "../Ursinus-CS475-Overview"
-  deliverables:  
-  - dtitle: "Programming Assignment: Warmup Handed Out"
-    dlink: "./Assignments/Warmup"
-    points: 10 
-    submission_types: "noupload"    
-- week: "0"
-  date: "2"
-  title: "Sending Packets"  
-  deliverables:
-  - dtitle: "Participation: Pre-Assessment Handed Out"
-    dlink: "./Assignments/Participation/PreAssessment"
-    points: 10   
-    submission_types: "written"        
-  readings:
-  - rtitle: "Dordal Ch. 1"
-    rlink: false
-  - rtitle: "Kurose and Ross: What is the Internet?"
-    rlink: "https://youtu.be/74sEFYBBRAY"
-  - rtitle: "Kurose and Ross: The Network Edge"
-    rlink: "https://youtu.be/k8NmM-hImBU"  
-  - rtitle: "Kurose and Ross: The Network Core"
-    rlink: "https://youtu.be/f1nUcCdQJ8Y" 
-  - rtitle: "Kurose and Ross: Network Performance"
-    rlink: "https://youtu.be/hm1y4LsphQQ"     
-- week: "1"
-  date: "0"
-  title: "Motivating Examples: nslookup, HTTP, Traceroute"
-  link: "./Activities/MotivatingExamples"  
-  deliverables:
-  - dtitle: "Lab: Wireshark Overview Handed Out"
-    dlink: "http://www-net.cs.umass.edu/wireshark-labs/Wireshark_Intro_v8.0.pdf"
-    points: 10   
-    submission_types: "written"        
-  readings:
-  - rtitle: "Jim Kurose: Wireshark Demo"
-    rlink: "https://www.youtube.com/watch?v=PYoXowOCppc"
-  - rtitle: "Jim Kurose: Traceroute Demo"
-    rlink: "https://www.youtube.com/watch?v=wEWiYLb7pxg" 
-  - rtitle: "Visualizing Traceroute on a Map of the Earth"
-    rlink: "https://www.youtube.com/watch?v=75yKT3OuE44"  
-- week: "1"
-  date: "1"
-  title: "Networking: A Layered Approach"
-  link: "./Activities/Layers"
-  deliverables:
-  - dtitle: "Programming Assignment: Warmup Due"
-    dlink: "./Assignments/Warmup"
-    points: 10  
-    submission_types: "noupload"    
-  readings:
-  - rtitle: "Kurose and Ross: Protocol Layers"
-    rlink: "https://youtu.be/IZ_PnVXtMeY"  
-  - rtitle: "Kurose and Ross: Networks Under Attack"
-    rlink: "https://youtu.be/yukwBqSwAkg"    
-  - rtitle: "Kurose and Ross: History of Computer Networking"
-    rlink: "https://youtu.be/l4q8iuqbuiQ"  
-- week: "1"
-  date: "2" 
-  title: "Socket Programming"
-  link: "./Activities/SocketProgramming"
-  readings:
-  - rtitle: "Redbook Ch. 11"
-    rlink: false  
-  - rtitle: "Kurose and Ross: Socket Programming"
-    rlink: "https://youtu.be/_iHMMo7SDfQ"   
-  deliverables:
-  - dtitle: "Participation: Pre-Assessment Due"
-    dlink: "./Assignments/Participation/PreAssessment"
-    points: 10 
-    submission_types: "written"   
-- week: "2"
-  date: "0" 
-  title: "Socket Programming"  
-- week: "2"
-  date: "1" 
-  title: "Multithreaded Socket Programming"    
-- week: "2"
-  date: "2" 
-  title: "Multithreaded Socket Programming"   
-  deliverables: 
-  - dtitle: "Programming Assignment: Mini Crypto Handed Out"
-    dlink: "./Assignments/MiniCrypto"
-    points: 100    
-- week: "3"
-  date: "0"
-  title: "The Physical Layer: Considerations"
-  link: "./Activities/PhysicalLayer"           
-  readings:
-  - rtitle: "Dordal Ch. 2"
-    rlink: false  
-- week: "3"
-  date: "1"
-  title: "TDMA with CSMA and ALOHA"  
-  deliverables:
-  - dtitle: "Lab: HTTP with Wireshark Handed Out"
-    dlink: "http://www-net.cs.umass.edu/wireshark-labs/Wireshark_HTTP_v8.0.pdf"     
-    points: 10 
-    submission_types: "written"        
-  readings:
-  - rtitle: "Transoceanic Cable Video"
-    rlink: "https://www.youtube.com/watch?v=T96P2d2UVsQ"  
-- week: "3"
-  date: "2"
-  title: "CSMA and ALOHA" 
-  deliverables:
-  - dtitle: "Lab: Wireshark Overview Due"
-    dlink: "http://www-net.cs.umass.edu/wireshark-labs/Wireshark_Intro_v8.0.pdf"  
-    points: 10    
-    submission_types: "written"        
-- week: "4"
-  date: "0"
-  title: "Ethernet"  
-  readings:
-  - rtitle: "The RFC Video"
-    rlink: "https://www.youtube.com/watch?v=8IXLpoN8Xj0"
-  deliverables:
-  - dtitle: "Programming Assignment: Mini Crypto Due"
-    dlink: "./Assignments/MiniCrypto"
-    points: 100   
-  - dtitle: "Programming Assignment: Introduction to the RFC Handed Out"  
-    dlink: "Assignments/RFC"
-    points: 100 
-    submission_types: "written"        
-- week: "4"
-  date: "1"
-  title: "Wi-Fi with FDMA and CDMA Wireless Protocols"
-  readings:
-  - rtitle: "Dordal Ch. 4"
-    rlink: false   
-  deliverables: 
-  - dtitle: "Lab: HTTP with Wireshark Due"
-    dlink: "http://www-net.cs.umass.edu/wireshark-labs/Wireshark_HTTP_v8.0.pdf"   
-    points: 10
-  - dtitle: "Lab: Ethernet with Wireshark Handed Out"
-    dlink: "http://www-net.cs.umass.edu/wireshark-labs/Wireshark_Ethernet_ARP_v8.0.pdf"     
-    points: 10   
-- week: "4"
-  date: "2"
-  title: "The Link Layer" 
-  link: "./Activities/LinkLayer"  
-  readings:
-  - rtitle: "Dordal Ch. 5"
-    rlink: false   
-- week: "5"
-  date: "0"
-  title: "Switching" 
-  readings:
-  - rtitle: "Dordal Ch. 6"
-    rlink: false  
-  - rtitle: "Kurose and Ross: The Link Layer"
-    rlink: "https://youtu.be/lMGWJZLTulY"
-  - rtitle: "Kurose and Ross: Error Detection and Correction"
-    rlink: "https://youtu.be/x-rQ3RiI7I0"     
-- week: "5"
-  date: "1"
-  title: "From Bits to Packets" 
-  readings:
-  - rtitle: "Dordal Ch. 7"
-    rlink: false    
-  - rtitle: "Kurose and Ross: Multiple Access Links and Protocols"
-    rlink: "https://youtu.be/X2cLpzFRMT4"  
-  deliverables:
-  - dtitle: "Lab: Ethernet with Wireshark Due"
-    dlink: "http://www-net.cs.umass.edu/wireshark-labs/Wireshark_Ethernet_ARP_v8.0.pdf"   
-    points: 10
-    submission_types: "written"        
-  - dtitle: "Lab: Wi-Fi with Wireshark Handed Out"
-    dlink: "http://www-net.cs.umass.edu/wireshark-labs/Wireshark_802.11_v8.0.pdf"   
-    points: 10    
-    submission_types: "written"        
-- week: "5"
-  date: "2"
-  title: "The Network Layer and IPv4"  
-  link: "./Activities/NetworkLayer"
-  readings:
-  - rtitle: "Dordal Ch. 9"
-    rlink: false  
-  - rtitle: "Kurose and Ross: The Network Layer Data Plane"
-    rlink: "https://youtu.be/olbr3WZwrdU"  
-  - rtitle: "Kurose and Ross: The Internet Protocol Part 1"
-    rlink: "https://youtu.be/sdIpLuIR1ZY"   
-  - rtitle: "Kurose and Ross: The Internet Protocol Part 2"
-    rlink: "https://youtu.be/H9DivCEFuUg"       
-- week: "6"
-  date: "0"
-  title: "IPv4 Addressing and Subnets"  
-  readings:
-  - rtitle: "Kurose and Ross: Generalized Forwarding"
-    rlink: "https://youtu.be/HIPVDxTrHqI"       
-  - rtitle: "Kurose and Ross: Middleboxes"
-    rlink: "https://youtu.be/kKZlPeyef0k" 
-  deliverables:
-  - dtitle: "Programming Assignment: Introduction to the RFC Due"  
-    dlink: "Assignments/RFC"
-    points: 100   
-    submission_types: "written"  
-  - dtitle: "Programming Assignment: FSM Handed Out"  
-    dlink: "Assignments/FSM"
-    points: 100    
-- week: "6"
-  date: "1"
-  title: "IPv4 Addressing and Subnets" 
-  deliverables:
-  - dtitle: "Lab: Wi-Fi with Wireshark Due"
-    dlink: "http://www-net.cs.umass.edu/wireshark-labs/Wireshark_802.11_v8.0.pdf"  
-    points: 10
-    submission_types: "written"        
-  - dtitle: "Lab: IP with Wireshark Handed Out"
-    dlink: "http://www-net.cs.umass.edu/wireshark-labs/Wireshark_IP_v8.0.pdf"      
-    points: 10
-    submission_types: "written"        
-- week: "6"
-  date: "2"
-  title: "IP Multiplexing with NAT"  
-  deliverables:
-  - dtitle: "Midterm Exam: Midterm Handed Out"
-    dlink: false
-    points: 100  
-    submission_types: "written"            
-- week: "8"
-  date: "0"
-  title: "Outside Address Lookups with DNS" 
-  deliverables:    
-  - dtitle: "Lab: IP with Wireshark Due"
-    dlink: "http://www-net.cs.umass.edu/wireshark-labs/Wireshark_IP_v8.0.pdf"     
-    points: 10
-    submission_types: "written"        
-  - dtitle: "Lab: NAT with Wireshark Handed Out"
-    dlink: "http://www-net.cs.umass.edu/wireshark-labs/Wireshark_NAT_v8.0.pdf"      
-    points: 10
-    submission_types: "written"        
-  readings:
-  - rtitle: "Dordal Ch. 10"
-    rlink: false   
-  - rtitle: "Redbook Ch. 12"
-    rlink: false      
-  - rtitle: "Kurose and Ross: DNS"
-    rlink: "https://youtu.be/6lRcMh5Yphg"    
-- week: "8"
-  date: "1"
-  title: "Inside Address Lookups with ARP" 
-  deliverables:
-  - dtitle: "Participation: First Self-Assessment Handed Out"
-    dlink: "./Assignments/Participation/SelfAssessment"
-    points: 10 
-    submission_types: "written"        
-  - dtitle: "Midterm Exam: Midterm Due"
-    dlink: false
-    points: 100    
-    submission_types: "written"        
-- week: "8"
-  date: "2"
-  title: "Dynamic Configuration with DHCP"
-  deliverables:
-  - dtitle: "Lab: NAT with Wireshark Due"
-    dlink: "http://www-net.cs.umass.edu/wireshark-labs/Wireshark_NAT_v8.0.pdf"  
-    points: 10    
-    submission_types: "written"        
-  - dtitle: "Lab: DHCP with Wireshark Handed Out"
-    dlink: "http://www-net.cs.umass.edu/wireshark-labs/Wireshark_DHCP_v8.0.pdf"    
-    points: 10
-    submission_types: "written"        
-- week: "9"
-  date: "0"
-  title: "ICMP and Ping" 
-  readings:
-  - rtitle: "Kurose and Ross: The Internet Control Message Protocol (ICMP)"
-    rlink: "https://youtu.be/EHV0Q0R--Ns"  
-  deliverables:
-  - dtitle: "Programming Assignment: FSM Due"  
-    dlink: "Assignments/FSM"
-    points: 100   
-  - dtitle: "Programming Assignment: Traceroute Handed Out"
-    dlink: "./Assignments/Traceroute"  
-- week: "9"
-  date: "1"
-  title: "IPv6"  
-  deliverables:
-    - dtitle: "Participation: First Self-Assessment Due"
-      dlink: "./Assignments/Participation/SelfAssessment"
-      points: 10   
-      submission_types: "written"        
-  readings:
-  - rtitle: "Dordal Ch. 11"
-    rlink: false   
-- week: "9"
-  date: "2"
-  title: "VPN and Tunneling" 
-  deliverables:
-  - dtitle: "Lab: DHCP with Wireshark Due"
-    dlink: "http://www-net.cs.umass.edu/wireshark-labs/Wireshark_DHCP_v8.0.pdf" 
-    points: 10
-    submission_types: "written"        
-  - dtitle: "Lab: ICMP with Wireshark Handed Out"
-    dlink: "http://www-net.cs.umass.edu/wireshark-labs/Wireshark_ICMP_v8.0.pdf"     
-    points: 10
-    submission_types: "written"        
-- week: "10"
-  date: "0"
-  title: "Routing" 
-  link: "./Activities/Routing"
-  readings:
-  - rtitle: "Dordal Ch. 13"
-    rlink: false 
-  - rtitle: "Kurose and Ross: The Network Layer Control Plane"
-    rlink: "https://youtu.be/Aeb80Q_mJp4"     
-  - rtitle: "Kurose and Ross: Routing Algorithms"
-    rlink: "https://youtu.be/bdh2kfgxVuw"        
-  - rtitle: "Kurose and Ross: What's Inside a Router? Part 1"
-    rlink: "https://youtu.be/NfHR94JAO-s"   
-  - rtitle: "Kurose and Ross: What's Inside a Router? Part 2"
-    rlink: "https://youtu.be/zfzzz9KQOog"     
-- week: "10"
-  date: "1"
-  title: "Distance Vector Algorithms"
-  readings:
-  - rtitle: "Kurose and Ross: Intra-AS Routing"
-    rlink: "https://youtu.be/iUQmn3nNjaI"   
-- week: "10"
-  date: "2"
-  title: "Hierarchical Routing"  
-  deliverables:
-  - dtitle: "Lab: ICMP with Wireshark Due"
-    dlink: "http://www-net.cs.umass.edu/wireshark-labs/Wireshark_ICMP_v8.0.pdf" 
-    points: 10
-    submission_types: "written"            
-  readings:
-  - rtitle: "Dordal Ch. 14"
-    rlink: false   
-- week: "11"
-  date: "0"
-  title: "Routing at Scale: BGP"
-  readings:
-  - rtitle: "Dordal Ch. 15"
-    rlink: false   
-  - rtitle: "Kurose and Ross: Routing Among the ISPs with BGP"
-    rlink: "https://youtu.be/2rV4tJkP-CQ"   
-  deliverables:
-  - dtitle: "Programming Assignment: Traceroute Due"
-    dlink: "./Assignments/Traceroute"   
-- week: "11"
-  date: "1"
-  title: "The Transport Layer: Considerations"
-  link: "./Activities/TransportLayer"
-  deliverables: 
-  - dtitle: "Programming Assignment: HTTP Client Handed Out"
-    dlink: "Assignments/HTTPClient"
-    points: 100
-  readings:
-  - rtitle: "Dordal Ch. 16"
-    rlink: false   
-  - rtitle: "Kurose and Ross: Introduction to Transport-Layer Services"
-    rlink: "https://youtu.be/lAvhH0XJLNE"      
-  - rtitle: "Kurose and Ross: Multiplexing"
-    rlink: "https://youtu.be/CekW6ipRrGA"        
-- week: "11"
-  date: "2"
-  title: "Basic Transport Services with UDP"
-  readings:
-  - rtitle: "Kurose and Ross: Connectionless Transport with UDP"
-    rlink: "https://youtu.be/VjBDgcNno-Q"    
-  deliverables:
-  - dtitle: "Lab: UDP with Wireshark Handed Out"
-    dlink: "http://www-net.cs.umass.edu/wireshark-labs/Wireshark_UDP_v8.0.pdf" 
-    points: 10  
-    submission_types: "written"       
-- week: "12"
-  date: "0"
-  title: "Coordinating Transport Services with TCP" 
-  readings:
-  - rtitle: "Dordal Ch. 17"
-    rlink: false  
-  - rtitle: "Kurose and Ross: Principles of Reliable Data Transfer Part 1"
-    rlink: "https://youtu.be/nyUHUtmxWg0"      
-  - rtitle: "Kurose and Ross: Principles of Reliable Data Transfer Part 2"
-    rlink: "https://youtu.be/vxgH6r-II2Q"          
-- week: "12"
-  date: "1"
-  title: "TCP" 
-  readings:
-  - rtitle: "Kurose and Ross: Connection Oriented Transport with TCP Part 1"
-    rlink: "https://youtu.be/UYJP-6mhF6E"      
-  - rtitle: "Kurose and Ross: Connection Oriented Transport with TCP Part 2"
-    rlink: "https://youtu.be/E4I6t0mI_is"   
-- week: "12"
-  date: "2"
-  title: "TCP Sliding Window Protocols"   
-  readings:
-  - rtitle: "Dordal Ch. 8"
-    rlink: false 
-  deliverables:
-  - dtitle: "Lab: UDP with Wireshark Due"
-    dlink: "http://www-net.cs.umass.edu/wireshark-labs/Wireshark_UDP_v8.0.pdf" 
-    points: 10
-    submission_types: "written"        
-  - dtitle: "Lab: TCP with Wireshark Handed Out"
-    dlink: "http://www-net.cs.umass.edu/wireshark-labs/Wireshark_TCP_v8.0.pdf"     
-    points: 10
-    submission_types: "written"    
-- week: "13"
-  date: "0"
-  title: "Congestion Management with TCP"  
-  deliverables: 
-  - dtitle: "Programming Assignment: HTTP Client Due"
-    dlink: "Assignments/HTTPClient"
-    points: 100 
-  - dtitle: "Participation: Second Self-Assessment Handed Out"
-    dlink: "./Assignments/Participation/SelfAssessment"
-    points: 10 
-    submission_types: "written"     
-  readings:
-  - rtitle: "Dordal Ch. 18"
-    rlink: false  
-  - rtitle: "Kurose and Ross: Principles of Congestion Control"
-    rlink: "https://youtu.be/Fm92xvIp6JY"       
-  - rtitle: "Kurose and Ross: TCP Congestion Control"
-    rlink: "https://youtu.be/cIHiSR4j3g4"    
-  - rtitle: "Kurose and Ross: Evolution of Transport Layer Functionality"
-    rlink: "https://youtu.be/oRUIEmpzk0Y" 
-  - rtitle: "Kurose and Ross: Transport Layer Summary"
-    rlink: "https://youtu.be/XPPsub35eNY"      
-- week: "13"
-  date: "1"
-  title: "Application Layer Protocols"  
-  link: "./Activities/ApplicationLayer"
-  deliverables:
-  - dtitle: "Programming Assignment: TFTP Handed Out"  
-    dlink: "Assignments/TFTP"
-    points: 100     
-  readings:
-  - rtitle: "Redbook Ch. 16"
-    rlink: false
-  - rtitle: "Kurose and Ross: Principles of Network Applications"
-    rlink: "https://youtu.be/abeupgK5z48"  
-  - rtitle: "Kurose and Ross: The Web and HTTP Part 1"
-    rlink: "https://youtu.be/S9GEPaQ1lFs"   
-  - rtitle: "Kurose and Ross: The Web and HTTP Part 2"
-    rlink: "https://youtu.be/4M39gEPWPYs"     
-- week: "13"
-  date: "2"
-  title: "HTTP and SMTP"  
-  link: "/Ursinus-WebMobile-HTTP"
-  readings:
-  - rtitle: "Kurose and Ross: Video Streaming and Content Distribution"
-    rlink: "https://youtu.be/ak5bbb-xHLI"    
-  deliverables:
-  - dtitle: "Final Project: Project and Presentation Handed Out"
-    dlink: "Projects/Final"  
-    points: 100   
-  - dtitle: "Lab: TCP with Wireshark Due"
-    dlink: "http://www-net.cs.umass.edu/wireshark-labs/Wireshark_TCP_v8.0.pdf"
-    points: 10
-    submission_types: "written"        
-  - dtitle: "Lab: DNS with Wireshark Handed Out"
-    dlink: "http://www-net.cs.umass.edu/wireshark-labs/Wireshark_DNS_v8.0.pdf"     
-    points: 10      
-    submission_types: "written"       
-  readings:
-  - rtitle: "Redbook Ch. 15"
-    rlink: false  
-  - rtitle: "Kurose and Ross: Email"
-    rlink: "https://youtu.be/D3GMrOMR2dk"
-  - rtitle: "Why Files Become Bigger in Emails (Encoding) from Computerphile"
-    rlink: "https://www.youtube.com/watch?v=zV-fR7xA4Hc"       
-- week: "14"
-  date: "0"
-  title: "Security and Privacy"
-  link: "./Activities/SecurityPrivacy"    
-  readings:
-  - rtitle: "Redbook Ch. 22"
-    rlink: false  
-- week: "14"
-  date: "1"
-  title: "Security and Privacy"
-  deliverables:
-    - dtitle: "Lab: DNS with Wireshark Due"
-      dlink: "http://www-net.cs.umass.edu/wireshark-labs/Wireshark_DNS_v8.0.pdf"  
-      points: 10     
-      submission_types: "written"            
-    - dtitle: "Lab: SSL with Wireshark Handed Out"
-      dlink: "http://www-net.cs.umass.edu/wireshark-labs/Wireshark_SSL_v8.0.pdf"     
-      points: 10
-      submission_types: "written"               
-- week: "14"
-  date: "2"
-  title: "Security and Privacy with Public Key Cryptosystems"
-  deliverables:   
-    - dtitle: "Participation: Second Self-Assessment Due"
-      dlink: "./Assignments/Participation/SelfAssessment"
-      points: 10   
-      submission_types: "written"        
-    - dtitle: "Programming Assignment: TFTP Due"  
-      dlink: "Assignments/TFTP"
-      points: 100              
-- week: "15"
-  date: "0"
-  title: "Review"
-  deliverables:
-  - dtitle: "Final Project: Project and Presentation Due"
-    dlink: "Projects/Final"
-    points: 100
-  - dtitle: "Lab: SSL with Wireshark Due"
-    dlink: "http://www-net.cs.umass.edu/wireshark-labs/Wireshark_SSL_v8.0.pdf" 
-    points: 10   
-    submission_types: "written"            
+  - week: "0"
+    date: "1"
+    title: "Course Overview"
+    link: "../Ursinus-CS274-Overview"
+    deliverables:
+      - dtitle: "Programming Assignment: Warmup Handed Out"
+        dlink: "./Assignments/Warmup"
+        points: 10
+        submission_types: "noupload"
+  - week: "0"
+    date: "2"
+    title: "From Circuits to Systems: the 555 Timer"
+    link: "./Activities/555Timer"
+    deliverables:
+      - dtitle: "Participation: Pre-Assessment Handed Out"
+        dlink: "./Assignments/Participation/PreAssessment"
+        points: 10
+        submission_types: "written"
+    readings:
+      - rtitle: "Astable 555 Timer by Ben Eater"
+        rlink: "https://www.youtube.com/watch?v=kRlSFm519Bo"
+  - week: "0"
+    date: "3"
+    title: "Big Ideas"
+    link: "./Activities/BigIdeas"
+    readings:
+      - rtitle: "COD Chapter 1.1 - 1.5"
+        rlink: false
+  - week: "1"
+    date: "0"
+    title: "Number Systems"
+    link: "./Activities/NumberSystems"
+    readings:
+      - rtitle: "COD Chapter 2.4, 2.9"
+        rlink: false
+  - week: "1"
+    date: "1"
+    title: "Number Systems"
+    deliverables:
+      - dtitle: "Programming Assignment: Warmup Due"
+        dlink: "./Assignments/Warmup"
+        points: 10
+        submission_types: "noupload"
+  - week: "1"
+    date: "2"
+    title: "Lab: Number Systems"
+    deliverables:
+      - dtitle: "Lab: Number Systems Handed Out"
+        dlink: "./Labs/NumberSystems"
+        points: 100
+  - week: "1"
+    date: "3"
+    title: "The MIPS Assembly Language and Instructions"
+    link: "./Activities/MIPSInstructions"
+    deliverables:
+      - dtitle: "Participation: Pre-Assessment Due"
+        dlink: "./Assignments/Participation/PreAssessment"
+        points: 10
+        submission_types: "written"
+    readings:
+      - rtitle: "COD Chapter 2.1-2.3"
+        rlink: false
+  - week: "2"
+    date: "0"
+    title: "The MIPS Assembly Language and Instructions"
+    deliverables:
+      - dtitle: "Programming Assignment: Number System Conversions Handed Out"
+        dlink: "./Assignments/Programming/NumberSystemConversion"
+        points: 100
+  - week: "2"
+    date: "1"
+    title: "From MIPS to Machine Language"
+    link: "./Activities/MachineLanguage"
+    deliverables:
+      - dtitle: "Lab: Number Systems Due"
+        dlink: "./Labs/NumberSystems"
+        points: 100
+    readings:
+      - rtitle: "COD Chapter 2.5-2.6"
+        rlink: false
+      - rtitle: "Hello World from Scratch on a 6502 by Ben Eater"
+        rlink: "https://www.youtube.com/watch?v=LnzuMJLZRdU&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=1"
+  - week: "2"
+    date: "2"
+    title: "Lab: Introduction to MIPS Programming"
+    deliverables:
+      - dtitle: "Lab: Introduction to MIPS Programming Handed Out"
+        dlink: "./Labs/MIPSIntro"
+        points: 100
+  - week: "2"
+    date: "3"
+    title: "From MIPS to Machine Language"
+  - week: "3"
+    date: "0"
+    title: "MIPS Conditionals"
+    link: "./Activities/MIPSConditionals"
+    readings:
+      - rtitle: "COD Chapter 2.7"
+        rlink: false
+  - week: "3"
+    date: "1"
+    title: "MIPS Conditionals"
+    deliverables:
+      - dtitle: "Lab: Introduction to MIPS Programming Due"
+        dlink: "./Labs/MIPSIntro"
+        points: 100
+      - rtitle: "How CPUs Read Machine Code by Ben Eater"
+        rlink: "https://www.youtube.com/watch?v=yl8vPW5hydQ&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=2"
+  - week: "3"
+    date: "2"
+    title: "Lab: Bitwise Logical Operators"
+    deliverables:
+      - dtitle: "Lab: Bitwise Logical Operators Handed Out"
+        dlink: "./Labs/BitwiseLogic"
+        points: 100
+  - week: "3"
+    date: "3"
+    title: "MIPS Iteration"
+    link: "./Activities/MIPSIteration"
+    deliverables:
+      - dtitle: "Programming Assignment: Number System Conversions Due"
+        dlink: "./Assignments/Programming/NumberSystemConversion"
+        points: 100
+  - week: "4"
+    date: "0"
+    title: "MIPS Iteration"
+    deliverables:
+      - dtitle: "Programming Assignment: MIPS Programming Handed Out"
+        dlink: "./Assignments/MIPSProgramming"
+        points: 100
+  - week: "4"
+    date: "1"
+    title: "MIPS Procedures"
+    link: "./Activities/MIPSProcedures"
+    deliverables:
+      - dtitle: "Lab: Bitwise Logical Operators Due"
+        dlink: "./Labs/BitwiseLogic"
+        points: 100
+    readings:
+      - rtitle: "COD Chapter 2.8, 2.10"
+        rlink: false
+      - rtitle: "Assembly Language to Machine Code by Ben Eater"
+        rlink: "https://www.youtube.com/watch?v=oO8_2JJV0B4&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=3"
+  - week: "4"
+    date: "2"
+    title: "Lab: Implementing if Statements in MIPS Assembly"
+    deliverables:
+      - dtitle: "Lab: Implementing if Statements in MIPS Assembly Handed Out"
+        dlink: "./Labs/MIPSConditionals"
+        points: 100
+  - week: "4"
+    date: "3"
+    title: "MIPS Procedures"
+    deliverables:
+      - dtitle: "Midterm: Midterm Exam Handed Out"
+        dlink: false
+        points: 100
+        submission_types: "written"
+  - week: "5"
+    date: "0"
+    title: "The Stack"
+    link: "./Activities/Stack"
+    deliverables:
+      - dtitle: "Participation: First Self-Assessment Handed Out"
+        dlink: "./Assignments/Participation/SelfAssessment"
+        points: 10
+        submission_types: "written"
+  - week: "5"
+    date: "1"
+    title: "Data Structures"
+    link: "./Activities/DataStructures"
+    deliverables:
+      - dtitle: "Lab: Implementing if Statements in MIPS Assembly Due"
+        dlink: "./Labs/MIPSConditionals"
+        points: 100
+      - rtitle: "Controlling an LCD Screen by Ben Eater"
+        rlink: "https://www.youtube.com/watch?v=FY3zTUaykVo&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=4"
+  - week: "5"
+    date: "2"
+    title: "Lab: Implementing loops in MIPS Assembly"
+    deliverables:
+      - dtitle: "Lab: Implementing loops in MIPS Assembly Handed Out"
+        dlink: "./Labs/MIPSIteration"
+        points: 100
+  - week: "5"
+    date: "3"
+    title: "Data Structures"
+    deliverables:
+      - dtitle: "Midterm: Midterm Exam Due"
+        dlink: false
+        points: 100
+        submission_types: "written"
+  - week: "6"
+    date: "0"
+    title: "Recursion in MIPS"
+    link: "./Activities/MIPSRecursion"
+    deliverables:
+      - dtitle: "Programming Assignment: MIPS Programming Due"
+        dlink: "./Assignments/MIPSProgramming"
+        points: 100
+  - week: "6"
+    date: "1"
+    title: "Computer Arithmetic: Addition and Subtraction"
+    link: "./Activities/ComputerArithmeticAddSubtract"
+    deliverables:
+      - dtitle: "Lab: Implementing loops in MIPS Assembly Due"
+        dlink: "./Labs/MIPSIteration"
+        points: 100
+    readings:
+      - rtitle: "COD Chapter 3.1-3.2"
+        rlink: false
+      - rtitle: "What is a Stack by Ben Eater"
+        rlink: "https://www.youtube.com/watch?v=xBjQVxVxOxc&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=5"
+  - week: "6"
+    date: "2"
+    title: "Computer Arithmetic: Addition and Subtraction"
+  - week: "6"
+    date: "3"
+    title: "Computer Arithmetic: Addition and Subtraction Logic Gates"
+    link: "./Activities/ComputerArithmeticAddSubtractLogicGates"
+    deliverables:
+      - dtitle: "Participation: First Self-Assessment Due"
+        dlink: "./Assignments/Participation/SelfAssessment"
+        points: 10
+        submission_types: "written"
+  - week: "8"
+    date: "0"
+    title: "Computer Arithmetic: Multiplication and Division"
+    link: "./Activities/ComputerArithmeticMultiplyDivide"
+    readings:
+      - rtitle: "COD Chapter 3.3-3.4"
+        rlink: false
+  - week: "8"
+    date: "1"
+    title: "Computer Arithmetic: Multiplication and Division"
+      - rtitle: "RAM and Bus Timing by Ben Eater"
+        rlink: "https://www.youtube.com/watch?v=i_wrxBdXTgM&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=6"
+  - week: "8"
+    date: "2"
+    title: "Lab: Computer Arithmetic"
+    deliverables:
+      - dtitle: "Lab: Computer Arithmetic Handed Out"
+        dlink: "./Labs/ComputerArithmetic"
+        points: 100
+  - week: "8"
+    date: "3"
+    title: "Computer Arithmetic: Floating Point"
+    link: "./Activities/ComputerArithmeticFloatingPoint"
+    readings:
+      - rtitle: "COD Chapter 3.5"
+        rlink: false
+      - rtitle: "What Every Computer Scientist Should Know about Floating Point Arithmetic by David Goldberg"
+        rlink: "https://www.itu.dk/~sestoft/bachelor/IEEE754_article.pdf"
+  - week: "9"
+    date: "0"
+    title: "Computer Arithmetic: Floating Point"
+  - week: "9"
+    date: "1"
+    title: "Computer Arithmetic: The Carry Lookahead Adder"
+    link: "./Activities/ComputerArithmeticCarryLookahead"
+    deliverables:
+      - dtitle: "Lab: Computer Arithmetic Due"
+        dlink: "./Labs/ComputerArithmetic"
+        points: 100
+      - rtitle: "Subroutines by Ben Eater"
+        rlink: "https://www.youtube.com/watch?v=omI0MrTWiMU&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=7"
+  - week: "9"
+    date: "2"
+    title: "Lab: Floating Point"
+    deliverables:
+      - dtitle: "Lab: Floating Point Handed Out"
+        dlink: "./Labs/FloatingPoint"
+        points: 100
+  - week: "9"
+    date: "3"
+    title: "MIPS Processor Design: The ALU"
+    link: "./Activities/ALU"
+    deliverables:
+      - dtitle: "Programming Assignment: Floating Point Bit Fields Handed Out"
+        dlink: "./Assignments/FloatingPoint"
+        points: 100
+    readings:
+      - rtitle: "COD Chapter B.5"
+        rlink: false
+  - week: "10"
+    date: "0"
+    title: "MIPS Processor Design: The ALU"
+  - week: "10"
+    date: "1"
+    title: "The MIPS Datapath"
+    link: "./Activities/MIPSDatapath"
+    deliverables:
+      - dtitle: "Lab: Floating Point Due"
+        dlink: "./Labs/FloatingPoint"
+        points: 100
+    readings:
+      - rtitle: "COD Chapter 4.1-4.3"
+        rlink: false
+      - rtitle: "Computers on a Breadboard by Ben Eater"
+        rlink: "https://www.youtube.com/watch?v=fCbAafKLqC8&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=8"
+  - week: "10"
+    date: "2"
+    title: "Lab: ALU Design"
+    deliverables:
+      - dtitle: "Lab: ALU Design Handed Out"
+        dlink: "./Labs/ALUDesign"
+        points: 100
+  - week: "10"
+    date: "3"
+    title: "The MIPS Datapath"
+  - week: "11"
+    date: "0"
+    title: "The MIPS Single Cycle Design"
+    link: "./Activities/MIPSSingleCycle"
+    readings:
+      - rtitle: "COD Chapter 4.4"
+        rlink: false
+  - week: "11"
+    date: "1"
+    title: "The MIPS Single Cycle Design"
+    deliverables:
+      - dtitle: "Lab: ALU Design Due"
+        dlink: "./Labs/ALUDesign"
+        points: 100
+      - rtitle: "How Assembly Language Loops Work by Ben Eater"
+        rlink: "https://www.youtube.com/watch?v=ZYJIakkcLYw&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=9"
+  - week: "11"
+    date: "2"
+    title: "Lab: Single Cycle Datapath Design"
+    deliverables:
+      - dtitle: "Lab: Single Cycle Datapath Design Handed Out"
+        dlink: "./Labs/SingleCycleDesign"
+        points: 100
+  - week: "11"
+    date: "3"
+    title: "The MIPS Multi Cycle Design"
+    link: "./Activities/MIPSMultiCycle"
+    deliverables:
+      - dtitle: "Programming Assignment: Floating Point Bit Fields Due"
+        dlink: "./Assignments/FloatingPoint"
+        points: 100
+    readings:
+      - rtitle: "COD Chapter 4.5"
+        rlink: false
+  - week: "12"
+    date: "0"
+    title: "Pipelining"
+    link: "./Activities/MIPSPipeline"
+    readings:
+      - rtitle: "COD Chapter 4.6-4.7"
+        rlink: false
+  - week: "12"
+    date: "1"
+    title: "Pipelining"
+    deliverables:
+      - dtitle: "Lab: Single Cycle Datapath Design Due"
+        dlink: "./Labs/SingleCycleDesign"
+        points: 100
+      - rtitle: "Computer Arithmetic by Ben Eater"
+        rlink: "https://www.youtube.com/watch?v=v3-a-zqKfgA&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=10"
+  - week: "12"
+    date: "2"
+    title: "Lab: Single Cycle Control"
+    deliverables:
+      - dtitle: "Lab: Single Cycle Control Handed Out"
+        dlink: "./Labs/SingleCycleControl"
+        points: 100
+  - week: "12"
+    date: "3"
+    title: "Pipelining: Data and Control Hazards"
+    link: "./Activities/MIPSPipelineHazards"
+    readings:
+      - rtitle: "COD Chapter 4.8-4.9"
+        rlink: false
+  - week: "13"
+    date: "0"
+    title: "Pipelining: Data and Control Hazards"
+  - week: "13"
+    date: "1"
+    title: "The Memory Hierarchy: Cache Design"
+    link: "./Activities/Cache"
+    deliverables:
+      - dtitle: "Lab: Single Cycle Control Due"
+        dlink: "./Labs/SingleCycleControl"
+        points: 100
+    readings:
+      - rtitle: "COD Chapter 5.1-5.4"
+        rlink: false
+  - week: "13"
+    date: "2"
+    title: "Lab: Cache"
+    deliverables:
+      - dtitle: "Lab: Cache Handed Out"
+        dlink: "./Labs/Cache"
+        points: 100
+  - week: "13"
+    date: "3"
+    title: "The Memory Hierarchy: Cache Design"
+    deliverables:
+      - dtitle: "Participation: Second Self-Assessment Handed Out"
+        dlink: "./Assignments/Participation/SelfAssessment"
+        points: 10
+        submission_types: "written"
+  - week: "14"
+    date: "0"
+    title: "The Memory Hierarchy: Cache Design"
+    deliverables:
+      - dtitle: "Programming Assignment: Cache Simulator Handed Out"
+        dlink: "./Assignments/CacheSimulator"
+        points: 100
+  - week: "14"
+    date: "1"
+    title: "The Memory Hierarchy: Virtual Memory"
+    link: "./Activities/VirtualMemory"
+    deliverables:
+      - dtitle: "Lab: Cache Due"
+        dlink: "./Labs/Cache"
+        points: 100
+    readings:
+      - rtitle: "COD Chapter 5.7"
+        rlink: false
+  - week: "14"
+    date: "2"
+    title: "The Memory Hierarchy: Virtual Memory"
+  - week: "14"
+    date: "3"
+    title: "Review"
+  - week: "15"
+    date: "0"
+    title: "Review"
+    deliverables:
+      - dtitle: "Participation: Second Self-Assessment Due"
+        dlink: "./Assignments/Participation/SelfAssessment"
+        points: 10
+        submission_types: "written"
+  - week: "15"
+    date: "1"
+    title: "Review"
+    deliverables:
+      - dtitle: "Programming Assignment: Cache Simulator Due"
+        dlink: "./Assignments/CacheSimulator"
+        points: 100
+          
 university:
   semester: "Spring"
   academicyear: "2022-23"
@@ -749,9 +691,6 @@ university:
   - date: "2023/03/10"   
   
 ---
-
-## Overview
-Computer Networks study interconnected computing systems at scale from many different perspectives.  Moving a bit from one computer to another over the Internet is a [complex process](https://www.youtube.com/watch?v=9BGWrLiT9qs).  The bit must travel to its destination from one computer to another, which must have some way of knowing where that bit is trying to go so that it can be moved along the right path.  Wireless communications (and even wired connections) are subject to noise and interference that may corrupt the bit as it transits between any two of those computers.  We need ways to manage these destination addresses, optimal pathways, and mechanisms to detect corrupted messages.  Sometimes, computers might become too overworked to forward your message, and they can be lost: worse yet, we cannot communicate this situation back to the sender (after all, if we had the resources to do so, we could have just forwarded the message properly!).  The sender, then, needs a way to ensure that their message was received, and received in-tact.  Ideally, we would do so efficiently: if new, faster paths to the destination appear (sort of like new expressways on the interstate highway system), we'd like to find out about them and utilize them, traffic permitting.  Even then, we need to define what those bits represent: an e-mail, a webpage, a function call, or data like a shopping cart.  And beyond all this, we need a mechanism to enable these communications to occur privately and securely: we want to ensure that the sender and receiver can validate one another's identity and privilege.  To facilitate all of this, we organize the study of computer networks into a "layered" model, in which we investigate each of these concepts independently of the others.  In fact, networks are implemented according to this layered model, which greatly simplifies the apparent complexity of the network as a whole: we implement an independent algorithm for each concept, and they interact only as much as is required (typically, only with one or two neighboring algorithms, which, in turn interact with their immediately adjacent layers).  
 
 ## Homework
 
