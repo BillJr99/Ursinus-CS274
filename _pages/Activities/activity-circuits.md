@@ -62,7 +62,7 @@ info:
           </tr>
         </tbody>
         </table>        
-      title: Another Transistor-based Logic Gate: the OR Gate
+      title: "Another Transistor-based Logic Gate: the OR Gate"
       questions:
         - "Describe the current behavior in this gate, in terms of the two inputs A and B."
         - "Fill in the truth table above."
