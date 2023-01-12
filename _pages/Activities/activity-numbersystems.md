@@ -181,7 +181,7 @@ info:
         <a title="Dgoetze, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Positionalnotationtable.jpg"><img width="512" alt="Positionalnotationtable" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Positionalnotationtable.jpg/512px-Positionalnotationtable.jpg"></a>
       title: Converting From Binary to Hexidecimal
       questions:
-        - "What is the ASCII value of the letter <code>A</code>?  What is this value in binary, decimal, and hexidecimal?"
+        - "What is the ASCII value of the letter <code>C</code> and the letter <code>K</code>?  What are these values in binary, decimal, and hexidecimal?"
         - Convert 0b1000100001 from binary to hexidecimal.
         - Convert 0b10001001 from binary to hexidecimal.
         - Convert 0b101110111 from binary to hexidecimal.
