@@ -512,7 +512,7 @@ DTSTAMP:20230302T000000Z
 DTSTART;VALUE=DATE:20230302
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:\nReading: How Computers Add Numbers by Ben Eater https://www.youtube.com/watch?v=wvJc9CZcvBc
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
