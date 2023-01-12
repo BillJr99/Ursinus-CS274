@@ -405,6 +405,9 @@ schedule:
   - week: "6"
     date: "2"
     title: "Computer Arithmetic: Addition and Subtraction"
+    readings:
+      - rtitle: "How Computers Add Numbers by Ben Eater"
+        rlink: "https://www.youtube.com/watch?v=wvJc9CZcvBc"
   - week: "6"
     date: "3"
     title: "Computer Arithmetic: Addition and Subtraction Logic Gates"
