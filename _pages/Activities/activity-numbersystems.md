@@ -61,7 +61,7 @@ function check() {
     var dec = document.getElementById("decimal").value;
     dec = parseInt(dec, 10);
     
-    console.log(dec.toString() + " " + bin.toString() + " " + hex.toString());
+    console.log("Decimal: " + dec.toString() + " Binary: " + bin.toString() + " Hexidecimal: " + hex.toString());
     
     if(hex == bin && dec == bin) {
         alert("Correct!");
@@ -71,12 +71,12 @@ function check() {
 }
 </script>
 
-Decimal Value: <input id="decimal" name="decimal" />
-Binary Value: <input id="binary" name="binary" />
-Hexidecimal Value: <input id="binary" name="binary" />
-
-<button id="gen10" onclick="get10()">Generate Decimal</button>
-<button id="gen2" onclick="gen2()">Generate Binary</button>
-<button id="gen16" onclick="gen16()">Generate Hexidecimal</button>
-
-<button id="check" onclick="check()">Check</button>
+Decimal Value: <input id="decimal" name="decimal" /><br>
+Binary Value: <input id="binary" name="binary" /><br>
+Hexidecimal Value: <input id="hexidecimal" name="hexidecimal" /><br>
+<br>
+<button id="bgen10" onclick="gen10()">Generate Decimal</button><br>
+<button id="bgen2" onclick="gen2()">Generate Binary</button><br>
+<button id="bgen16" onclick="gen16()">Generate Hexidecimal</button><br>
+<br>
+<button id="bcheck" onclick="check()">Check</button>
