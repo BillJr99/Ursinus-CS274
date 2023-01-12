@@ -75,8 +75,8 @@ Decimal Value: <input id="decimal" name="decimal" />
 Binary Value: <input id="binary" name="binary" />
 Hexidecimal Value: <input id="binary" name="binary" />
 
-<button id="gen10" onclick=get10()>Generate Decimal</button>
-<button id="gen2" onclick=gen2()>Generate Binary</button>
-<button id="gen16" onclick=gen16()>Generate Hexidecimal</button>
+<button id="gen10" onclick="get10()">Generate Decimal</button>
+<button id="gen2" onclick="gen2()">Generate Binary</button>
+<button id="gen16" onclick="gen16()">Generate Hexidecimal</button>
 
-<button id="check" onclick=check()>Check</button>
+<button id="check" onclick="check()">Check</button>
