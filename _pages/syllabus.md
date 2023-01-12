@@ -199,7 +199,7 @@ schedule:
   - week: "0"
     date: "2"
     title: "From Circuits to Systems: the 555 Timer"
-    link: "./Activities/555Timer"
+    link: "./Activities/Circuits"
     deliverables:
       - dtitle: "Participation: Pre-Assessment Handed Out"
         dlink: "./Assignments/Participation/PreAssessment"
