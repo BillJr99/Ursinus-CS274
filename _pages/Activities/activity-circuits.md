@@ -1,6 +1,6 @@
 ---
 layout: activity
-permalink: /Activities/555Timer
+permalink: /Activities/Circuits
 title: "CS274: Computer Architecture - From Circuits to Systems: the 555 Timer"
 excerpt: "CS274: Computer Architecture - From Circuits to Systems: the 555 Timer"
 
