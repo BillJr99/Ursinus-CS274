@@ -104,6 +104,8 @@ info:
     - model: |
         <div align="center">
         Multiply the digit (1 or 0) by its place value (2 to the power of the digit position, right to left, beginning at the 1 place), and add up the result.
+        <br> 
+        In the example in the table below: 00001011001 = 1 * 1 + 0 * 2 + 0 * 4 + 1 * 8 + 1 * 16 + 0 * 32 + 1 * 64 + 0 * 128 + 0 ... = 1 + 8 + 16 + 64 = 89
         <br>
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[        
         function convert_binary_to_decimal(x) {
