@@ -125,7 +125,7 @@ DTSTAMP:20230119T000000Z
 DTSTART;VALUE=DATE:20230119
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/555Timer\nReading: Astable 555 Timer by Ben Eater https://www.youtube.com/watch?v=kRlSFm519Bo\nDeliverable: Participation: Pre-Assessment Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/Participation/PreAssessment
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/Circuits\nReading: Astable 555 Timer by Ben Eater https://www.youtube.com/watch?v=kRlSFm519Bo\nDeliverable: Participation: Pre-Assessment Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/Participation/PreAssessment
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
