@@ -602,7 +602,7 @@ DTSTAMP:20230322T000000Z
 DTSTART;VALUE=DATE:20230322
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/ComputerArithmeticCarryLookahead\nReading: Subroutines by Ben Eater https://www.youtube.com/watch?v=omI0MrTWiMU&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=7\nDeliverable: Lab: Computer Arithmetic Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/ComputerArithmetic
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/ALU\nReading: Subroutines by Ben Eater https://www.youtube.com/watch?v=omI0MrTWiMU&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=7\nReading: COD Chapter B.5\nDeliverable: Lab: Computer Arithmetic Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/ComputerArithmetic
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -638,7 +638,7 @@ DTSTAMP:20230324T000000Z
 DTSTART;VALUE=DATE:20230324
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/ALU\nReading: COD Chapter B.5\nDeliverable: Programming Assignment: Floating Point Bit Fields Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/FloatingPoint
+DESCRIPTION:\nDeliverable: Programming Assignment: Floating Point Bit Fields Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/FloatingPoint
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
