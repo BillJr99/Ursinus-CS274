@@ -31,6 +31,7 @@ info:
             li $v0, 10
             syscall    
         ]]></script>
+        </div>
       title: A First Program
       questions:
         - Using your best guess, write comments for each line of code.  What do you think they do?
@@ -452,7 +453,7 @@ info:
 
     - model: |
         <div align="center">
-        <code>A = 5 + 10</code>
+        <code>printf("Hello, world!");</code>
         <br>
         <script type="syntaxhighlighter" class="brush: mips"><![CDATA[        
                 .text
@@ -472,6 +473,7 @@ info:
                 .data
         msg:    .asciiz "Hello, world!"  
         ]]></script>
+        </div>
       title: System Calls
       questions:
         - What do you think system call number 4 does, and what do you think system call number 10 does?
