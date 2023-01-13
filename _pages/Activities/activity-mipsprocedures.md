@@ -9,8 +9,6 @@ info:
     - To read and write procedure calls
     - To save and restore the stack when calling procedures
     - To use registers and save registers according to standard MIPS calling conventions
-    - To properly use recursion and save the stack
-    - To diagram a call stack trace for a given program
 
   models: 
     - model: |
@@ -95,19 +93,10 @@ info:
         - What does this program do?
         - "Modify this program to execute the algorithm in a procedure, using the argument registers to correspond to the two memory addresses to be swapped.  Call the procedure from <code>main</code>."
         
-    - model: |
-        <script src="https://gist.github.com/Peng-YM/be70d28079833bd701b05a5ce7772ff1.js"></script>
-      title: A Recursive Algorithm
-      questions:
-        - "Draw a call stack for a call to <code>factorial(3)</code>."
-        - "What registers did <code>factorial</code> save to the stack, and why?  In particular, why did it save <code>ra</code>?"
-        - "Remove <code>ra</code> from the stack and re-run this program.  What happens, and why?"
-        - How might one implement the Fibonacci sequence?
 
 tags:
   - mips
   - procedures
-  - recursion
 
 ---
 
