@@ -34,6 +34,7 @@ info:
       title: A First Program
       questions:
         - Using your best guess, write comments for each line of code.  What do you think they do?
+        - Save and import this program into the MIPS Simulator and run it.  What happens?
         
     - model: |
         <style type="text/css">
@@ -474,6 +475,7 @@ info:
       title: System Calls
       questions:
         - What do you think system call number 4 does, and what do you think system call number 10 does?
+        - Save and import this program into the MIPS Simulator and run it.  What happens?
 
   additional_reading:
     - link: https://shawnzhong.github.io/JsSpim/
