@@ -377,6 +377,8 @@ info:
       title: MIPS Reference Sheet
     - link: https://en.wikibooks.org/wiki/MIPS_Assembly/Instruction_Formats
       title: MIPS Assembly Formats
+    - link: https://courses.missouristate.edu/kenvollmar/mars/help/syscallhelp.html
+      title: MIPS System Call Table
       
 tags:
   - mips

@@ -120,6 +120,7 @@ info:
         - "Where is the &quot;answer&quot; register (<code>rd</code> in an R type instruction, and <code>rt</code> in an I type instruction) typically found in a MIPS assembly instruction, and where is it typically found in the machine code translation?"
         - "The <code>shamt</code> field holds the number of bits that a register shifts left or right.  In your MIPS reference sheet, look up what instruction would consist of all 0 bits.  What might you call this instruction, and what does it do?"
         - "How can you tell if an instruction is R type or not?  If it is not R type, how can you tell if it is J type or I type?"
+        - "Why do you think the designers stopped at only 3 instruction formats?"
         - "Translate the instruction <code>addi $t1, $t2, $t3</code> to a MIPS 32 bit machine instruction."
         - "Translate the 32 bit instruction 0x00571020 from hexidecimal to binary, and then to a MIPS assembly instruction."
         
