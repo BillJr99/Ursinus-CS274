@@ -451,8 +451,8 @@ schedule:
     title: "Computer Arithmetic: Floating Point"
   - week: "9"
     date: "1"
-    title: "Computer Arithmetic: The Carry Lookahead Adder"
-    link: "./Activities/ComputerArithmeticCarryLookahead"
+    title: "MIPS Processor Design: The ALU"
+    link: "./Activities/ALU"
     deliverables:
       - dtitle: "Lab: Computer Arithmetic Due"
         dlink: "./Labs/ComputerArithmetic"
@@ -460,6 +460,8 @@ schedule:
     readings:
       - rtitle: "Subroutines by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=omI0MrTWiMU&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=7"
+      - rtitle: "COD Chapter B.5"
+        rlink: false        
   - week: "9"
     date: "2"
     title: "Lab: Floating Point"
@@ -470,14 +472,10 @@ schedule:
   - week: "9"
     date: "3"
     title: "MIPS Processor Design: The ALU"
-    link: "./Activities/ALU"
     deliverables:
       - dtitle: "Programming Assignment: Floating Point Bit Fields Handed Out"
         dlink: "./Assignments/FloatingPoint"
         points: 100
-    readings:
-      - rtitle: "COD Chapter B.5"
-        rlink: false
   - week: "10"
     date: "0"
     title: "MIPS Processor Design: The ALU"
