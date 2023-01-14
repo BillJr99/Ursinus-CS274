@@ -15,7 +15,7 @@ info:
   models:
     - model: |
         <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/dcd36557db1b343d74991d99aeb50aadce64eb3a" alt="Scientific Notation">
-      title: Scientific Notation: a Review
+      title: "Scientific Notation: a Review"
       questions:
         - What are the components of every value written in scientific notation?
         - "How might you &quot;normalize&quot; this value by writing it with only a single digit in the one's place?"
