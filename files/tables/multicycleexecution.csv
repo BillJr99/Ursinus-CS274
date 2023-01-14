@@ -1,0 +1,6 @@
+Fetch,Decode,ALU,Memory Access,Writeback
+IR = Mem[PC],A = Reg[rs],lw/sw: ALUOut = A+immediate (IR[15:0]),lw: MDR = Mem[ALUOut],lw/sw: Reg[rt] = MDR
+ALUOut = PC + 4,B = Reg[rt],R type: ALUOut = func,sw: Mem[ALUOut] = B,R-type: Reg[rd] = ALUOut
+PC += 4,"ALUOut = immediate (IR[15:0]) <<2
+sign extended to 32 bits","beq: ALUOut = A - B; if zero, PC = ALUOut",R-type: skip to writeback,
+,,j: PC = jump target,,
