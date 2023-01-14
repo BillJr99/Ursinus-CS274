@@ -665,7 +665,7 @@ DTSTAMP:20230329T000000Z
 DTSTART;VALUE=DATE:20230329
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/MIPSDatapath\nReading: COD Chapter 4.1-4.3\nReading: Computers on a Breadboard by Ben Eater https://www.youtube.com/watch?v=fCbAafKLqC8&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=8\nDeliverable: Lab: Floating Point Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/FloatingPoint
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/MIPSSingleCycle\nReading: COD Chapter 4.1-4.4\nReading: Computers on a Breadboard by Ben Eater https://www.youtube.com/watch?v=fCbAafKLqC8&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=8\nDeliverable: Lab: Floating Point Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/FloatingPoint
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -701,7 +701,7 @@ DTSTAMP:20230403T000000Z
 DTSTART;VALUE=DATE:20230403
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/MIPSSingleCycle\nReading: COD Chapter 4.4
+DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
