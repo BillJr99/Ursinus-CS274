@@ -76,6 +76,16 @@ info:
       questions:
         - "How does this unit work in tandem with the forwarding unit for load data hazards?"          
         - "How does this approach ensure we do not skip the currently executing instruction (but instead re-issue it with a no-op feeding into the execute stage)?"  
+        
+    - model: |
+        <div align="center">
+        25% load instructions, 10% of which result in hazards<br>
+        50% R-type instructions, 20% of which require forwarding<br>
+        25% branch instructions, 50% of which are taken
+        </div>
+      title: MIPS Pipeline Performance
+      questions:
+        - "How many penalty cycles result from stalling the pipeline, on average, per instruction?"          
 
   additional_reading:
     - link: "https://hackmd.io/@yW7HKRexRASTmH3kBDXQpQ/Sy395BDg5"
