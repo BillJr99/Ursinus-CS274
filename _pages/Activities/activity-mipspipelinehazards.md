@@ -51,8 +51,6 @@ info:
         <img src="https://i.imgur.com/8PtYa15.png" alt="Pipelined Datapath and Control with Forwarding">
         <br>
         <div align="center">
-        <code>A = 5 + 10</code>
-        <br>
         <script type="syntaxhighlighter"><![CDATA[        
         if EX/MEM.RegWrite == 1 && EX/MEM.rd == ID/EX.rs && EX/MEM.rd != 0 then ForwardA = 0b10
         elif MEM/WB.RegWrite == 1 && MEM/WB.rd == ID/EX.rs && MEM/WB.rd != 0 then ForwardA = 0b01

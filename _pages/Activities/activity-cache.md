@@ -12,8 +12,6 @@ info:
   models:
     - model: |
         <div align="center">
-        <code>A = 5 + 10</code>
-        <br>
         <script type="syntaxhighlighter" class="brush: c"><![CDATA[        
             int arr[N][M]; // assume this is initialized with dimensions N rows by M cols
             sum = 0;
