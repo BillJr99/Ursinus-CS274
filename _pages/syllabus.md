@@ -481,14 +481,14 @@ schedule:
     title: "MIPS Processor Design: The ALU"
   - week: "10"
     date: "1"
-    title: "The MIPS Datapath"
-    link: "./Activities/MIPSDatapath"
+    title: "The MIPS Single Cycle Design"
+    link: "./Activities/MIPSSingleCycle"    
     deliverables:
       - dtitle: "Lab: Floating Point Due"
         dlink: "./Labs/FloatingPoint"
         points: 100
     readings:
-      - rtitle: "COD Chapter 4.1-4.3"
+      - rtitle: "COD Chapter 4.1-4.4"
         rlink: false
       - rtitle: "Computers on a Breadboard by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=fCbAafKLqC8&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=8"
@@ -501,14 +501,10 @@ schedule:
         points: 100
   - week: "10"
     date: "3"
-    title: "The MIPS Datapath"
+    title: "The MIPS Single Cycle Design"
   - week: "11"
     date: "0"
     title: "The MIPS Single Cycle Design"
-    link: "./Activities/MIPSSingleCycle"
-    readings:
-      - rtitle: "COD Chapter 4.4"
-        rlink: false
   - week: "11"
     date: "1"
     title: "The MIPS Single Cycle Design"

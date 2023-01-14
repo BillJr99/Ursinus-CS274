@@ -17,7 +17,7 @@ info:
         <div align="center">
         <img src="https://sites.google.com/site/mikekraseksblog/_/rsrc/1371652810451/student-name-tech-portfolio/computer-technology/Logic_gate.gif" alt="Circuit Building Blocks">
         <br>
-        sum = (A xor B) xor carryIn
+        sum = (A xor B) xor carryIn<br>
         carryOut = ((A xor B) and carryIn) or (A and B)
         <br>
         <style type="text/css">
