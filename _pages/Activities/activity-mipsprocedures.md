@@ -62,7 +62,7 @@ info:
       questions:
         - "Why was it important to set <code>a0</code> prior to executing <code>syscall 1</code> above?"
         - "Given that register values are 32 bits in size, why did we subtract 4 from the stack pointer prior to saving register <code>s0</code>, and add 4 back to it when restoring the register from memory?"
-        - "Why was it necessary to save register <code>s0</code> to the stack in the <code>add5</code> function?  
+        - "Why was it necessary to save register <code>s0</code> to the stack in the <code>add5</code> function?"
         - "If we had used <code>t0</code> instead of <code>s0</code> in <code>add5</code>, would we have had to save it to the stack?  What is the significance of this?"
         
     - model: |
