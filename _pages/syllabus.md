@@ -601,18 +601,14 @@ schedule:
         points: 100
   - week: "14"
     date: "1"
-    title: "The Memory Hierarchy: Virtual Memory"
-    link: "./Activities/VirtualMemory"
+    title: "The Memory Hierarchy: Cache Design"
     deliverables:
       - dtitle: "Lab: Cache Due"
         dlink: "./Labs/Cache"
         points: 100
-    readings:
-      - rtitle: "COD Chapter 5.7"
-        rlink: false
   - week: "14"
     date: "2"
-    title: "The Memory Hierarchy: Virtual Memory"
+    title: "The Memory Hierarchy: Cache Design"
   - week: "14"
     date: "3"
     title: "Review"
