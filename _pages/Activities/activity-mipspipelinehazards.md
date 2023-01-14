@@ -51,12 +51,14 @@ info:
         <img src="https://i.imgur.com/8PtYa15.png" alt="Pipelined Datapath and Control with Forwarding">
         <br>
         <div align="center">
-        <code>
+        <code>A = 5 + 10</code>
+        <br>
+        <script type="syntaxhighlighter"><![CDATA[        
         if EX/MEM.RegWrite == 1 && EX/MEM.rd == ID/EX.rs && EX/MEM.rd != 0 then ForwardA = 0b10
         elif MEM/WB.RegWrite == 1 && MEM/WB.rd == ID/EX.rs && MEM/WB.rd != 0 then ForwardA = 0b01
         if EX/MEM.RegWrite == 1 && EX/MEM.rd == ID/EX.rt && EX/MEM.rd != 0 then ForwardB = 0b10
-        elif MEM/WB.RegWrite == 1 && MEM/WB.rd == ID/EX.rt && MEM/WB.rd != 0 then ForwardA = 0b01
-        </code>
+        elif MEM/WB.RegWrite == 1 && MEM/WB.rd == ID/EX.rt && MEM/WB.rd != 0 then ForwardA = 0b01  
+        ]]></script>
         </div>
       title: Forwarding Detection
       questions:
@@ -66,11 +68,11 @@ info:
         <img src="https://i.imgur.com/LFrSwm5.png" alt="Example load hazard requiring a stall followed by a forward from the writeback stage">
         <br>
         <img src="https://i.imgur.com/416Zt0q.png" alt="Pipelined Datapath and Control with Hazard Detection">
-        <br>
+        <br>        
         <div align="center">
-        <code>
+        <script type="syntaxhighlighter"><![CDATA[        
         if ID/EX.MemRead && (ID/EX.rt == IF/ID.rs || ID/EX.rt == IF/ID.rt) then stall by overriding ID/EX control to 0, PCWrite to 0, and IF/ID to flush
-        </code>
+        ]]></script>        
         </div>
       title: Hazard Detection for Load (Control Hazard) and Branch (Data Hazard) Stalls
       questions:
