@@ -37,7 +37,13 @@ info:
         xxx
       title: "Status Bits (Zero and Less)"
       questions:
-        - xxx                  
+        - xxx   
+
+    - model: |
+        xxx
+      title: "Parallelized Addition with the Carry Lookahead Adder"
+      questions:
+        - xxx          
 
   additional_reading:
     - link: xxx

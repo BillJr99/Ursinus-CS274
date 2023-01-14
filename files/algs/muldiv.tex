@@ -1,0 +1,116 @@
+\documentclass[11pt]{article}
+\usepackage[margin=4cm]{geometry}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\begin{document}
+
+
+\begin{algorithm}[hbt!]
+\caption{A Basic Multiplication Algorithm Based on Classic Decimal Multiplication}\label{alg:mul1}
+\begin{algorithmic}
+
+\For{$i = 0$; $i < 32$; $i{+}{+}$}
+    \If{$multiplier_{0}$ == 1}
+        \State $product \gets product + multiplicand$    
+    \EndIf
+    
+    \State $multiplicand \gets multiplicand << 1$
+    \State $multiplier \gets multiplier >> 1$
+\EndFor 
+
+\end{algorithmic}
+\end{algorithm}
+
+%%%%%%%%
+\pagebreak
+
+\begin{algorithm}[hbt!]
+\caption{An Improved Algorithm that Adds to the Left Half of the 64-bit Product Register and Shifts into Place on the Right Half so that a 32-bit ALU Can be Used}\label{alg:mul2}
+\begin{algorithmic}
+
+\For{$i = 0$; $i < 32$; $i{+}{+}$}
+    \If{$multiplier_{0}$ == 1}
+        \State $product_{31:16} \gets product_{31:16} + multiplicand$    
+    \EndIf
+    
+    \State $product \gets product >> 1$
+    \State $multiplier \gets multiplier >> 1$
+\EndFor 
+
+\end{algorithmic}
+\end{algorithm}
+
+%%%%%%%%
+\pagebreak
+
+\begin{algorithm}[hbt!]
+\caption{A Further Improved Algorithm that Utilizes the Unused Right Half of the 64-bit Product Register (which will be shifted out of the register) as the Multiplier (eliminating a register)}\label{alg:mul3}
+\begin{algorithmic}
+
+\State $product{15:0} \gets multiplier$
+
+\For{$i = 0$; $i < 32$; $i{+}{+}$}
+    \If{$product{0}$ == 1}
+        \State $product_{31:16} \gets product_{31:16} + multiplicand$    
+    \EndIf
+    
+    \State $multiplier \gets multiplier >> 1$
+\EndFor 
+
+\end{algorithmic}
+\end{algorithm}
+
+%%%%%%%%
+\pagebreak
+
+\begin{algorithm}[hbt!]
+\caption{A Binary Integer Division Algorithm}\label{alg:div1}
+\begin{algorithmic}
+
+\For{$i = 0$; $i < 33$; $i{+}{+}$}
+    \State $remainder \gets remainder - divisor$
+    
+    \If{$remainder \ge 0$}
+        \State $quotient \gets quotient << 1$
+        \State $quotient_{0} \gets 1$
+    \Else
+        \State $remainder \gets remainder + divisor$
+        \State $quotient \gets quotient << 1$
+        \State $quotient_{0} \gets 0$    
+    \EndIf
+    
+    \State $divisor \gets divisor >> 1$
+\EndFor
+
+\end{algorithmic}
+\end{algorithm}
+
+%%%%%%%%
+\pagebreak
+
+\begin{algorithm}[hbt!]
+\caption{An Improved Binary Integer Division Algorithm Using a 32-bit ALU and that Uses the Unused Left Half of the Remainder as the Dividend}\label{alg:div1}
+\begin{algorithmic}
+
+\State $remainder_{31:16} \gets dividend$
+\State $remainder \gets remainder << 1$
+
+\For{$i = 0$; $i < 32$; $i{+}{+}$}
+    \State $remainder_{31:16} \gets remainder_{31:16} - divisor$
+    
+    \If{$remainder \ge 0$}
+        \State $remainder \gets remainder << 1$
+        \State $remainder_{0} \gets 1$
+    \Else
+        \State $remainder_{31:16} \gets remainder_{31:16} + divisor$
+        \State $remainder \gets remainder << 1$
+        \State $remainder_{0} \gets 0$    
+    \EndIf
+    
+    \State $remainder_{31:16} \gets remainder_{31:16} >> 1$
+\EndFor
+
+\end{algorithmic}
+\end{algorithm}
+
+\end{document}
