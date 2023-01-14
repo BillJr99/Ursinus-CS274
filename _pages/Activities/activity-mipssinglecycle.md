@@ -22,6 +22,8 @@ info:
         
     - model: |
         <img src="https://harttle.land/assets/img/blog/mips-basic.png" alt="Control Signals for the MIPS Single Cycle Components">
+        <br>
+        <img src="https://i.imgur.com/VFBxSlq.png" alt="Description of the Control Signals">
       title: Using Control Signals to Manipulate the Datapath Components
       questions:
         - "In your own words, describe the function of each control line."
