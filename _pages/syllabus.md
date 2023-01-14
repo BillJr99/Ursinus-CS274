@@ -507,7 +507,8 @@ schedule:
     title: "The MIPS Single Cycle Design"
   - week: "11"
     date: "1"
-    title: "The MIPS Single Cycle Design"
+    title: "The MIPS Multi Cycle Design"
+    link: "./Activities/MIPSMultiCycle"    
     deliverables:
       - dtitle: "Lab: ALU Design Due"
         dlink: "./Labs/ALUDesign"
@@ -515,6 +516,8 @@ schedule:
     readings:
       - rtitle: "How Assembly Language Loops Work by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=ZYJIakkcLYw&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=9"
+      - rtitle: "COD Chapter 4.5"
+        rlink: false        
   - week: "11"
     date: "2"
     title: "Lab: Single Cycle Datapath Design"
@@ -525,14 +528,10 @@ schedule:
   - week: "11"
     date: "3"
     title: "The MIPS Multi Cycle Design"
-    link: "./Activities/MIPSMultiCycle"
     deliverables:
       - dtitle: "Programming Assignment: Floating Point Bit Fields Due"
         dlink: "./Assignments/FloatingPoint"
         points: 100
-    readings:
-      - rtitle: "COD Chapter 4.5"
-        rlink: false
   - week: "12"
     date: "0"
     title: "Pipelining"
