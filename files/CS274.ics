@@ -719,7 +719,7 @@ DTSTAMP:20230405T000000Z
 DTSTART;VALUE=DATE:20230405
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: How Assembly Language Loops Work by Ben Eater https://www.youtube.com/watch?v=ZYJIakkcLYw&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=9\nDeliverable: Lab: ALU Design Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/ALUDesign
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/MIPSMultiCycle\nReading: How Assembly Language Loops Work by Ben Eater https://www.youtube.com/watch?v=ZYJIakkcLYw&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=9\nReading: COD Chapter 4.5\nDeliverable: Lab: ALU Design Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/ALUDesign
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -755,7 +755,7 @@ DTSTAMP:20230407T000000Z
 DTSTART;VALUE=DATE:20230407
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/MIPSMultiCycle\nReading: COD Chapter 4.5\nDeliverable: Programming Assignment: Floating Point Bit Fields Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/FloatingPoint
+DESCRIPTION:\nDeliverable: Programming Assignment: Floating Point Bit Fields Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Assignments/FloatingPoint
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
