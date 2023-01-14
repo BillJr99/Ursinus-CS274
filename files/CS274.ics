@@ -908,7 +908,7 @@ DTSTAMP:20230426T000000Z
 DTSTART;VALUE=DATE:20230426
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/VirtualMemory\nReading: COD Chapter 5.7\nDeliverable: Lab: Cache Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/Cache
+DESCRIPTION:\nDeliverable: Lab: Cache Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/Cache
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
