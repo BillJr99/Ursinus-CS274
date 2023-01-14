@@ -1,0 +1,5 @@
+A,B,Carry State,Logic formula
+0,0,kill,A NOR B
+0,1,propagate,A XOR B
+1,0,propagate,A XOR B
+1,1,generate,A AND B
