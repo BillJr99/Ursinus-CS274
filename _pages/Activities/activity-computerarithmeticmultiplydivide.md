@@ -11,7 +11,7 @@ info:
 
   models:
     - model: |
-        <img src="../../images/muldiv/mul1.png" alt="Multiplication with a Simple Algorithm">
+        <img src="../images/muldiv/mul1.png" alt="Multiplication with a Simple Algorithm">
         <br>
         <img src="https://www.researchgate.net/profile/Darshan-Shah-19/publication/232322818/figure/fig1/AS:393475884371969@1470823369188/Figure-2-Hardware-of-shift-add-multiplication-Hardware-for-Shift-Add-multiplication-is_W640.jpg" alt="Hardware for a Shift and Add Multiplier">
         <br>
@@ -24,20 +24,20 @@ info:
         - "How might the MIPS architecture perform these additions, given that it uses a 32-bit adder?  Hint - do you ever add more than 4 bits at a time in the example above?"
 
     - model: |
-        <img src="../../images/muldiv/mul2.png" alt="Multiplication using a 32-bit ALU">
+        <img src="../images/muldiv/mul2.png" alt="Multiplication using a 32-bit ALU">
       title: An Improved Multiplication Algorithm Using a 32-bit ALU
       questions:
         - "Draw the updated flow chart and hardware diagram for this algorithm."   
         - "How does this algorithm take advantage of unused hardware to simplify the hardware requirements?"
         
     - model: |
-        <img src="../../images/muldiv/mul3.png" alt="Multiplication using a 32-bit ALU and Reduced Hardware">
+        <img src="../images/muldiv/mul3.png" alt="Multiplication using a 32-bit ALU and Reduced Hardware">
       title: An Improved Multiplication Algorithm Using a 32-bit ALU and Reduced Hardware
       questions:
         - "Draw the updated hardware diagram for this algorithm.  What components are consolidated, and were they previously unused?"   
 
     - model: |
-        <img src="../../images/muldiv/div1.png" alt="Division with a Simple Algorithm">
+        <img src="../images/muldiv/div1.png" alt="Division with a Simple Algorithm">
       title: Division
       questions:
         - "Draw the hardware diagram and flowchart for this algorithm."
@@ -47,7 +47,7 @@ info:
         - "What MIPS instructions support manipulating the low and high register components?"
 
     - model: |
-        <img src="../../images/muldiv/mul2.png" alt="Division using a 32-bit ALU and Reduced Hardware">
+        <img src="../images/muldiv/mul2.png" alt="Division using a 32-bit ALU and Reduced Hardware">
         <br>
         <img src="https://i.imgur.com/FQ9dQnU.png" alt="Hardware for a Binary Division Circuit">
         <br>
