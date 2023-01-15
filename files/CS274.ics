@@ -555,7 +555,7 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0837
 DTSTAMP:20230316T000000Z
 DTSTART;VALUE=DATE:20230316
-SUMMARY:CS274 Computer Architecture: Lab: Computer Arithmetic Handed Out
+SUMMARY:CS274 Computer Architecture: Lab: Procedures and Recursion in MIPS Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -566,7 +566,7 @@ DTSTAMP:20230316T000000Z
 DTSTART;VALUE=DATE:20230316
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: Computer Arithmetic Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/ComputerArithmetic
+DESCRIPTION:\nDeliverable: Lab: Procedures and Recursion in MIPS Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/MIPSProceduresRecursion
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -591,7 +591,7 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba083b
 DTSTAMP:20230322T000000Z
 DTSTART;VALUE=DATE:20230322
-SUMMARY:CS274 Computer Architecture: Lab: Computer Arithmetic Due
+SUMMARY:CS274 Computer Architecture: Lab: Procedures and Recursion in MIPS Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -602,14 +602,14 @@ DTSTAMP:20230322T000000Z
 DTSTART;VALUE=DATE:20230322
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/ALU\nReading: Subroutines by Ben Eater https://www.youtube.com/watch?v=omI0MrTWiMU&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=7\nReading: COD Chapter B.5\nDeliverable: Lab: Computer Arithmetic Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/ComputerArithmetic
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/ALU\nReading: Subroutines by Ben Eater https://www.youtube.com/watch?v=omI0MrTWiMU&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=7\nReading: COD Chapter B.5\nDeliverable: Lab: Procedures and Recursion in MIPS Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/MIPSProceduresRecursion
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba083d
 DTSTAMP:20230323T000000Z
 DTSTART;VALUE=DATE:20230323
-SUMMARY:CS274 Computer Architecture: Lab: Floating Point Handed Out
+SUMMARY:CS274 Computer Architecture: Lab: Computer Arithmetic Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -620,7 +620,7 @@ DTSTAMP:20230323T000000Z
 DTSTART;VALUE=DATE:20230323
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: Floating Point Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/FloatingPoint
+DESCRIPTION:\nDeliverable: Lab: Computer Arithmetic Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/ComputerArithmetic
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -654,7 +654,7 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0842
 DTSTAMP:20230329T000000Z
 DTSTART;VALUE=DATE:20230329
-SUMMARY:CS274 Computer Architecture: Lab: Floating Point Due
+SUMMARY:CS274 Computer Architecture: Lab: Computer Arithmetic Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -665,7 +665,7 @@ DTSTAMP:20230329T000000Z
 DTSTART;VALUE=DATE:20230329
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/MIPSSingleCycle\nReading: COD Chapter 4.1-4.4\nReading: Computers on a Breadboard by Ben Eater https://www.youtube.com/watch?v=fCbAafKLqC8&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=8\nDeliverable: Lab: Floating Point Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/FloatingPoint
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/MIPSSingleCycle\nReading: COD Chapter 4.1-4.4\nReading: Computers on a Breadboard by Ben Eater https://www.youtube.com/watch?v=fCbAafKLqC8&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=8\nDeliverable: Lab: Computer Arithmetic Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/ComputerArithmetic
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -726,7 +726,7 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba084a
 DTSTAMP:20230406T000000Z
 DTSTART;VALUE=DATE:20230406
-SUMMARY:CS274 Computer Architecture: Lab: Single Cycle Datapath Design Handed Out
+SUMMARY:CS274 Computer Architecture: Lab: 4 Bit ALU Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -737,7 +737,7 @@ DTSTAMP:20230406T000000Z
 DTSTART;VALUE=DATE:20230406
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: Single Cycle Datapath Design Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/SingleCycleDesign
+DESCRIPTION:\nDeliverable: Lab: 4 Bit ALU Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/ALU4Bit
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -771,7 +771,7 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba084f
 DTSTAMP:20230412T000000Z
 DTSTART;VALUE=DATE:20230412
-SUMMARY:CS274 Computer Architecture: Lab: Single Cycle Datapath Design Due
+SUMMARY:CS274 Computer Architecture: Lab: 4 Bit ALU Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -782,14 +782,14 @@ DTSTAMP:20230412T000000Z
 DTSTART;VALUE=DATE:20230412
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Computer Arithmetic by Ben Eater https://www.youtube.com/watch?v=v3-a-zqKfgA&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=10\nDeliverable: Lab: Single Cycle Datapath Design Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/SingleCycleDesign
+DESCRIPTION:\nReading: Computer Arithmetic by Ben Eater https://www.youtube.com/watch?v=v3-a-zqKfgA&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=10\nDeliverable: Lab: 4 Bit ALU Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/ALU4Bit
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0851
 DTSTAMP:20230413T000000Z
 DTSTART;VALUE=DATE:20230413
-SUMMARY:CS274 Computer Architecture: Lab: Single Cycle Control Handed Out
+SUMMARY:CS274 Computer Architecture: Lab: Single Cycle Datapath and Control Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -800,7 +800,7 @@ DTSTAMP:20230413T000000Z
 DTSTART;VALUE=DATE:20230413
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: Single Cycle Control Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/SingleCycleControl
+DESCRIPTION:\nDeliverable: Lab: Single Cycle Datapath and Control Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/SingleCycle
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -825,7 +825,7 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0855
 DTSTAMP:20230419T000000Z
 DTSTART;VALUE=DATE:20230419
-SUMMARY:CS274 Computer Architecture: Lab: Single Cycle Control Due
+SUMMARY:CS274 Computer Architecture: Lab: Single Cycle Datapath and Control Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -836,7 +836,7 @@ DTSTAMP:20230419T000000Z
 DTSTART;VALUE=DATE:20230419
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/Cache\nReading: COD Chapter 5.1-5.4\nDeliverable: Lab: Single Cycle Control Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/SingleCycleControl
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/Cache\nReading: COD Chapter 5.1-5.4\nDeliverable: Lab: Single Cycle Datapath and Control Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/SingleCycle
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
