@@ -520,10 +520,10 @@ schedule:
         rlink: false        
   - week: "11"
     date: "2"
-    title: "Lab: Single Cycle Datapath Design"
+    title: "Lab: 4 Bit ALU"
     deliverables:
-      - dtitle: "Lab: Single Cycle Datapath Design Handed Out"
-        dlink: "./Labs/SingleCycleDesign"
+      - dtitle: "Lab: 4 Bit ALU Handed Out"
+        dlink: "./Labs/ALU4Bit"
         points: 100
   - week: "11"
     date: "3"
@@ -543,18 +543,18 @@ schedule:
     date: "1"
     title: "Pipelining"
     deliverables:
-      - dtitle: "Lab: Single Cycle Datapath Design Due"
-        dlink: "./Labs/SingleCycleDesign"
+      - dtitle: "Lab: 4 Bit ALU Due"
+        dlink: "./Labs/ALU4Bit"
         points: 100
     readings:
       - rtitle: "Computer Arithmetic by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=v3-a-zqKfgA&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=10"
   - week: "12"
     date: "2"
-    title: "Lab: Single Cycle Control"
+    title: "Lab: Single Cycle Datapath and Control"
     deliverables:
-      - dtitle: "Lab: Single Cycle Control Handed Out"
-        dlink: "./Labs/SingleCycleControl"
+      - dtitle: "Lab: Single Cycle Datapath and Control Handed Out"
+        dlink: "./Labs/SingleCycle"
         points: 100
   - week: "12"
     date: "3"
@@ -571,8 +571,8 @@ schedule:
     title: "The Memory Hierarchy: Cache Design"
     link: "./Activities/Cache"
     deliverables:
-      - dtitle: "Lab: Single Cycle Control Due"
-        dlink: "./Labs/SingleCycleControl"
+      - dtitle: "Lab: Single Cycle Datapath and Control Due"
+        dlink: "./Labs/SingleCycle"
         points: 100
     readings:
       - rtitle: "COD Chapter 5.1-5.4"

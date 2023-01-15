@@ -1,14 +1,14 @@
 ---
 layout: assignment
-permalink: /Labs/SingleCycleDesign
-title: "CS274: Computer Architecture - Single Cycle Datapath Design"
-excerpt: "CS274: Computer Architecture - Single Cycle Datapath Design"
+permalink: /Labs/ALU4Bit
+title: "CS274: Computer Architecture - 4 Bit ALU Design"
+excerpt: "CS274: Computer Architecture - 4 Bit ALU Design"
 
 info:
   coursenum: CS274
   points: 100
   goals:
-    - xxx
+    - To connect individual ALU designs into a multi-bit ALU
 
   rubric:
     - weight: 60
@@ -31,14 +31,41 @@ info:
       proficient: The program is submitted according to the directions, including a readme writeup describing the solution, and thoughtful answers to the bolded questions throughout
 
   readings:
-    - rlink: xxx
-      rtitle: xxx
-
-  questions:
-    - xxx
+    - rlink: ../Labs/ALUDesign
+      rtitle: 1-Bit ALU Design Lab
 
 tags:
-  - xxx
+  - alu
+  - vhdl
 
 ---
 
+### What to Do
+
+In this lab, you will create and test a 4-bit ALU using a structural design in VHDL.  The port definition is provided for you:
+
+```vhdl
+entity ALU4 is
+port(a,b             : in std_ulogic_vector (3 downto 0);
+     Op              : in std_ulogic_vector (1 downto 0);
+     result          : out std_ulogic_vector (3 downto 0);
+     zero            : out std_ulogic;
+     CarryOut        : out std_ulogic;
+     overflow        : out std_ulogic);
+end ALU4;
+```
+
+You can instantiate multiple structural wirings using a `for...generate` loop that you may wish to consider:
+
+```vhdl
+alugen: for i in 3 downto 0 generate
+   alu: alu1 PORT MAP(x => a(i), ...);
+```
+
+When finished with this base design, make two modifications.
+
+#### Modification 1: less than status bit
+Modify your design to support a less than output that is the most significant bit `xor` the overflow detection bit.
+
+#### Modification 2: Subtraction
+Add a bInvert bit to your design, use it as your least significant bit ALU carry in, and pass it to the bInvert input of your 1-bit ALUs (adding this to your 1-bit ALU design if necessary).
