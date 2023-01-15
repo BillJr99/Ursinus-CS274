@@ -432,10 +432,10 @@ schedule:
         rlink: "https://www.youtube.com/watch?v=i_wrxBdXTgM&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=6"
   - week: "8"
     date: "2"
-    title: "Lab: Computer Arithmetic"
+    title: "Lab: Procedures and Recursion in MIPS"
     deliverables:
-      - dtitle: "Lab: Computer Arithmetic Handed Out"
-        dlink: "./Labs/ComputerArithmetic"
+      - dtitle: "Lab: Procedures and Recursion in MIPS Handed Out"
+        dlink: "./Labs/MIPSProceduresRecursion"
         points: 100
   - week: "8"
     date: "3"
@@ -454,8 +454,8 @@ schedule:
     title: "MIPS Processor Design: The ALU"
     link: "./Activities/ALU"
     deliverables:
-      - dtitle: "Lab: Computer Arithmetic Due"
-        dlink: "./Labs/ComputerArithmetic"
+      - dtitle: "Lab: Procedures and Recursion in MIPS Due"
+        dlink: "./Labs/MIPSProceduresRecursion"
         points: 100
     readings:
       - rtitle: "Subroutines by Ben Eater"
@@ -464,10 +464,10 @@ schedule:
         rlink: false        
   - week: "9"
     date: "2"
-    title: "Lab: Floating Point"
+    title: "Lab: Computer Arithmetic"
     deliverables:
-      - dtitle: "Lab: Floating Point Handed Out"
-        dlink: "./Labs/FloatingPoint"
+      - dtitle: "Lab: Computer Arithmetic Handed Out"
+        dlink: "./Labs/ComputerArithmetic"
         points: 100
   - week: "9"
     date: "3"
@@ -484,8 +484,8 @@ schedule:
     title: "The MIPS Single Cycle Design"
     link: "./Activities/MIPSSingleCycle"    
     deliverables:
-      - dtitle: "Lab: Floating Point Due"
-        dlink: "./Labs/FloatingPoint"
+      - dtitle: "Lab: Computer Arithmetic Due"
+        dlink: "./Labs/ComputerArithmetic"
         points: 100
     readings:
       - rtitle: "COD Chapter 4.1-4.4"

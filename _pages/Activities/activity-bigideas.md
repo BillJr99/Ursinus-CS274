@@ -20,6 +20,8 @@ info:
   additional_reading:
     - link: https://www.d.umn.edu/~gshute/arch/great-ideas.html
       title: "8 Great Ideas in Computer Architcture"
+    - link: https://www.cs.jhu.edu/~phi/csf/scram/dewdney-omnibus-scram.pdf
+      title: "The New Turing Omnibus: Random Access Machines by A. K. Dewdney"
 
 tags:
   - principles
