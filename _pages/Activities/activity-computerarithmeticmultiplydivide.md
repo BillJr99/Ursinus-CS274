@@ -71,7 +71,8 @@ info:
 
 tags:
   - arithmetic
-  - floatingpoint
+  - multiplication
+  - division
 
 ---
 
