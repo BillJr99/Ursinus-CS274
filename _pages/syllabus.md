@@ -237,6 +237,7 @@ schedule:
       - dtitle: "Lab: Number Systems Handed Out"
         dlink: "./Labs/NumberSystems"
         points: 100
+        rubricpath: "_pages/Labs/lab-numbersystems.md"
   - week: "1"
     date: "3"
     title: "The MIPS Assembly Language and Instructions"
@@ -256,6 +257,7 @@ schedule:
       - dtitle: "Programming Assignment: Number System Conversions Handed Out"
         dlink: "./Assignments/Programming/NumberSystemConversion"
         points: 100
+        rubricpath: "_pages/Assignments/assignment-numbersystemconversion.md"
   - week: "2"
     date: "1"
     title: "From MIPS to Machine Language"
@@ -264,6 +266,7 @@ schedule:
       - dtitle: "Lab: Number Systems Due"
         dlink: "./Labs/NumberSystems"
         points: 100
+        rubricpath: "_pages/Labs/lab-numbersystems.md"
     readings:
       - rtitle: "COD Chapter 2.5-2.6"
         rlink: false
@@ -276,6 +279,7 @@ schedule:
       - dtitle: "Lab: Introduction to MIPS Programming Handed Out"
         dlink: "./Labs/MIPSIntro"
         points: 100
+        rubricpath: "_pages/Labs/lab-mipsintro.md"
   - week: "2"
     date: "3"
     title: "From MIPS to Machine Language"
@@ -293,6 +297,7 @@ schedule:
       - dtitle: "Lab: Introduction to MIPS Programming Due"
         dlink: "./Labs/MIPSIntro"
         points: 100
+        rubricpath: "_pages/Labs/lab-mipsintro.md"
     readings:
       - rtitle: "How CPUs Read Machine Code by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=yl8vPW5hydQ&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=2"
@@ -303,6 +308,7 @@ schedule:
       - dtitle: "Lab: Bitwise Logical Operators Handed Out"
         dlink: "./Labs/BitwiseLogic"
         points: 100
+        rubricpath: "_pages/Labs/lab-bitwiselogic.md"
   - week: "3"
     date: "3"
     title: "MIPS Iteration"
@@ -311,6 +317,7 @@ schedule:
       - dtitle: "Programming Assignment: Number System Conversions Due"
         dlink: "./Assignments/Programming/NumberSystemConversion"
         points: 100
+        rubricpath: "_pages/Assignments/assignment-numbersystemconversion.md"
   - week: "4"
     date: "0"
     title: "MIPS Iteration"
@@ -318,6 +325,7 @@ schedule:
       - dtitle: "Programming Assignment: MIPS Programming Handed Out"
         dlink: "./Assignments/MIPSProgramming"
         points: 100
+        rubricpath: "_pages/Assignments/assignment-mipsprogramming.md"
   - week: "4"
     date: "1"
     title: "MIPS Procedures"
@@ -326,6 +334,7 @@ schedule:
       - dtitle: "Lab: Bitwise Logical Operators Due"
         dlink: "./Labs/BitwiseLogic"
         points: 100
+        rubricpath: "_pages/Labs/lab-bitwiselogic.md"
     readings:
       - rtitle: "COD Chapter 2.8, 2.10"
         rlink: false
@@ -338,6 +347,7 @@ schedule:
       - dtitle: "Lab: Implementing if Statements in MIPS Assembly Handed Out"
         dlink: "./Labs/MIPSConditionals"
         points: 100
+        rubricpath: "_pages/Labs/lab-mipsconditionals.md"
   - week: "4"
     date: "3"
     title: "MIPS Procedures"
@@ -363,6 +373,7 @@ schedule:
       - dtitle: "Lab: Implementing if Statements in MIPS Assembly Due"
         dlink: "./Labs/MIPSConditionals"
         points: 100
+        rubricpath: "_pages/Labs/lab-mipsconditionals.md"
     readings:
       - rtitle: "Controlling an LCD Screen by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=FY3zTUaykVo&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=4"
@@ -373,6 +384,7 @@ schedule:
       - dtitle: "Lab: Implementing loops in MIPS Assembly Handed Out"
         dlink: "./Labs/MIPSIteration"
         points: 100
+        rubricpath: "_pages/Labs/lab-mipsiteration.md"
   - week: "5"
     date: "3"
     title: "Data Structures"
@@ -389,6 +401,7 @@ schedule:
       - dtitle: "Programming Assignment: MIPS Programming Due"
         dlink: "./Assignments/MIPSProgramming"
         points: 100
+        rubricpath: "_pages/Assignments/assignment-mipsprogramming.md"
   - week: "6"
     date: "1"
     title: "Computer Arithmetic: Addition and Subtraction"
@@ -397,6 +410,7 @@ schedule:
       - dtitle: "Lab: Implementing loops in MIPS Assembly Due"
         dlink: "./Labs/MIPSIteration"
         points: 100
+        rubricpath: "_pages/Labs/lab-mipsiteration.md"
     readings:
       - rtitle: "COD Chapter 3.1-3.2"
         rlink: false
@@ -437,6 +451,7 @@ schedule:
       - dtitle: "Lab: Procedures and Recursion in MIPS Handed Out"
         dlink: "./Labs/MIPSProceduresRecursion"
         points: 100
+        rubricpath: "_pages/Labs/lab-mipsproceduresrecursion.md"
   - week: "8"
     date: "3"
     title: "Computer Arithmetic: Floating Point"
@@ -457,6 +472,7 @@ schedule:
       - dtitle: "Lab: Procedures and Recursion in MIPS Due"
         dlink: "./Labs/MIPSProceduresRecursion"
         points: 100
+        rubricpath: "_pages/Labs/lab-mipsproceduresrecursion.md"
     readings:
       - rtitle: "Subroutines by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=omI0MrTWiMU&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=7"
@@ -469,6 +485,7 @@ schedule:
       - dtitle: "Lab: Computer Arithmetic Handed Out"
         dlink: "./Labs/ComputerArithmetic"
         points: 100
+        rubricpath: "_pages/Labs/lab-computerarithmetic.md"
   - week: "9"
     date: "3"
     title: "MIPS Processor Design: The ALU"
@@ -476,6 +493,7 @@ schedule:
       - dtitle: "Programming Assignment: Floating Point Bit Fields Handed Out"
         dlink: "./Assignments/FloatingPoint"
         points: 100
+        rubricpath: "_pages/Assignments/assignment-floatingpoint.md"
   - week: "10"
     date: "0"
     title: "MIPS Processor Design: The ALU"
@@ -487,6 +505,7 @@ schedule:
       - dtitle: "Lab: Computer Arithmetic Due"
         dlink: "./Labs/ComputerArithmetic"
         points: 100
+        rubricpath: "_pages/Labs/lab-computerarithmetic.md"
     readings:
       - rtitle: "COD Chapter 4.1-4.4"
         rlink: false
@@ -499,6 +518,7 @@ schedule:
       - dtitle: "Lab: ALU Design Handed Out"
         dlink: "./Labs/ALUDesign"
         points: 100
+        rubricpath: "_pages/Labs/lab-aludesign.md"
   - week: "10"
     date: "3"
     title: "The MIPS Single Cycle Design"
@@ -513,6 +533,7 @@ schedule:
       - dtitle: "Lab: ALU Design Due"
         dlink: "./Labs/ALUDesign"
         points: 100
+        rubricpath: "_pages/Labs/lab-aludesign.md"
     readings:
       - rtitle: "How Assembly Language Loops Work by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=ZYJIakkcLYw&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=9"
@@ -525,6 +546,7 @@ schedule:
       - dtitle: "Lab: 4 Bit ALU Handed Out"
         dlink: "./Labs/ALU4Bit"
         points: 100
+        rubricpath: "_pages/Labs/lab-alu4bit.md"
   - week: "11"
     date: "3"
     title: "The MIPS Multi Cycle Design"
@@ -532,6 +554,7 @@ schedule:
       - dtitle: "Programming Assignment: Floating Point Bit Fields Due"
         dlink: "./Assignments/FloatingPoint"
         points: 100
+        rubricpath: "_pages/Assignments/assignment-floatingpoint.md"
   - week: "12"
     date: "0"
     title: "Pipelining"
@@ -546,6 +569,7 @@ schedule:
       - dtitle: "Lab: 4 Bit ALU Due"
         dlink: "./Labs/ALU4Bit"
         points: 100
+        rubricpath: "_pages/Labs/lab-alu4bit.md"
     readings:
       - rtitle: "Computer Arithmetic by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=v3-a-zqKfgA&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=10"
@@ -556,6 +580,7 @@ schedule:
       - dtitle: "Lab: Single Cycle Datapath and Control Handed Out"
         dlink: "./Labs/SingleCycle"
         points: 100
+        rubricpath: "_pages/Labs/lab-singlecycle.md"
   - week: "12"
     date: "3"
     title: "Pipelining: Data and Control Hazards"
@@ -574,6 +599,7 @@ schedule:
       - dtitle: "Lab: Single Cycle Datapath and Control Due"
         dlink: "./Labs/SingleCycle"
         points: 100
+        rubricpath: "_pages/Labs/lab-singlecycle.md"
     readings:
       - rtitle: "COD Chapter 5.1-5.4"
         rlink: false
@@ -584,6 +610,7 @@ schedule:
       - dtitle: "Lab: Cache Handed Out"
         dlink: "./Labs/Cache"
         points: 100
+        rubricpath: "_pages/Labs/lab-cache.md"
   - week: "13"
     date: "3"
     title: "The Memory Hierarchy: Cache Design"
@@ -599,6 +626,7 @@ schedule:
       - dtitle: "Programming Assignment: Cache Simulator Handed Out"
         dlink: "./Assignments/CacheSimulator"
         points: 100
+        rubricpath: "_pages/Assignments/assignment-cachesimulator.md"
   - week: "14"
     date: "1"
     title: "The Memory Hierarchy: Cache Design"
@@ -606,6 +634,7 @@ schedule:
       - dtitle: "Lab: Cache Due"
         dlink: "./Labs/Cache"
         points: 100
+        rubricpath: "_pages/Labs/lab-cache.md"
   - week: "14"
     date: "2"
     title: "The Memory Hierarchy: Cache Design"
@@ -627,6 +656,7 @@ schedule:
       - dtitle: "Programming Assignment: Cache Simulator Due"
         dlink: "./Assignments/CacheSimulator"
         points: 100
+        rubricpath: "_pages/Assignments/assignment-cachesimulator.md"
           
 university:
   semester: "Spring"
