@@ -150,13 +150,13 @@ grade_breakdown:
 - category: "Programming Assignments"
   weight: "25%"
 - category: "Labs"
-  weight: "35%"
+  weight: "40%"
 - category: "Midterm Exam"
   weight: "15%"
 - category: "Final Exam"
   weight: "15%"
 - category: "Class Participation and Quizzes"
-  weight: "10%"
+  weight: "5%"
 
 letter_grades:
 - letter: "A+"
