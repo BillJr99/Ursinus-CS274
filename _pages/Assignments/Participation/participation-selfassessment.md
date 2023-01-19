@@ -1,11 +1,11 @@
 ---
 layout: assignment
 permalink: /Assignments/Participation/SelfAssessment
-title: "CS475: Computer Networks - Participation Self Assessment"
-excerpt: "CS475: Computer Networks - Participation Self Assessment"
+title: "CS274: Computer Architecture - Participation Self Assessment"
+excerpt: "CS274: Computer Architecture - Participation Self Assessment"
 
 info:
-  coursenum: CS475
+  coursenum: CS274
   points: 10
   
 tags:
