@@ -1,11 +1,11 @@
 ---
 layout: assignment
 permalink: /Assignments/Participation/PreAssessment
-title: "CS475: Computer Networks - Participation Pre Assessment"
-excerpt: "CS475: Computer Networks - Participation Pre Assessment"
+title: "CS274: Computer Architecture - Participation Pre Assessment"
+excerpt: "CS274: Computer Architecture - Participation Pre Assessment"
 
 info:
-  coursenum: CS475
+  coursenum: CS274
   points: 10
   
 tags:
