@@ -72,7 +72,7 @@ info:
         <a title="Napalm Llama, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:R-S_mk2.gif"><img width="256" alt="R-S mk2" src="https://upload.wikimedia.org/wikipedia/commons/c/c6/R-S_mk2.gif"></a>
       title: The SR Latch
       questions:
-        - "The purpose of S is to set the output (Q) to high.  R is a reset, and sets Q to low.  Q bar is just the opposite of Q.  If Q is set to high by setting S to high, why does Q remain high even when turning off the current to S?"
+        - "The purpose of S is to set the output (Q) to high.  R is a reset, and sets Q to low.  Q bar is just the opposite of Q.  If Q is set to high by setting S to high, why does Q remain high even when turning off the current to S?  As a hint: notice that you aren't sure the output of the NOR gate following the S input, but since you know R must be 0, you do know its output.  Use this to trace the rest of the circuit."
         - "What do you think is the purpose of an SR Latch?"
         - "How can we cause an SR Latch to set when a series of conditions occur: for example, to unlock our door when it is warm and not raining outside?"
 
