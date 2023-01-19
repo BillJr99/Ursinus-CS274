@@ -114,7 +114,9 @@ instructors:
     starttime: "12:00 PM"
     endtime: "1:00 PM"
     location: "Pfahler 101L" 
-    
+- name: Matt Wallace
+  title: Teaching Assistant
+  
 textbooks:
 - title: "Computer Organization and Design MIPS Edition: The Hardware/Software Interface"
   authors: "David A. Patterson and John L. Hennessy"
