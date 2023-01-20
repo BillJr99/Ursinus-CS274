@@ -116,6 +116,15 @@ instructors:
     location: "Pfahler 101L" 
 - name: Matt Wallace
   title: Teaching Assistant
+  officehours:
+  - day: "W"
+    starttime: "7:30 PM"
+    endtime: "8:30 PM"
+    location: "Pfahler 102 Help Room"   
+  - day: "R"
+    starttime: "6:00 PM"
+    endtime: "7:00 PM"
+    location: "Pfahler 102 Help Room"
   
 textbooks:
 - title: "Computer Organization and Design MIPS Edition: The Hardware/Software Interface"
