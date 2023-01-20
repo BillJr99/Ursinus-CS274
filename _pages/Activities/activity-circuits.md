@@ -10,6 +10,10 @@ info:
     - To integrate circuits into logic components that can be used to build modern computers
     - To demonstrate transistor logic using the 555 timer integrated circuit
     - To explain that a timer can be used to synchronize computations via a clock
+    
+  reflective_prompts:
+    - "What is the result of an input NAND itself?  What might you call this gate?"
+    - "Considering that the AND of two inputs is the NOT of the NAND, use the NAND-based NOT gate above to create an AND gate."
 
   models:
     - model: |
