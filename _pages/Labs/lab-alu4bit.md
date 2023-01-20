@@ -42,6 +42,14 @@ tags:
 
 ### What to Do
 
+#### Draw the Circuit Diagram for a 4-bit ALU
+
+Draw a circuit diagram schematic for a 4-bit ALU using boolean logic gates and the below diagram of a 1-bit ALU.  Specifically, accept as inputs a 4-bit input `A` and a 4-bit input `B`, as well as an `Op` operation code, and connect the individual 1-bit ALU's to one another to produce a 4-bit output `result`, a 1-bit output `zero`, a 1-bit output `CarryOut`, and a 1-bit output `overflow`.
+
+<img src="https://www.researchgate.net/profile/V-Bhanumathi/publication/321814052/figure/fig2/AS:745655408529409@1554789511084/Functional-block-diagram-of-one-bit-ALU_W640.jpg" alt="1 bit ALU">
+
+#### Synthesis of a 4-bit ALU in VHDL
+
 In this lab, you will create and test a 4-bit ALU using a structural design in VHDL.  The port definition is provided for you:
 
 ```vhdl
