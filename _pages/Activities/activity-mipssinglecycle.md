@@ -193,6 +193,7 @@ info:
         - "Trace the execution of the following instructions through the datapath, including their control values: <code>add</code>, <code>lw</code>, and <code>beq</code>."
         - "What ALU operation occurs on a branch instruction, and what status output line is used?"
         - "What happens to the PC if a <code>beq</code> instruction is specified but the ALU result is not 0?"
+        - "Write an <code>if</code> statement that outputs one of the control signals above.  Then, write a boolean logic formula (and draw the circuit) using the opcode and, if needed, the function code bits as inputs."
         
     - model: |
         <img src="https://i.stack.imgur.com/vCvw1.png" alt="The MIPS Single Cycle Datapath with Jump Support">
