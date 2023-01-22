@@ -82,7 +82,8 @@ info:
         <img src="https://camo.githubusercontent.com/cabec94e61a35fe078491a579b88487211fe273b53eda3b8c1d88aa3b69e7c05/68747470733a2f2f7777772e636973652e75666c2e6564752f7e6d73737a2f436f6d704f72672f466967342e32322d4d4950532d4653432d436f6d706f736974652e676966" alt="Modifying the Control Unit to Output Specialized Control Signals at Each Instruction Stage">
       title: Modifying the Control Unit to Output Specialized Control Signals at Each Instruction Stage via a Finite State Machine
       questions:
-        - "Describe the functionality of each control signal in this datapath, for each instruction cycle stage."     
+        - "Describe the functionality of each control signal in this datapath, for each instruction cycle stage."   
+        - "How does the conditional and boolean logic of the multi-cycle control unit differ from that of the single cycle control?  In other words, what additional input(s) are needed to the control unit to determine the output control bits, beyond merely the opcode and function code?"
 
     - model: |   
         <img src="https://camo.githubusercontent.com/93dad2cf0647e66de5070ee90c99adaa1fe3045fa322f15bccc6fa6dcbf96050/68747470733a2f2f692e696d6775722e636f6d2f6d5758485770542e706e67" alt="The MIPS Multi Cycle Datapath">
