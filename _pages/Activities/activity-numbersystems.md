@@ -182,6 +182,7 @@ info:
       title: Converting From Binary to Hexidecimal
       questions:
         - "What is the ASCII value of the letter <code>C</code> and the letter <code>K</code>?  What are these values in binary, decimal, and hexidecimal?"
+        - "Suppose a binary value is fewer than 4 bits, like 0b110.  How can you convert this to a 4-bit binary value so that it can be looked up in the table?"
         - Convert 0b1000100001 from binary to hexidecimal.
         - Convert 0b10001001 from binary to hexidecimal.
         - Convert 0b101110111 from binary to hexidecimal.
