@@ -8,7 +8,7 @@ info:
   coursenum: CS274
   points: 100
   goals:
-    - To convert between decimal, hexidecimal, and binary number representations
+    - To convert between decimal, hexadecimal, and binary number representations
 
   rubric:
     - weight: 90
@@ -36,7 +36,7 @@ tags:
 
 ---
 
-Using the tool below, generate 5 decimal, 5 binary, and 5 hexidecimal values, and convert them.  In your browser, open your developer tools console and copy the log output into your class notebook.
+Using the tool below, generate 5 decimal, 5 binary, and 5 hexadecimal values, and convert them.  In your browser, open your developer tools console and copy the log output into your class notebook.
 
 <script language="JavaScript">
 function gen2() {
@@ -44,7 +44,7 @@ function gen2() {
     
     document.getElementById("decimal").value = "";
     document.getElementById("binary").value = val.toString(2);
-    document.getElementById("hexidecimal").value = "";
+    document.getElementById("hexadecimal").value = "";
 }
 
 function gen10() {
@@ -52,7 +52,7 @@ function gen10() {
     
     document.getElementById("decimal").value = val.toString();
     document.getElementById("binary").value = "";
-    document.getElementById("hexidecimal").value = "";
+    document.getElementById("hexadecimal").value = "";
 }
 
 function gen16() {
@@ -60,19 +60,19 @@ function gen16() {
     
     document.getElementById("decimal").value = "";
     document.getElementById("binary").value = "";
-    document.getElementById("hexidecimal").value = val.toString(16);
+    document.getElementById("hexadecimal").value = val.toString(16);
 }
 
 function check() {
     var bin = document.getElementById("binary").value;
     bin = parseInt(bin, 2);
-    var hex = document.getElementById("hexidecimal").value;
+    var hex = document.getElementById("hexadecimal").value;
     hex = parseInt(hex, 16);
     var dec = document.getElementById("decimal").value;
     dec = parseInt(dec, 10);
     
-    console.log("Decimal: " + document.getElementById("decimal").value + " Binary: " + document.getElementById("binary").value + " Hexidecimal: " + document.getElementById("hexidecimal").value);
-    console.log("Decimal: " + dec.toString() + " Binary: " + bin.toString() + " Hexidecimal: " + hex.toString());
+    console.log("Decimal: " + document.getElementById("decimal").value + " Binary: " + document.getElementById("binary").value + " Hexadecimal: " + document.getElementById("hexadecimal").value);
+    console.log("Decimal: " + dec.toString() + " Binary: " + bin.toString() + " Hexadecimal: " + hex.toString());
     
     if(hex == bin && dec == bin) {
         alert("Correct!");
@@ -86,11 +86,11 @@ function check() {
 <div align="left">
 Decimal Value: <input id="decimal" name="decimal" /><br>
 Binary Value: <input id="binary" name="binary" /><br>
-Hexidecimal Value: <input id="hexidecimal" name="hexidecimal" /><br>
+Hexadecimal Value: <input id="hexadecimal" name="hexadecimal" /><br>
 <br>
 <button id="bgen10" onclick="gen10()">Generate Decimal</button><br>
 <button id="bgen2" onclick="gen2()">Generate Binary</button><br>
-<button id="bgen16" onclick="gen16()">Generate Hexidecimal</button><br>
+<button id="bgen16" onclick="gen16()">Generate Hexadecimal</button><br>
 <br>
 <button id="bcheck" onclick="check()">Check</button>
 </div>
