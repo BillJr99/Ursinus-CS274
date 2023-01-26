@@ -107,6 +107,6 @@ Hexadecimal Value: <input id="hexadecimal" name="hexadecimal" /><br>
 <br>
 <br>
 <h3>Output Log</h3>
-<textarea rows="5" cols="50" id="multiLineInput"></textarea>
+<textarea rows="5" cols="50" id="responses"></textarea>
 </div>
 </div>
