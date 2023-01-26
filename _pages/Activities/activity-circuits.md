@@ -92,6 +92,19 @@ info:
         - "How might one determine the frequency of the timer?  That is, what should the period of a timer or clock be when used inside a computer?  Could you make the timer as fast as you want?  Why or why not?"
         - "What elements of the 555 Timer would you adjust to make the SR Latch oscillate faster or slower?"
 
+    - model: |
+        <div align="left">
+        A AND B
+        NOT (NOT A OR NOT B)
+
+        A OR B
+        NOT (NOT A AND NOT B) = (NOT A NAND NOT B)
+        (A NAND A) NAND (A NAND B)
+        </div>
+      title: "DeMorgan's Law"
+      questions:
+        - "Draw a truth table for the above logic formulas.  What do you notice?"
+        
 tags:
   - circuits
 
