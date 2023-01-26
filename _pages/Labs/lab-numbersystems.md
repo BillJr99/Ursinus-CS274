@@ -76,9 +76,20 @@ function check() {
     
     if(hex == bin && dec == bin) {
         alert("Correct!");
+        console.log("Correct");
     } else {
         alert("Not quite!");
+        console.log("Incorrect");
     }
+  
+    document.getElementById("responses").innerHTML += "Decimal: " + document.getElementById("decimal").value + " Binary: " + document.getElementById("binary").value + " Hexadecimal: " + document.getElementById("hexadecimal").value + "<br>";
+    document.getElementById("responses").innerHTML += "Decimal: " + dec.toString() + " Binary: " + bin.toString() + " Hexadecimal: " + hex.toString() + "<br>";
+    
+    if(hex == bin && dec == bin) {
+        document.getElementById("responses").innerHTML += "Correct<br>";
+    } else {
+        document.getElementById("responses").innerHTML += "Incorrect<br>";
+    }  
 }
 </script>
 
@@ -93,5 +104,9 @@ Hexadecimal Value: <input id="hexadecimal" name="hexadecimal" /><br>
 <button id="bgen16" onclick="gen16()">Generate Hexadecimal</button><br>
 <br>
 <button id="bcheck" onclick="check()">Check</button>
+<br>
+<br>
+<h3>Output Log</h3>
+<textarea rows="5" cols="50" id="multiLineInput"></textarea>
 </div>
 </div>
