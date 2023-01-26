@@ -99,7 +99,7 @@ info:
         <br>
         A OR B<br>
         NOT (NOT A AND NOT B) = (NOT A NAND NOT B)<br>
-        (A NAND A) NAND (A NAND B)
+        (A NAND A) NAND (B NAND B)
         </div>
       title: "DeMorgan's Law"
       questions:
