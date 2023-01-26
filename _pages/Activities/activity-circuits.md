@@ -93,12 +93,12 @@ info:
         - "What elements of the 555 Timer would you adjust to make the SR Latch oscillate faster or slower?"
 
     - model: |
-        <div align="left">
-        A AND B
-        NOT (NOT A OR NOT B)
-
-        A OR B
-        NOT (NOT A AND NOT B) = (NOT A NAND NOT B)
+        <div align="center">
+        A AND B<br>
+        NOT (NOT A OR NOT B)<br>
+        <br>
+        A OR B<br>
+        NOT (NOT A AND NOT B) = (NOT A NAND NOT B)<br>
         (A NAND A) NAND (A NAND B)
         </div>
       title: "DeMorgan's Law"
