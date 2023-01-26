@@ -82,13 +82,13 @@ function check() {
         console.log("Incorrect");
     }
   
-    document.getElementById("responses").innerHTML += "Decimal: " + document.getElementById("decimal").value + " Binary: " + document.getElementById("binary").value + " Hexadecimal: " + document.getElementById("hexadecimal").value + "<br>";
-    document.getElementById("responses").innerHTML += "Decimal: " + dec.toString() + " Binary: " + bin.toString() + " Hexadecimal: " + hex.toString() + "<br>";
+    document.getElementById("responses").innerHTML += "Decimal: " + document.getElementById("decimal").value + " Binary: " + document.getElementById("binary").value + " Hexadecimal: " + document.getElementById("hexadecimal").value + "\n";
+    document.getElementById("responses").innerHTML += "Decimal: " + dec.toString() + " Binary: " + bin.toString() + " Hexadecimal: " + hex.toString() + "\n";
     
     if(hex == bin && dec == bin) {
-        document.getElementById("responses").innerHTML += "Correct<br>";
+        document.getElementById("responses").innerHTML += "Correct\n";
     } else {
-        document.getElementById("responses").innerHTML += "Incorrect<br>";
+        document.getElementById("responses").innerHTML += "Incorrect\n";
     }  
 }
 </script>
