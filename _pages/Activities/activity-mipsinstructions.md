@@ -195,7 +195,7 @@ info:
             <td class="tg-1wig">branch if not equal</td>
             <td class="tg-0lax">Move the program counter to its current location (the next instruction to execute) plus the immediate (can be specified as a label) if the registers are NOT equal</td>
             <td class="tg-0lax">I</td>
-            <td class="tg-0lax">beq $t1, $t2, 8</td>
+            <td class="tg-0lax">bne $t1, $t2, 8</td>
             <td class="tg-0lax">t1 != t2? PC = PC + 4 + 8 : PC = PC + 4</td>
           </tr>
           <tr>
