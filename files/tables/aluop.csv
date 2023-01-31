@@ -1,9 +1,0 @@
-Opcode,Function Code (R Type),ALU Action,ALU bInvert,ALU select operation
-lw,,add,0,10
-sw,,add,0,10
-beq,,subtract,1,10
-R (add),100000,add,0,10
-R (sub),100010,subtract,1,10
-R (and),100100,and,0,00
-R (or),100101,or,0,01
-R (slt),101010,slt,1,11

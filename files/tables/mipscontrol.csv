@@ -1,5 +1,0 @@
-Opcode,RegDst,ALUSrc,MemToReg,RegWrite,MemRead,MemWrite,Branch,ALUOp
-R,1,0,0,1,0,0,0,See Function Code Table
-lw,0,1,1,1,1,0,0,Add
-sw,X,1,X,0,0,1,0,Add
-beq,X,0,X,0,0,0,1,Subtract
