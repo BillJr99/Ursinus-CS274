@@ -61,7 +61,7 @@ tags:
 
 # What to Do
 
-Recall the approaches we used to convert between a decimal value and a binary value, and between binary and hexidecimal values.  
+Recall the approaches we used to convert between a decimal value and a binary value, and between binary and hexadecimal values.  
 
 In this assignment, you will write a program (or a series of programs) that:
 1. allow the user to input which base they would like to convert from and to (base 2, 10, and 16),

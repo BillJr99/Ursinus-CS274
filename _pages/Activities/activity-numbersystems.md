@@ -6,7 +6,7 @@ excerpt: "CS274: Computer Architecture - Number Systems"
 
 info:
   goals:
-    - To convert between decimal, hexidecimal, and binary number representations
+    - To convert between decimal, hexadecimal, and binary number representations
     - To explain why computers represent values in binary rather than in another number system
 
   models:
@@ -175,27 +175,28 @@ info:
 
     - model: |
         <div align="center">
-        Take each group of 4 binary values from left to right.  Look them up in the table to obtain the corresponding hexidecimal digit, and output that digit.
+        Take each group of 4 binary values from left to right.  Look them up in the table to obtain the corresponding hexadecimal digit, and output that digit.
         </div>
         <br>
         <a title="Dgoetze, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Positionalnotationtable.jpg"><img width="512" alt="Positionalnotationtable" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Positionalnotationtable.jpg/512px-Positionalnotationtable.jpg"></a>
-      title: Converting From Binary to Hexidecimal
+      title: Converting From Binary to Hexadecimal
       questions:
-        - "What is the ASCII value of the letter <code>C</code> and the letter <code>K</code>?  What are these values in binary, decimal, and hexidecimal?"
-        - Convert 0b1000100001 from binary to hexidecimal.
-        - Convert 0b10001001 from binary to hexidecimal.
-        - Convert 0b101110111 from binary to hexidecimal.
-        - Convert 375 from decimal to binary, and then to hexidecimal.
+        - "What is the ASCII value of the letter <code>C</code> and the letter <code>K</code>?  What are these values in binary, decimal, and hexadecimal?"
+        - "Suppose a binary value is fewer than 4 bits, like 0b110.  How can you convert this to a 4-bit binary value so that it can be looked up in the table?"
+        - Convert 0b1000100001 from binary to hexadecimal.
+        - Convert 0b10001001 from binary to hexadecimal.
+        - Convert 0b101110111 from binary to hexadecimal.
+        - Convert 375 from decimal to binary, and then to hexadecimal.
         
     - model: |
         <div align="center">
-        Using the binary to hexidecimal table, look up the binary representation for each hexidecimal digit.  In other words, convert each hexidecimal digit to decimal, and then to binary.  This will result in a four digit binary number.  Output those binary bits.  Repeat for each hexidecimal digit from left to right.
+        Using the binary to hexadecimal table, look up the binary representation for each hexadecimal digit.  In other words, convert each hexadecimal digit to decimal, and then to binary.  This will result in a four digit binary number.  Output those binary bits.  Repeat for each hexadecimal digit from left to right.
         </div>
-      title: Converting From Hexidecimal to Binary
+      title: Converting From Hexadecimal to Binary
       questions:
-        - Convert 0xCAFE from hexidecimal to binary.
-        - Convert 0x3C from hexidecimal to binary, and from binary to decimal.
-        - Convert 0xFF from hexidecimal to binary, and from binary to decimal.
+        - Convert 0xCAFE from hexadecimal to binary.
+        - Convert 0x3C from hexadecimal to binary, and from binary to decimal.
+        - Convert 0xFF from hexadecimal to binary, and from binary to decimal.
 
 
 tags:
