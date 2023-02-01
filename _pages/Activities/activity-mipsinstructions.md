@@ -340,7 +340,7 @@ info:
       title: Registers
       questions:
         - "What do you think is the difference between the <code>t</code> registers and the <code>s</code> registers?"
-        - When might you use a <code>t</code> register as opposed to an <code>s</code> register in your program?"
+        - "When might you use a <code>t</code> register as opposed to an <code>s</code> register in your program?"
 
     - model: |
         <div align="center">
