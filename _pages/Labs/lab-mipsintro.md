@@ -63,10 +63,11 @@ We'll use integers today because integers and floating point values are represen
 ### What to Do
 
 #### Reading User Input
-Begin by prompting the user to input integer values fomr `wps` and `spw` using a `syscall`.  To perform the syscall that prints the prompt to the screen, set `$v0` to 4 using the `li` instruction, set `$a0` to your prompt label using the `la` instruction, and call `syscall`.
+Begin by prompting the user to input integer values fomr `wps` and `spw` using a `syscall`.  To perform the syscall that prints the prompt to the screen, set `$v0` to 4 using the `li` instruction, set `$a0` to your prompt label using the `la` instruction, and call `syscall`.  In your `.data` section, you can declare your string variables.  Be sure to add a `\n` to the end of your string to print a newline!
 
-Read in an integer using `syscall`, but this time merely set `$v0` to 5.  `$v0` will contain the integer the user types in when finished.  
-Repeat this process for each variable you wish to input: prompt the user, read an integer, and copy that integer into a register to save it (you can `add $t0, $v0, $zero` to copy `$v0` into `$t0`, but be sure to use a different register for `wps` and `spw`).
+Read in an integer using `syscall`, but this time merely set `$v0` to 5.  `$v0` will contain the integer the user types in when finished.  Repeat this process for each variable you wish to input: prompt the user, read an integer, and copy that integer into a register to save it (you can `add $t0, $v0, $zero` to copy `$v0` into `$t0`, but be sure to use a different register for `wps` and `spw`).
+
+Keep in mind that the register `$v0` is overwritten by the user's input when you type in an integer value, so you'll need to reset `$v0` before making the next `syscall`.  
 
 #### Computing the Formula
 
@@ -75,3 +76,16 @@ Use the R type instructions `add`, `sub`, and the pseudoinstruction `mul` (we wi
 #### Outputting the Result
 
 To print an integer, invoke `syscall` with `$v0` set to 1, and `$a0` containing the value you wish to print.  Print the grade level.
+
+#### Summary
+
+The general strategy is as follows:
+
+1. Perform a `syscall` number 5 to print a message prompting the user to input `wps`.
+2. Perform a `syscall` number 4 to read in the integer `wps`, and copy that from `$v0` to a temporary register.
+3. Perform a `syscall` number 5 to print a second message prompting the user to input `spw`.
+4. Perform a `syscall` number 4 to read in the integer `wps`, and copy that from `$v0` to a different temporary register.
+5. Load your formula constants into temporary registers using `li` instructions.
+6. Using the `add`, `sub`, and `mul` instructions, compute the formula into a new temporary register.  Be aware of order of operations!
+7. Copy your answer into the `$a0` register, and perform a `syscall` number 1 to print an integer (the one stored in `$a0`).  This will print your result.
+8. In the `.data` section, create two strings to hold your prompt messages (including a `\n` character for each).
