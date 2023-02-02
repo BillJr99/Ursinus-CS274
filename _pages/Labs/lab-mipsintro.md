@@ -88,4 +88,5 @@ The general strategy is as follows:
 5. Load your formula constants into temporary registers using `li` instructions.
 6. Using the `add`, `sub`, and `mul` instructions, compute the formula into a new temporary register.  Be aware of order of operations!
 7. Copy your answer into the `$a0` register, and perform a `syscall` number 1 to print an integer (the one stored in `$a0`).  This will print your result.
-8. In the `.data` section, create two strings to hold your prompt messages (including a `\n` character for each).
+8. Perform a `syscall` number 10 to quit the program.
+9. In the `.data` section, create two strings to hold your prompt messages (including a `\n` character for each).
