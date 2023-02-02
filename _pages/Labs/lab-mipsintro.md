@@ -82,11 +82,13 @@ To print an integer, invoke `syscall` with `$v0` set to 1, and `$a0` containing 
 The general strategy is as follows:
 
 1. Perform a `syscall` number 4 to print a message prompting the user to input `wps`.
-2. Perform a `syscall` number 5 to read in an integer, and copy that from `$v0` to a temporary register that will represent the `wps` value.
-3. Perform a `syscall` number 4 to print a second message prompting the user to input `spw`.
-4. Perform a `syscall` number 5 to read in an integer, and copy that from `$v0` to another temporary register that will represent the `spw` value.
-5. Load your formula constants into temporary registers using `li` instructions.
-6. Using the `add`, `sub`, and `mul` instructions, compute the formula into a new temporary register.  Be aware of order of operations!
-7. Copy your answer into the `$a0` register, and perform a `syscall` number 1 to print an integer (the one stored in `$a0`).  This will print your result.
-8. Perform a `syscall` number 10 to quit the program.
-9. In the `.data` section, create two strings to hold your prompt messages (including a `\n` character for each).
+2. Perform a `syscall` number 5 to read in an integer.
+3. Copy that value from `$v0` to a temporary register that will represent the `wps` value.
+4. Perform a `syscall` number 4 to print a second message prompting the user to input `spw`.
+5. Perform a `syscall` number 5 to read in an integer.
+6. Copy that value from `$v0` to another temporary register that will represent the `spw` value.
+7. Load your formula constants into temporary registers using `li` instructions.
+8. Using the `add`, `sub`, and `mul` instructions, compute the formula into a new temporary register.  Be aware of order of operations!
+9. Copy your answer into the `$a0` register, and perform a `syscall` number 1 to print an integer (the one stored in `$a0`).  This will print your result.
+10. Perform a `syscall` number 10 to quit the program.
+11. In the `.data` section, create two strings to hold your prompt messages (including a `\n` character for each).
