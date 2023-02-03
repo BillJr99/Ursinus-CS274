@@ -87,7 +87,7 @@ The general strategy is as follows:
 4. Perform a `syscall` number 4 to print a second message prompting the user to input `spw`.
 5. Perform a `syscall` number 5 to read in an integer.
 6. Copy that value from `$v0` to another temporary register that will represent the `spw` value.
-7. Load your formula constants into temporary registers using `li` instructions.
+7. Load your formula constants (the `12` and the `5` in the formula above) into temporary registers using `li` instructions.
 8. Using the `add`, `sub`, and `mul` instructions, compute the formula into a new temporary register.  Be aware of order of operations!
 9. Copy your answer into the `$a0` register, and perform a `syscall` number 1 to print an integer (the one stored in `$a0`).  This will print your result.
 10. Perform a `syscall` number 10 to quit the program.
