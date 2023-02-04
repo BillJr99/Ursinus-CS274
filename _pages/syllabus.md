@@ -55,7 +55,7 @@ info:
       endtime: "10:50 AM"
       place: "PFA 007"
   midtermexam: 
-    - mdate: "2021/02/24"
+    - mdate: "2023/03/01"
       mstarttime: "10:00 AM"
       mendtime: "10:50 AM"
       mroom: "Regular Class Period"      
@@ -362,11 +362,6 @@ schedule:
   - week: "4"
     date: "3"
     title: "MIPS Procedures"
-    deliverables:
-      - dtitle: "Midterm: Midterm Exam Handed Out"
-        dlink: false
-        points: 100
-        submission_types: "written"
   - week: "5"
     date: "0"
     title: "The Stack"
@@ -385,6 +380,10 @@ schedule:
         dlink: "./Labs/MIPSConditionals"
         points: 100
         rubricpath: "_pages/Labs/lab-mipsconditionals.md"
+      - dtitle: "Midterm: Midterm Exam Handed Out"
+        dlink: false
+        points: 100
+        submission_types: "written"        
     readings:
       - rtitle: "Controlling an LCD Screen by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=FY3zTUaykVo&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=4"
@@ -399,11 +398,6 @@ schedule:
   - week: "5"
     date: "3"
     title: "Data Structures"
-    deliverables:
-      - dtitle: "Midterm: Midterm Exam Due"
-        dlink: false
-        points: 100
-        submission_types: "written"
   - week: "6"
     date: "0"
     title: "Recursion in MIPS"
@@ -422,6 +416,10 @@ schedule:
         dlink: "./Labs/MIPSIteration"
         points: 100
         rubricpath: "_pages/Labs/lab-mipsiteration.md"
+      - dtitle: "Midterm: Midterm Exam Due"
+        dlink: false
+        points: 100
+        submission_types: "written"        
     readings:
       - rtitle: "COD Chapter 3.1-3.2"
         rlink: false
