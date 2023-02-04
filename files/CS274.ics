@@ -384,22 +384,13 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0824
 DTSTAMP:20230217T000000Z
 DTSTART;VALUE=DATE:20230217
-SUMMARY:CS274 Computer Architecture: Midterm: Midterm Exam Handed Out
+SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0825
-DTSTAMP:20230217T000000Z
-DTSTART;VALUE=DATE:20230217
-SUMMARY:CS274 Computer Architecture: Class Meeting
-LOCATION:
-DESCRIPTION:\nDeliverable: Midterm: Midterm Exam Handed Out
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0826
 DTSTAMP:20230220T000000Z
 DTSTART;VALUE=DATE:20230220
 SUMMARY:CS274 Computer Architecture: Participation: First Self-Assessment Handed Out
@@ -408,7 +399,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0827
+UID:00000000-0000-0000-0000-027df4ba0826
 DTSTAMP:20230220T000000Z
 DTSTART;VALUE=DATE:20230220
 SUMMARY:CS274 Computer Architecture: Class Meeting
@@ -417,10 +408,19 @@ DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/Sta
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0828
+UID:00000000-0000-0000-0000-027df4ba0827
 DTSTAMP:20230222T000000Z
 DTSTART;VALUE=DATE:20230222
 SUMMARY:CS274 Computer Architecture: Lab: Implementing if Statements in MIPS Assembly Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba0828
+DTSTAMP:20230222T000000Z
+DTSTART;VALUE=DATE:20230222
+SUMMARY:CS274 Computer Architecture: Midterm: Midterm Exam Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -431,7 +431,7 @@ DTSTAMP:20230222T000000Z
 DTSTART;VALUE=DATE:20230222
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/DataStructures\nReading: Controlling an LCD Screen by Ben Eater https://www.youtube.com/watch?v=FY3zTUaykVo&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=4\nDeliverable: Lab: Implementing if Statements in MIPS Assembly Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/MIPSConditionals
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/DataStructures\nReading: Controlling an LCD Screen by Ben Eater https://www.youtube.com/watch?v=FY3zTUaykVo&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=4\nDeliverable: Lab: Implementing if Statements in MIPS Assembly Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/MIPSConditionals\nDeliverable: Midterm: Midterm Exam Handed Out
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -456,22 +456,13 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba082c
 DTSTAMP:20230224T000000Z
 DTSTART;VALUE=DATE:20230224
-SUMMARY:CS274 Computer Architecture: Midterm: Midterm Exam Due
+SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba082d
-DTSTAMP:20230224T000000Z
-DTSTART;VALUE=DATE:20230224
-SUMMARY:CS274 Computer Architecture: Class Meeting
-LOCATION:
-DESCRIPTION:\nDeliverable: Midterm: Midterm Exam Due
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba082e
 DTSTAMP:20230227T000000Z
 DTSTART;VALUE=DATE:20230227
 SUMMARY:CS274 Computer Architecture: Programming Assignment: MIPS Programming Due
@@ -480,7 +471,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba082f
+UID:00000000-0000-0000-0000-027df4ba082e
 DTSTAMP:20230227T000000Z
 DTSTART;VALUE=DATE:20230227
 SUMMARY:CS274 Computer Architecture: Class Meeting
@@ -489,10 +480,19 @@ DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/MIP
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-027df4ba0830
+UID:00000000-0000-0000-0000-027df4ba082f
 DTSTAMP:20230301T000000Z
 DTSTART;VALUE=DATE:20230301
 SUMMARY:CS274 Computer Architecture: Lab: Implementing loops in MIPS Assembly Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-027df4ba0830
+DTSTAMP:20230301T000000Z
+DTSTART;VALUE=DATE:20230301
+SUMMARY:CS274 Computer Architecture: Midterm: Midterm Exam Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -503,7 +503,7 @@ DTSTAMP:20230301T000000Z
 DTSTART;VALUE=DATE:20230301
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/ComputerArithmeticAddSubtract\nReading: COD Chapter 3.1-3.2\nReading: What is a Stack by Ben Eater https://www.youtube.com/watch?v=xBjQVxVxOxc&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=5\nDeliverable: Lab: Implementing loops in MIPS Assembly Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/MIPSIteration
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/ComputerArithmeticAddSubtract\nReading: COD Chapter 3.1-3.2\nReading: What is a Stack by Ben Eater https://www.youtube.com/watch?v=xBjQVxVxOxc&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=5\nDeliverable: Lab: Implementing loops in MIPS Assembly Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/MIPSIteration\nDeliverable: Midterm: Midterm Exam Due
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -1093,9 +1093,9 @@ PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba086c
-DTSTAMP;TZID=US-Eastern:20210224T100000
-DTSTART;TZID=US-Eastern:20210224T100000
-DTEND;TZID=US-Eastern:20210224T105000
+DTSTAMP;TZID=US-Eastern:20230301T100000
+DTSTART;TZID=US-Eastern:20230301T100000
+DTEND;TZID=US-Eastern:20230301T105000
 SUMMARY:CS274 Computer Architecture: Midterm Exam
 LOCATION:Regular Class Period
 DESCRIPTION:
