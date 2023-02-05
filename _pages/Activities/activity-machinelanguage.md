@@ -122,7 +122,7 @@ info:
         - "How can you tell if an instruction is R type or not?  If it is not R type, how can you tell if it is J type or I type?"
         - "Why do you think the designers stopped at only 3 instruction formats?"
         - "Translate the instruction <code>addi $t1, $t2, $t3</code> to a MIPS 32 bit machine instruction."
-        - "Translate the 32 bit instruction 0x00571020 from hexidecimal to binary, and then to a MIPS assembly instruction."
+        - "Translate the 32 bit instruction 0x00571020 from hexidecimal to binary, and then to a MIPS assembly instruction.  How can you tell just by looking at the hexidecimal that it's an R-type instruction?"
         
     - model: |
         <div align="center">
