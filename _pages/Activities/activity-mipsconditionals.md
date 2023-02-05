@@ -62,6 +62,9 @@ info:
         - "What would happen if the <code>j exit</code> line was omitted?"
         - "How would you modify this program to print the secret number using a syscall?"
         - "Translate the <code>beq</code> instruction to machine language."
+        - "Translate the <code>j</code> instruction to machine language."
+        - "What is the farthest you can move the program counter with a branch instruction?  How about a jump instruction?"
+        - "Suppose you wanted to jump to a location that caused the upper four bits of the program counter to be modified.  Using a combination of branch and jump instructions, perform this jump."
         
     - model: |
         <script type="syntaxhighlighter" class="brush: c"><![CDATA[        
