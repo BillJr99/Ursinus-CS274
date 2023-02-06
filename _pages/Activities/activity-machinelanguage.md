@@ -123,6 +123,7 @@ info:
         - "Why do you think the designers stopped at only 3 instruction formats?"
         - "Translate the instruction <code>addi $t1, $t2, $t3</code> to a MIPS 32 bit machine instruction."
         - "Translate the 32 bit instruction 0x00571020 from hexidecimal to binary, and then to a MIPS assembly instruction.  How can you tell just by looking at the hexidecimal that it's an R-type instruction?"
+        - "What instructions might implement the pseudoinstruction li $t0, 0xabcd5678?  Why can't this instruction be represented with a single operation?"
         
     - model: |
         <div align="center">
