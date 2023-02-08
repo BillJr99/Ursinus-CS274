@@ -42,6 +42,33 @@ tags:
 
 ---
 
+### Overview: Bitwise Operations
+
+Consider the following C program, which computes bitwise logical operations:
+
+```c
+#include <stdio.h>
+
+int main(void) {
+  int a = 0xaa;
+  int b = 0x55;
+
+  printf("%b\n", a);
+  printf("%b\n", b);
+
+  printf("%b\n", (a & b)); // and
+  printf("%b\n", (a | b)); // or
+  printf("%b\n", (a ^ b)); // xor 
+  printf("%b\n", (~a)); // not: note that the upper bits are assumed to be 0, and will be flipped!
+
+  int c = 2;
+  printf("%d: %b\n", (c << 1), (c << 1)); // shift left
+  printf("%d: %b\n", (c >> 1), (c >> 1)); // shift right
+}
+```
+
+In this lab, you will use combinations of these operations to compute several logical bitwise operations on variables that you can set.
+
 ### What to Do
 
 Write a C program to compute the following using bitwise operators:
@@ -52,4 +79,4 @@ Write a C program to compute the following using bitwise operators:
 
 3. Compute the bitwise AND of two variables using the `&` operator.  Now, use deMorgan's law to compute the bitwise AND using only the OR (`|`) and NOT (`~`) operators.  The formula is `A AND B = NOT (NOT A OR NOT B)`.
 
-4. Computer network addresses are given in the form 255.255.255.255, which is four octets of 8 bit values (from 0 to 255).  Some of these bits correspond to the network address, and some correspond to the specific computer address.  The number of bits used in the network portion of the address is known as the netmask.  For example, the address 192.168.1.12/24 indicates that the first 24 bits of the address (192.168.1) represent the network address, and the remaining 8 (32-24) bits represent the computer address (12).  Write a program to input an IP address and a netmask, and print out the decimal values of the network address and the computer address using the bitwise logical operators.  (hint: if you AND 24 1's and 8 0's with a value, you'll get the first 24 bits of that value).
+4. Computer network addresses are given in the form 255.255.255.255, which is four octets of 8 bit values (from 0 to 255).  Some of these bits correspond to the network address, and some correspond to the specific computer address.  The number of bits used in the network portion of the address is known as the netmask.  For example, the address 192.168.1.12/24 indicates that the first 24 bits of the address (192.168.1) represent the network address, and the remaining 8 (32-24) bits represent the computer address (12).  Write a program to input an IP address and a netmask, and print out the decimal values of the network address and the computer address using the bitwise logical operators.  (hint: if you AND 24 1's and 8 0's with a value, you'll get the first 24 bits of that value).  To determine an integer value of an IP address, convert each decimal octet to an 8-bit binary value (for example, 192, 168, 1, and 12).  Append these values together.  The netmask can be an integer value between 1 and 31.
