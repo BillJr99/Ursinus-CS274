@@ -9,6 +9,7 @@ info:
   points: 100
   goals:
     - To manipulate bitwise variables in the C programming language
+    - To write and use a Makefile    
 
   rubric:
     - weight: 60
@@ -35,7 +36,8 @@ info:
       rtitle: Circuits Activity
     - rlink: https://www.tutorialspoint.com/cprogramming/c_bitwise_operators.htm
       rtitle: Bitwise Operators in C
-
+    - rlink: https://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/
+      rtitle: Makefile Tutorial by Bruce A. Maxwell      
 
 tags:
   - logic
@@ -71,7 +73,7 @@ In this lab, you will use combinations of these operations to compute several lo
 
 ### What to Do
 
-Write a C program to compute the following using bitwise operators:
+Write a C program to compute the following using bitwise operators, and submit this program along with a makefile that compiles and runs your code.
 
 1. Take two integer variable values and determine if they are equal by computing the `xor` of one value with the other.  The xor will produce a 1 in the bit positions that are the same, and a 0 in the ones that are not.  Invert this, and check if the value is equal to 0.  If so, the values are the same.
 
