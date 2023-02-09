@@ -55,8 +55,8 @@ int main(void) {
   int a = 0xaa;
   int b = 0x55;
 
-  printf("%b\n", a);
-  printf("%b\n", b);
+  printf("%b: %x\n", a, a);
+  printf("%b: %x\n", b, b);
 
   printf("%b\n", (a & b)); // and
   printf("%b\n", (a | b)); // or
