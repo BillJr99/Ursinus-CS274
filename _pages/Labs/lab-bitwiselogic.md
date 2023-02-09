@@ -51,21 +51,35 @@ Consider the following C program, which computes bitwise logical operations:
 ```c
 #include <stdio.h>
 
+// https://www.codegrepper.com/profile/yasha
+void print_bin(unsigned char value)
+{
+    for (int i = sizeof(char) * 7; i >= 0; i--)
+        printf("%d", (value & (1 << i)) >> i );
+    putc('\n', stdout);
+}
+
 int main(void) {
   int a = 0xaa;
   int b = 0x55;
 
-  printf("%b: %x\n", a, a);
-  printf("%b: %x\n", b, b);
+  printf("%d: ", a);
+  print_bin(a);
+  
+  printf("%d: ", b);
+  print_bin(b);
 
-  printf("%b\n", (a & b)); // and
-  printf("%b\n", (a | b)); // or
-  printf("%b\n", (a ^ b)); // xor 
-  printf("%b\n", (~a)); // not: note that the upper bits are assumed to be 0, and will be flipped!
+  print_bin(a & b); // and
+  print_bin(a | b); // or
+  print_bin(a ^ b); // xor 
+  print_bin(~a); // not: note that the upper bits are assumed to be 0, and will be flipped!
 
   int c = 2;
-  printf("%d: %b\n", (c << 1), (c << 1)); // shift left
-  printf("%d: %b\n", (c >> 1), (c >> 1)); // shift right
+  printf("%d: ", (c << 1)); // shift left
+  print_bin(c << 1);
+
+  printf("%d: ", (c >> 1)); // shift right
+  print_bin(c >> 1);
 }
 ```
 
