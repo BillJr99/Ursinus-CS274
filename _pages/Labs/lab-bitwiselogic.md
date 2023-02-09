@@ -52,9 +52,9 @@ Consider the following C program, which computes bitwise logical operations:
 #include <stdio.h>
 
 // https://www.codegrepper.com/profile/yasha
-void print_bin(unsigned char value)
+void print_bin(unsigned int value)
 {
-    for (int i = sizeof(char) * 7; i >= 0; i--)
+    for (int i = 31; i >= 0; i--)
         printf("%d", (value & (1 << i)) >> i );
     putc('\n', stdout);
 }
