@@ -77,7 +77,7 @@ Write a C program to compute the following using bitwise operators, and submit t
 
 1. Take two integer variable values and determine if they are equal by computing the `xor` of one value with the other.  The xor will produce a 1 in the bit positions that are the same, and a 0 in the ones that are not.  Invert this, and check if the value is equal to 0.  If so, the values are the same.
 
-2. Check if a number is negative or positive by extracting only its sign bit (the 32nd bit for a 32-bit integer).  If it is a 1, the value is negative, and it is positive or 0 if the most significant bit is 0.  (hint: if you AND a 1 shifted left 32 times with a value, you'll get the first bit of that value).
+2. Check if a number is negative or positive by extracting only its sign bit (the 32nd bit for a 32-bit integer).  If it is a 1, the value is negative, and it is positive or 0 if the most significant bit is 0.  (hint: if you shift the value right 31 times, you'll get the first bit of that value duplicated in all 32 places; you can AND this value with 1 to obtain the single bit, and compare that to 0 or 1).
 
 3. Compute the bitwise AND of two variables using the `&` operator.  Now, use deMorgan's law to compute the bitwise AND using only the OR (`|`) and NOT (`~`) operators.  The formula is `A AND B = NOT (NOT A OR NOT B)`.
 
