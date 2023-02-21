@@ -34,8 +34,8 @@ info:
   readings:
     - rlink: ../Activities/MIPSInstructions
       rtitle: MIPS Instruction Set Activity
-    - rlink: https://shawnzhong.github.io/JsSpim/
-      rtitle: JsSpim Online MIPS Simulator
+    - rlink: https://www.billmongan.com/JsSpim/
+      rtitle: JsSpim MIPS Simulator by Shawn Zhong
     - rlink: https://pages.cs.wisc.edu/~larus/spim.html#qtspim
       rtitle: SPIM MIPS Simulator
     - rlink: http://courses.missouristate.edu/kenvollmar/mars/

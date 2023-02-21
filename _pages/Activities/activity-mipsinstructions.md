@@ -371,8 +371,8 @@ info:
         - Save and import this program into the MIPS Simulator and run it.  What happens?
 
   additional_reading:
-    - link: https://shawnzhong.github.io/JsSpim/
-      title: JsSpim MIPS Simulator 
+    - link: https://www.billmongan.com/JsSpim/
+      title: JsSpim MIPS Simulator by Shawn Zhong
     - link: https://inst.eecs.berkeley.edu/~cs61c/resources/MIPS_Green_Sheet.pdf
       title: MIPS Reference Sheet
     - link: https://en.wikibooks.org/wiki/MIPS_Assembly/Instruction_Formats
