@@ -48,7 +48,6 @@ info:
       title: MIPS Strings
       questions:
         - "What is the difference between the <code>lb</code> instruction and the <code>lw</code> instruction?"
-
     - model: |
         <script type="syntaxhighlighter" class="brush: mips"><![CDATA[        
                     .text
@@ -104,10 +103,9 @@ info:
           questions:
             - "Now that you know what an array is, what is a string?"
             - "What is the difference between a string and an array, in terms of its size and how it is terminated?"
-            - "Why was it necessary to multiply <code>i</code> by 4 before adding it to the base address of the array?"
-            
-        - model: |
-            <script type="syntaxhighlighter" class="brush: mips"><![CDATA[        
+            - "Why was it necessary to multiply <code>i</code> by 4 before adding it to the base address of the array?"      
+      - model: |
+          <script type="syntaxhighlighter" class="brush: mips"><![CDATA[        
                     .text
                 
                     .globl main
