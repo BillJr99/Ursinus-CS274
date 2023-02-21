@@ -42,6 +42,8 @@ info:
       rtitle: MARS MIPS Simulator    
     - rlink: https://courses.missouristate.edu/kenvollmar/mars/help/syscallhelp.html
       rtitle: MIPS System Calls    
+    - rlink: https://inst.eecs.berkeley.edu/~cs61c/resources/MIPS_Green_Sheet.pdf
+      rtitle: MIPS Reference Sheet      
 
   questions:
     - "Step through the &quot;Hello World&quot; example assembly program in your MIPS Simulator.  As you step from instruction to instruction, what registers and memory values change?"
