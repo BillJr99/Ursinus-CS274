@@ -48,6 +48,7 @@ info:
       title: MIPS Strings
       questions:
         - "What is the difference between the <code>lb</code> instruction and the <code>lw</code> instruction?"
+        - "Modify this program to convert each character of a String to uppercase, and then to lowercase."
     - model: |
         <script type="syntaxhighlighter" class="brush: mips"><![CDATA[        
             .text
