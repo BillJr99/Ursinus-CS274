@@ -158,6 +158,8 @@ info:
       title: Review of the MIPS Instruction Set
     - link: "https://godbolt.org/"
       title: "Cross-Compiler Explorer"
+    - link: "http://mipsconverter.com/opcodes.html"
+      title: "MIPS to Binary Translation Reference Guide"
 
 tags:
   - mips
