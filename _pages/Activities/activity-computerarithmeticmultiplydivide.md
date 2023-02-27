@@ -18,6 +18,7 @@ info:
         <img src="https://i.stack.imgur.com/mKtQu.png" alt="Algorithm Flowchart for a Shift and Add Multiplier">
       title: Multiplication with a Simple Algorithm
       questions:
+        - "Using only shift and add instructions, multiply a value in a register <code>$t0</code> by 3."
         - "Multiply 0010 by 0011 using this algorithm.  What does it remind you of?"
         - "Why does this algorithm require double the number of bits required for the input values to store the answer?  In other words, why does 4-bit multiplication require an 8-bit result, and why does 32-bit multiplication require a 64-bit result?"
         - "How might the MIPS architecture handle this 64-bit requirement, given that it only uses 32-bit registers?"
