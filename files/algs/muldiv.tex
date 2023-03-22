@@ -30,7 +30,7 @@
 
 \For{$i = 0$; $i < 32$; $i{+}{+}$}
     \If{$multiplier_{0}$ == 1}
-        \State $product_{31:16} \gets product_{31:16} + multiplicand$    
+        \State $product_{63:32} \gets product_{63:32} + multiplicand$    
     \EndIf
     
     \State $product \gets product >> 1$
@@ -47,14 +47,14 @@
 \caption{A Further Improved Algorithm that Utilizes the Unused Right Half of the 64-bit Product Register (which will be shifted out of the register) as the Multiplier (eliminating a register)}\label{alg:mul3}
 \begin{algorithmic}
 
-\State $product{15:0} \gets multiplier$
+\State $product{31:0} \gets multiplier$
 
 \For{$i = 0$; $i < 32$; $i{+}{+}$}
     \If{$product{0}$ == 1}
-        \State $product_{31:16} \gets product_{31:16} + multiplicand$    
+        \State $product_{63:32} \gets product_{63:32} + multiplicand$    
     \EndIf
     
-    \State $multiplier \gets multiplier >> 1$
+    \State $product \gets product >> 1$
 \EndFor 
 
 \end{algorithmic}
@@ -92,22 +92,22 @@
 \caption{An Improved Binary Integer Division Algorithm Using a 32-bit ALU and that Uses the Unused Left Half of the Remainder as the Dividend}\label{alg:div1}
 \begin{algorithmic}
 
-\State $remainder_{31:16} \gets dividend$
+\State $remainder_{63:32} \gets dividend$
 \State $remainder \gets remainder << 1$
 
 \For{$i = 0$; $i < 32$; $i{+}{+}$}
-    \State $remainder_{31:16} \gets remainder_{31:16} - divisor$
+    \State $remainder_{63:32} \gets remainder_{63:32} - divisor$
     
     \If{$remainder \ge 0$}
         \State $remainder \gets remainder << 1$
         \State $remainder_{0} \gets 1$
     \Else
-        \State $remainder_{31:16} \gets remainder_{31:16} + divisor$
+        \State $remainder_{63:32} \gets remainder_{63:32} + divisor$
         \State $remainder \gets remainder << 1$
         \State $remainder_{0} \gets 0$    
     \EndIf
     
-    \State $remainder_{31:16} \gets remainder_{31:16} >> 1$
+    \State $remainder_{63:32} \gets remainder_{63:32} >> 1$
 \EndFor
 
 \end{algorithmic}
