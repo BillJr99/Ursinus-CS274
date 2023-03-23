@@ -44,6 +44,6 @@ tags:
 
 In this lab, you will write two programs (or two functions): one to multiply two binary numbers, and one to divide two binary numbers.  Follow the circuitry and control from the flowcharts for the algorithm we learned.  In other words, each register in the circuit should be a variable in your program, and your implementation should simulate a state machine as indicated by the algorithm control flowchart.
 
-You will write this program in MIPS assembly, storing the floating point values in 32-bit registers, and storing the result in a pair of 32-bit registers for the result of the multiplication or division.  For the quotient, one register will represent the quotient and the other will represent the remainder.
+You will write this program in MIPS assembly, storing the multiplicand and multiplier values in 32-bit registers, and storing the result in a pair of 32-bit registers for the result of the multiplication or division.  For the quotient, one register will represent the quotient and the other will represent the remainder.  For simplicity, you may assume that the values are 16-bit in size, and use a 32-bit register to store the product (or quotient).  For division, you can store the quotient in the upper half of the register and the remainder in the lower half, or use two different registers, if you choose.
 
 Note that you may not use the `mul` or `div` instructions on this lab; rather, you will use the arithmetic instructions `sll`, `add` and others as you may need.
