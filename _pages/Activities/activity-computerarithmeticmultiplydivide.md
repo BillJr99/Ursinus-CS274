@@ -39,9 +39,12 @@ info:
 
     - model: |
         <img src="../images/muldiv/div1.png" alt="Division with a Simple Algorithm">
+        <br>
+        <img src="https://i.stack.imgur.com/b9ZP9.png" alt="Division Flowchart">
       title: Division
       questions:
         - "Draw the hardware diagram and flowchart for this algorithm."
+        - "Where do you initialize the divisor and dividend for this algorithm?"
         - "Divide 0110 by 0011 using this algorithm."
         - "The quotient and remainder are each 4-bit values (or 32-bit values for 32-bit division).  Where does MIPS store these results?"
         - "What MIPS instructions support multiplication and division?"
