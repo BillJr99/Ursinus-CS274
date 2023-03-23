@@ -48,7 +48,7 @@ info:
         - "What MIPS instructions support manipulating the low and high register components?"
 
     - model: |
-        <img src="../images/muldiv/mul2.png" alt="Division using a 32-bit ALU and Reduced Hardware">
+        <img src="../images/muldiv/div2.png" alt="Division using a 32-bit ALU and Reduced Hardware">
         <br>
         <img src="https://i.imgur.com/FQ9dQnU.png" alt="Hardware for a Binary Division Circuit">
         <br>
