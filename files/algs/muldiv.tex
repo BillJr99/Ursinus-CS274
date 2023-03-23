@@ -47,7 +47,7 @@
 \caption{A Further Improved Algorithm that Utilizes the Unused Right Half of the 64-bit Product Register (which will be shifted out of the register) as the Multiplier (eliminating a register)}\label{alg:mul3}
 \begin{algorithmic}
 
-\State $product{31:0} \gets multiplier$
+\State $product_{31:0} \gets multiplier$
 
 \For{$i = 0$; $i < 32$; $i{+}{+}$}
     \If{$product{0}$ == 1}
