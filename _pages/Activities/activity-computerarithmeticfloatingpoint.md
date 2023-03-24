@@ -50,6 +50,7 @@ info:
         - "Represent 1.25 as a single precision floating point value."
         - "What floating point value is represented by the binary field 0 01111110 000000000000000000000000?"
         - "An exponent of 255 with a mantissa is considered infinity (which can be positive or negative based on the sign bit), and NaN is represented by an exponent of 255 with a non-zero mantissa.  What floating point value would be represented by the binary field 0 00000000 000000000000000000000000; that is, 0 exponent and 0 mantissa?  Note that this is considered a special case and, in reality, it is hard coded to 0"
+        - "What is the distance between two floating point numbers?  Is it always the same?  When might you expect the gap to be larger, or smaller (which field would this depend upon)?"
         
     - model: |
         <div align="center">
