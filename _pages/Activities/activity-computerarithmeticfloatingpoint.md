@@ -26,7 +26,7 @@ info:
       title: Single Precision Floating Point Standard
       questions:
         - "Write 0.5 in binary by writing it in the form <code>1.xxx * 2^yyy</code>.  What is the exponent and the mantissa?"
-        - "Complete the conversion to floating point by subtracting this exponent from 127.  You should have a positive number, even though your original exponent was negative.  Why do you think all exponents are converted to positive values in this way?"
+        - "Complete the conversion to floating point by adding this exponent to 127.  You should have a positive number, even though your original exponent was negative.  Why do you think all exponents are converted to positive values in this way?"
         - "Look up the double precision standard and list the differences between it and the single precision standard."
         - "Does double precision offer inrceased range, increased precision, or both?"
         - "What is the approximate range of a single and a double precision floating point value?"
