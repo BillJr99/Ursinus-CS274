@@ -51,6 +51,7 @@ info:
         - "What floating point value is represented by the binary field 0 01111110 000000000000000000000000?"
         - "An exponent of 255 with a mantissa is considered infinity (which can be positive or negative based on the sign bit), and NaN is represented by an exponent of 255 with a non-zero mantissa.  What floating point value would be represented by the binary field 0 00000000 000000000000000000000000; that is, 0 exponent and 0 mantissa?  Note that this is considered a special case and, in reality, it is hard coded to 0"
         - "What is the distance between two floating point numbers?  Is it always the same?  When might you expect the gap to be larger, or smaller (which field would this depend upon)?"
+        - "Represent 0.1 as a single precision floating point value.  To calculate a mantissa for any decimal value, repeatedly multiply the decimal portion by 2; if this number is greater than 1, append a 1 to the mantissa.  Take the decimal portion of that result and repeat to fill the rest of the mantissa field.  Normalize this mantissa with any whole number portion of the float, and use this to generate your exponent."
         
     - model: |
         <div align="center">
@@ -72,6 +73,8 @@ info:
       title: IEEE 754 Floating Point Standard
     - link: https://www.doc.ic.ac.uk/~eedwards/compsys/float/
       title: Floating Point Arithmetic Examples
+    - link: https://www.itu.dk/~sestoft/bachelor/IEEE754_article.pdf
+      title: "What Every Computer Scientist Should Know about Floating Point"
 
 tags:
   - arithmetic
