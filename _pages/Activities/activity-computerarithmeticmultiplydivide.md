@@ -72,6 +72,8 @@ info:
       title: Multiplying Binary Numbers
     - link: https://www.math-drills.com/division/dividing_base_system_02_binary_001.php
       title: Dividing Binary Numbers
+    - link: https://www.cs.colostate.edu/~cs470/s08/multi_div.pdf
+      title: Multiplication and Division Examples
 
 tags:
   - arithmetic
