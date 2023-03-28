@@ -67,7 +67,8 @@
 \caption{A Binary Integer Division Algorithm}\label{alg:div1}
 \begin{algorithmic}
 
-\State $remainder_{63:32} \gets dividend$
+\State $remainder \gets dividend$
+\State $divisor \gets divisor << 32$
 
 \For{$i = 0$; $i < 33$; $i{+}{+}$}
     \State $remainder \gets remainder - divisor$
