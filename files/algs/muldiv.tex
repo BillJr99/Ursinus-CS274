@@ -92,10 +92,10 @@
 \pagebreak
 
 \begin{algorithm}[hbt!]
-\caption{An Improved Binary Integer Division Algorithm Using a 32-bit ALU and that Uses the Unused Left Half of the Remainder as the Dividend, Placing the Remainder in the Left Half of the Reminader Register, and the Quotient in the Right Half of the Remainder Register}\label{alg:div1}
+\caption{An Improved Binary Integer Division Algorithm Using a 32-bit ALU, Using the Right Half of the Remainder as the Dividend, and Placing the Remainder in the Left Half of the Reminader Register, and the Quotient in the Right Half of the Remainder Register}\label{alg:div1}
 \begin{algorithmic}
 
-\State $remainder_{63:32} \gets dividend$
+\State $remainder_{31:0} \gets dividend$
 \State $remainder \gets remainder << 1$
 
 \For{$i = 0$; $i < 32$; $i{+}{+}$}
