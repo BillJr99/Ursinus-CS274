@@ -169,6 +169,6 @@ end structural;
 
 ### What to Do
 
-1. Create and test a 2-bit and gate
-2. Create and test a 2-bit or gate
-3. Create and test a full adder that accepts `a`, `b`, and `carryIn`, and outputs `sum` and `carryOut`, either behaviorally or structurally.
+1. Create and test a 2-bit and gate.
+2. Create and test a 2-bit or gate.
+3. Create and test a full adder that accepts `a`, `b`, and `carryIn`, and outputs `sum` and `carryOut`, either behaviorally or structurally.  You will find it helpful to create a half adder component first, and then create a full adder that consists of two half adders (and possibly one or more of the gates you made above).  This way, you will have far fewer total components in your synthesized circuit (kind of like re-using a function in software)!
