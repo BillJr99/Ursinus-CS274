@@ -45,6 +45,8 @@ tags:
 
 ---
 
+In this lab, you will use a tool called [ghdl](https://github.com/ghdl/ghdl/releases) to compile Virtual Hardware Description Language (VHDL) code that describes circuit wirings for various logic components.
+
 ### Background: VHDL
 
 A basic circuit can be expressed using the VHDL language as follows:
