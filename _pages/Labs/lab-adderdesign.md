@@ -151,12 +151,12 @@ end half_adder;
   
 architecture structural of half_adder is	
 
-  component xor_2
+  component xor2
 	  port(a,b : in std_logic;
 	       c   : out std_logic);
   end component;
   
-  component and_2
+  component and2
 	  port(a,b : in std_logic;
 	  c   : out std_logic);
   end component;
