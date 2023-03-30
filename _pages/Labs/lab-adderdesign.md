@@ -176,3 +176,7 @@ end structural;
 #### Hint: Wiring Two Components Together
 
 You can create a signal (like you did in your testbench files) to represent internal variables in your component.  You can port map the output of one half adder to that signal, and then port map the signal to the input of the next half adder!  You can do this for all your internal wires.
+
+### Online VHDL Editor
+
+If you have trouble using the tools, the [EDA Playground](https://edaplayground.com/) is an online VHDL editor and compiler that you can try!
