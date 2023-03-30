@@ -62,7 +62,7 @@ entity and2 is
         z : out std_logic);
 end and2;
 
-architecture behavioral of full_adder is
+architecture behavioral of and2 is
 begin
     z <= a and b after 2 ns;
 end;
