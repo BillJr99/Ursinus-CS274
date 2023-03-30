@@ -162,8 +162,8 @@ architecture structural of half_adder is
   end component;
   
 begin
-	X1 : xor_2 port map(a => a, b => b, c => sum);
-	A1 : and_2 port map(a => a, b => b, c => carry);
+	X1 : xor2 port map(a => a, b => b, c => sum);
+	A1 : and2 port map(a => a, b => b, c => carry);
 end structural;
 ```
 
@@ -180,8 +180,8 @@ signal x : std_logic;
 You can then port map the xor gates:
 
 ```vhdl
-X1 : xor_2 port map(a => a1, b => b1, c => x);
-X2: xor_2 port map(a => x, b => b2, c => z);
+X1 : xor2 port map(a => a1, b => b1, c => x);
+X2: xor2 port map(a => x, b => b2, c => z);
 ```
 
 Notice the use of x as an output of `X1` and as an input of `X2`, thus connecting the two gates!
