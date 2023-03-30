@@ -130,7 +130,7 @@ gtkwave waveform.vcd
 
 You may need to zoom in and out of the gtk window to see the whole waveform.
 
-#### Creating Complex Circuits Using Structural Circuit Definitions
+#### Creating Complex Circuits Using Structural Circuit Definitions: a Half Adder
 
 An important feature of VHDL is that it allows you to import other components and wire them directly, rather than having to define everything behavrioally through potentially complex boolean logic formulas.
 
@@ -167,7 +167,49 @@ begin
 end structural;
 ```
 
-#### Wiring Two Components Together
+Here is a testbench for the half adder:
+
+```vhdl
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity tb is
+end tb;
+
+architecture behavior of tb is
+    component half_adder is
+	port (
+		a: in std_logic;
+		b: in std_logic;
+		sum: out std_logic;
+		carry: out std_logic
+	);  
+    end component;
+    
+	signal input  : std_logic_vector(1 downto 0);
+	signal output : std_logic_vector(1 downto 0);
+
+begin
+    test1: half_adder port map (
+        a => input(0),
+        b => input(1),
+      	sum => output(0),
+      	carry => output(1)
+    );
+
+    tb_proc: process
+    begin
+        input <= "00"; wait for 30 ns; assert output = "00" report "0&0 failed";
+        input <= "01"; wait for 30 ns; assert output = "01" report "0&1 failed";
+        input <= "10"; wait for 30 ns; assert output = "01" report "1&0 failed";
+        input <= "11"; wait for 30 ns; assert output = "10" report "1&1 failed";    
+        report "Testbench finished";
+        wait;
+    end process;
+end;
+```
+
+#### Wiring Two Components Together: a Full Adder
 
 You can create a signal (like you did in your testbench files) to represent internal variables in your component.  You can port map the output of one half adder to that signal, and then port map the signal to the input of the next half adder!  You can do this for all your internal wires.
 
