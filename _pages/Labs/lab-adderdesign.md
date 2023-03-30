@@ -177,6 +177,21 @@ end structural;
 
 You can create a signal (like you did in your testbench files) to represent internal variables in your component.  You can port map the output of one half adder to that signal, and then port map the signal to the input of the next half adder!  You can do this for all your internal wires.
 
+For example, suppose you wanted to connect the output of one xor gate to the input of another.  You could add a signal to represent this internal connection between the two gates:
+
+```vhdl
+signal x : std_logic;
+```
+
+You can then port map the xor gates:
+
+```vhdl
+X1 : xor_2 port map(a => a1, b => b1, c => x);
+X2: xor_2 port map(a => x, b => b2, c => z);
+```
+
+Notice the use of x as an output of `X1` and as an input of `X2`, thus connecting the two gates!
+
 ### Online VHDL Editor
 
 If you have trouble using the tools, the [EDA Playground](https://edaplayground.com/) is an online VHDL editor and compiler that you can try!
