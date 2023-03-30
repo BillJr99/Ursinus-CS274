@@ -521,10 +521,10 @@ schedule:
     date: "2"
     title: "Lab: ALU Design"
     deliverables:
-      - dtitle: "Lab: ALU Design Handed Out"
-        dlink: "./Labs/ALUDesign"
+      - dtitle: "Lab: Adder Design Handed Out"
+        dlink: "./Labs/AdderDesign"
         points: 100
-        rubricpath: "_pages/Labs/lab-aludesign.md"
+        rubricpath: "_pages/Labs/lab-adderdesign.md"
   - week: "10"
     date: "3"
     title: "The MIPS Single Cycle Design"
@@ -536,10 +536,10 @@ schedule:
     title: "The MIPS Multi Cycle Design"
     link: "./Activities/MIPSMultiCycle"    
     deliverables:
-      - dtitle: "Lab: ALU Design Due"
-        dlink: "./Labs/ALUDesign"
+      - dtitle: "Lab: Adder Design Due"
+        dlink: "./Labs/AdderDesign"
         points: 100
-        rubricpath: "_pages/Labs/lab-aludesign.md"
+        rubricpath: "_pages/Labs/lab-adderdesign.md"
     readings:
       - rtitle: "How Assembly Language Loops Work by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=ZYJIakkcLYw&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=9"
