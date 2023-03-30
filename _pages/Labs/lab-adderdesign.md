@@ -173,7 +173,7 @@ end structural;
 2. Create and test a 2-bit xor gate.
 3. Create and test a full adder that accepts `a`, `b`, and `carryIn`, and outputs `sum` and `carryOut`, using the half adder above.  By using two half adder components in your full adder implementation, you will have far fewer total components in your synthesized circuit than if you constructed the whole full adder out of and/or/xor gates.  This is a bit like re-using a function in software!  Feel free to create additional gates (for example, an or gate), if you need them.
 
-#### Hint: Wiring Two Components Together
+#### Wiring Two Components Together
 
 You can create a signal (like you did in your testbench files) to represent internal variables in your component.  You can port map the output of one half adder to that signal, and then port map the signal to the input of the next half adder!  You can do this for all your internal wires.
 
@@ -191,6 +191,16 @@ X2: xor_2 port map(a => x, b => b2, c => z);
 ```
 
 Notice the use of x as an output of `X1` and as an input of `X2`, thus connecting the two gates!
+
+#### Testing the Full Adder
+
+When you test your full adder, you can re-use much of the and2 test bench from earlier.  However, you'll have three inputs now (a, b, and carry in), instead of two, so your input signal will become a 3-bit gate, as follows:
+
+```vhdl
+signal input  : std_logic_vector(2 downto 0);
+```
+
+You'll set this to `"000"` instead of just `"00"`, and so on.  You'll also have two output signals, for the sum and carry out (instead of just one).
 
 ### Online VHDL Editor
 
