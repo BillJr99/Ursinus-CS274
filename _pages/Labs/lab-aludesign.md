@@ -101,7 +101,7 @@ begin
         input <= "00"; wait for 30 ns; assert output = '0' report "0&0 failed";
         input <= "01"; wait for 30 ns; assert output = '0' report "0&1 failed";
         input <= "10"; wait for 30 ns; assert output = '0' report "1&0 failed";
-        input <= "11"; wait for 30 ns; assert output = '0' report "1&1 failed";
+        input <= "11"; wait for 30 ns; assert output = '1' report "1&1 failed";
         report "Testbench finished";
         wait;
     end process;
