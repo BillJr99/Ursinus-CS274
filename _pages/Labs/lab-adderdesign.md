@@ -118,7 +118,7 @@ You can compile and run your vhdl program by compiling each vhdl file, and simul
 ghdl -a and2.vhd
 ghdl -a and2_tb.vhd
 ghdl -e and2_tb
-ghdl -r and2_tb --vcd=waveform.vcd # on some systems, the command may be: ./and2_tb --vcd=waveform.vcd
+ghdl -r and2_tb --vcd=waveform.vcd # on some systems, this command may be: ./and2_tb --vcd=waveform.vcd
 ```
 This will output the report statements within the testbench and output a waveform timeline that you can view in `gtkwave`.
 
@@ -171,4 +171,4 @@ end structural;
 
 1. Create and test a 2-bit and gate.
 2. Create and test a 2-bit xor gate.
-3. Create and test a full adder that accepts `a`, `b`, and `carryIn`, and outputs `sum` and `carryOut`, either behaviorally or structurally.  For a structural full adder, you will find it helpful to create a half adder component first, and then create a full adder that consists of two half adders (and possibly one or more of the gates you made above).  This way, you will have far fewer total components in your synthesized circuit (kind of like re-using a function in software)!  Feel free to create additional gates (for example, an or gate), if you need them.
+3. Create and test a full adder that accepts `a`, `b`, and `carryIn`, and outputs `sum` and `carryOut`, using the half adder above.  By using two half adder components in your full adder implementation, you will have far fewer total components in your synthesized circuit than if you constructed the whole full adder out of and/or/xor gates.  This is a bit like re-using a function in software!  Feel free to create additional gates (for example, an or gate), if you need them.
