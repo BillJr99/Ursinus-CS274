@@ -153,17 +153,17 @@ architecture structural of half_adder is
 
   component xor2
 	  port(a,b : in std_logic;
-	       c   : out std_logic);
+	       z   : out std_logic);
   end component;
   
   component and2
 	  port(a,b : in std_logic;
-	  c   : out std_logic);
+	  z   : out std_logic);
   end component;
   
 begin
-	X1 : xor2 port map(a => a, b => b, c => sum);
-	A1 : and2 port map(a => a, b => b, c => carry);
+	X1 : xor2 port map(a => a, b => b, z => sum);
+	A1 : and2 port map(a => a, b => b, z => carry);
 end structural;
 ```
 
