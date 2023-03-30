@@ -1,15 +1,15 @@
 ---
 layout: assignment
-permalink: /Labs/ALUDesign
-title: "CS274: Computer Architecture - ALU Design"
-excerpt: "CS274: Computer Architecture - ALU Design"
+permalink: /Labs/AdderDesign
+title: "CS274: Computer Architecture - Adder Design"
+excerpt: "CS274: Computer Architecture - Adder Design"
 
 info:
   coursenum: CS274
   points: 100
   goals:
-    - To design an ALU using logic gates
-    - To implement an ALU design using both a structural and behavioral approach using VHDL
+    - To design an adder using logic gates
+    - To implement an adder design using both a structural and behavioral approach using VHDL
 
   rubric:
     - weight: 60
@@ -45,7 +45,7 @@ tags:
 
 ---
 
-In this lab, you will use a tool called [ghdl](http://ghdl.free.fr/download.html) to compile Virtual Hardware Description Language (VHDL) code that describes circuit wirings for various logic components.  On Mac OS systems, you can install ghdl using [homebrew](https://brew.sh/) via this command: `brew install --cask ghdl gtkwave`, and on Linux, you can install using this command: `sudo apt-get install ghdl gtkwave` (these will also install the gtkwave system that Windows users will download later in this lab).
+In this lab, you will use a tool called [ghdl](http://ghdl.free.fr/download.html) to compile Virtual Hardware Description Language (VHDL) code that describes circuit wirings for various logic components.  On Mac OS systems, you can install ghdl using [homebrew](https://brew.sh/) via this command: `brew install --cask ghdl gtkwave`, and on Linux, you can install using this command: `sudo apt-get install ghdl gtkwave` (these will also install the gtkwave system that Windows users will download later in this lab).  Using these tools, you will implement an adder circuit using the VHDL language.
 
 ### Background: VHDL
 
@@ -172,10 +172,3 @@ You may need to zoom in and out of the gtk window to see the whole waveform.
 1. Create and test a 2-bit and gate
 2. Create and test a 2-bit or gate
 3. Create and test a full adder that accepts `a`, `b`, and `carryIn`, and outputs `sum` and `carryOut`, either behaviorally or structurally.
-4. Create and test a 3-bit and gate
-5. Create and test a 4-to-1 multiplexor according to this design:
-<img src="https://www.tutorialspoint.com/digital_circuits/images/4_1_multiplexer.jpg" alt="4-1 multiplexor">
-<br>
-<img src="https://www.tutorialspoint.com/digital_circuits/images/4_1_multiplexer_circuit_diagram.jpg" alt="Circuit design for the 4-1 multiplexor">
-6. Create a structural ALU component that wires together a 2-bit and gate, a 2-bit or gate, and a full adder, and then multiplexes them together according to a select input, as shown in this design:
-<img src="https://www.researchgate.net/profile/V-Bhanumathi/publication/321814052/figure/fig2/AS:745655408529409@1554789511084/Functional-block-diagram-of-one-bit-ALU_W640.jpg" alt="1 bit ALU">
