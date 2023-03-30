@@ -45,7 +45,7 @@ tags:
 
 ---
 
-In this lab, you will use a tool called [ghdl](https://github.com/ghdl/ghdl/releases) to compile Virtual Hardware Description Language (VHDL) code that describes circuit wirings for various logic components.
+In this lab, you will use a tool called [ghdl](http://ghdl.free.fr/download.html) to compile Virtual Hardware Description Language (VHDL) code that describes circuit wirings for various logic components.
 
 ### Background: VHDL
 
