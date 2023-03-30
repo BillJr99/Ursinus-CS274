@@ -155,11 +155,11 @@ You can compile and run your vhdl program by compiling each vhdl file, and simul
 ghdl -a and2.vhd
 ghdl -a and2_tb.vhd
 ghdl -e and2_tb
-./and2_tb --vcd=waveform.vcd
+ghdl -r and2_tb --vcd=waveform.vcd # on some systems, the command may be: ./and2_tb --vcd=waveform.vcd
 ```
 This will output the report statements within the testbench and output a waveform timeline that you can view in `gtkwave`.
 
-You can view the waveform via:
+You can view the waveform by downloading a tool called [gtkwave](https://sourceforge.net/projects/gtkwave/), and running:
 
 ```
 gtkwave waveform.vcd
