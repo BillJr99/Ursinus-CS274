@@ -663,7 +663,7 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0843
 DTSTAMP:20230330T000000Z
 DTSTART;VALUE=DATE:20230330
-SUMMARY:CS274 Computer Architecture: Lab: ALU Design Handed Out
+SUMMARY:CS274 Computer Architecture: Lab: Adder Design Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -674,7 +674,7 @@ DTSTAMP:20230330T000000Z
 DTSTART;VALUE=DATE:20230330
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: ALU Design Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/ALUDesign
+DESCRIPTION:\nDeliverable: Lab: Adder Design Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/AdderDesign
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -699,7 +699,7 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0847
 DTSTAMP:20230405T000000Z
 DTSTART;VALUE=DATE:20230405
-SUMMARY:CS274 Computer Architecture: Lab: ALU Design Due
+SUMMARY:CS274 Computer Architecture: Lab: Adder Design Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -710,7 +710,7 @@ DTSTAMP:20230405T000000Z
 DTSTART;VALUE=DATE:20230405
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/MIPSMultiCycle\nReading: How Assembly Language Loops Work by Ben Eater https://www.youtube.com/watch?v=ZYJIakkcLYw&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=9\nReading: COD Chapter 4.5\nDeliverable: Lab: ALU Design Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/ALUDesign
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/MIPSMultiCycle\nReading: How Assembly Language Loops Work by Ben Eater https://www.youtube.com/watch?v=ZYJIakkcLYw&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=9\nReading: COD Chapter 4.5\nDeliverable: Lab: Adder Design Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/AdderDesign
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
