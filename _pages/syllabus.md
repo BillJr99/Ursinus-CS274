@@ -519,7 +519,7 @@ schedule:
         rlink: "https://www.youtube.com/watch?v=fCbAafKLqC8&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=8"
   - week: "10"
     date: "2"
-    title: "Lab: ALU Design"
+    title: "Lab: Adder Design"
     deliverables:
       - dtitle: "Lab: Adder Design Handed Out"
         dlink: "./Labs/AdderDesign"
