@@ -110,7 +110,27 @@ end;
 
 This testbench has no pins of its own, but rather creates signals for the pins of the circuit it is testing (`input` and `output`).  It imports the `and2` circuit, and starts a process to test each set of values and assert their output.
 
-#### Structural Circuit Definitions
+### Using ghdl
+
+You can compile and run your vhdl program by compiling each vhdl file, and simulating the testbench:
+
+```
+ghdl -a and2.vhd
+ghdl -a and2_tb.vhd
+ghdl -e and2_tb
+ghdl -r and2_tb --vcd=waveform.vcd # on some systems, the command may be: ./and2_tb --vcd=waveform.vcd
+```
+This will output the report statements within the testbench and output a waveform timeline that you can view in `gtkwave`.
+
+You can view the waveform by downloading a tool called [gtkwave](https://sourceforge.net/projects/gtkwave/), and running:
+
+```
+gtkwave waveform.vcd
+```
+
+You may need to zoom in and out of the gtk window to see the whole waveform.
+
+#### Creating Complex Circuits Using Structural Circuit Definitions
 
 An important feature of VHDL is that it allows you to import other components and wire them directly, rather than having to define everything behavrioally through potentially complex boolean logic formulas.
 
@@ -146,26 +166,6 @@ begin
 	A1 : and_2 port map(a => a, b => b, c => carry);
 end structural;
 ```
-
-### Using ghdl
-
-You can compile and run your vhdl program by compiling each vhdl file, and simulating the testbench:
-
-```
-ghdl -a and2.vhd
-ghdl -a and2_tb.vhd
-ghdl -e and2_tb
-ghdl -r and2_tb --vcd=waveform.vcd # on some systems, the command may be: ./and2_tb --vcd=waveform.vcd
-```
-This will output the report statements within the testbench and output a waveform timeline that you can view in `gtkwave`.
-
-You can view the waveform by downloading a tool called [gtkwave](https://sourceforge.net/projects/gtkwave/), and running:
-
-```
-gtkwave waveform.vcd
-```
-
-You may need to zoom in and out of the gtk window to see the whole waveform.
 
 ### What to Do
 
