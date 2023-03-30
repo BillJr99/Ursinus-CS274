@@ -79,7 +79,7 @@ use ieee.std_logic_1164.all;
 entity and2_tb is
 end and2_tb;
 
-architecture behavior of and_tb is
+architecture behavior of and2_tb is
     component and2 is
     port (
         a  : in  std_logic;
