@@ -42,6 +42,18 @@ tags:
 
 ### What to Do
 
+#### Create a 1-bit ALU
+
+Using the adder circuit from the prior lab, create a 1-bit ALU by creating and wiring the following additional components:
+
+1. Create and test a 3-bit and gate
+2. Create and test a 4-to-1 multiplexor according to this design:
+<img src="https://www.tutorialspoint.com/digital_circuits/images/4_1_multiplexer.jpg" alt="4-1 multiplexor">
+<br>
+<img src="https://www.tutorialspoint.com/digital_circuits/images/4_1_multiplexer_circuit_diagram.jpg" alt="Circuit design for the 4-1 multiplexor">
+3. Create a structural ALU component that wires together a 2-bit and gate, a 2-bit or gate, and a full adder, and then multiplexes them together according to a select input, as shown in this design:
+<img src="https://www.researchgate.net/profile/V-Bhanumathi/publication/321814052/figure/fig2/AS:745655408529409@1554789511084/Functional-block-diagram-of-one-bit-ALU_W640.jpg" alt="1 bit ALU">
+
 #### Draw the Circuit Diagram for a 4-bit ALU
 
 Draw a circuit diagram schematic for a 4-bit ALU using boolean logic gates and the below diagram of a 1-bit ALU.  Specifically, accept as inputs a 4-bit input `A` and a 4-bit input `B`, as well as an `Op` operation code, and connect the individual 1-bit ALU's to one another to produce a 4-bit output `result`, a 1-bit output `zero`, a 1-bit output `CarryOut`, and a 1-bit output `overflow`.
