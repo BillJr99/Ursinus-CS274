@@ -164,7 +164,7 @@ grade_breakdown:
   weight: "40%"
 - category: "Midterm Exam"
   weight: "15%"
-- category: "Final Exam"
+- category: "Final Assessment"
   weight: "15%"
 - category: "Class Participation and Quizzes"
   weight: "5%"
@@ -617,6 +617,10 @@ schedule:
         dlink: "./Labs/Cache"
         points: 100
         rubricpath: "_pages/Labs/lab-cache.md"
+      - dtitle: "Final Project: Project and Presentation Handed Out"
+        dlink: "Projects/Final"  
+        points: 100  
+        rubricpath: "_pages/Projects/proj-final.md"        
   - week: "13"
     date: "3"
     title: "The Memory Hierarchy: Cache Design"
@@ -664,6 +668,10 @@ schedule:
         dlink: "./Assignments/CacheSimulator"
         points: 100
         rubricpath: "_pages/Assignments/assignment-cachesimulator.md"
+      - dtitle: "Final Project: Project and Presentation Due"
+        dlink: "Projects/Final"
+        points: 100
+        rubricpath: "_pages/Projects/proj-final.md"        
           
 university:
   semester: "Spring"
