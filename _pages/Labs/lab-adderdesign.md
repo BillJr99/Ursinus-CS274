@@ -223,7 +223,7 @@ You can then port map the xor gates:
 
 ```vhdl
 X1 : xor2 port map(a => a1, b => b1, c => x);
-X2: xor2 port map(a => x, b => b2, c => z);
+X2 : xor2 port map(a => x, b => b2, c => z);
 ```
 
 Notice the use of x as an output of `X1` and as an input of `X2`, thus connecting the two gates!
@@ -240,7 +240,7 @@ You'll set this to `"000"` instead of just `"00"`, and so on.  You'll also have 
 
 ### Online VHDL Editor
 
-If you have trouble using the tools, the [EDA Playground](https://edaplayground.com/) is an online VHDL editor and compiler that you can try!  On the left menu, you can select VHDL as the `Testbench and Design`, and specify the name of your testbench component in the `Top entity` text box.  Under `Tools & Simulators`, choose `GHDL`, and hit `Run` at the top.
+If you have trouble using the tools, the [EDA Playground](https://edaplayground.com/) is an online VHDL editor and compiler that you can try!  On the left menu, you can select VHDL as the `Testbench and Design`, and specify the name of your testbench component in the `Top entity` text box.  Under `Tools & Simulators`, choose `GHDL`, and hit `Run` at the top.  Optionally, you can select the `EPWave` tool to enable the output waveform similar to gtkwave.
 
 The only restriction is that you will save all your work in a single design file, and a single testbench file.  So, if you have multiple entities, you'll paste them one after the other in the design file.  Here is an example, using a 3-input and gate that structurally wires together two 2-input and gates (notice the two files are pasted one right after the other, such that the and2 gate begins as soon as the and3 gate ends!):
 
