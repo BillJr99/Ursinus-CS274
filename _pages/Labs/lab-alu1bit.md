@@ -57,4 +57,4 @@ Using the adder circuit from the prior lab, create a 1-bit ALU by creating and w
 When finished with this base design, make the following modification.
 
 #### Subtraction
-Add a bInvert bit to your design, and multiplex the input signal `b` with `not b`, and use the resulting mux output as a signal to the remaining `b` inputs.  You can create a 2-input multiplexor to support this.
+Add a `bInvert` input bit to your design, and multiplex the input signal `b` with `not b`, and use the resulting mux output as a signal to the remaining `b` inputs.  You can create a 2-input multiplexor to support this.
