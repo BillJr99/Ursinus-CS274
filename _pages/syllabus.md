@@ -547,12 +547,12 @@ schedule:
         rlink: false        
   - week: "11"
     date: "2"
-    title: "Lab: 4 Bit ALU"
+    title: "Lab: 1 Bit ALU"
     deliverables:
-      - dtitle: "Lab: 4 Bit ALU Handed Out"
-        dlink: "./Labs/ALU4Bit"
+      - dtitle: "Lab: 1 Bit ALU Handed Out"
+        dlink: "./Labs/ALU1Bit"
         points: 100
-        rubricpath: "_pages/Labs/lab-alu4bit.md"
+        rubricpath: "_pages/Labs/lab-alu1bit.md"
   - week: "11"
     date: "3"
     title: "The MIPS Multi Cycle Design"
@@ -572,21 +572,21 @@ schedule:
     date: "1"
     title: "Pipelining"
     deliverables:
-      - dtitle: "Lab: 4 Bit ALU Due"
-        dlink: "./Labs/ALU4Bit"
+      - dtitle: "Lab: 1 Bit ALU Due"
+        dlink: "./Labs/ALU1Bit"
         points: 100
-        rubricpath: "_pages/Labs/lab-alu4bit.md"
+        rubricpath: "_pages/Labs/lab-alu1bit.md"
     readings:
       - rtitle: "Computer Arithmetic by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=v3-a-zqKfgA&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=10"
   - week: "12"
     date: "2"
-    title: "Lab: Single Cycle Datapath and Control"
+    title: "Lab: 4-bit ALU"
     deliverables:
-      - dtitle: "Lab: Single Cycle Datapath and Control Handed Out"
-        dlink: "./Labs/SingleCycle"
+      - dtitle: "Lab: 4 Bit ALU Handed Out"
+        dlink: "./Labs/ALU4Bit"
         points: 100
-        rubricpath: "_pages/Labs/lab-singlecycle.md"
+        rubricpath: "_pages/Labs/lab-alu4bit.md"    
   - week: "12"
     date: "3"
     title: "Pipelining: Data and Control Hazards"
@@ -602,21 +602,21 @@ schedule:
     title: "The Memory Hierarchy: Cache Design"
     link: "./Activities/Cache"
     deliverables:
-      - dtitle: "Lab: Single Cycle Datapath and Control Due"
-        dlink: "./Labs/SingleCycle"
+      - dtitle: "Lab: 4 Bit ALU Due"
+        dlink: "./Labs/ALU4Bit"
         points: 100
-        rubricpath: "_pages/Labs/lab-singlecycle.md"
+        rubricpath: "_pages/Labs/lab-alu4bit.md"      
     readings:
       - rtitle: "COD Chapter 5.1-5.4"
         rlink: false
   - week: "13"
     date: "2"
-    title: "Lab: Cache"
+    title: "Lab: Single Cycle Datapath and Control"
     deliverables:
-      - dtitle: "Lab: Cache Handed Out"
-        dlink: "./Labs/Cache"
+      - dtitle: "Lab: Single Cycle Datapath and Control Handed Out"
+        dlink: "./Labs/SingleCycle"
         points: 100
-        rubricpath: "_pages/Labs/lab-cache.md"
+        rubricpath: "_pages/Labs/lab-singlecycle.md"
       - dtitle: "Final Project: Project and Presentation Handed Out"
         dlink: "Projects/Final"  
         points: 100  
@@ -641,10 +641,10 @@ schedule:
     date: "1"
     title: "The Memory Hierarchy: Cache Design"
     deliverables:
-      - dtitle: "Lab: Cache Due"
-        dlink: "./Labs/Cache"
+      - dtitle: "Lab: Single Cycle Datapath and Control Due"
+        dlink: "./Labs/SingleCycle"
         points: 100
-        rubricpath: "_pages/Labs/lab-cache.md"
+        rubricpath: "_pages/Labs/lab-singlecycle.md"
   - week: "14"
     date: "2"
     title: "The Memory Hierarchy: Virtual Memory"
