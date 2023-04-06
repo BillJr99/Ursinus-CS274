@@ -31,8 +31,8 @@ info:
       proficient: The program is submitted according to the directions, including a readme writeup describing the solution, and thoughtful answers to the bolded questions throughout
 
   readings:
-    - rlink: ../Labs/ALUDesign
-      rtitle: 1-Bit ALU Design Lab
+    - rlink: ../Labs/AdderDesign
+      rtitle: Adder Design Lab
 
 tags:
   - alu
