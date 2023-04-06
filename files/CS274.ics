@@ -717,7 +717,7 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0849
 DTSTAMP:20230406T000000Z
 DTSTART;VALUE=DATE:20230406
-SUMMARY:CS274 Computer Architecture: Lab: 4 Bit ALU Handed Out
+SUMMARY:CS274 Computer Architecture: Lab: 1 Bit ALU Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -728,7 +728,7 @@ DTSTAMP:20230406T000000Z
 DTSTART;VALUE=DATE:20230406
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: 4 Bit ALU Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/ALU4Bit
+DESCRIPTION:\nDeliverable: Lab: 1 Bit ALU Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/ALU1Bit
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -762,7 +762,7 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba084e
 DTSTAMP:20230412T000000Z
 DTSTART;VALUE=DATE:20230412
-SUMMARY:CS274 Computer Architecture: Lab: 4 Bit ALU Due
+SUMMARY:CS274 Computer Architecture: Lab: 1 Bit ALU Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -773,14 +773,14 @@ DTSTAMP:20230412T000000Z
 DTSTART;VALUE=DATE:20230412
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Computer Arithmetic by Ben Eater https://www.youtube.com/watch?v=v3-a-zqKfgA&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=10\nDeliverable: Lab: 4 Bit ALU Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/ALU4Bit
+DESCRIPTION:\nReading: Computer Arithmetic by Ben Eater https://www.youtube.com/watch?v=v3-a-zqKfgA&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=10\nDeliverable: Lab: 1 Bit ALU Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/ALU1Bit
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0850
 DTSTAMP:20230413T000000Z
 DTSTART;VALUE=DATE:20230413
-SUMMARY:CS274 Computer Architecture: Lab: Single Cycle Datapath and Control Handed Out
+SUMMARY:CS274 Computer Architecture: Lab: 4 Bit ALU Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -791,7 +791,7 @@ DTSTAMP:20230413T000000Z
 DTSTART;VALUE=DATE:20230413
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: Single Cycle Datapath and Control Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/SingleCycle
+DESCRIPTION:\nDeliverable: Lab: 4 Bit ALU Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/ALU4Bit
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -816,7 +816,7 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0854
 DTSTAMP:20230419T000000Z
 DTSTART;VALUE=DATE:20230419
-SUMMARY:CS274 Computer Architecture: Lab: Single Cycle Datapath and Control Due
+SUMMARY:CS274 Computer Architecture: Lab: 4 Bit ALU Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -827,14 +827,14 @@ DTSTAMP:20230419T000000Z
 DTSTART;VALUE=DATE:20230419
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/Cache\nReading: COD Chapter 5.1-5.4\nDeliverable: Lab: Single Cycle Datapath and Control Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/SingleCycle
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS274-Spring2023/./Activities/Cache\nReading: COD Chapter 5.1-5.4\nDeliverable: Lab: 4 Bit ALU Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/ALU4Bit
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba0856
 DTSTAMP:20230420T000000Z
 DTSTART;VALUE=DATE:20230420
-SUMMARY:CS274 Computer Architecture: Lab: Cache Handed Out
+SUMMARY:CS274 Computer Architecture: Lab: Single Cycle Datapath and Control Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -854,7 +854,7 @@ DTSTAMP:20230420T000000Z
 DTSTART;VALUE=DATE:20230420
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: Cache Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/Cache\nDeliverable: Final Project: Project and Presentation Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/Projects/Final
+DESCRIPTION:\nDeliverable: Lab: Single Cycle Datapath and Control Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/SingleCycle\nDeliverable: Final Project: Project and Presentation Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/Projects/Final
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -897,7 +897,7 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-027df4ba085d
 DTSTAMP:20230426T000000Z
 DTSTART;VALUE=DATE:20230426
-SUMMARY:CS274 Computer Architecture: Lab: Cache Due
+SUMMARY:CS274 Computer Architecture: Lab: Single Cycle Datapath and Control Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -908,7 +908,7 @@ DTSTAMP:20230426T000000Z
 DTSTART;VALUE=DATE:20230426
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: Cache Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/Cache
+DESCRIPTION:\nDeliverable: Lab: Single Cycle Datapath and Control Due https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/SingleCycle
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
