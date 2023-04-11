@@ -54,8 +54,8 @@ Recall the C program to extract the IEEE bit fields from an IEEE 754 `float` dat
 
 ### What to Do
 
-In this assignment, you will write a program to prompt the user for the sign, mantissa, and exponent of an IEEE 754 single precision floating point value (in binary).  Using the IEEE 754 standard, normalize the mantissa and exponent, convert them from binary to decimal, and calculate the decimal value of this float.
+In this assignment, you will write a program to prompt the user for the sign, mantissa, and exponent of an IEEE 754 single precision floating point value (in binary).  Using the IEEE 754 standard, calculate the decimal value of this float.
 
-Repeat this process for an IEEE 754 double precision floating point value.
+Repeat this process for an IEEE 754 double precision floating point value.  Instead of an `int`, you can declare the mantissa as a `long int` to enable the additional bit storage.
 
 You may use C, C++, Java, or Python for your solution, but be sure to include a Makefile that compiles and runs the program(s).

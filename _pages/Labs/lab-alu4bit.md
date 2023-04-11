@@ -31,8 +31,8 @@ info:
       proficient: The program is submitted according to the directions, including a readme writeup describing the solution, and thoughtful answers to the bolded questions throughout
 
   readings:
-    - rlink: ../Labs/ALUDesign
-      rtitle: 1-Bit ALU Design Lab
+    - rlink: ../Labs/ALU1Bit
+      rtitle: "1-Bit ALU Lab"
 
 tags:
   - alu
@@ -41,18 +41,6 @@ tags:
 ---
 
 ### What to Do
-
-#### Create a 1-bit ALU
-
-Using the adder circuit from the prior lab, create a 1-bit ALU by creating and wiring the following additional components:
-
-1. Create and test a 3-bit and gate
-2. Create and test a 4-to-1 multiplexor according to this design:
-<img src="https://www.tutorialspoint.com/digital_circuits/images/4_1_multiplexer.jpg" alt="4-1 multiplexor">
-<br>
-<img src="https://www.tutorialspoint.com/digital_circuits/images/4_1_multiplexer_circuit_diagram.jpg" alt="Circuit design for the 4-1 multiplexor">
-3. Create a structural ALU component that wires together a 2-bit and gate, a 2-bit or gate, and a full adder, and then multiplexes them together according to a select input, as shown in this design:
-<img src="https://www.researchgate.net/profile/V-Bhanumathi/publication/321814052/figure/fig2/AS:745655408529409@1554789511084/Functional-block-diagram-of-one-bit-ALU_W640.jpg" alt="1 bit ALU">
 
 #### Draw the Circuit Diagram for a 4-bit ALU
 
@@ -82,10 +70,13 @@ alugen: for i in 3 downto 0 generate
    alu: alu1 PORT MAP(x => a(i), ...);
 ```
 
-When finished with this base design, make two modifications.
+When finished with this base design, make the following three modifications.
 
 #### Modification 1: less than status bit
 Modify your design to support a less than output that is the most significant bit `xor` the overflow detection bit.
 
 #### Modification 2: Subtraction
-Add a bInvert bit to your design, use it as your least significant bit ALU carry in, and pass it to the bInvert input of your 1-bit ALUs (adding this to your 1-bit ALU design if necessary).
+Add a `bInvert` signal, and pass it to the bInvert input of your 1-bit ALUs, along with the least significant ALU `carryIn` bit.
+
+#### Modification 3: Overflow Detection
+Add an `overflow` signal that is equal to the `carryIn xor carryOut` of the most significant ALU.
