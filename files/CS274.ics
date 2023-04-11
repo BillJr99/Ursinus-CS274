@@ -854,11 +854,7 @@ DTSTAMP:20230420T000000Z
 DTSTART;VALUE=DATE:20230420
 SUMMARY:CS274 Computer Architecture: Class Meeting
 LOCATION:
-<<<<<<< HEAD
-DESCRIPTION:\nDeliverable: Lab: Cache Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/Cache\nDeliverable: Final Project: Project and Presentation Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/Projects/Final
-=======
 DESCRIPTION:\nDeliverable: Lab: Single Cycle Datapath and Control Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/./Labs/SingleCycle\nDeliverable: Final Project: Project and Presentation Handed Out https://www.billmongan.com/Ursinus-CS274-Spring2023/Projects/Final
->>>>>>> 9a1a6264d3505292880eb3816dc0378371dc55d5
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
