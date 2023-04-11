@@ -52,7 +52,7 @@ Using the adder circuit from the prior lab, create a 1-bit ALU by creating and w
 A1: and3 port map(w => I0, x => "not"(s(0)), y => "not"(s(1)), z => sig1);
 ```
 Using these and gates, allow `I0` to pass when `s` is `10`, `I1` when `s` is `01`, and so on.  If a bit of `s` is `0`, invert it to produce a `1`.
-Finally, You can `or` together the four internal signals, and wire that to the output pin, to complete the multiplexor.
+Finally, You can `or` together the four internal signals, and wire that to the output pin, to complete the multiplexor.  Note that if you only need fewer than 4 inputs to your multiplexor (say, one for the adder, one for the `and` gate, and one for the `or` gate), you can simply wire `I0`, `I1`, and `I2` to those pins or signals, and then create a placeholder signal that you can wire to `I3`.  This will leave that pin essentially disconnected, or &quot;floating&quot;.
 <br>
 <img src="https://www.tutorialspoint.com/digital_circuits/images/4_1_multiplexer.jpg" alt="4-1 multiplexor">
 <br>
