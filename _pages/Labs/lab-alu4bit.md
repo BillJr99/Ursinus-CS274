@@ -73,16 +73,23 @@ alugen: for i in 3 downto 0 generate
 I recommend creating a `std_logic_vector(3 downto 0` called `result` that you wire each of your individual 1-bit ALU results to.  You can add a behavioral line to connect the result to the `result` output pin:
 
 ```vhdl
-result => results;
+result <= results;
 ```
+
+You should wire:
+
+1. Each bit of `a` and `b` to each 1-bit ALU
+2. The `ALUOp` port to all of the 1-bit ALUs
+
+### Modifications for Essential Features
 
 When finished with this base design, make the following three modifications.  For your carry bits, create a `std_logic_vector(4 downto 0)` signal called `carries`, and use these to pass the carry out of each 1-bit ALU to the carry in of the next. 
 
 #### Modification 1: Subtraction
-Add a `bInvert` pin, and pass it to the bInvert input of each of your 1-bit ALUs, along with the least significant ALU `carryIn` bit (you can replace the `carrys(0)` input which is not used).
+Add a `bInvert` pin, and wire it to the bInvert input of all of your 1-bit ALUs, and wire it to the least significant ALU `carryIn` bit (you can replace the `carrys(0)` input which is not used).  
 
 #### Modification 2: Overflow Detection
 Add an `overflow` pin that is equal to the `carryIn xor carryOut` of the most significant ALU.
 
 #### Modification 3: less than status bit
-Modify your design to support a `less` than output pin that is the most significant `results` bit `xor` the overflow detection bit.
+Add a `less` than output pin that is the most significant `results` bit `xor` the overflow detection bit.
