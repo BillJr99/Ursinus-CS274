@@ -89,7 +89,7 @@ When finished with this base design, make the following three modifications.  Fo
 Add a `bInvert` pin, and wire it to the bInvert input of all of your 1-bit ALUs, and wire it to the least significant ALU `carryIn` bit (you can replace the `carrys(0)` input which is not used).  
 
 #### Modification 2: Overflow Detection
-Add an `overflow` pin that is equal to the `carryIn xor carryOut` of the most significant ALU.
+Add an `ovf` overflow signal that is equal to the `carryIn xor carryOut` of the most significant ALU.  Add an `overflow` pin to your 4-bit ALU, and set `overflow` to `ovf` just like you did with the `result` signal above.
 
 #### Modification 3: less than status bit
-Add a `less` than output pin that is the most significant `results` bit `xor` the overflow detection bit.
+Add a `less` than output pin that is the most significant `results` bit `xor` the `ovf` detection signal.
