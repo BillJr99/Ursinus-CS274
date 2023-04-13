@@ -54,12 +54,12 @@ In this lab, you will create and test a 4-bit ALU using a structural design in V
 
 ```vhdl
 entity ALU4 is
-port(a,b             : in std_ulogic_vector (3 downto 0);
-     Op              : in std_ulogic_vector (1 downto 0);
-     result          : out std_ulogic_vector (3 downto 0);
-     zero            : out std_ulogic;
-     CarryOut        : out std_ulogic;
-     overflow        : out std_ulogic);
+port(a,b             : in std_logic_vector (3 downto 0);
+     Op              : in std_logic_vector (1 downto 0);
+     result          : out std_logic_vector (3 downto 0);
+     zero            : out std_logic;
+     CarryOut        : out std_logic;
+     overflow        : out std_logic);
 end ALU4;
 ```
 
