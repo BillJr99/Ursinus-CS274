@@ -57,7 +57,6 @@ entity ALU4 is
 port(a,b             : in std_logic_vector (3 downto 0);
      ALUOp           : in std_logic_vector (1 downto 0);
      result          : out std_logic_vector (3 downto 0);
-     zero            : out std_logic;
      CarryOut        : out std_logic;
      overflow        : out std_logic);
 end ALU4;
@@ -70,7 +69,7 @@ alugen: for i in 3 downto 0 generate
    alu: alu1 PORT MAP(x => a(i), ...);
 ```
 
-I recommend creating a `std_logic_vector(3 downto 0)` called `results` that you wire each of your individual 1-bit ALU results to.  You can add a behavioral line to connect the result to the `result` output pin:
+I recommend creating a `std_logic_vector(3 downto 0)` signal called `results` that you wire each of your individual 1-bit ALU results to.  You can then add a behavioral line to connect the result to the `result` output pin:
 
 ```vhdl
 result <= results;
@@ -93,3 +92,13 @@ Add an `ovf` overflow signal that is equal to the `carryIn xor carryOut` of the 
 
 #### Modification 3: less than status bit
 Add a `less` than output pin that is the most significant `results` bit `xor` the `ovf` detection signal.
+
+### Extra Credit (20%): Zero Flag
+
+Create a `zero` flag pin for your 4-bit ALU as follows:
+
+```vhdl
+zero            : out std_logic;
+```
+
+Create and use a 4-bit `or` gate, and a `not` gate, to bitwise `or` together all four bits of your `results` signal, and invert that.  Your inverted output writes to the `zero` flag.
