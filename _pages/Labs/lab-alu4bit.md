@@ -55,7 +55,7 @@ In this lab, you will create and test a 4-bit ALU using a structural design in V
 ```vhdl
 entity ALU4 is
 port(a,b             : in std_logic_vector (3 downto 0);
-     Op              : in std_logic_vector (1 downto 0);
+     ALUOp           : in std_logic_vector (1 downto 0);
      result          : out std_logic_vector (3 downto 0);
      zero            : out std_logic;
      CarryOut        : out std_logic;
@@ -63,11 +63,17 @@ port(a,b             : in std_logic_vector (3 downto 0);
 end ALU4;
 ```
 
-You can instantiate multiple structural wirings using a `for...generate` loop that you may wish to consider:
+You can write four port maps to 1-bit ALU components to do this, but you could also instantiate multiple structural wirings using a `for...generate` loop that you may wish to consider:
 
 ```vhdl
 alugen: for i in 3 downto 0 generate
    alu: alu1 PORT MAP(x => a(i), ...);
+```
+
+I recommend creating a `std_logic_vector(3 downto 0` called `result` that you wire each of your individual 1-bit ALU results to.  You can add a behavioral line to connect the result to the `result` output pin:
+
+```vhdl
+result => results;
 ```
 
 When finished with this base design, make the following three modifications.  For your carry bits, create a `std_logic_vector(4 downto 0)` signal called `carries`, and use these to pass the carry out of each 1-bit ALU to the carry in of the next. 
@@ -79,4 +85,4 @@ Add a `bInvert` pin, and pass it to the bInvert input of each of your 1-bit ALUs
 Add an `overflow` pin that is equal to the `carryIn xor carryOut` of the most significant ALU.
 
 #### Modification 3: less than status bit
-Modify your design to support a `less` than output pin that is the most significant bit `xor` the overflow detection bit.
+Modify your design to support a `less` than output pin that is the most significant `results` bit `xor` the overflow detection bit.
