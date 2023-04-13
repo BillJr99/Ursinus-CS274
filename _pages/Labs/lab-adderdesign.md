@@ -36,6 +36,8 @@ info:
       rtitle: Using ghdl
     - rlink: https://lauri.xn--vsandi-pxa.com/hdl/gtkwave.html
       rtitle: Producing and viewing ghdl waveforms with GtkWave
+    - rlink: https://www.tutorialspoint.com/vlsi_design/vlsi_design_vhdl_introduction.htm
+      rtilte: VHDL Tutorial
     - rlink: ../Activities/ALU
       rtitle: ALU Activity
 
@@ -64,6 +66,7 @@ end and2;
 
 architecture behavioral of and2 is
 begin
+    -- This is a comment: set z to a and b with a 2ns delay
     z <= a and b after 2 ns;
 end;
 ```
