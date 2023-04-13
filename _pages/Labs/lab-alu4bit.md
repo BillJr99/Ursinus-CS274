@@ -98,7 +98,7 @@ Add a `less` than output pin that is the most significant `results` bit `xor` th
 Create a `zero` flag pin for your 4-bit ALU as follows:
 
 ```vhdl
-zero            : out std_logic;
+zero : out std_logic;
 ```
 
 Create and use a 4-bit `or` gate, and a `not` gate, to bitwise `or` together all four bits of your `results` signal, and invert that.  Your inverted output writes to the `zero` flag.
