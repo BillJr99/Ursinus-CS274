@@ -70,13 +70,13 @@ alugen: for i in 3 downto 0 generate
    alu: alu1 PORT MAP(x => a(i), ...);
 ```
 
-I recommend creating a `std_logic_vector(3 downto 0)` called `result` that you wire each of your individual 1-bit ALU results to.  You can add a behavioral line to connect the result to the `result` output pin:
+I recommend creating a `std_logic_vector(3 downto 0)` called `results` that you wire each of your individual 1-bit ALU results to.  You can add a behavioral line to connect the result to the `result` output pin:
 
 ```vhdl
 result <= results;
 ```
 
-You should wire:
+For the 1-bit ALU port maps, you should wire:
 
 1. Each bit of `a` and `b` to each 1-bit ALU
 2. The `ALUOp` port to all of the 1-bit ALUs
