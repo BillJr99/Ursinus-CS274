@@ -218,7 +218,7 @@ info:
           <tr>
             <th class="tg-1wig">Opcode</th>
             <th class="tg-1wig">Instruction Fetch</th>
-            <th class="tg-1wig">Regiter Read</th>
+            <th class="tg-1wig">Register Read</th>
             <th class="tg-1wig">ALU</th>
             <th class="tg-1wig">Memory</th>
             <th class="tg-1wig">Register Writeback</th>
