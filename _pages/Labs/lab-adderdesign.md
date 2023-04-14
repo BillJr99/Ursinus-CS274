@@ -37,7 +37,7 @@ info:
     - rlink: https://lauri.xn--vsandi-pxa.com/hdl/gtkwave.html
       rtitle: Producing and viewing ghdl waveforms with GtkWave
     - rlink: https://www.tutorialspoint.com/vlsi_design/vlsi_design_vhdl_introduction.htm
-      rtilte: VHDL Tutorial
+      rtitle: VHDL Tutorial
     - rlink: ../Activities/ALU
       rtitle: ALU Activity
 
