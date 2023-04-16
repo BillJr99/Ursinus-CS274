@@ -47,7 +47,7 @@ tags:
 
 ---
 
-In this lab, you will use a tool called [ghdl](http://ghdl.free.fr/download.html) to compile Virtual Hardware Description Language (VHDL) code that describes circuit wirings for various logic components.  On Mac OS systems, you can install ghdl using [homebrew](https://brew.sh/) via this command: `brew install --cask ghdl gtkwave`, and on Linux, you can install using this command: `sudo apt-get install ghdl gtkwave` (these will also install the gtkwave system that Windows users will download later in this lab).  
+In this lab, you will use a tool called [ghdl](http://ghdl.free.fr/download.html) to compile Virtual Hardware Description Language (VHDL) code that describes circuit wirings for various logic components.  On Mac OS systems, you can install ghdl using [homebrew](https://brew.sh/) via this command: `brew install --cask ghdl gtkwave`, and on Linux, you can install using this command: `sudo apt-get install ghdl gtkwave` (these will also install the gtkwave system that Windows users will download later in this lab).  Alternatively, if you have any difficulty running these tools locally, you can run many ghdl commands through [replit](https://replit.com/@BillJr99/VHDLExample).
 
 Using these tools, you will implement an adder circuit using the VHDL language.
 
@@ -276,7 +276,7 @@ begin
     
 end;
 
-
+-- Normally, this section would go into its own file; but on EDA Playground, they are combined into one by pasting one file below the other
 library ieee;
 use ieee.std_logic_1164.all;
 
@@ -336,8 +336,6 @@ begin
     end process;
 end;
 ```
-
-Alternatively, if you have any difficulty running these tools locally, you can run many ghdl commands through replit.
 
 ### What to Do
 
