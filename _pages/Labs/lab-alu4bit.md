@@ -67,6 +67,7 @@ You can write four port maps to 1-bit ALU components to do this, but you could a
 ```vhdl
 alugen: for i in 3 downto 0 generate
    alu: alu1 PORT MAP(x => a(i), ...);
+end generate alugen;
 ```
 
 I recommend creating a `std_logic_vector(3 downto 0)` signal called `results` that you wire each of your individual 1-bit ALU results to.  You can then add a behavioral line to connect the result to the `result` output pin:
