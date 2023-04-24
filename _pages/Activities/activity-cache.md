@@ -199,7 +199,7 @@ info:
 
     - model: |
         <img src="https://harttle.land/assets/img/blog/set-associative.png" alt="A set associative cache">
-      title: Mitigating Cache Conflicts with Associative Caches"
+      title: Mitigating Cache Conflicts with Associative Caches
       questions:
         - "Draw a 1 MB cache that is 4-way set associative, with 8 words per block."
         - "Map address 37 to this cache, and indicate which other addresses would be loaded."
