@@ -39,7 +39,7 @@ info:
     - Patterson and Hennessy Textbook Question 5.2
     - Patterson and Hennessy Textbook Question 5.5
     - Patterson and Hennessy Textbook Question 5.6.2 through 5.6.3
-    - Patterson and Hennessy Textbook Question 5.10
+    - Patterson and Hennessy Textbook Question 5.10.1, 5.10.2, and 5.10.4
     - Patterson and Hennessy Textbook Question 5.11
 
 tags:
