@@ -204,6 +204,7 @@ info:
         - "Draw a 1 MB cache that is 4-way set associative, with 8 words per block."
         - "Map address 37 to this cache, and indicate which other addresses would be loaded."
         - "Show the tag and index for address 37."
+        - "Does a fully associative cache need a block offset, an index, and/or a tag?  Why or why not?"
 
     - model: |
         <div align="center">
