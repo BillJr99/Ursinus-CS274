@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/DataStructures
 title: "CS274: Computer Architecture - Data Structures"
-excerpt: "CS274: Computer Architecture - Data Structures"
+
 
 info:
   goals:

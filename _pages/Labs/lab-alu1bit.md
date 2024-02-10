@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/ALU1Bit
 title: "CS274: Computer Architecture - 1 Bit ALU Design"
-excerpt: "CS274: Computer Architecture - 1 Bit ALU Design"
+
 
 info:
   coursenum: CS274

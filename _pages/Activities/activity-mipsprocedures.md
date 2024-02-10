@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/MIPSProcedures
 title: "CS274: Computer Architecture - MIPS Procedures"
-excerpt: "CS274: Computer Architecture - MIPS Procedures"
+
 
 info:
   goals:

@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/ComputerArithmeticAddSubtract
 title: "CS274: Computer Architecture - Computer Arithmetic: Addition and Subtraction"
-excerpt: "CS274: Computer Architecture - Computer Arithmetic: Addition and Subtraction"
+
 
 info:
   goals:

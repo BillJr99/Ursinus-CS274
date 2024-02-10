@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Assignments/CacheSimulator
 title: "CS274: Computer Architecture - Cache Simulator"
-excerpt: "CS274: Computer Architecture - Cache Simulator"
+
 
 info:
   coursenum: CS274

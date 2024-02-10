@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Assignments/Programming/NumberSystemConversion
 title: "CS274: Computer Architecture - Number System Conversions"
-excerpt: "CS274: Computer Architecture - Number System Conversions"
+
 
 info:
   coursenum: CS274

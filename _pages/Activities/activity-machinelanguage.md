@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/MachineLanguage
 title: "CS274: Computer Architecture - From MIPS to Machine Language"
-excerpt: "CS274: Computer Architecture - From MIPS to Machine Language"
+
 
 info:
   goals:

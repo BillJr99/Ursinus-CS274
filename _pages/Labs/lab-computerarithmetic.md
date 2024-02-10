@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/ComputerArithmetic
 title: "CS274: Computer Architecture - Computer Arithmetic"
-excerpt: "CS274: Computer Architecture - Computer Arithmetic"
+
 
 info:
   coursenum: CS274

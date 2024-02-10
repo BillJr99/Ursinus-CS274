@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Assignments/Programming/CProgrammingPointers
 title: "CS274: Computer Architecture - C Programming and Pointers"
-excerpt: "CS274: Computer Architecture - C Programming and Pointers"
+
 
 info:
   coursenum: CS274

@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/BigIdeas
 title: "CS274: Computer Architecture - Big Ideas"
-excerpt: "CS274: Computer Architecture - Big Ideas"
+
 
 info:
   goals:

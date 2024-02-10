@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/NumberSystems
 title: "CS274: Computer Architecture - Number Systems"
-excerpt: "CS274: Computer Architecture - Number Systems"
+
 
 info:
   goals:

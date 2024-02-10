@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/MIPSSingleCycle
 title: "CS274: Computer Architecture - The MIPS Single Cycle Design"
-excerpt: "CS274: Computer Architecture - The MIPS Single Cycle Design"
+
 
 info:
   goals:

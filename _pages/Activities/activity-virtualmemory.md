@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/VirtualMemory
 title: "CS274: Computer Architecture - Virtual Memory"
-excerpt: "CS274: Computer Architecture - Virtual Memory"
+
 
 info:
   next: ./VirtualMemory2

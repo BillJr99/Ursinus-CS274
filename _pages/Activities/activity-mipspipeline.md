@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/MIPSPipeline
 title: "CS274: Computer Architecture - Pipelining"
-excerpt: "CS274: Computer Architecture - Pipelining"
+
 
 info:
   goals:

@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Assignments/Participation/SelfAssessment
 title: "CS274: Computer Architecture - Participation Self Assessment"
-excerpt: "CS274: Computer Architecture - Participation Self Assessment"
+
 
 info:
   coursenum: CS274

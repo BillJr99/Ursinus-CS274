@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/NumberSystems
 title: "CS274: Computer Architecture - Number Systems"
-excerpt: "CS274: Computer Architecture - Number Systems"
+
 
 info:
   coursenum: CS274

@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/MIPSConditionals
 title: "CS274: Computer Architecture - MIPS Conditionals"
-excerpt: "CS274: Computer Architecture - MIPS Conditionals"
+
 
 info:
   goals:

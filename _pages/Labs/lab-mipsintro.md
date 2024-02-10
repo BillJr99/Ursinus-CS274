@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/MIPSIntro
 title: "CS274: Computer Architecture - Introduction to MIPS Programming"
-excerpt: "CS274: Computer Architecture - Introduction to MIPS Programming"
+
 
 info:
   coursenum: CS274

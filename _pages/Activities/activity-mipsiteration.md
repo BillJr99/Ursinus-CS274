@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/MIPSIteration
 title: "CS274: Computer Architecture - MIPS Iteration"
-excerpt: "CS274: Computer Architecture - MIPS Iteration"
+
 
 info:
   goals:

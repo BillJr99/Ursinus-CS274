@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/AdderDesign
 title: "CS274: Computer Architecture - Adder Design"
-excerpt: "CS274: Computer Architecture - Adder Design"
+
 
 info:
   coursenum: CS274

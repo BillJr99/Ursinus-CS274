@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/Circuits
 title: "CS274: Computer Architecture - From Circuits to Systems: the 555 Timer"
-excerpt: "CS274: Computer Architecture - From Circuits to Systems: the 555 Timer"
+
 
 info:
   goals:

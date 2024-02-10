@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/MIPSProceduresRecursion
 title: "CS274: Computer Architecture - Procedures and Recursion in MIPS"
-excerpt: "CS274: Computer Architecture - Procedures and Recursion in MIPS"
+
 
 info:
   coursenum: CS274

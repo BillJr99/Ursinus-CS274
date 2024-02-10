@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/Stack
 title: "CS274: Computer Architecture - The Stack"
-excerpt: "CS274: Computer Architecture - The Stack"
+
 
 info:
   goals:

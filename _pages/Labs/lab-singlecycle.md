@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/SingleCycle
 title: "CS274: Computer Architecture - Single Cycle Datapath and Control"
-excerpt: "CS274: Computer Architecture - Single Cycle Datapath and Control"
+
 
 info:
   coursenum: CS274

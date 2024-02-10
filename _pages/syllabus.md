@@ -2,7 +2,7 @@
 layout: syllabus
 permalink: /
 title: "CS274: Computer Architecture"
-excerpt: "CS274: Computer Architecture"
+
     
 info:
   course_number: CS274

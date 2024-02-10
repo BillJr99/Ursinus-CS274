@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/MIPSMultiCycle
 title: "CS274: Computer Architecture - The MIPS Multi Cycle Design"
-excerpt: "CS274: Computer Architecture - The MIPS Multi Cycle Design"
+
 
 info:
   goals:

@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/Cache
 title: "CS274: Computer Architecture - The Memory Hierarchy: Cache Design"
-excerpt: "CS274: Computer Architecture - The Memory Hierarchy: Cache Design"
+
 
 info:
   goals:

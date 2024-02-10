@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/MIPSPipelineHazards
 title: "CS274: Computer Architecture - Pipelining: Data and Control Hazards"
-excerpt: "CS274: Computer Architecture - Pipelining: Data and Control Hazards"
+
 
 info:
   goals:

@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/MIPSIteration
 title: "CS274: Computer Architecture - Implementing loops in MIPS Assembly"
-excerpt: "CS274: Computer Architecture - Implementing loops in MIPS Assembly"
+
 
 info:
   coursenum: CS274

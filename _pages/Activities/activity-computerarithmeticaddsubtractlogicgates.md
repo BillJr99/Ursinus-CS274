@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/ComputerArithmeticAddSubtractLogicGates
 title: "CS274: Computer Architecture - Computer Arithmetic: Addition and Subtraction Logic Gates"
-excerpt: "CS274: Computer Architecture - Computer Arithmetic: Addition and Subtraction Logic Gates"
+
 
 info:
   goals:

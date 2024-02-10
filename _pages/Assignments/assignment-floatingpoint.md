@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Assignments/FloatingPoint
 title: "CS274: Computer Architecture - Floating Point Bit Fields"
-excerpt: "CS274: Computer Architecture - Floating Point Bit Fields"
+
 
 info:
   coursenum: CS274

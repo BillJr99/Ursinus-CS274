@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/MIPSInstructions
 title: "CS274: Computer Architecture - The MIPS Assembly Language and Instructions"
-excerpt: "CS274: Computer Architecture - The MIPS Assembly Language and Instructions"
+
 
 info:
   goals:

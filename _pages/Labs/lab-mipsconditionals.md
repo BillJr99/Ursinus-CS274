@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/MIPSConditionals
 title: "CS274: Computer Architecture - Implementing if Statements in MIPS Assembly"
-excerpt: "CS274: Computer Architecture - Implementing if Statements in MIPS Assembly"
+
 
 info:
   coursenum: CS274

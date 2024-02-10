@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/MIPSRecursion
 title: "CS274: Computer Architecture - Recursion in MIPS"
-excerpt: "CS274: Computer Architecture - Recursion in MIPS"
+
 
 info:
   goals:

@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/Cache
 title: "CS274: Computer Architecture - Cache"
-excerpt: "CS274: Computer Architecture - Cache"
+
 
 info:
   coursenum: CS274

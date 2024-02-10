@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/ComputerArithmeticMultiplyDivide
 title: "CS274: Computer Architecture - Computer Arithmetic: Multiplication and Division"
-excerpt: "CS274: Computer Architecture - Computer Arithmetic: Multiplication and Division"
+
 
 info:
   goals:

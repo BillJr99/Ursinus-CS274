@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Projects/Final
 title: "CS274: Computer Architecture - Final Project"
-excerpt: "CS274: Computer Architecture - Final Project"
+
 
 info:
   coursenum: CS274

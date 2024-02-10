@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/ComputerArithmeticFloatingPoint
 title: "CS274: Computer Architecture - Computer Arithmetic: Floating Point"
-excerpt: "CS274: Computer Architecture - Computer Arithmetic: Floating Point"
+
 
 info:
   goals:

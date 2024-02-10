@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/ALU
 title: "CS274: Computer Architecture - MIPS Processor Design: The ALU"
-excerpt: "CS274: Computer Architecture - MIPS Processor Design: The ALU"
+
 
 info:
   goals:

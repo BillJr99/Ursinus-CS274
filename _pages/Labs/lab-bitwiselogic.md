@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/BitwiseLogic
 title: "CS274: Computer Architecture - Bitwise Logical Operators"
-excerpt: "CS274: Computer Architecture - Bitwise Logical Operators"
+
 
 info:
   coursenum: CS274

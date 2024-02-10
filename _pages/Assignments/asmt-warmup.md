@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Assignments/Warmup
 title: "CS274: Computer Architecture - Warmup"
-excerpt: "CS274: Computer Architecture - Warmup"
+
 
 info:
   coursenum: CS274

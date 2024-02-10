@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Assignments/Participation/PreAssessment
 title: "CS274: Computer Architecture - Participation Pre Assessment"
-excerpt: "CS274: Computer Architecture - Participation Pre Assessment"
+
 
 info:
   coursenum: CS274
