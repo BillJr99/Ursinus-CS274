@@ -519,7 +519,7 @@ schedule:
       - dtitle: "Assignment: Single Cycle Datapath and Control Handed Out"
         dlink: "./Assignments/SingleCycle"
         points: 100
-        rubricpath: "_pages/Labs/assignment-singlecycle.md"
+        rubricpath: "_pages/Assignments/assignment-singlecycle.md"
   - week: "12"
     date: "3"
     title: "Lab: 1 Bit ALU"
@@ -570,7 +570,7 @@ schedule:
       - dtitle: "Assignment: Single Cycle Datapath and Control Due"
         dlink: "./Assignments/SingleCycle"
         points: 100
-        rubricpath: "_pages/Labs/assignment-singlecycle.md"
+        rubricpath: "_pages/Assignments/assignment-singlecycle.md"
       - dtitle: "Programming Assignment: Cache Simulator Handed Out"
         dlink: "./Assignments/CacheSimulator"
         points: 100
