@@ -376,7 +376,7 @@ schedule:
   - week: "6"
     date: "1"
     title: "Data Structures"
-	deliverables:
+    deliverables:
       - dtitle: "Programming Assignment: MIPS Programming Due"
         dlink: "./Assignments/MIPSProgramming"
         points: 100
