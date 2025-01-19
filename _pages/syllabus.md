@@ -376,15 +376,16 @@ schedule:
   - week: "6"
     date: "1"
     title: "Data Structures"
+	deliverables:
+      - dtitle: "Programming Assignment: MIPS Programming Due"
+        dlink: "./Assignments/MIPSProgramming"
+        points: 100
+        rubricpath: "_pages/Assignments/assignment-mipsprogramming.md"	
   - week: "6"
     date: "3"
     title: "Recursion in MIPS"
     link: "./Activities/MIPSRecursion"
     deliverables:
-      - dtitle: "Programming Assignment: MIPS Programming Due"
-        dlink: "./Assignments/MIPSProgramming"
-        points: 100
-        rubricpath: "_pages/Assignments/assignment-mipsprogramming.md"
       - dtitle: "Midterm: Midterm Exam Due"
         dlink: false
         points: 100
