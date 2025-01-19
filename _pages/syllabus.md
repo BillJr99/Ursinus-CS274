@@ -380,7 +380,7 @@ schedule:
       - dtitle: "Programming Assignment: MIPS Programming Due"
         dlink: "./Assignments/MIPSProgramming"
         points: 100
-        rubricpath: "_pages/Assignments/assignment-mipsprogramming.md"	
+        rubricpath: "_pages/Assignments/assignment-mipsprogramming.md"
   - week: "6"
     date: "3"
     title: "Recursion in MIPS"
