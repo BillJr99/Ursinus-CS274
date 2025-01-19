@@ -10,12 +10,13 @@ info:
   - section: "A"
   course_title: "Computer Architecture"
   credit_hours: "4 Semester Hours"
-  course_homepage: "https://www.billmongan.com/Ursinus-CS274-Spring2023/"
+  course_homepage: "https://www.billmongan.com/Ursinus-CS274-Spring2025/"
   class_notebook: https://ursinuscollege365-my.sharepoint.com/personal/wmongan_ursinus_edu/Documents/Class%20Notebooks/CS274%20Spring%202023
+  teamshelproom: https://teams.microsoft.com/l/channel/19%3AYMywmkt9yNYVBXxiMLa35Nh2hrBWQvCmek66CBdNlJA1%40thread.tacv2/?groupId=43517804-3739-4e1a-8c36-2a4e60bad2a9&tenantId=921f1c03-8689-4e60-a722-f5ea581e00fe
   ical: files/CS274.ics
   course_prerequisites: "CS174"
-  course_start_date: "2023/01/16"
-  course_end_date: "2023/05/03"
+  course_start_date: "2025/01/20"
+  course_end_date: "2025/05/07"
   course_description: "Hierarchical structure of computer architecture, number systems, arithmetic operations, codes, switching algebra, logic gates, assembly language programming. Prerequisite: CS-174. Offered in the spring semester. Three hours of lecture and one hour of laboratory per week. Four semester hours."
   welcome_message: "Welcome to CS274!"
   questions: |
@@ -39,33 +40,33 @@ info:
   class_meets_locations:
   - section:
     - day: "M"
-      starttime: "10:00 AM"
-      endtime: "10:50 AM"
-      place: "PFA 007"
+      starttime: "9:00 AM"
+      endtime: "9:50 AM"
+      place: "PFA 107"
     - day: "W"
-      starttime: "10:00 AM"
+      starttime: "9:00 AM"
       endtime: "10:50 AM"
-      place: "PFA 007"
+      place: "PFA 107"
     - day: "R"
-      starttime: "10:00 AM"
-      endtime: "10:50 AM"
-      place: "PFA 001"      
+      starttime: "9:00 AM"
+      endtime: "9:50 AM"
+      place: "PFA 109"      
     - day: "F"
-      starttime: "10:00 AM"
-      endtime: "10:50 AM"
-      place: "PFA 007"
+      starttime: "9:00 AM"
+      endtime: "9:50 AM"
+      place: "PFA 107"
   midtermexam: 
-    - mdate: "2023/03/01"
-      mstarttime: "10:00 AM"
-      mendtime: "10:50 AM"
-      mroom: "Regular Class Period"      
+    - mdate: "TBD"
+      mstarttime: "TBD"
+      mendtime: "TBD"
+      mroom: "TBD"      
   finalexam: 
-    - fdate: "2023/05/10"
-      fstarttime: "1:00 PM"
-      fendtime: "4:00 PM"
+    - fdate: "TBD"
+      fstarttime: "TBD"
+      fendtime: "TBD"
       froom: "Regular Class Period"
-  flexible_submission_policy: "In the absence of <a href=\"#accommodations\">accommodations</a> arranged in advance with the instructor or college, all assignments are due at 10:59PM Eastern Time on the date(s) stated on the schedule.  Assignments will be accepted without prior permission following this time with a points deduction of 4% per day if submitted before 10:59 PM Eastern Time on the day submitted.  Each student will receive a total of 10 &quot;slack days&quot; for the semester with which to waive these grade reductions; for example, one assignment may be submitted 10 days late, or two assignments may be submitted 5 days late, with no grade reduction.  Extra credit will not be awarded for assignments submitted under the flexible submission policy.  Students with accommodations will receive additional &quot;slack days&quot; as specified within the accommodations letter; however, some deliverables cannot be subject to accommodations due to the time-sensitive nature of the assignment (for example, group assignments, presentations, and course surveys).  Students who add the class late shall receive additional slack days equal to the number of days between the start of classes and the first date that approval is given or that class is attended (whichever occurs first).  Under no circumstances (including accommodations) can late work be accepted after the final class meeting, nor during final exams week, nor after the exam." 
-  late_penalty_per_period: 4
+  flexible_submission_policy: "In the absence of <a href=\"#accommodations\">accommodations</a> arranged in advance with the instructor or college, all assignments are due at 11:59 PM Eastern Time on the date(s) stated on the schedule.  With prior permission and a reasonable first draft submission by the deliverable deadline, any student may request a three day extension on any deliverable, as often as needed.  Assignments will be accepted without prior permission following the original deadline, or, if requested, following the three-day extension deadline, with a points deduction of 10% per day if submitted before 11:59 PM Eastern Time on the day submitted.  If a student adds the course late, deliverables due prior to or on the day of that student's registration will be due twice the number of days following the first day of the semester that they registered (for example, a student who registers on the third day of the semester shall receive six days to submit assignments from the first three days, and then the remainder of this policy takes effect for those and for all other deliverables).  Under no circumstances (including accommodations) can late work be accepted after the final class meeting, nor during final exams week, nor after the exam." 
+  late_penalty_per_period: 10
   late_penalty_period: "day"
   banner: |
     <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
@@ -95,36 +96,21 @@ instructors:
   picture: /images/profile.png
   officehours:
   - day: "M"
-    starttime: "12:00 PM"
-    endtime: "1:00 PM"
+    starttime: "11:00 AM"
+    endtime: "12:00 PM"
     location: "Pfahler 101L"        
   - day: "W"
-    starttime: "12:00 PM"
-    endtime: "1:00 PM"
-    location: "Pfahler 101L" 
-  - day: "R"
-    starttime: "9:00 AM"
-    endtime: "10:00 PM"
-    location: "Pfahler 101L"     
-  - day: "R"
     starttime: "11:00 AM"
     endtime: "12:00 PM"
     location: "Pfahler 101L" 
-  - day: "F"
-    starttime: "12:00 PM"
-    endtime: "1:00 PM"
-    location: "Pfahler 101L" 
-- name: Matt Wallace
-  title: Teaching Assistant
-  officehours:
-  - day: "W"
-    starttime: "7:30 PM"
-    endtime: "8:30 PM"
-    location: "Pfahler 102 Help Room"   
   - day: "R"
-    starttime: "6:00 PM"
-    endtime: "7:00 PM"
-    location: "Pfahler 102 Help Room"
+    starttime: "10:00 AM"
+    endtime: "12:00 PM"
+    location: "Pfahler 101L"     
+  - day: "F"
+    starttime: "11:00 AM"
+    endtime: "12:00 PM"
+    location: "Pfahler 101L" 
   
 textbooks:
 - title: "Computer Organization and Design MIPS Edition: The Hardware/Software Interface"
@@ -161,11 +147,11 @@ grade_breakdown:
 - category: "Programming Assignments"
   weight: "25%"
 - category: "Labs"
-  weight: "40%"
+  weight: "35%"
 - category: "Midterm Exam"
   weight: "15%"
-- category: "Final Assessment"
-  weight: "15%"
+- category: "Final Project"
+  weight: "20%"
 - category: "Class Participation and Quizzes"
   weight: "5%"
 
@@ -217,24 +203,19 @@ schedule:
         points: 10
         submission_types: "written"
     readings:
+      - rtitle: "COD Chapter 1"
+        rlink: false
       - rtitle: "Astable 555 Timer by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=kRlSFm519Bo"
   - week: "0"
     date: "3"
-    title: "Big Ideas"
-    link: "./Activities/BigIdeas"
-    readings:
-      - rtitle: "COD Chapter 1.1 - 1.5"
-        rlink: false
-  - week: "1"
-    date: "0"
     title: "Number Systems"
     link: "./Activities/NumberSystems"
     readings:
       - rtitle: "COD Chapter 2.4, 2.9"
         rlink: false
   - week: "1"
-    date: "1"
+    date: "0"
     title: "Number Systems"
     deliverables:
       - dtitle: "Programming Assignment: Warmup Due"
@@ -242,7 +223,7 @@ schedule:
         points: 10
         submission_types: "noupload"
   - week: "1"
-    date: "2"
+    date: "1"
     title: "Lab: Number Systems"
     deliverables:
       - dtitle: "Lab: Number Systems Handed Out"
@@ -250,7 +231,7 @@ schedule:
         points: 100
         rubricpath: "_pages/Labs/lab-numbersystems.md"
   - week: "1"
-    date: "3"
+    date: "2"
     title: "The MIPS Assembly Language and Instructions"
     link: "./Activities/MIPSInstructions"
     deliverables:
@@ -261,16 +242,16 @@ schedule:
     readings:
       - rtitle: "COD Chapter 2.1-2.3"
         rlink: false
-  - week: "2"
-    date: "0"
+  - week: "1"
+    date: "3"
     title: "The MIPS Assembly Language and Instructions"
     deliverables:
       - dtitle: "Programming Assignment: Number System Conversions Handed Out"
         dlink: "./Assignments/Programming/NumberSystemConversion"
         points: 100
         rubricpath: "_pages/Assignments/assignment-numbersystemconversion.md"
-  - week: "2"
-    date: "1"
+  - week: "3"
+    date: "0"
     title: "From MIPS to Machine Language"
     link: "./Activities/MachineLanguage"
     deliverables:
@@ -283,26 +264,23 @@ schedule:
         rlink: false
       - rtitle: "Hello World from Scratch on a 6502 by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=LnzuMJLZRdU&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=1"
-  - week: "2"
-    date: "2"
+  - week: "3"
+    date: "1"
     title: "Lab: Introduction to MIPS Programming"
     deliverables:
       - dtitle: "Lab: Introduction to MIPS Programming Handed Out"
         dlink: "./Labs/MIPSIntro"
         points: 100
         rubricpath: "_pages/Labs/lab-mipsintro.md"
-  - week: "2"
-    date: "3"
-    title: "From MIPS to Machine Language"
   - week: "3"
-    date: "0"
+    date: "2"
     title: "MIPS Conditionals"
     link: "./Activities/MIPSConditionals"
     readings:
       - rtitle: "COD Chapter 2.7"
         rlink: false
   - week: "3"
-    date: "1"
+    date: "3"
     title: "MIPS Conditionals"
     deliverables:
       - dtitle: "Lab: Introduction to MIPS Programming Due"
@@ -312,16 +290,16 @@ schedule:
     readings:
       - rtitle: "How CPUs Read Machine Code by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=yl8vPW5hydQ&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=2"
-  - week: "3"
-    date: "2"
+  - week: "4"
+    date: "0"
     title: "Lab: Bitwise Logical Operators"
     deliverables:
       - dtitle: "Lab: Bitwise Logical Operators Handed Out"
         dlink: "./Labs/BitwiseLogic"
         points: 100
         rubricpath: "_pages/Labs/lab-bitwiselogic.md"
-  - week: "3"
-    date: "3"
+  - week: "4"
+    date: "1"
     title: "MIPS Iteration"
     link: "./Activities/MIPSIteration"
     deliverables:
@@ -330,7 +308,7 @@ schedule:
         points: 100
         rubricpath: "_pages/Assignments/assignment-numbersystemconversion.md"
   - week: "4"
-    date: "0"
+    date: "2"
     title: "MIPS Iteration"
     deliverables:
       - dtitle: "Programming Assignment: MIPS Programming Handed Out"
@@ -338,7 +316,7 @@ schedule:
         points: 100
         rubricpath: "_pages/Assignments/assignment-mipsprogramming.md"
   - week: "4"
-    date: "1"
+    date: "3"
     title: "MIPS Procedures"
     link: "./Activities/MIPSProcedures"
     deliverables:
@@ -351,28 +329,28 @@ schedule:
         rlink: false
       - rtitle: "Assembly Language to Machine Code by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=oO8_2JJV0B4&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=3"
-  - week: "4"
-    date: "2"
+  - week: "5"
+    date: "0"
     title: "Lab: Implementing if Statements in MIPS Assembly"
     deliverables:
       - dtitle: "Lab: Implementing if Statements in MIPS Assembly Handed Out"
         dlink: "./Labs/MIPSConditionals"
         points: 100
         rubricpath: "_pages/Labs/lab-mipsconditionals.md"
-  - week: "4"
-    date: "3"
+  - week: "5"
+    date: "1"
     title: "MIPS Procedures"
   - week: "5"
-    date: "0"
+    date: "2"
     title: "The Stack"
     link: "./Activities/Stack"
     deliverables:
-      - dtitle: "Participation: First Self-Assessment Handed Out"
+      - dtitle: "Participation: Self-Assessment Handed Out"
         dlink: "./Assignments/Participation/SelfAssessment"
         points: 10
         submission_types: "written"
   - week: "5"
-    date: "1"
+    date: "3"
     title: "Data Structures"
     link: "./Activities/DataStructures"
     deliverables:
@@ -383,23 +361,23 @@ schedule:
       - dtitle: "Midterm: Midterm Exam Handed Out"
         dlink: false
         points: 100
-        submission_types: "written"        
+        submission_types: "written"
     readings:
       - rtitle: "Controlling an LCD Screen by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=FY3zTUaykVo&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=4"
-  - week: "5"
-    date: "2"
+  - week: "6"
+    date: "0"
     title: "Lab: Implementing loops in MIPS Assembly"
     deliverables:
       - dtitle: "Lab: Implementing loops in MIPS Assembly Handed Out"
         dlink: "./Labs/MIPSIteration"
         points: 100
         rubricpath: "_pages/Labs/lab-mipsiteration.md"
-  - week: "5"
-    date: "3"
+  - week: "6"
+    date: "1"
     title: "Data Structures"
   - week: "6"
-    date: "0"
+    date: "3"
     title: "Recursion in MIPS"
     link: "./Activities/MIPSRecursion"
     deliverables:
@@ -407,59 +385,59 @@ schedule:
         dlink: "./Assignments/MIPSProgramming"
         points: 100
         rubricpath: "_pages/Assignments/assignment-mipsprogramming.md"
-  - week: "6"
-    date: "1"
-    title: "Computer Arithmetic: Addition and Subtraction"
-    link: "./Activities/ComputerArithmeticAddSubtract"
-    deliverables:
-      - dtitle: "Lab: Implementing loops in MIPS Assembly Due"
-        dlink: "./Labs/MIPSIteration"
-        points: 100
-        rubricpath: "_pages/Labs/lab-mipsiteration.md"
       - dtitle: "Midterm: Midterm Exam Due"
         dlink: false
         points: 100
-        submission_types: "written"        
+        submission_types: "written"
+  - week: "8"
+    date: "0"
+    title: "Computer Arithmetic: Addition and Subtraction"
+    link: "./Activities/ComputerArithmeticAddSubtract"
     readings:
       - rtitle: "COD Chapter 3.1-3.2"
         rlink: false
       - rtitle: "What is a Stack by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=xBjQVxVxOxc&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=5"
-  - week: "6"
-    date: "3"
+  - week: "8"
+    date: "1"
     title: "Computer Arithmetic: Addition and Subtraction Logic Gates"
     link: "./Activities/ComputerArithmeticAddSubtractLogicGates"
     readings:
       - rtitle: "How Computers Add Numbers by Ben Eater"
-        rlink: "https://www.youtube.com/watch?v=wvJc9CZcvBc"    
-    deliverables:
-      - dtitle: "Participation: First Self-Assessment Due"
-        dlink: "./Assignments/Participation/SelfAssessment"
-        points: 10
-        submission_types: "written"
+        rlink: "https://www.youtube.com/watch?v=wvJc9CZcvBc"
   - week: "8"
-    date: "0"
+    date: "2"
     title: "Computer Arithmetic: Multiplication and Division"
     link: "./Activities/ComputerArithmeticMultiplyDivide"
+    deliverables:
+      - dtitle: "Lab: Implementing loops in MIPS Assembly Due"
+        dlink: "./Labs/MIPSIteration"
+        points: 100
+        rubricpath: "_pages/Labs/lab-mipsiteration.md"
     readings:
       - rtitle: "COD Chapter 3.3-3.4"
         rlink: false
   - week: "8"
-    date: "1"
+    date: "3"
     title: "Computer Arithmetic: Multiplication and Division"
+    deliverables:
+      - dtitle: "Participation: Self-Assessment Due"
+        dlink: "./Assignments/Participation/SelfAssessment"
+        points: 10
+        submission_types: "written"
     readings:
       - rtitle: "RAM and Bus Timing by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=i_wrxBdXTgM&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=6"
-  - week: "8"
-    date: "2"
+  - week: "10"
+    date: "0"
     title: "Lab: Procedures and Recursion in MIPS"
     deliverables:
       - dtitle: "Lab: Procedures and Recursion in MIPS Handed Out"
         dlink: "./Labs/MIPSProceduresRecursion"
         points: 100
         rubricpath: "_pages/Labs/lab-mipsproceduresrecursion.md"
-  - week: "8"
-    date: "3"
+  - week: "10"
+    date: "1"
     title: "Computer Arithmetic: Floating Point"
     link: "./Activities/ComputerArithmeticFloatingPoint"
     readings:
@@ -467,11 +445,11 @@ schedule:
         rlink: false
       - rtitle: "What Every Computer Scientist Should Know about Floating Point Arithmetic by David Goldberg"
         rlink: "https://www.itu.dk/~sestoft/bachelor/IEEE754_article.pdf"
-  - week: "9"
-    date: "0"
+  - week: "10"
+    date: "2"
     title: "Computer Arithmetic: Floating Point"
-  - week: "9"
-    date: "1"
+  - week: "10"
+    date: "3"
     title: "MIPS Processor Design: The ALU"
     link: "./Activities/ALU"
     deliverables:
@@ -483,30 +461,30 @@ schedule:
       - rtitle: "Subroutines by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=omI0MrTWiMU&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=7"
       - rtitle: "COD Chapter B.5"
-        rlink: false        
-  - week: "9"
-    date: "2"
+        rlink: false
+  - week: "11"
+    date: "0"
     title: "Lab: Computer Arithmetic"
     deliverables:
       - dtitle: "Lab: Computer Arithmetic Handed Out"
         dlink: "./Labs/ComputerArithmetic"
         points: 100
         rubricpath: "_pages/Labs/lab-computerarithmetic.md"
-  - week: "9"
-    date: "3"
+  - week: "11"
+    date: "1"
     title: "MIPS Processor Design: The ALU"
     deliverables:
       - dtitle: "Programming Assignment: Floating Point Bit Fields Handed Out"
         dlink: "./Assignments/FloatingPoint"
         points: 100
         rubricpath: "_pages/Assignments/assignment-floatingpoint.md"
-  - week: "10"
-    date: "0"
+  - week: "11"
+    date: "2"
     title: "MIPS Processor Design: The ALU"
-  - week: "10"
-    date: "1"
+  - week: "11"
+    date: "3"
     title: "The MIPS Single Cycle Design"
-    link: "./Activities/MIPSSingleCycle"    
+    link: "./Activities/MIPSSingleCycle"
     deliverables:
       - dtitle: "Lab: Computer Arithmetic Due"
         dlink: "./Labs/ComputerArithmetic"
@@ -517,138 +495,93 @@ schedule:
         rlink: false
       - rtitle: "Computers on a Breadboard by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=fCbAafKLqC8&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=8"
-  - week: "10"
-    date: "2"
+  - week: "12"
+    date: "0"
     title: "Lab: Adder Design"
     deliverables:
       - dtitle: "Lab: Adder Design Handed Out"
         dlink: "./Labs/AdderDesign"
         points: 100
         rubricpath: "_pages/Labs/lab-adderdesign.md"
-  - week: "10"
-    date: "3"
-    title: "The MIPS Single Cycle Design"
-  - week: "11"
-    date: "0"
-    title: "The MIPS Single Cycle Design"
-  - week: "11"
+  - week: "12"
     date: "1"
-    title: "The MIPS Multi Cycle Design"
-    link: "./Activities/MIPSMultiCycle"    
+    title: "The MIPS Single Cycle Design"
+    deliverables:
+      - dtitle: "Final Project: Project and Presentation Handed Out"
+        dlink: "Projects/Final"
+        points: 100
+        rubricpath: "_pages/Projects/proj-final.md"
+  - week: "12"
+    date: "2"
+    title: "The MIPS Single Cycle Design"
+    deliverables:
+      - dtitle: "Assignment: Single Cycle Datapath and Control Handed Out"
+        dlink: "./Assignments/SingleCycle"
+        points: 100
+        rubricpath: "_pages/Labs/assignment-singlecycle.md"
+  - week: "12"
+    date: "3"
+    title: "Lab: 1 Bit ALU"
     deliverables:
       - dtitle: "Lab: Adder Design Due"
         dlink: "./Labs/AdderDesign"
         points: 100
         rubricpath: "_pages/Labs/lab-adderdesign.md"
-    readings:
-      - rtitle: "How Assembly Language Loops Work by Ben Eater"
-        rlink: "https://www.youtube.com/watch?v=ZYJIakkcLYw&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=9"
-      - rtitle: "COD Chapter 4.5"
-        rlink: false        
-  - week: "11"
-    date: "2"
-    title: "Lab: 1 Bit ALU"
-    deliverables:
       - dtitle: "Lab: 1 Bit ALU Handed Out"
         dlink: "./Labs/ALU1Bit"
         points: 100
         rubricpath: "_pages/Labs/lab-alu1bit.md"
-  - week: "11"
-    date: "3"
-    title: "The MIPS Multi Cycle Design"
+    readings:
+      - rtitle: "How Assembly Language Loops Work by Ben Eater"
+        rlink: "https://www.youtube.com/watch?v=ZYJIakkcLYw&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=9"
+      - rtitle: "COD Chapter 4.5"
+        rlink: false
+  - week: "13"
+    date: "0"
+    title: "The MIPS Single Cycle Design"
+  - week: "13"
+    date: "2"
+    title: "The Memory Hierarchy: Cache Design"
+    link: "./Activities/Cache"
     deliverables:
       - dtitle: "Programming Assignment: Floating Point Bit Fields Due"
         dlink: "./Assignments/FloatingPoint"
         points: 100
         rubricpath: "_pages/Assignments/assignment-floatingpoint.md"
-  - week: "12"
-    date: "0"
-    title: "Pipelining"
-    link: "./Activities/MIPSPipeline"
     readings:
-      - rtitle: "COD Chapter 4.6-4.7"
+      - rtitle: "COD Chapter 5.1-5.4"
         rlink: false
-  - week: "12"
-    date: "1"
-    title: "Pipelining"
-    deliverables:
-      - dtitle: "Lab: 1 Bit ALU Due"
-        dlink: "./Labs/ALU1Bit"
-        points: 100
-        rubricpath: "_pages/Labs/lab-alu1bit.md"
-    readings:
-      - rtitle: "Computer Arithmetic by Ben Eater"
-        rlink: "https://www.youtube.com/watch?v=v3-a-zqKfgA&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=10"
-  - week: "12"
-    date: "2"
+  - week: "13"
+    date: "3"
     title: "Lab: 4-bit ALU"
     deliverables:
       - dtitle: "Lab: 4 Bit ALU Handed Out"
         dlink: "./Labs/ALU4Bit"
         points: 100
-        rubricpath: "_pages/Labs/lab-alu4bit.md"    
-  - week: "12"
-    date: "3"
-    title: "Pipelining: Data and Control Hazards"
-    link: "./Activities/MIPSPipelineHazards"
-    readings:
-      - rtitle: "COD Chapter 4.8-4.9"
-        rlink: false
-  - week: "13"
-    date: "0"
-    title: "Pipelining: Data and Control Hazards"
-  - week: "13"
-    date: "1"
-    title: "The Memory Hierarchy: Cache Design"
-    link: "./Activities/Cache"
-    deliverables:
-      - dtitle: "Lab: 4 Bit ALU Due"
-        dlink: "./Labs/ALU4Bit"
-        points: 100
-        rubricpath: "_pages/Labs/lab-alu4bit.md"      
-    readings:
-      - rtitle: "COD Chapter 5.1-5.4"
-        rlink: false
-  - week: "13"
-    date: "2"
-    title: "Lab: Single Cycle Datapath and Control"
-    deliverables:
-      - dtitle: "Lab: Single Cycle Datapath and Control Handed Out"
-        dlink: "./Labs/SingleCycle"
-        points: 100
-        rubricpath: "_pages/Labs/lab-singlecycle.md"
-      - dtitle: "Final Project: Project and Presentation Handed Out"
-        dlink: "Projects/Final"  
-        points: 100  
-        rubricpath: "_pages/Projects/proj-final.md"        
-  - week: "13"
-    date: "3"
-    title: "The Memory Hierarchy: Cache Design"
-    deliverables:
-      - dtitle: "Participation: Second Self-Assessment Handed Out"
-        dlink: "./Assignments/Participation/SelfAssessment"
-        points: 10
-        submission_types: "written"
+        rubricpath: "_pages/Labs/lab-alu4bit.md"
   - week: "14"
     date: "0"
     title: "The Memory Hierarchy: Cache Design"
+  - week: "14"
+    date: "1"
+    title: "The Memory Hierarchy: Cache Design"
     deliverables:
+      - dtitle: "Assignment: Single Cycle Datapath and Control Due"
+        dlink: "./Assignments/SingleCycle"
+        points: 100
+        rubricpath: "_pages/Labs/assignment-singlecycle.md"
       - dtitle: "Programming Assignment: Cache Simulator Handed Out"
         dlink: "./Assignments/CacheSimulator"
         points: 100
         rubricpath: "_pages/Assignments/assignment-cachesimulator.md"
   - week: "14"
-    date: "1"
+    date: "2"
     title: "The Memory Hierarchy: Cache Design"
     deliverables:
-      - dtitle: "Lab: Single Cycle Datapath and Control Due"
-        dlink: "./Labs/SingleCycle"
+      - dtitle: "Lab: 4 Bit ALU Due"
+        dlink: "./Labs/ALU4Bit"
         points: 100
-        rubricpath: "_pages/Labs/lab-singlecycle.md"
-  - week: "14"
-    date: "2"
-    title: "The Memory Hierarchy: Virtual Memory"
-    link: "./Activities/VirtualMemory"
+        rubricpath: "_pages/Labs/lab-alu4bit.md"
   - week: "14"
     date: "3"
     title: "Review"
@@ -656,10 +589,10 @@ schedule:
     date: "0"
     title: "Review"
     deliverables:
-      - dtitle: "Participation: Second Self-Assessment Due"
-        dlink: "./Assignments/Participation/SelfAssessment"
-        points: 10
-        submission_types: "written"
+      - dtitle: "Final Project: Project and Presentation Due"
+        dlink: "Projects/Final"
+        points: 100
+        rubricpath: "_pages/Projects/proj-final.md"
   - week: "15"
     date: "1"
     title: "Review"
@@ -667,76 +600,73 @@ schedule:
       - dtitle: "Programming Assignment: Cache Simulator Due"
         dlink: "./Assignments/CacheSimulator"
         points: 100
-        rubricpath: "_pages/Assignments/assignment-cachesimulator.md"
-      - dtitle: "Final Project: Project and Presentation Due"
-        dlink: "Projects/Final"
-        points: 100
-        rubricpath: "_pages/Projects/proj-final.md"        
+        rubricpath: "_pages/Assignments/assignment-cachesimulator.md"       
           
 university:
-  semester: "Spring"
-  academicyear: "2022-23"
+  semester: "Fall"
+  academicyear: "2024-25"
   fall:
   - kname: "Add Deadline"
-    kdate: "2022/09/10"
+    kdate: "2024/09/6"
     kdisplay: true
-  - kname: "Drop with a W Deadline"
-    kdate: "2022/10/27"
-    kdisplay: true  
   - kname: "Mid Semester Grades Posted"
-    kdate: "2022/10/15"
+    kdate: "2024/10/11"
     kdisplay: false
+  - kname: "Drop with a W Deadline"
+    kdate: "2024/11/19"
+    kdisplay: true      
   - kname: "Reading Day"
-    kdate: "2022/12/11"
+    kdate: "2024/12/10"
     kdisplay: true
   - kname: "Finals Week Begins"
-    kdate: "2022/12/13"
+    kdate: "2024/12/11"
     kdisplay: false
   - kname: "Finals Week Ends"
-    kdate: "2022/12/18"
+    kdate: "2024/12/17"
     kdisplay: false
   spring:
   - kname: "Add Deadline"
-    kdate: "2023/1/31"
-    kdisplay: true
-  - kname: "Drop with a W Deadline"
-    kdate: "2023/03/22"
+    kdate: "2025/02/4"
     kdisplay: true
   - kname: "Mid Semester Grades Posted"
-    kdate: "2023/03/3"
+    kdate: "2025/03/7"
     kdisplay: false
+  - kname: "Drop with a W Deadline"
+    kdate: "2025/04/18"
+    kdisplay: true    
   - kname: "CoSA"
-    kdate: "2023/04/19"
-    kdisplay: true  
+    kdate: "2025/04/23"
+    kdisplay: true   
   - kname: "Reading Day"
-    kdate: "2023/05/4"
-    kdisplay: false    
-  - kname: "Baccalaureate"
-    kdate: "2023/05/12"
-    kdisplay: false
-  - kname: "Commencement"
-    kdate: "2023/05/13"
+    kdate: "2025/05/8"
     kdisplay: false
   - kname: "Finals Week Begins"
-    kdate: "2023/05/05"
+    kdate: "2025/05/09"
     kdisplay: false
   - kname: "Finals Week Ends"
-    kdate: "2023/05/11"
+    kdate: "2025/05/15"
+    kdisplay: false    
+  - kname: "Baccalaureate"
+    kdate: "2025/05/16"
+    kdisplay: false
+  - kname: "Commencement"
+    kdate: "2025/05/17"
     kdisplay: false    
   fallholidays:
-  - date: "2022/10/17"
-  - date: "2022/10/18"
-  - date: "2022/11/24"
-  - date: "2022/11/25"
-  - date: "2022/11/26" 
+  - date: "2024/10/14"
+  - date: "2024/10/15"
+  - date: "2024/10/16"
+  - date: "2024/11/27"
+  - date: "2024/11/28"
+  - date: "2024/11/29" 
   springholidays:
-  - date: "2023/01/16"  
-  - date: "2023/01/17"
-  - date: "2023/03/6"  
-  - date: "2023/03/7"
-  - date: "2023/03/8" 
-  - date: "2023/03/9"
-  - date: "2023/03/10"   
+  - date: "2025/01/20"  
+  - date: "2025/01/21"
+  - date: "2025/03/10"  
+  - date: "2025/03/11"
+  - date: "2025/03/12" 
+  - date: "2025/03/13"
+  - date: "2025/03/14"  
   
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: assignment
-permalink: /Labs/SingleCycle
+permalink: /Assignments/SingleCycle
 title: "CS274: Computer Architecture - Single Cycle Datapath and Control"
 
 
