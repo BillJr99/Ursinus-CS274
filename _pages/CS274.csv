@@ -1,5 +1,5 @@
 Week,Day,Title,Link,dtitle1,dlink1,dpoints1,drubric1,dtype1,dtitle2,dlink2,dpoints2,drubric2,dtype2,dtitle3,dlink3,dpoints3,drubric3,dtype3,rtitle1,rlink1,rtitle2,rlink2,rtitle3,rlink3,rtitle4,rlink4,rtitle5,rlink5
-0,1,Course Overview,../Ursinus-CS274-Overview,Programming Assignment: Warmup Handed Out,./Assignments/Warmup,10,,noupload,,,,,,,,,,,,,,,,,,,,
+0,1,Course Overview,../Ursinus-CS274-Overview,Programming Assignment: Warmup Handed Out,./Assignments/Warmup,10,,noupload,,,,,,,,,,,"Why the First Computers were Made out of Light Bulbs","https://www.youtube.com/watch?v=FU_YFpfDqqA",,,,,,,,
 0,2,From Circuits to Systems: the 555 Timer,./Activities/Circuits,Participation: Pre-Assessment Handed Out,./Assignments/Participation/PreAssessment,10,,written,,,,,,,,,,,COD Chapter 1,,Astable 555 Timer by Ben Eater,https://www.youtube.com/watch?v=kRlSFm519Bo,,,,,,
 0,3,Number Systems,./Activities/NumberSystems,,,,,,,,,,,,,,,,"COD Chapter 2.4, 2.9",,,,,,,,,
 1,0,Number Systems,,Programming Assignment: Warmup Due,./Assignments/Warmup,10,,noupload,,,,,,,,,,,"SCRAM: The New Turing Omnibus","https://www.cs.jhu.edu/~phi/csf/scram/dewdney-omnibus-scram.pdf",,,,,,,,
