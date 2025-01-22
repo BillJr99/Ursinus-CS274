@@ -217,6 +217,9 @@ schedule:
   - week: "1"
     date: "0"
     title: "Number Systems"
+    readings:
+      - rtitle: "SCRAM: The New Turing Omnibus"
+        rlink: "https://www.cs.jhu.edu/~phi/csf/scram/dewdney-omnibus-scram.pdf" 
     deliverables:
       - dtitle: "Programming Assignment: Warmup Due"
         dlink: "./Assignments/Warmup"
