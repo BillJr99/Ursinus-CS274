@@ -45,7 +45,7 @@ info:
       place: "PFA 107"
     - day: "W"
       starttime: "9:00 AM"
-      endtime: "10:50 AM"
+      endtime: "9:50 AM"
       place: "PFA 107"
     - day: "R"
       starttime: "9:00 AM"
@@ -604,7 +604,7 @@ schedule:
         rubricpath: "_pages/Assignments/assignment-cachesimulator.md"       
           
 university:
-  semester: "Fall"
+  semester: "Spring"
   academicyear: "2024-25"
   fall:
   - kname: "Add Deadline"
