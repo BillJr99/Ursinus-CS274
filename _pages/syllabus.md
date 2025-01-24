@@ -50,7 +50,7 @@ info:
     - day: "R"
       starttime: "9:00 AM"
       endtime: "9:50 AM"
-      place: "PFA 109"      
+      place: "PFA 107"      
     - day: "F"
       starttime: "9:00 AM"
       endtime: "9:50 AM"
