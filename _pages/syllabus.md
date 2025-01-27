@@ -11,7 +11,7 @@ info:
   course_title: "Computer Architecture"
   credit_hours: "4 Semester Hours"
   course_homepage: "https://www.billmongan.com/Ursinus-CS274-Spring2025/"
-  class_notebook: https://ursinuscollege365-my.sharepoint.com/personal/wmongan_ursinus_edu/Documents/Class%20Notebooks/CS274%20Spring%202023
+  class_notebook: https://ursinuscollege365-my.sharepoint.com/personal/wmongan_ursinus_edu/Documents/Class%20Notebooks/CS274%20Spring%202025
   teamshelproom: https://teams.microsoft.com/l/channel/19%3AYMywmkt9yNYVBXxiMLa35Nh2hrBWQvCmek66CBdNlJA1%40thread.tacv2/?groupId=43517804-3739-4e1a-8c36-2a4e60bad2a9&tenantId=921f1c03-8689-4e60-a722-f5ea581e00fe
   ical: files/CS274.ics
   course_prerequisites: "CS174"
