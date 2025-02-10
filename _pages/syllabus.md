@@ -288,11 +288,6 @@ schedule:
   - week: "3"
     date: "3"
     title: "MIPS Conditionals"
-    deliverables:
-      - dtitle: "Lab: Introduction to MIPS Programming Due"
-        dlink: "./Labs/MIPSIntro"
-        points: 100
-        rubricpath: "_pages/Labs/lab-mipsintro.md"
     readings:
       - rtitle: "How CPUs Read Machine Code by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=yl8vPW5hydQ&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=2"
@@ -300,6 +295,10 @@ schedule:
     date: "0"
     title: "Lab: Bitwise Logical Operators"
     deliverables:
+      - dtitle: "Lab: Introduction to MIPS Programming Due"
+        dlink: "./Labs/MIPSIntro"
+        points: 100
+        rubricpath: "_pages/Labs/lab-mipsintro.md"
       - dtitle: "Lab: Bitwise Logical Operators Handed Out"
         dlink: "./Labs/BitwiseLogic"
         points: 100
