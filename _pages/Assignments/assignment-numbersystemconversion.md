@@ -39,7 +39,7 @@ info:
       proficient: The program is submitted according to the directions, including a readme writeup describing the solution, and thoughtful answers to the bolded questions throughout
 
   readings:
-    - rlink: ../Activities/NumberSystems
+    - rlink: ../../Activities/NumberSystems
       rtitle: Number Systems Activity
     - rlink: https://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/
       rtitle: Makefile Tutorial by Bruce A. Maxwell      
