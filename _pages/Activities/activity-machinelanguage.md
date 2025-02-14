@@ -160,6 +160,8 @@ info:
       title: "Cross-Compiler Explorer"
     - link: "http://mipsconverter.com/opcodes.html"
       title: "MIPS to Binary Translation Reference Guide"
+    - link: "https://courses.cs.washington.edu/courses/cse378/09au/MIPS_Green_Sheet.pdf"
+      title: "MIPS Green Sheet Textbook Reference"
 
 tags:
   - mips
