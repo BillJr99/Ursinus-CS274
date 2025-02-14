@@ -158,7 +158,7 @@ info:
       title: Review of the MIPS Instruction Set
     - link: "https://godbolt.org/"
       title: "Cross-Compiler Explorer"
-    - link: "http://mipsconverter.com/opcodes.html"
+    - link: "https://web.archive.org/web/20240805121947/http://mipsconverter.com/opcodes.html"
       title: "MIPS to Binary Translation Reference Guide"
     - link: "https://courses.cs.washington.edu/courses/cse378/09au/MIPS_Green_Sheet.pdf"
       title: "MIPS Green Sheet Textbook Reference"
