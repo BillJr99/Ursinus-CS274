@@ -38,9 +38,9 @@ info:
       rtitle: JsSpim MIPS Simulator by Shawn Zhong
     - rlink: https://pages.cs.wisc.edu/~larus/spim.html#qtspim
       rtitle: SPIM MIPS Simulator
-    - rlink: http://courses.missouristate.edu/kenvollmar/mars/
+    - rlink: https://computerscience.missouristate.edu/mars-mips-simulator.htm
       rtitle: MARS MIPS Simulator    
-    - rlink: https://courses.missouristate.edu/kenvollmar/mars/help/syscallhelp.html
+    - rlink: https://dpetersanderson.github.io/Help/SyscallHelp.html
       rtitle: MIPS System Calls    
     - rlink: https://inst.eecs.berkeley.edu/~cs61c/resources/MIPS_Green_Sheet.pdf
       rtitle: MIPS Reference Sheet      
