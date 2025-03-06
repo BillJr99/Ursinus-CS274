@@ -38,9 +38,9 @@ info:
       rtitle: JsSpim MIPS Simulator by Shawn Zhong
     - rlink: https://pages.cs.wisc.edu/~larus/spim.html#qtspim
       rtitle: SPIM MIPS Simulator
-    - rlink: http://courses.missouristate.edu/kenvollmar/mars/
+    - rlink: https://computerscience.missouristate.edu/mars-mips-simulator.htm
       rtitle: MARS MIPS Simulator    
-    - rlink: https://courses.missouristate.edu/kenvollmar/mars/help/syscallhelp.html
+    - rlink: https://dpetersanderson.github.io/Help/SyscallHelp.html
       rtitle: MIPS System Calls    
     - rlink: https://inst.eecs.berkeley.edu/~cs61c/resources/MIPS_Green_Sheet.pdf
       rtitle: MIPS Reference Sheet      
@@ -64,8 +64,28 @@ We'll use integers today because integers and floating point values are represen
 
 ### What to Do
 
+#### Writing Your Program
+
+Begin by writing a blank MIPS assembly program:
+
+```
+.text
+.globl main
+```
+
 #### Reading User Input
-Begin by prompting the user to input integer values fomr `wps` and `spw` using a `syscall`.  To perform the syscall that prints the prompt to the screen, set `$v0` to 4 using the `li` instruction, set `$a0` to your prompt label using the `la` instruction, and call `syscall`.  In your `.data` section, you can declare your string variables.  Be sure to add a `\n` to the end of your string to print a newline!
+Begin by prompting the user to input integer values fomr `wps` and `spw` using a `syscall`.  To perform the syscall that prints the prompt to the screen, set `$v0` to 4 using the `li` instruction, set `$a0` to your prompt label using the `la` instruction, and call `syscall`.  In your `.data` section, you can declare your string variables.  Be sure to add a `\n` to the end of your string to print a newline!  This will look like the following:
+
+```
+        .data
+msg:   .asciiz "Please enter the number of words per sentence:\n"
+
+        .text
+# what you had before!
+li $v0, 4
+la $a0, msg
+syscall
+```
 
 Read in an integer using `syscall`, but this time merely set `$v0` to 5.  `$v0` will contain the integer the user types in when finished.  Repeat this process for each variable you wish to input: prompt the user, read an integer, and copy that integer into a register to save it (you can `add $t0, $v0, $zero` to copy `$v0` into `$t0`, but be sure to use a different register for `wps` and `spw`).
 

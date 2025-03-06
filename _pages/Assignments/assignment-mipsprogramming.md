@@ -60,4 +60,4 @@ int power(int x, int y)
 
 Prompt the user for values of `x` and `y`, and print the result to the console using system calls.
 
-You can use the pseudoinstruction `mul` as an R-type instruction to multiply two values together.  Multiplication can quickly overflow a 32-bit register, and although we will learn later how to deal with this, you can simply use small input values for x and y for now.
+You can use the pseudoinstruction `mul` as an R-type instruction to multiply two values together.  Multiplication can quickly overflow a 32-bit register, and although we will learn later how to deal with this, you can simply use small input values for `x` and `y` for now.

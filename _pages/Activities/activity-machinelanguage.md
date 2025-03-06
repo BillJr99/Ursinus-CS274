@@ -154,12 +154,14 @@ info:
         - "Suppose the first line of <code>main</code> is instruction address <code>0x00400024</code>.  What is the address of the first instruction at label <code>procedure</code>?  What is the binary translation of the <code>jal</code> instruction above?"
 
   additional_reading:
-    - link: ../MIPSInstructions
+    - link: ./MIPSInstructions
       title: Review of the MIPS Instruction Set
     - link: "https://godbolt.org/"
       title: "Cross-Compiler Explorer"
-    - link: "http://mipsconverter.com/opcodes.html"
+    - link: "https://web.archive.org/web/20240805121947/http://mipsconverter.com/opcodes.html"
       title: "MIPS to Binary Translation Reference Guide"
+    - link: "https://courses.cs.washington.edu/courses/cse378/09au/MIPS_Green_Sheet.pdf"
+      title: "MIPS Green Sheet Textbook Reference"
 
 tags:
   - mips

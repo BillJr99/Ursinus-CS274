@@ -115,7 +115,7 @@ info:
                 ch = x[i];
                 
                 if(ch == '1') {
-                    result = result + Math.pow(2, i);
+                    result = result + Math.pow(2, x.length - i - 1);
                 }
             }
             

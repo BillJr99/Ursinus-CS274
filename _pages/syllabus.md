@@ -315,20 +315,15 @@ schedule:
   - week: "4"
     date: "2"
     title: "MIPS Iteration"
-    deliverables:
-      - dtitle: "Programming Assignment: MIPS Programming Handed Out"
-        dlink: "./Assignments/MIPSProgramming"
-        points: 100
-        rubricpath: "_pages/Assignments/assignment-mipsprogramming.md"
   - week: "4"
     date: "3"
     title: "MIPS Procedures"
     link: "./Activities/MIPSProcedures"
     deliverables:
-      - dtitle: "Lab: Bitwise Logical Operators Due"
-        dlink: "./Labs/BitwiseLogic"
+      - dtitle: "Programming Assignment: MIPS Programming Handed Out"
+        dlink: "./Assignments/MIPSProgramming"
         points: 100
-        rubricpath: "_pages/Labs/lab-bitwiselogic.md"
+        rubricpath: "_pages/Assignments/assignment-mipsprogramming.md"    
     readings:
       - rtitle: "COD Chapter 2.8, 2.10"
         rlink: false
@@ -338,6 +333,10 @@ schedule:
     date: "0"
     title: "Lab: Implementing if Statements in MIPS Assembly"
     deliverables:
+      - dtitle: "Lab: Bitwise Logical Operators Due"
+        dlink: "./Labs/BitwiseLogic"
+        points: 100
+        rubricpath: "_pages/Labs/lab-bitwiselogic.md"    
       - dtitle: "Lab: Implementing if Statements in MIPS Assembly Handed Out"
         dlink: "./Labs/MIPSConditionals"
         points: 100
