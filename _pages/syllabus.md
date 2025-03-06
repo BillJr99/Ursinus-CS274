@@ -387,6 +387,9 @@ schedule:
         points: 100
         rubricpath: "_pages/Assignments/assignment-mipsprogramming.md"
   - week: "6"
+    date: "2"
+    title: "Data Structures"        
+  - week: "6"
     date: "3"
     title: "Recursion in MIPS"
     link: "./Activities/MIPSRecursion"
