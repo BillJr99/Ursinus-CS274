@@ -49,7 +49,7 @@ tags:
 
 #### Part 1: Procedures
 
-For this part of the lab, you may select any prior MIPS program you've written in this class, and modify it to call a proceudre.  For example, if you wrote a program to accept user input, compute a primality test, and output the result, you can move the primality test code into a procedure, and call it from `main`.
+For this part of the lab, you may select any prior MIPS program you've written in this class, and modify it to call a procedure.  For example, if you wrote a program to accept user input, compute a primality test, and output the result, you can move the primality test code into a procedure, and call it from `main`.
 
 Any MIPS program that a) accepts user input from `main`, b) sets the `a` registers and calls a procedure with arguments from `main`, c) returns values via the `v` registers from within your procedure, and d) prints those values from `main` is acceptable.  You can write a new program if you wish.
 
