@@ -12,10 +12,6 @@ info:
   models:
     - model: |
         <img src="../images/muldiv/mul1.png" alt="Multiplication with a Simple Algorithm">
-        <br>
-        <img src="https://www.researchgate.net/profile/Darshan-Shah-19/publication/232322818/figure/fig1/AS:393475884371969@1470823369188/Figure-2-Hardware-of-shift-add-multiplication-Hardware-for-Shift-Add-multiplication-is_W640.jpg" alt="Hardware for a Shift and Add Multiplier">
-        <br>
-        <img src="https://i.stack.imgur.com/mKtQu.png" alt="Algorithm Flowchart for a Shift and Add Multiplier">
       title: Multiplication with a Simple Algorithm
       questions:
         - "Using only shift and add instructions, multiply a value in a register <code>$t0</code> by 3."
@@ -39,8 +35,6 @@ info:
 
     - model: |
         <img src="../images/muldiv/div1.png" alt="Division with a Simple Algorithm">
-        <br>
-        <img src="https://i.stack.imgur.com/b9ZP9.png" alt="Division Flowchart">
       title: Division
       questions:
         - "Draw the hardware diagram and flowchart for this algorithm."
