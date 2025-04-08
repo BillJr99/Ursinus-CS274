@@ -472,12 +472,7 @@ schedule:
         rlink: false
   - week: "11"
     date: "0"
-    title: "Lab: Computer Arithmetic"
-    deliverables:
-      - dtitle: "Lab: Computer Arithmetic Handed Out"
-        dlink: "./Labs/ComputerArithmetic"
-        points: 100
-        rubricpath: "_pages/Labs/lab-computerarithmetic.md"
+    title: "MIPS Processor Design: The ALU"
   - week: "11"
     date: "1"
     title: "MIPS Processor Design: The ALU"
@@ -493,11 +488,6 @@ schedule:
     date: "3"
     title: "The MIPS Single Cycle Design"
     link: "./Activities/MIPSSingleCycle"
-    deliverables:
-      - dtitle: "Lab: Computer Arithmetic Due"
-        dlink: "./Labs/ComputerArithmetic"
-        points: 100
-        rubricpath: "_pages/Labs/lab-computerarithmetic.md"
     readings:
       - rtitle: "COD Chapter 4.1-4.4"
         rlink: false
