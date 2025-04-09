@@ -46,7 +46,7 @@ tags:
 
 ---
 
-In this lab, you will simulate the datapath and control of the MIPS single cycle architecture in a programming language of your choice.  You may use arrays to simulate the register units and memory.
+In this assignment, you will simulate the datapath and control of the MIPS single cycle architecture in a programming language of your choice.  You may use arrays to simulate the register units and memory.
 
 Read a MIPS assembly program from a text file, in this format:
 
