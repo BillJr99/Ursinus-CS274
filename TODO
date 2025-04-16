@@ -3,3 +3,4 @@ More bitwise operator practice, perhaps extracting the fields of a float, and mo
 On labs and assignments, ask students to sketch out the memory layout of the program - i.e., the strings, the code
 Written assignment practice on converting addresses like branches and jumps (perhaps a computer program)
 Link to references on unit testing and makefiles on the programming assignment
+More adder VHDL instructions on installing, compiling, and running; including zooming in on the waveform
