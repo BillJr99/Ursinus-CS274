@@ -243,6 +243,19 @@ signal input  : std_logic_vector(2 downto 0);
 
 You'll set this to `"000"` instead of just `"00"`, and so on.  You'll also have two output signals, for the sum and carry out (instead of just one).
 
+### What to Do
+
+1. Create and test a 2-bit and gate.
+2. Create and test a 2-bit xor gate.
+3. Create and test a 2-bit or gate.
+4. Create and test a full adder that accepts `a`, `b`, and `carryIn`, and outputs `sum` and `carryOut`, using the half adder above.  By using two half adder components in your full adder implementation, you will have far fewer total components in your synthesized circuit than if you constructed the whole full adder out of and/or/xor gates.  This is a bit like re-using a function in software!  Feel free to create additional gates (for example, an or gate), if you need them.
+
+#### Schematic
+
+Here is the schematic you will implement with these steps above:
+
+![Full Adder Schematic from Two Half Adders](https://media.geeksforgeeks.org/wp-content/uploads/20240228175355/Untitled-Diagram---2024-02-28T175346210.webp)
+
 ### Online VHDL Editor
 
 If you have trouble using the tools, the [EDA Playground](https://edaplayground.com/) is an online VHDL editor and compiler that you can try!  On the left menu, you can select VHDL as the `Testbench and Design`, and specify the name of your testbench component in the `Top entity` text box.  Under `Tools & Simulators`, choose `GHDL`, and hit `Run` at the top.  Optionally, you can select the `EPWave` tool to enable the output waveform similar to gtkwave.
@@ -336,16 +349,3 @@ begin
     end process;
 end;
 ```
-
-### What to Do
-
-1. Create and test a 2-bit and gate.
-2. Create and test a 2-bit xor gate.
-3. Create and test a 2-bit or gate.
-4. Create and test a full adder that accepts `a`, `b`, and `carryIn`, and outputs `sum` and `carryOut`, using the half adder above.  By using two half adder components in your full adder implementation, you will have far fewer total components in your synthesized circuit than if you constructed the whole full adder out of and/or/xor gates.  This is a bit like re-using a function in software!  Feel free to create additional gates (for example, an or gate), if you need them.
-
-#### Schematic
-
-Here is the schematic you will implement with these steps above:
-
-![Full Adder Schematic from Two Half Adders](https://media.geeksforgeeks.org/wp-content/uploads/20240228175355/Untitled-Diagram---2024-02-28T175346210.webp)
