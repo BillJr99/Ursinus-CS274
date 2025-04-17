@@ -504,19 +504,14 @@ schedule:
   - week: "12"
     date: "1"
     title: "The MIPS Single Cycle Design"
-    deliverables:
-      - dtitle: "Final Project: Project and Presentation Handed Out"
-        dlink: "Projects/Final"
-        points: 100
-        rubricpath: "_pages/Projects/proj-final.md"
   - week: "12"
     date: "2"
     title: "The MIPS Single Cycle Design"
     deliverables:
-      - dtitle: "Assignment: Single Cycle Datapath and Control Handed Out"
-        dlink: "./Assignments/SingleCycle"
+      - dtitle: "Final Project: Project and Presentation Handed Out"
+        dlink: "Projects/Final"
         points: 100
-        rubricpath: "_pages/Assignments/assignment-singlecycle.md"
+        rubricpath: "_pages/Projects/proj-final.md"    
   - week: "12"
     date: "3"
     title: "The MIPS Single Cycle Design"
@@ -545,6 +540,10 @@ schedule:
         dlink: "./Assignments/FloatingPoint"
         points: 100
         rubricpath: "_pages/Assignments/assignment-floatingpoint.md"
+      - dtitle: "Assignment: Single Cycle Datapath and Control Handed Out"
+        dlink: "./Assignments/SingleCycle"
+        points: 100
+        rubricpath: "_pages/Assignments/assignment-singlecycle.md"        
     readings:
       - rtitle: "COD Chapter 5.1-5.4"
         rlink: false
