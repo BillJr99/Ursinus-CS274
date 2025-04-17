@@ -519,7 +519,19 @@ schedule:
         rubricpath: "_pages/Assignments/assignment-singlecycle.md"
   - week: "12"
     date: "3"
+    title: "The MIPS Single Cycle Design"
+    readings:
+      - rtitle: "How Assembly Language Loops Work by Ben Eater"
+        rlink: "https://www.youtube.com/watch?v=ZYJIakkcLYw&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=9"
+      - rtitle: "COD Chapter 4.5"
+        rlink: false
+  - week: "13"
+    date: "0"
     title: "Lab: 1 Bit ALU"
+  - week: "13"
+    date: "2"
+    title: "The Memory Hierarchy: Cache Design"
+    link: "./Activities/Cache"
     deliverables:
       - dtitle: "Lab: Adder Design Due"
         dlink: "./Labs/AdderDesign"
@@ -528,20 +540,7 @@ schedule:
       - dtitle: "Lab: 1 Bit ALU Handed Out"
         dlink: "./Labs/ALU1Bit"
         points: 100
-        rubricpath: "_pages/Labs/lab-alu1bit.md"
-    readings:
-      - rtitle: "How Assembly Language Loops Work by Ben Eater"
-        rlink: "https://www.youtube.com/watch?v=ZYJIakkcLYw&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=9"
-      - rtitle: "COD Chapter 4.5"
-        rlink: false
-  - week: "13"
-    date: "0"
-    title: "The MIPS Single Cycle Design"
-  - week: "13"
-    date: "2"
-    title: "The Memory Hierarchy: Cache Design"
-    link: "./Activities/Cache"
-    deliverables:
+        rubricpath: "_pages/Labs/lab-alu1bit.md"    
       - dtitle: "Programming Assignment: Floating Point Bit Fields Due"
         dlink: "./Assignments/FloatingPoint"
         points: 100
@@ -551,12 +550,7 @@ schedule:
         rlink: false
   - week: "13"
     date: "3"
-    title: "Lab: 4-bit ALU"
-    deliverables:
-      - dtitle: "Lab: 4 Bit ALU Handed Out"
-        dlink: "./Labs/ALU4Bit"
-        points: 100
-        rubricpath: "_pages/Labs/lab-alu4bit.md"
+    title: "The MIPS Single Cycle Design"
   - week: "14"
     date: "0"
     title: "The Memory Hierarchy: Cache Design"
@@ -568,18 +562,18 @@ schedule:
         dlink: "./Assignments/SingleCycle"
         points: 100
         rubricpath: "_pages/Assignments/assignment-singlecycle.md"
-      - dtitle: "Programming Assignment: Cache Simulator Handed Out"
-        dlink: "./Assignments/CacheSimulator"
-        points: 100
-        rubricpath: "_pages/Assignments/assignment-cachesimulator.md"
   - week: "14"
     date: "2"
-    title: "The Memory Hierarchy: Cache Design"
+    title: "Lab: 4 Bit ALU"
     deliverables:
-      - dtitle: "Lab: 4 Bit ALU Due"
+      - dtitle: "Lab: 1 Bit ALU Due"
+        dlink: "./Labs/ALU1Bit"
+        points: 100
+        rubricpath: "_pages/Labs/lab-alu1bit.md"       
+      - dtitle: "Lab: 4 Bit ALU Handed Out"
         dlink: "./Labs/ALU4Bit"
         points: 100
-        rubricpath: "_pages/Labs/lab-alu4bit.md"
+        rubricpath: "_pages/Labs/lab-alu4bit.md"    
   - week: "14"
     date: "3"
     title: "Review"
@@ -595,10 +589,10 @@ schedule:
     date: "1"
     title: "Review"
     deliverables:
-      - dtitle: "Programming Assignment: Cache Simulator Due"
-        dlink: "./Assignments/CacheSimulator"
+      - dtitle: "Lab: 4 Bit ALU Due"
+        dlink: "./Labs/ALU4Bit"
         points: 100
-        rubricpath: "_pages/Assignments/assignment-cachesimulator.md"       
+        rubricpath: "_pages/Labs/lab-alu4bit.md"   
           
 university:
   semester: "Spring"
