@@ -522,11 +522,10 @@ schedule:
         rlink: false
   - week: "13"
     date: "0"
-    title: "Lab: 1 Bit ALU"
+    title: "The MIPS Single Cycle Design"
   - week: "13"
     date: "2"
-    title: "The Memory Hierarchy: Cache Design"
-    link: "./Activities/Cache"
+    title: "Lab: 1 Bit ALU"
     deliverables:
       - dtitle: "Lab: Adder Design Due"
         dlink: "./Labs/AdderDesign"
@@ -553,6 +552,7 @@ schedule:
   - week: "14"
     date: "0"
     title: "The Memory Hierarchy: Cache Design"
+    link: "./Activities/Cache"
   - week: "14"
     date: "1"
     title: "The Memory Hierarchy: Cache Design"
