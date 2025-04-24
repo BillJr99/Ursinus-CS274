@@ -538,17 +538,18 @@ schedule:
       - dtitle: "Programming Assignment: Floating Point Bit Fields Due"
         dlink: "./Assignments/FloatingPoint"
         points: 100
-        rubricpath: "_pages/Assignments/assignment-floatingpoint.md"
-      - dtitle: "Assignment: Single Cycle Datapath and Control Handed Out"
-        dlink: "./Assignments/SingleCycle"
-        points: 100
-        rubricpath: "_pages/Assignments/assignment-singlecycle.md"        
+        rubricpath: "_pages/Assignments/assignment-floatingpoint.md"  
     readings:
       - rtitle: "COD Chapter 5.1-5.4"
         rlink: false
   - week: "13"
     date: "3"
     title: "The MIPS Single Cycle Design"
+    deliverables:
+      - dtitle: "Assignment: Single Cycle Datapath and Control Handed Out"
+        dlink: "./Assignments/SingleCycle"
+        points: 100
+        rubricpath: "_pages/Assignments/assignment-singlecycle.md"          
   - week: "14"
     date: "0"
     title: "The Memory Hierarchy: Cache Design"
@@ -556,11 +557,6 @@ schedule:
   - week: "14"
     date: "1"
     title: "The Memory Hierarchy: Cache Design"
-    deliverables:
-      - dtitle: "Assignment: Single Cycle Datapath and Control Due"
-        dlink: "./Assignments/SingleCycle"
-        points: 100
-        rubricpath: "_pages/Assignments/assignment-singlecycle.md"
   - week: "14"
     date: "2"
     title: "Lab: 4 Bit ALU"
@@ -576,6 +572,11 @@ schedule:
   - week: "14"
     date: "3"
     title: "Review"
+    deliverables:
+      - dtitle: "Assignment: Single Cycle Datapath and Control Due"
+        dlink: "./Assignments/SingleCycle"
+        points: 100
+        rubricpath: "_pages/Assignments/assignment-singlecycle.md"    
   - week: "15"
     date: "0"
     title: "Review"
