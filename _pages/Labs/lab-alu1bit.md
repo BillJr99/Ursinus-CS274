@@ -69,4 +69,13 @@ When finished with this base design, make the following modification.
 1. Create and test a 2-to-1 multiplexor according to this design (note that your select input will only be 1 bit now!):
 <br>
 <img src="https://www.electronicshub.org/wp-content/uploads/2021/04/Logic-Circuit-of-2-to-1-MUX.jpg" alt="2-1 multiplexor">
-2. Add a `bInvert` input bit to your design, and multiplex the input signal `b` with `not b` (using a 2-input mux), and use the resulting mux output as a signal to the remaining `b` inputs.  
+2. Add a `bInvert` input bit to your design, and multiplex the input signal `b` with `not b` (using a 2-input mux), and use the resulting mux output as a signal to the remaining `b` inputs.
+3. 
+
+#### Testing
+
+To test a multi-bit input vector, you can set individual bits of the component you are testing, via array indexing.  For example:
+
+```
+sel(0) => input(0);
+```
