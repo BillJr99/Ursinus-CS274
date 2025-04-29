@@ -70,12 +70,93 @@ When finished with this base design, make the following modification.
 <br>
 <img src="https://www.electronicshub.org/wp-content/uploads/2021/04/Logic-Circuit-of-2-to-1-MUX.jpg" alt="2-1 multiplexor">
 2. Add a `bInvert` input bit to your design, and multiplex the input signal `b` with `not b` (using a 2-input mux), and use the resulting mux output as a signal to the remaining `b` inputs.
-3. 
 
 #### Testing
 
-To test a multi-bit input vector, you can set individual bits of the component you are testing, via array indexing.  For example:
+Here is an example testbench for the 1-bit ALU (you may need to change the labels to match the ones you used).  It's a good idea to also assert the values of the flag signals like `zero`, `less`, and `overflow`, which is left as an exercise for you.
 
 ```
-sel(0) => input(0);
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity alu1bit_tb is
+end alu1bit_tb;
+
+architecture behavior of alu1bit_tb is
+    component alu1bit
+    port (
+        a        : in  std_logic;
+        b        : in  std_logic;
+        carryin  : in  std_logic;
+        bInvert  : in  std_logic;
+        select   : in  std_logic_vector(1 downto 0);
+        z        : out std_logic;
+        carryout : out std_logic;
+        zero     : out std_logic;
+        less     : out std_logic;
+        overflow : out std_logic
+    );
+    end component;
+
+    signal a, b, carryin, bInvert : std_logic;
+    signal select : std_logic_vector(1 downto 0);
+    signal z, carryout, zero, less, overflow : std_logic;
+begin
+    uut: alu1bit port map (
+        a        => a,
+        b        => b,
+        carryin  => carryin,
+        bInvert  => bInvert,
+        select   => select,
+        z        => z,
+        carryout => carryout,
+        zero     => zero,
+        less     => less,
+        overflow => overflow
+    );
+
+    tb_proc: process
+    begin
+        -- Test ADD (select = "00", bInvert = '0')
+        select <= "00"; bInvert <= '0';
+        
+        a <= '0'; b <= '0'; carryin <= '0'; wait for 30 ns; assert z = '0' report "ADD 0+0+0 failed";
+        a <= '0'; b <= '0'; carryin <= '1'; wait for 30 ns; assert z = '1' report "ADD 0+0+1 failed";
+        a <= '0'; b <= '1'; carryin <= '0'; wait for 30 ns; assert z = '1' report "ADD 0+1+0 failed";
+        a <= '0'; b <= '1'; carryin <= '1'; wait for 30 ns; assert z = '0' report "ADD 0+1+1 failed";
+        a <= '1'; b <= '0'; carryin <= '0'; wait for 30 ns; assert z = '1' report "ADD 1+0+0 failed";
+        a <= '1'; b <= '0'; carryin <= '1'; wait for 30 ns; assert z = '0' report "ADD 1+0+1 failed";
+        a <= '1'; b <= '1'; carryin <= '0'; wait for 30 ns; assert z = '0' report "ADD 1+1+0 failed";
+        a <= '1'; b <= '1'; carryin <= '1'; wait for 30 ns; assert z = '1' report "ADD 1+1+1 failed";
+
+        -- Test SUBTRACT (select = "00", bInvert = '1')
+        select <= "00"; bInvert <= '1';
+        
+        a <= '0'; b <= '0'; carryin <= '1'; wait for 30 ns; assert z = '1' report "SUB 0-0 failed";
+        a <= '0'; b <= '1'; carryin <= '1'; wait for 30 ns; assert z = '0' report "SUB 0-1 failed";
+        a <= '1'; b <= '0'; carryin <= '1'; wait for 30 ns; assert z = '0' report "SUB 1-0 failed";
+        a <= '1'; b <= '1'; carryin <= '1'; wait for 30 ns; assert z = '1' report "SUB 1-1 failed";
+
+        -- Test AND (select = "01", bInvert irrelevant)
+        select <= "01"; bInvert <= '0';
+        carryin <= '0'; -- carryin not used for AND
+        
+        a <= '0'; b <= '0'; wait for 30 ns; assert z = '0' report "AND 0&0 failed";
+        a <= '0'; b <= '1'; wait for 30 ns; assert z = '0' report "AND 0&1 failed";
+        a <= '1'; b <= '0'; wait for 30 ns; assert z = '0' report "AND 1&0 failed";
+        a <= '1'; b <= '1'; wait for 30 ns; assert z = '1' report "AND 1&1 failed";
+
+        -- Test OR (select = "10", bInvert irrelevant)
+        select <= "10"; bInvert <= '0';
+        carryin <= '0'; -- carryin not used for OR
+        
+        a <= '0'; b <= '0'; wait for 30 ns; assert z = '0' report "OR 0|0 failed";
+        a <= '0'; b <= '1'; wait for 30 ns; assert z = '1' report "OR 0|1 failed";
+        a <= '1'; b <= '0'; wait for 30 ns; assert z = '1' report "OR 1|0 failed";
+        a <= '1'; b <= '1'; wait for 30 ns; assert z = '1' report "OR 1|1 failed";
+
+        report "Testbench finished successfully";
+        wait;
+    end process;
+end behavior;
 ```
