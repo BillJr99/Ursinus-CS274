@@ -571,12 +571,7 @@ schedule:
         rubricpath: "_pages/Labs/lab-alu4bit.md"    
   - week: "14"
     date: "3"
-    title: "Review"
-    deliverables:
-      - dtitle: "Assignment: Single Cycle Datapath and Control Due"
-        dlink: "./Assignments/SingleCycle"
-        points: 100
-        rubricpath: "_pages/Assignments/assignment-singlecycle.md"    
+    title: "Review"  
   - week: "15"
     date: "0"
     title: "Review"
@@ -592,7 +587,11 @@ schedule:
       - dtitle: "Lab: 4 Bit ALU Due"
         dlink: "./Labs/ALU4Bit"
         points: 100
-        rubricpath: "_pages/Labs/lab-alu4bit.md"   
+        rubricpath: "_pages/Labs/lab-alu4bit.md"
+      - dtitle: "Assignment: Single Cycle Datapath and Control Due"
+        dlink: "./Assignments/SingleCycle"
+        points: 100
+        rubricpath: "_pages/Assignments/assignment-singlecycle.md"          
           
 university:
   semester: "Spring"
