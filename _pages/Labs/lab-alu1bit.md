@@ -49,7 +49,7 @@ Using the adder circuit from the prior lab, create a 1-bit ALU by creating and w
 1. Create and test a 3-bit and gate, and a 4-bit or gate
 2. Create and test a 4-to-1 multiplexor according to the design below.  You will create four input pins (`I0`, `I1`, `I2`, and `I3`), one select input (`s`: a 2-bit `std_logic_vector`), and an output pin.  Create four internal signals (`sig1`, `sig2`, `sig3`, and `sig4`) to hold the intermediate values.  You can port map four and gates to signals like this:
 ```vhdl
-A1: and3 port map(w => I0, x => "not"(s(0)), y => "not"(s(1)), z => sig1);
+A1: and3 port map(w => I0, x => not s(0), y => not s(1), z => sig1);
 ```
 Using these and gates, allow `I0` to pass when `s` is `10`, `I1` when `s` is `01`, and so on.  If a bit of `s` is `0`, invert it to produce a `1`.
 Finally, You can `or` together the four internal signals, and wire that to the output pin, to complete the multiplexor.  Note that if you only need fewer than 4 inputs to your multiplexor (say, one for the adder, one for the `and` gate, and one for the `or` gate), you can simply wire `I0`, `I1`, and `I2` to those pins or signals, and then create a placeholder signal that you can wire to `I3`.  This will leave that pin essentially disconnected, or &quot;floating&quot;.  In other words, you can port map `I3` to `'0'`.
