@@ -56,7 +56,7 @@ In this lab, you will create and test a 4-bit ALU using a structural design in V
 entity ALU4 is
 port(a,b             : in std_logic_vector (3 downto 0);
      ALUOp           : in std_logic_vector (1 downto 0);
-     result          : inout std_logic_vector (3 downto 0); -- this allows us to write to result and also to read it later
+     result          : out std_logic_vector (3 downto 0);
      CarryOut        : out std_logic;
      overflow        : out std_logic);
 end ALU4;
@@ -76,14 +76,14 @@ I recommend creating a `std_logic_vector(3 downto 0)` signal called `results` th
 result <= results;
 ```
 
+Do the same for carries as a vector of `(4 downto 0)`, mapping each carryout bit to the next ALU carry in (for example, the first ALU takes `carries(0)` as its `carryin`, and `carryout` goes to `carries(1)`, and so on.  In your loop, this would involve reading `carryin` from `carries(i)` and writing `carryout` to `carries(i+1)`.  Just be sure to map `carries(0)` and `carries(4)` to the main ALU `carryin` and `carryout`, respectively.
+
 For the 1-bit ALU port maps, you should wire:
 
 1. Each bit of `a` and `b` to each 1-bit ALU
 2. The `ALUOp` port to all of the 1-bit ALUs
 
-### Modifications for Essential Features
-
-When finished with this base design, make the following three modifications.  For your carry bits, create a `std_logic_vector(4 downto 0)` signal called `carries`, and use these to pass the carry out of each 1-bit ALU to the carry in of the next. 
+### Modifications for ALU status flags
 
 #### Modification 1: Subtraction
 Add a `bInvert` pin, and wire it to the bInvert input of all of your 1-bit ALUs, and wire it to the least significant ALU `carryIn` bit (you can replace the `carrys(0)` input which is not used).  
