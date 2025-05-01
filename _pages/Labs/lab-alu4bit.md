@@ -56,7 +56,7 @@ In this lab, you will create and test a 4-bit ALU using a structural design in V
 entity ALU4 is
 port(a,b             : in std_logic_vector (3 downto 0);
      ALUOp           : in std_logic_vector (1 downto 0);
-     result          : out std_logic_vector (3 downto 0);
+     result          : inout std_logic_vector (3 downto 0); -- this allows us to write to result and also to read it later
      CarryOut        : out std_logic;
      overflow        : out std_logic);
 end ALU4;
