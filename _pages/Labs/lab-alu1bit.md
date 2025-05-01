@@ -49,7 +49,11 @@ Using the adder circuit from the prior lab, create a 1-bit ALU by creating and w
 1. Create and test a 3-bit and gate, and a 4-bit or gate
 2. Create and test a 4-to-1 multiplexor according to the design below.  You will create four input pins (`I0`, `I1`, `I2`, and `I3`), one select input (`s`: a 2-bit `std_logic_vector`), and an output pin.  Create four internal signals (`sig1`, `sig2`, `sig3`, and `sig4`) to hold the intermediate values.  You can port map four and gates to signals like this:
 ```vhdl
-A1: and3 port map(w => I0, x => not s(0), y => not s(1), z => sig1);
+signal not_s0, not_s1 : std_logic;
+...
+not_s0 <= not s(0);
+not_s1 <= not s(1);
+A1: and3 port map(w => I0, x => not_s0, y => not_s1, z => sig1);
 ```
 Using these and gates, allow `I0` to pass when `s` is `10`, `I1` when `s` is `01`, and so on.  If a bit of `s` is `0`, invert it to produce a `1`.
 Finally, You can `or` together the four internal signals, and wire that to the output pin, to complete the multiplexor.  Note that if you only need fewer than 4 inputs to your multiplexor (say, one for the adder, one for the `and` gate, and one for the `or` gate), you can simply wire `I0`, `I1`, and `I2` to those pins or signals, and then create a placeholder signal that you can wire to `I3`.  This will leave that pin essentially disconnected, or &quot;floating&quot;.  In other words, you can port map `I3` to `'0'`.
@@ -98,62 +102,62 @@ architecture behavior of alu1bit_tb is
     );
     end component;
 
-    signal a, b, carryin, bInvert : std_logic;
-    signal select : std_logic_vector(1 downto 0);
-    signal z, carryout, zero, less, overflow : std_logic;
+    signal ta, tb, carryin, bInvert : std_logic;
+    signal tselect : std_logic_vector(1 downto 0);
+    signal tz, tcarryout, tzero, tless, toverflow : std_logic;
 begin
     uut: alu1bit port map (
-        a        => a,
-        b        => b,
-        carryin  => carryin,
-        bInvert  => bInvert,
-        select   => select,
-        z        => z,
-        carryout => carryout,
-        zero     => zero,
-        less     => less,
-        overflow => overflow
+        a        => ta,
+        b        => tb,
+        carryin  => tcarryin,
+        bInvert  => tbInvert,
+        select   => tselect,
+        z        => tz,
+        carryout => tcarryout,
+        zero     => tzero,
+        less     => tless,
+        overflow => toverflow
     );
 
     tb_proc: process
     begin
         -- Test ADD (select = "00", bInvert = '0')
-        select <= "00"; bInvert <= '0';
+        tselect <= "00"; tbInvert <= '0';
         
-        a <= '0'; b <= '0'; carryin <= '0'; wait for 30 ns; assert z = '0' report "ADD 0+0+0 failed";
-        a <= '0'; b <= '0'; carryin <= '1'; wait for 30 ns; assert z = '1' report "ADD 0+0+1 failed";
-        a <= '0'; b <= '1'; carryin <= '0'; wait for 30 ns; assert z = '1' report "ADD 0+1+0 failed";
-        a <= '0'; b <= '1'; carryin <= '1'; wait for 30 ns; assert z = '0' report "ADD 0+1+1 failed";
-        a <= '1'; b <= '0'; carryin <= '0'; wait for 30 ns; assert z = '1' report "ADD 1+0+0 failed";
-        a <= '1'; b <= '0'; carryin <= '1'; wait for 30 ns; assert z = '0' report "ADD 1+0+1 failed";
-        a <= '1'; b <= '1'; carryin <= '0'; wait for 30 ns; assert z = '0' report "ADD 1+1+0 failed";
-        a <= '1'; b <= '1'; carryin <= '1'; wait for 30 ns; assert z = '1' report "ADD 1+1+1 failed";
+        ta <= '0'; tb <= '0'; tcarryin <= '0'; wait for 30 ns; assert tz = '0' report "ADD 0+0+0 failed";
+        ta <= '0'; tb <= '0'; tcarryin <= '1'; wait for 30 ns; assert tz = '1' report "ADD 0+0+1 failed";
+        ta <= '0'; tb <= '1'; tcarryin <= '0'; wait for 30 ns; assert tz = '1' report "ADD 0+1+0 failed";
+        ta <= '0'; tb <= '1'; tcarryin <= '1'; wait for 30 ns; assert tz = '0' report "ADD 0+1+1 failed";
+        ta <= '1'; tb <= '0'; tcarryin <= '0'; wait for 30 ns; assert tz = '1' report "ADD 1+0+0 failed";
+        ta <= '1'; tb <= '0'; tcarryin <= '1'; wait for 30 ns; assert tz = '0' report "ADD 1+0+1 failed";
+        ta <= '1'; tb <= '1'; tcarryin <= '0'; wait for 30 ns; assert tz = '0' report "ADD 1+1+0 failed";
+        ta <= '1'; tb <= '1'; tcarryin <= '1'; wait for 30 ns; assert tz = '1' report "ADD 1+1+1 failed";
 
         -- Test SUBTRACT (select = "00", bInvert = '1')
-        select <= "00"; bInvert <= '1';
+        tselect <= "00"; tbInvert <= '1';
         
-        a <= '0'; b <= '0'; carryin <= '1'; wait for 30 ns; assert z = '1' report "SUB 0-0 failed";
-        a <= '0'; b <= '1'; carryin <= '1'; wait for 30 ns; assert z = '0' report "SUB 0-1 failed";
-        a <= '1'; b <= '0'; carryin <= '1'; wait for 30 ns; assert z = '0' report "SUB 1-0 failed";
-        a <= '1'; b <= '1'; carryin <= '1'; wait for 30 ns; assert z = '1' report "SUB 1-1 failed";
+        ta <= '0'; tb <= '0'; tcarryin <= '1'; wait for 30 ns; assert tz = '1' report "SUB 0-0 failed";
+        ta <= '0'; tb <= '1'; tcarryin <= '1'; wait for 30 ns; assert tz = '0' report "SUB 0-1 failed";
+        ta <= '1'; tb <= '0'; tcarryin <= '1'; wait for 30 ns; assert tz = '0' report "SUB 1-0 failed";
+        ta <= '1'; tb <= '1'; tcarryin <= '1'; wait for 30 ns; assert tz = '1' report "SUB 1-1 failed";
 
         -- Test AND (select = "01", bInvert irrelevant)
-        select <= "01"; bInvert <= '0';
-        carryin <= '0'; -- carryin not used for AND
+        tselect <= "01"; tbInvert <= '0';
+        tcarryin <= '0'; -- carryin not used for AND
         
-        a <= '0'; b <= '0'; wait for 30 ns; assert z = '0' report "AND 0&0 failed";
-        a <= '0'; b <= '1'; wait for 30 ns; assert z = '0' report "AND 0&1 failed";
-        a <= '1'; b <= '0'; wait for 30 ns; assert z = '0' report "AND 1&0 failed";
-        a <= '1'; b <= '1'; wait for 30 ns; assert z = '1' report "AND 1&1 failed";
+        ta <= '0'; tb <= '0'; wait for 30 ns; assert tz = '0' report "AND 0&0 failed";
+        ta <= '0'; tb <= '1'; wait for 30 ns; assert tz = '0' report "AND 0&1 failed";
+        ta <= '1'; tb <= '0'; wait for 30 ns; assert tz = '0' report "AND 1&0 failed";
+        ta <= '1'; tb <= '1'; wait for 30 ns; assert tz = '1' report "AND 1&1 failed";
 
         -- Test OR (select = "10", bInvert irrelevant)
-        select <= "10"; bInvert <= '0';
-        carryin <= '0'; -- carryin not used for OR
+        tselect <= "10"; tbInvert <= '0';
+        tcarryin <= '0'; -- carryin not used for OR
         
-        a <= '0'; b <= '0'; wait for 30 ns; assert z = '0' report "OR 0|0 failed";
-        a <= '0'; b <= '1'; wait for 30 ns; assert z = '1' report "OR 0|1 failed";
-        a <= '1'; b <= '0'; wait for 30 ns; assert z = '1' report "OR 1|0 failed";
-        a <= '1'; b <= '1'; wait for 30 ns; assert z = '1' report "OR 1|1 failed";
+        ta <= '0'; tb <= '0'; wait for 30 ns; assert tz = '0' report "OR 0|0 failed";
+        ta <= '0'; tb <= '1'; wait for 30 ns; assert tz = '1' report "OR 0|1 failed";
+        ta <= '1'; tb <= '0'; wait for 30 ns; assert tz = '1' report "OR 1|0 failed";
+        ta <= '1'; tb <= '1'; wait for 30 ns; assert tz = '1' report "OR 1|1 failed";
 
         report "Testbench finished successfully";
         wait;
