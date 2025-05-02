@@ -136,10 +136,10 @@ begin
         -- Test SUBTRACT (select = "00", bInvert = '1')
         tselect <= "00"; tbInvert <= '1';
         
-        ta <= '0'; tb <= '0'; tcarryin <= '1'; wait for 30 ns; assert tz = '1' report "SUB 0-0 failed";
-        ta <= '0'; tb <= '1'; tcarryin <= '1'; wait for 30 ns; assert tz = '0' report "SUB 0-1 failed";
-        ta <= '1'; tb <= '0'; tcarryin <= '1'; wait for 30 ns; assert tz = '0' report "SUB 1-0 failed";
-        ta <= '1'; tb <= '1'; tcarryin <= '1'; wait for 30 ns; assert tz = '1' report "SUB 1-1 failed";
+        ta <= '0'; tb <= '0'; tcarryin <= '1'; wait for 30 ns; assert tz = '0' report "SUB 0-0 failed";
+        ta <= '0'; tb <= '1'; tcarryin <= '1'; wait for 30 ns; assert tz = '1' report "SUB 0-1 failed";
+        ta <= '1'; tb <= '0'; tcarryin <= '1'; wait for 30 ns; assert tz = '1' report "SUB 1-0 failed";
+        ta <= '1'; tb <= '1'; tcarryin <= '1'; wait for 30 ns; assert tz = '0' report "SUB 1-1 failed";
 
         -- Test AND (select = "01", bInvert irrelevant)
         tselect <= "01"; tbInvert <= '0';
