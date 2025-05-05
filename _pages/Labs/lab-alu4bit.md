@@ -76,7 +76,7 @@ I recommend creating a `std_logic_vector(3 downto 0)` signal called `results` th
 result <= results;
 ```
 
-Do the same for carries as a vector of `(4 downto 0)`, mapping each carryout bit to the next ALU carry in (for example, the first ALU takes `carries(0)` as its `carryin`, and `carryout` goes to `carries(1)`, and so on.  In your loop, this would involve reading `carryin` from `carries(i)` and writing `carryout` to `carries(i+1)`.  Just be sure to map `carries(0)` and `carries(4)` to the main ALU `carryin` and `carryout`, respectively.
+Do the same for `carries` as a vector of `(4 downto 0)`, mapping each carryout bit to the next ALU carry in (for example, the first ALU takes `carries(0)` as its `carryin`, and `carryout` goes to `carries(1)`, and so on.  In your loop, this would involve reading `carryin` from `carries(i)` and writing `carryout` to `carries(i+1)`.  Just be sure to map `carries(0)` and `carries(4)` to the main ALU `carryin` and `carryout`, respectively.
 
 For the 1-bit ALU port maps, you should wire:
 
