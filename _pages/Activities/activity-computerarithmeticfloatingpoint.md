@@ -32,8 +32,6 @@ info:
         - "What is the approximate range of a single and a double precision floating point value?"
         - "Using only integer MIPS instructions, write an instruction to compare two MIPS floating point values.  Hint - you only need one line of code!  What does this tell you about the floating point standard?  Another hint - this has something to do with the normalization of the exponent by converting all exponents to positive values."
         - "Why isn't the initial 1 in the <code>1.xxx</code> field encoded in the bits of an IEEE floating point number?  What is the benefit of this?"
-      embed: |
-        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/FloatingPointStandard?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe> 
         
     - model: |
         <div align="center">
@@ -75,7 +73,9 @@ info:
       title: Floating Point Arithmetic Examples
     - link: https://www.itu.dk/~sestoft/bachelor/IEEE754_article.pdf
       title: "What Every Computer Scientist Should Know about Floating Point"
-
+    - title: "Floating Point Standard Example"
+      link: "FloatingPointStandard" 
+      
 tags:
   - arithmetic
   - floating point
