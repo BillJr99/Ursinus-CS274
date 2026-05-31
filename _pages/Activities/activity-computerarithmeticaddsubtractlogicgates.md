@@ -63,7 +63,7 @@ info:
         - Draw a circuit representing the sum and carry when adding two one-bit values.
         
     - model: |
-        <a title="Hellbus, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Odometer_rollover.jpg"><img width="512" alt="Odometer rollover" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Odometer_rollover.jpg"></a>
+        <a title="Hellbus, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Odometer_rollover.jpg"><img width="512" alt="Odometer rollover" src="https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Odometer_rollover.jpg"></a>
       title: Overflow Detection
       questions:
         - Given that overflow occurs when the sign bit of the sum differs from the sign bit of the two inputs.

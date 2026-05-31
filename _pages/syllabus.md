@@ -71,16 +71,16 @@ info:
     <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
     <div style="width: 100%; display: table-row;">
         <div style="display: table-cell; padding:5px; width:25%">
-            <a title="Own work based on:NE555 astable.png, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:555_esquema.png"><img width="100%" alt="555 esquema" src="https://upload.wikimedia.org/wikipedia/commons/2/2e/555_esquema.png"></a>
+            <a title="Own work based on:NE555 astable.png, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:555_esquema.png"><img width="100%" alt="555 esquema" src="https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/555_esquema.png"></a>
         </div>
         <div style="display: table-cell; padding:5px; width:25%">
-            <a title="Inductiveload, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:MIPS_Architecture_(Pipelined).svg"><img width="100%" alt="MIPS Architecture (Pipelined)" src="https://upload.wikimedia.org/wikipedia/commons/e/ea/MIPS_Architecture_(Pipelined).svg"></a>
+            <a title="Inductiveload, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:MIPS_Architecture_(Pipelined).svg"><img width="100%" alt="MIPS Architecture (Pipelined)" src="https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/MIPS_Architecture_(Pipelined).svg"></a>
         </div>
         <div style="display: table-cell; padding:5px; width:25%">
-            <a title="Thomas Nguyen, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Intel_C8086.jpg"><img width="100%" alt="Intel C8086" src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Intel_C8086.jpg"></a>
+            <a title="Thomas Nguyen, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Intel_C8086.jpg"><img width="100%" alt="Intel C8086" src="https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Intel_C8086.jpg"></a>
         </div>     
         <div style="display: table-cell; padding:5px; width:25%">
-            <a title="chris.jervis, CC BY-SA 2.0 &lt;https://creativecommons.org/licenses/by-sa/2.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Intel_Core_i7-940_bottom.jpg"><img width="100%" alt="Intel Core i7-940 bottom" src="https://upload.wikimedia.org/wikipedia/commons/8/87/Intel_Core_i7-940_bottom.jpg"></a>
+            <a title="chris.jervis, CC BY-SA 2.0 &lt;https://creativecommons.org/licenses/by-sa/2.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Intel_Core_i7-940_bottom.jpg"><img width="100%" alt="Intel Core i7-940 bottom" src="https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Intel_Core_i7-940_bottom.jpg"></a>
         </div>         
     </div>
     </div>

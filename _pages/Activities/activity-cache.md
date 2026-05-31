@@ -182,7 +182,7 @@ info:
         - "How could we increase the duration of temporal locality in this cache?  That is, what could we do to enable these words to remain in cache longer?"
 
     - model: |
-        <a title="ComputerMemoryHierarchy.png: User:Danlash at en.wikipedia.org, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:ComputerMemoryHierarchy.svg"><img width="512" alt="ComputerMemoryHierarchy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/ComputerMemoryHierarchy.svg/512px-ComputerMemoryHierarchy.svg.png"></a>
+        <a title="ComputerMemoryHierarchy.png: User:Danlash at en.wikipedia.org, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:ComputerMemoryHierarchy.svg"><img width="512" alt="ComputerMemoryHierarchy" src="https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/ComputerMemoryHierarchy.svg"></a>
       title: Write Policies to Avoid Stale Data
       questions:
         - "What is the benefit and drawback of writing data to both cache and to main memory (and every layer in between) whenever a write occurs?  This is known as a &quot;write-through&quot; strategy."

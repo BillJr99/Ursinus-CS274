@@ -178,7 +178,7 @@ info:
         Take each group of 4 binary values from left to right.  Look them up in the table to obtain the corresponding hexadecimal digit, and output that digit.
         </div>
         <br>
-        <a title="Dgoetze, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Positionalnotationtable.jpg"><img width="512" alt="Positionalnotationtable" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Positionalnotationtable.jpg/512px-Positionalnotationtable.jpg"></a>
+        <a title="Dgoetze, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Positionalnotationtable.jpg"><img width="512" alt="Positionalnotationtable" src="https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Positionalnotationtable.jpg"></a>
       title: Converting From Binary to Hexadecimal
       questions:
         - "What is the ASCII value of the letter <code>C</code> and the letter <code>K</code>?  What are these values in binary, decimal, and hexadecimal?"

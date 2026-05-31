@@ -22,7 +22,7 @@ info:
         - "For a binary value, every value except for 0 must have what value in the one's place when normalized?"
         
     - model: |
-        <a title="Vectorization:  Stannered, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Float_example.svg"><img width="512" alt="Float example" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Float_example.svg/512px-Float_example.svg.png"></a>    
+        <a title="Vectorization:  Stannered, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Float_example.svg"><img width="512" alt="Float example" src="https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Float_example.svg"></a>    
       title: Single Precision Floating Point Standard
       questions:
         - "Write 0.5 in binary by writing it in the form <code>1.xxx * 2^yyy</code>.  What is the exponent and the mantissa?"

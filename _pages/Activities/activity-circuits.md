@@ -17,14 +17,14 @@ info:
 
   models:
     - model: |
-        <a title="Pradana Aumars (talk · contribs), CC0, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Simplified_NOT_gate_circuit_using_transistor.svg"><img width="256" alt="Simplified NOT gate circuit using transistor" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Simplified_NOT_gate_circuit_using_transistor.svg/256px-Simplified_NOT_gate_circuit_using_transistor.svg.png"></a>
+        <a title="Pradana Aumars (talk · contribs), CC0, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Simplified_NOT_gate_circuit_using_transistor.svg"><img width="256" alt="Simplified NOT gate circuit using transistor" src="https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Simplified_NOT_gate_circuit_using_transistor.svg"></a>
       title: Transistor-based Logic Gates
       questions:
         - "The source current flows through the 10 kilo-ohm resistor (R_1) at the top of the figure.  If current is applied to the transistor (T) at point A, the gate will close and the current will be allowed to pass to ground.  Otherwise, the gate will be open and the current will be forced to flow to the output (S).  If A is high, what is the output on S?  What is the output on S if A is low?" 
         - "If you were to give this gate a name, what would you call it?"
         
     - model: |
-        <a title="EBatlleP, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Transistor_OR_Gate.png"><img width="256" alt="Transistor OR Gate" src="https://upload.wikimedia.org/wikipedia/commons/0/01/Transistor_OR_Gate.png"></a>
+        <a title="EBatlleP, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Transistor_OR_Gate.png"><img width="256" alt="Transistor OR Gate" src="https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Transistor_OR_Gate.png"></a>
         <br>
         <style type="text/css">
         .tg  {border-collapse:collapse;border-spacing:0;}
@@ -73,7 +73,7 @@ info:
         - "Modify the NOT gate to act as a NAND gate.  This gate outputs low if both A and B are high, and outputs high otherwise.  That is, it is the opposite of an AND gate (hence &quot;NOT AND&quot;).  Hint: this gate looks nearly identical to the NOT gate, but has an additional input B that drives an additional transistor between T and ground."
 
     - model: |
-        <a title="Napalm Llama, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:R-S_mk2.gif"><img width="256" alt="R-S mk2" src="https://upload.wikimedia.org/wikipedia/commons/c/c6/R-S_mk2.gif"></a>
+        <a title="Napalm Llama, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:R-S_mk2.gif"><img width="256" alt="R-S mk2" src="https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/R-S_mk2.gif"></a>
       title: The SR Latch
       questions:
         - "The purpose of S is to set the output (Q) to high.  R is a reset, and sets Q to low.  Q bar is just the opposite of Q.  If Q is set to high by setting S to high, why does Q remain high even when turning off the current to S?  As a hint: notice that you aren't sure the output of the NOR gate following the R input, but since you know S must be 1, you do know its output.  Use this to trace the rest of the circuit."
@@ -81,7 +81,7 @@ info:
         - "How can we cause an SR Latch to set when a series of conditions occur: for example, to unlock our door when it is warm and not raining outside?"
 
     - model: |
-        <a title="Own work based on:NE555 astable.png, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:555_esquema.png"><img width="512" alt="555 esquema" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/555_esquema.png/512px-555_esquema.png"></a>
+        <a title="Own work based on:NE555 astable.png, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:555_esquema.png"><img width="512" alt="555 esquema" src="https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/555_esquema.png"></a>
         <br>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/kRlSFm519Bo" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       title: The 555 Timer

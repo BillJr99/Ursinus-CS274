@@ -155,7 +155,7 @@ info:
         - "Add the select line to this ALU such that the AND operation is select bits 00, the OR operation is select bits 01, and the adder is select bits 10.  Call this select line <code>operation</code>."
 
     - model: |
-        <a title="Lambtron, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:ALU_block.gif"><img width="512" alt="ALU block" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/ALU_block.gif/512px-ALU_block.gif"></a>
+        <a title="Lambtron, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:ALU_block.gif"><img width="512" alt="ALU block" src="https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/ALU_block.gif"></a>
       title: A 32-bit ALU
       questions:
         - "Suppose you had an 8-bit ALU.  Connect each of the 8-bits of the inputs <code>A</code> and <code>B</code> to 8 individual ALUs.  Where would you connect the select operation lines, and the carry inputs and outputs?  Sketch your final result."
@@ -311,7 +311,7 @@ info:
         - "What circuit can tell you if all 32 bits of the ALU result line are 0?  Add an ALU output called <code>zero</code> that is set to 1 when this occurs.  Hint - add a logic circuit that indicates if any of the bits is 1, and then negate it."
 
     - model: |
-        <a title="en:User:Cburnett, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:4-bit_carry_lookahead_adder.svg"><img width="256" alt="4-bit carry lookahead adder" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/4-bit_carry_lookahead_adder.svg/256px-4-bit_carry_lookahead_adder.svg.png"></a>
+        <a title="en:User:Cburnett, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:4-bit_carry_lookahead_adder.svg"><img width="256" alt="4-bit carry lookahead adder" src="https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/4-bit_carry_lookahead_adder.svg"></a>
         <br>
         <style type="text/css">
         .tg  {border-collapse:collapse;border-spacing:0;}

@@ -11,7 +11,7 @@ info:
 
   models:
     - model: |
-        <a title="Gorivero, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Optimizing-different-parts.svg"><img width="256" alt="Optimizing-different-parts" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Optimizing-different-parts.svg/256px-Optimizing-different-parts.svg.png"></a>
+        <a title="Gorivero, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Optimizing-different-parts.svg"><img width="256" alt="Optimizing-different-parts" src="https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Optimizing-different-parts.svg"></a>
       title: Eight Big Ideas in Computer Architecture
       questions:
         - Review the 8 Big Ideas in Computer Architecture.  With your group, develop 2-3 slides that describe the idea, and where you might see this idea manifest in computing or in your own life.  If you get stuck, you can do a little research for inspiration.
