@@ -48,7 +48,10 @@ tags:
 
 ---
 
-Recall the [C program](https://repl.it/@BillJr99/FloatingPointStandard) to extract the IEEE bit fields from an IEEE 754 `float` data type:
+Recall the C program to extract the IEEE bit fields from an IEEE 754 `float` data type, shown below:
+
+<iframe height="500px" width="100%" src="https://www.billmongan.com/Ursinus-CS274/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-CS274%2Fgh-pages%2Ffiles%2Freplit%2FFloatingPointStandard.zip&title=Floating%20Point%20Standard" scrolling="yes" frameborder="no" allowfullscreen="true" sandbox="allow-scripts allow-same-origin"></iframe>
+
 
 ### What to Do
 
