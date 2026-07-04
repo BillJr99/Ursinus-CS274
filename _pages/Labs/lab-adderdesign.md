@@ -54,6 +54,43 @@ In this lab, you will use a tool called [ghdl](http://ghdl.free.fr/download.html
 
 Using these tools, you will implement an adder circuit using the VHDL language.
 
+### Installing the Tools
+
+We'll use two programs in this lab: `ghdl` (which compiles and simulates your VHDL code) and `gtkwave` (which displays the waveform files that the simulation produces, so you can see your signals change over time).  Here's how to install them on each platform:
+
+**Windows**
+
+1. Download the latest GHDL release for Windows from the [GHDL releases page](https://github.com/ghdl/ghdl/releases) (look for a `.zip` or installer ending in `mingw64` or `ucrt64` under "Assets").
+2. Extract or install it, and add the `bin` folder (the one containing `ghdl.exe`) to your system `PATH` so you can run `ghdl` from any command prompt.  You can do this by searching for "Edit the system environment variables" in the Start menu, clicking "Environment Variables...", and appending the folder to the `Path` variable.
+3. Download and install GTKWave from the [GTKWave SourceForge page](https://sourceforge.net/projects/gtkwave/), and add its `bin` folder to your `PATH` as well.
+4. Alternatively, if you already use [MSYS2](https://www.msys2.org/), you can install both at once from an MSYS2 terminal with: `pacman -S mingw-w64-x86_64-ghdl-llvm mingw-w64-x86_64-gtkwave`
+
+**macOS**
+
+1. Install [homebrew](https://brew.sh/) if you don't already have it.
+2. Run `brew install ghdl` in a Terminal window.
+3. Run `brew install --cask gtkwave` to install the GTKWave application.
+4. On Apple Silicon Macs, the first time you open GTKWave, macOS Gatekeeper may warn you that the app is from an unidentified developer.  If that happens, right-click (or Control-click) the GTKWave app in your Applications folder and choose "Open" — you only need to do this once.
+
+**Linux**
+
+1. Run `sudo apt-get install ghdl gtkwave` (on Debian/Ubuntu-based systems; use your distribution's package manager otherwise).
+
+**Verify Your Install**
+
+Before going any further, open a fresh terminal window and run:
+
+```
+ghdl --version
+gtkwave --version
+```
+
+If both commands print a version number, you're ready to go.  If you get a "command not found" error, the tool isn't on your `PATH` yet — revisit the steps above (and on Windows, make sure you opened a *new* command prompt after editing the `PATH`).
+
+**If All Else Fails**
+
+Don't let tool installation stop you!  The [EDA Playground](https://edaplayground.com/) (described at the bottom of this page) runs GHDL and a waveform viewer entirely in your browser with nothing to install.
+
 ### Background: VHDL
 
 A basic circuit can be expressed using the VHDL language as follows:
@@ -128,15 +165,60 @@ ghdl -a and2_tb.vhd
 ghdl -e and2_tb
 ghdl -r and2_tb --vcd=waveform.vcd # on some systems, this command may be: ./and2_tb --vcd=waveform.vcd
 ```
+
 This will output the report statements within the testbench and output a waveform timeline that you can view in `gtkwave`.
 
-You can view the waveform by downloading a tool called [gtkwave](https://sourceforge.net/projects/gtkwave/), and running:
+Let's walk through what each of those commands actually does, because you'll be running this same workflow in every VHDL lab this semester:
+
+1. `ghdl -a and2.vhd` — **analyze** the file.  This is GHDL's word for "syntax-check and compile."  It parses `and2.vhd`, checks it for errors, and adds the compiled `and2` entity to a *work library* (you'll notice a `work-obj93.cf` or similar file appear in your directory — that's the library).  **Order matters here**: you must analyze a component *before* you analyze any file that uses it, because the second file looks the first one up in the work library.  Analyze your gates first, then the components built from them, then the testbench last — dependencies first, just like you'd define a function before calling it.
+2. `ghdl -a and2_tb.vhd` — analyze the testbench the same way.  Since `and2` is already in the work library, the testbench's `component and2` declaration can be matched up with it.
+3. `ghdl -e and2_tb` — **elaborate** the design.  This takes the *top-level entity* (your testbench, `and2_tb`) and links together everything it depends on into a runnable simulation.  Note that you pass the **entity name** here, *not* a filename — no `.vhd` extension!  The name must exactly match the `entity and2_tb is` line in your code.
+4. `ghdl -r and2_tb --vcd=waveform.vcd` — **run** the simulation.  GHDL executes your testbench process, prints any `report` messages (and any failed `assert` messages) to the terminal, and — because of the `--vcd` flag — records *every signal change* with its timestamp into the file `waveform.vcd`.  VCD stands for "Value Change Dump," and it's exactly what it sounds like: a log of every wire's value over time, which is what GTKWave displays.
+
+A few common errors to watch out for:
+
+* **"cannot find entity"** or **"unit ... not found"**: you analyzed your files out of order (or forgot to analyze one).  Re-run the `ghdl -a` commands starting from the lowest-level component.
+* **Entity name mismatch**: `ghdl -e and2tb` will fail if your entity is actually named `and2_tb`.  The name in the `-e` and `-r` commands must match the entity name in the code exactly.
+* **On some systems** (particularly the mcode/LLVM backends on Windows or older Linux installs), `ghdl -e` produces an actual executable file, and you run the simulation with `./and2_tb --vcd=waveform.vcd` instead of `ghdl -r and2_tb --vcd=waveform.vcd`.  If `ghdl -r` complains, try that form.
+* **Stale results**: if you edit a `.vhd` file, you must re-run *all three steps* (`-a`, `-e`, `-r`) for the change to take effect.  Running the simulation without re-analyzing runs your *old* code.
+
+### Reading the Waveform in GTKWave
+
+You can view the waveform by downloading a tool called [gtkwave](https://sourceforge.net/projects/gtkwave/) (see the install section above), and running:
 
 ```
 gtkwave waveform.vcd
 ```
 
-You may need to zoom in and out of the gtk window to see the whole waveform.
+When GTKWave first opens, the wave display will be *empty* — this surprises everyone the first time!  You have to tell GTKWave which signals you want to see:
+
+1. Open your file with `gtkwave waveform.vcd` (or launch GTKWave and use `File > Open New Tab`).
+2. In the upper-left panel (the "SST", or Signal Search Tree), click the triangle/plus to expand the top module — it will be named after your testbench, e.g. `and2_tb`.
+3. Click the module name so its signals (`input`, `output`, etc.) appear in the list below the SST panel.
+4. Select the signals you want to view (Ctrl-click or Shift-click to select several) and click the **Append** or **Insert** button beneath the list.  The signals now appear in the wave pane on the right.
+5. The default zoom is often way too far in or out to see anything useful.  Choose `Time > Zoom > Zoom Fit` (or press `Ctrl+Alt+F`, or click the magnifying-glass-with-brackets toolbar button) to fit the entire simulation in the window.  Then use the `+` magnifier button to zoom in around an interesting transition.
+6. Click anywhere in the wave pane to drop the **primary marker** (a vertical line).  The value of every displayed signal *at that exact timestamp* is shown in the "Signals" column, and the marker's time appears at the top of the window.  This is how you read off exact values — for example, to check what `output` is at `t = 92 ns`.
+
+### What You Should See
+
+Here's what the waveform for the `and2` testbench above should look like.  The testbench changes the inputs every 30 ns, so:
+
+| Time range | `a`, `b` (i.e. `input`) | `z` (i.e. `output`) |
+|:---|:---:|:---:|
+| 0 – 30 ns | `0 0` | `0` |
+| 30 – 60 ns | `0 1` (input = "01") | `0` |
+| 60 – 90 ns | `1 0` (input = "10") | `0` |
+| 90 – 120 ns | `1 1` (input = "11") | `1` (rises at ~92 ns) |
+
+For the first 90 ns the output is a flat `0` line (an AND gate only outputs 1 when *both* inputs are 1).  The interesting moment is at `t = 90 ns`, when both inputs become `1`.  Notice that `z` does **not** rise at exactly 90 ns — it rises at 92 ns, because we wrote `z <= a and b after 2 ns;` to simulate the gate's propagation delay.  **Zoom in tightly around t = 90 ns and place the marker on the transition — actually seeing that 2 ns gap between the input change and the output change is the payoff of this whole exercise.**  Real gates take time, and your waveform proves it.
+
+(At the very start of the simulation, before the first assignment takes effect, you may also see signals shown in red or as `U` for "uninitialized" — that's normal.)
+
+> **Common Pitfalls**
+>
+> * **No waveform file?**  You probably forgot the `--vcd=waveform.vcd` flag on the run command.  Without it, the simulation runs and prints reports, but dumps nothing for GTKWave to display.
+> * **Waveform looks the same after you changed your code?**  GTKWave shows the file as it was when the simulation ran.  Re-run all of `ghdl -a`, `ghdl -e`, and `ghdl -r ... --vcd=...`, then choose `File > Reload Waveform` in GTKWave (`Shift+Ctrl+R`).
+> * **Everything looks like one solid block, or you see nothing at all?**  That's a zoom problem, not a bug.  Use `Time > Zoom > Zoom Fit` (`Ctrl+Alt+F`) first, then zoom in.  And remember: signals don't appear in the wave pane until you Append them from the SST panel.
 
 #### Creating Complex Circuits Using Structural Circuit Definitions: a Half Adder
 
