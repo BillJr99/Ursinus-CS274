@@ -168,6 +168,164 @@ info:
         - "Suppose a program has 25% loads, 10% stores, 52% ALU instructions, 11% branches, and 2% jumps.  What is the average number of cycles per instruction?"
         - "The average cycles per instruction for the single cycle datapath is always 1.  Why is this an improvement?  Hint: consider the timing length of each cycle for single cycle and for multi cycle."
 
+    - model: |
+        <style type="text/css">
+        .tg  {border-collapse:collapse;border-spacing:0;}
+        .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}
+        .tg .tg-0lax{text-align:left;vertical-align:top}
+        </style>
+        <p>A one-page summary of the multicycle design.</p>
+        <p><strong>Key formulas and rules:</strong></p>
+        <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-1wig">Formula / Rule</th>
+            <th class="tg-1wig">Micro-example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-0lax">Each instruction is broken into steps (fetch, decode, ALU, memory, writeback), one short clock cycle per step.</td>
+            <td class="tg-0lax">The clock only needs to fit the slowest <em>step</em> (e.g. 200 ps), not the slowest instruction</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">Different instructions take different numbers of cycles.</td>
+            <td class="tg-0lax">lw = 5, sw = 4, R type = 4, beq = 3, j = 3</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">Average CPI = sum over instruction types of (frequency &times; cycles).</td>
+            <td class="tg-0lax">25% &times; 5 + 10% &times; 4 + 52% &times; 4 + 11% &times; 3 + 2% &times; 3 = 1.25 + 0.40 + 2.08 + 0.33 + 0.06 = 4.12</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">Execution time = instruction count &times; CPI &times; clock period.</td>
+            <td class="tg-0lax">100 &times; 4.12 &times; 200 ps = 82,400 ps (vs. 100 &times; 1 &times; 600 ps = 60,000 ps single cycle -- compare carefully!)</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">Hardware is <em>reused</em> across cycles: one ALU serves PC + 4, address arithmetic, comparisons, and branch targets.</td>
+            <td class="tg-0lax">Cycle 1: ALU computes PC + 4; cycle 3: the same ALU adds base + offset for <code>lw</code></td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">Intermediate results must be latched in new registers between cycles.</td>
+            <td class="tg-0lax">IR (instruction), A and B (register reads), ALUOut, MDR (memory data)</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">Control becomes a finite state machine: the control outputs depend on the opcode <em>and</em> the current step.</td>
+            <td class="tg-0lax">State 0 (fetch) always reads memory; a later state asserts RegWrite only for lw/R types</td>
+          </tr>
+        </tbody>
+        </table>
+        <br>
+        <p><strong>Cycles per instruction at a glance:</strong></p>
+        <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-1wig">Instruction</th>
+            <th class="tg-1wig">Fetch</th>
+            <th class="tg-1wig">Decode</th>
+            <th class="tg-1wig">ALU</th>
+            <th class="tg-1wig">Memory</th>
+            <th class="tg-1wig">Writeback</th>
+            <th class="tg-1wig">Total cycles</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-1wig">lw</td>
+            <td class="tg-0lax">1</td>
+            <td class="tg-0lax">1</td>
+            <td class="tg-0lax">1</td>
+            <td class="tg-0lax">1</td>
+            <td class="tg-0lax">1</td>
+            <td class="tg-0lax">5</td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">sw</td>
+            <td class="tg-0lax">1</td>
+            <td class="tg-0lax">1</td>
+            <td class="tg-0lax">1</td>
+            <td class="tg-0lax">1</td>
+            <td class="tg-0lax">-</td>
+            <td class="tg-0lax">4</td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">R type</td>
+            <td class="tg-0lax">1</td>
+            <td class="tg-0lax">1</td>
+            <td class="tg-0lax">1</td>
+            <td class="tg-0lax">-</td>
+            <td class="tg-0lax">1</td>
+            <td class="tg-0lax">4</td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">beq</td>
+            <td class="tg-0lax">1</td>
+            <td class="tg-0lax">1</td>
+            <td class="tg-0lax">1</td>
+            <td class="tg-0lax">-</td>
+            <td class="tg-0lax">-</td>
+            <td class="tg-0lax">3</td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">j</td>
+            <td class="tg-0lax">1</td>
+            <td class="tg-0lax">1</td>
+            <td class="tg-0lax">1</td>
+            <td class="tg-0lax">-</td>
+            <td class="tg-0lax">-</td>
+            <td class="tg-0lax">3</td>
+          </tr>
+        </tbody>
+        </table>
+        <br>
+        <p><strong>Glossary:</strong></p>
+        <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-1wig">Term</th>
+            <th class="tg-1wig">One-line definition</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-1wig">Multicycle design</td>
+            <td class="tg-0lax">A datapath where each instruction takes several short clock cycles, one per step.</td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">CPI</td>
+            <td class="tg-0lax">Cycles per instruction; a weighted average over the instruction mix in multicycle designs.</td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">Finite state machine (FSM)</td>
+            <td class="tg-0lax">A controller that moves through states cycle by cycle, emitting different control signals in each.</td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">Instruction register (IR)</td>
+            <td class="tg-0lax">Latches the fetched instruction so its fields remain available in later cycles.</td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">MDR</td>
+            <td class="tg-0lax">Memory data register: latches data read from memory for use in the writeback cycle.</td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">ALUOut</td>
+            <td class="tg-0lax">A register holding the ALU's result between cycles (e.g. a load's effective address).</td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">A and B registers</td>
+            <td class="tg-0lax">Latches holding the values read from rs and rt during the decode cycle.</td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">State</td>
+            <td class="tg-0lax">One step of the control FSM; the current state plus the opcode determines the next state.</td>
+          </tr>
+        </tbody>
+        </table>
+      title: "Key Formulas and Concepts Recap"
+
 tags:
   - mips
   - architecture

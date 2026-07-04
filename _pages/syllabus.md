@@ -255,6 +255,10 @@ schedule:
         dlink: "./Assignments/Programming/NumberSystemConversion"
         points: 100
         rubricpath: "_pages/Assignments/assignment-numbersystemconversion.md"
+      - dtitle: "Takehome: Binary Practice Problems Handed Out"
+        dlink: "./Activities/NumberSystems"
+        points: 10
+        submission_types: "written"
   - week: "3"
     date: "0"
     title: "From MIPS to Machine Language"
@@ -264,6 +268,10 @@ schedule:
         dlink: "./Labs/NumberSystems"
         points: 100
         rubricpath: "_pages/Labs/lab-numbersystems.md"
+      - dtitle: "Takehome: Binary Practice Problems Due"
+        dlink: "./Activities/NumberSystems"
+        points: 10
+        submission_types: "written"
     readings:
       - rtitle: "COD Chapter 2.5-2.6"
         rlink: false
@@ -313,7 +321,13 @@ schedule:
         rubricpath: "_pages/Assignments/assignment-numbersystemconversion.md"
   - week: "4"
     date: "2"
-    title: "MIPS Iteration"
+    title: "MIPS Procedures"
+    link: "./Activities/MIPSProcedures"
+    readings:
+      - rtitle: "COD Chapter 2.8, 2.10"
+        rlink: false
+      - rtitle: "Assembly Language to Machine Code by Ben Eater"
+        rlink: "https://www.youtube.com/watch?v=oO8_2JJV0B4&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=3"
   - week: "4"
     date: "3"
     title: "MIPS Procedures"
@@ -323,11 +337,6 @@ schedule:
         dlink: "./Assignments/MIPSProgramming"
         points: 100
         rubricpath: "_pages/Assignments/assignment-mipsprogramming.md"    
-    readings:
-      - rtitle: "COD Chapter 2.8, 2.10"
-        rlink: false
-      - rtitle: "Assembly Language to Machine Code by Ben Eater"
-        rlink: "https://www.youtube.com/watch?v=oO8_2JJV0B4&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=3"
   - week: "5"
     date: "0"
     title: "Lab: Implementing if Statements in MIPS Assembly"
@@ -342,7 +351,13 @@ schedule:
         rubricpath: "_pages/Labs/lab-mipsconditionals.md"
   - week: "5"
     date: "1"
-    title: "MIPS Procedures"
+    title: "From MIPS to Machine Language: Branches and Jumps"
+    link: "./Activities/MachineLanguage"
+    deliverables:
+      - dtitle: "Takehome: Branch and Jump Address Conversion Practice Handed Out"
+        dlink: "./Activities/MachineLanguage"
+        points: 10
+        submission_types: "written"
   - week: "5"
     date: "2"
     title: "The Stack"
@@ -384,9 +399,17 @@ schedule:
         dlink: "./Assignments/MIPSProgramming"
         points: 100
         rubricpath: "_pages/Assignments/assignment-mipsprogramming.md"
+      - dtitle: "Takehome: Branch and Jump Address Conversion Practice Due"
+        dlink: "./Activities/MachineLanguage"
+        points: 10
+        submission_types: "written"
   - week: "6"
     date: "2"
-    title: "Data Structures"        
+    title: "Computer Arithmetic: Addition and Subtraction"
+    link: "./Activities/ComputerArithmeticAddSubtract"
+    readings:
+      - rtitle: "COD Chapter 3.1-3.2"
+        rlink: false
   - week: "6"
     date: "3"
     title: "Recursion in MIPS"
@@ -399,10 +422,7 @@ schedule:
   - week: "8"
     date: "0"
     title: "Computer Arithmetic: Addition and Subtraction"
-    link: "./Activities/ComputerArithmeticAddSubtract"
     readings:
-      - rtitle: "COD Chapter 3.1-3.2"
-        rlink: false
       - rtitle: "What is a Stack by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=xBjQVxVxOxc&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=5"
   - week: "8"
@@ -426,13 +446,18 @@ schedule:
         rlink: false
   - week: "8"
     date: "3"
-    title: "Computer Arithmetic: Multiplication and Division"
+    title: "Computer Arithmetic: Multiplication, Division, and Floating Point"
+    link: "./Activities/ComputerArithmeticFloatingPoint"
     deliverables:
       - dtitle: "Participation: Self-Assessment Due"
         dlink: "./Assignments/Participation/SelfAssessment"
         points: 10
         submission_types: "written"
     readings:
+      - rtitle: "COD Chapter 3.5"
+        rlink: false
+      - rtitle: "What Every Computer Scientist Should Know about Floating Point Arithmetic by David Goldberg"
+        rlink: "https://www.itu.dk/~sestoft/bachelor/IEEE754_article.pdf"
       - rtitle: "RAM and Bus Timing by Ben Eater"
         rlink: "https://www.youtube.com/watch?v=i_wrxBdXTgM&list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&index=6"
   - week: "10"
@@ -450,11 +475,14 @@ schedule:
     readings:
       - rtitle: "COD Chapter 3.5"
         rlink: false
-      - rtitle: "What Every Computer Scientist Should Know about Floating Point Arithmetic by David Goldberg"
-        rlink: "https://www.itu.dk/~sestoft/bachelor/IEEE754_article.pdf"
   - week: "10"
     date: "2"
-    title: "Computer Arithmetic: Floating Point"
+    title: "Lab: Computer Arithmetic"
+    deliverables:
+      - dtitle: "Lab: Computer Arithmetic Handed Out"
+        dlink: "./Labs/ComputerArithmetic"
+        points: 100
+        rubricpath: "_pages/Labs/lab-computerarithmetic.md"
   - week: "10"
     date: "3"
     title: "MIPS Processor Design: The ALU"
@@ -483,10 +511,18 @@ schedule:
   - week: "11"
     date: "2"
     title: "MIPS Processor Design: The ALU"
+    readings:
+      - rtitle: "Optional Practice Lab: ALU Design"
+        rlink: "./Labs/ALUDesign"
   - week: "11"
     date: "3"
     title: "The MIPS Single Cycle Design"
     link: "./Activities/MIPSSingleCycle"
+    deliverables:
+      - dtitle: "Lab: Computer Arithmetic Due"
+        dlink: "./Labs/ComputerArithmetic"
+        points: 100
+        rubricpath: "_pages/Labs/lab-computerarithmetic.md"
     readings:
       - rtitle: "COD Chapter 4.1-4.4"
         rlink: false
@@ -503,6 +539,11 @@ schedule:
   - week: "12"
     date: "1"
     title: "The MIPS Single Cycle Design"
+    deliverables:
+      - dtitle: "Lab: Tracing the Single Cycle Datapath Handed Out"
+        dlink: "./Labs/SingleCycle"
+        points: 100
+        rubricpath: "_pages/Labs/lab-singlecycle.md"
   - week: "12"
     date: "2"
     title: "The MIPS Single Cycle Design"
@@ -521,7 +562,13 @@ schedule:
         rlink: false
   - week: "13"
     date: "0"
-    title: "The MIPS Single Cycle Design"
+    title: "The MIPS Multicycle Datapath"
+    link: "./Activities/MIPSMultiCycle"
+    deliverables:
+      - dtitle: "In-Class Assessment: The Single Cycle Datapath"
+        dlink: "./Assignments/Participation/SingleCycleAssessment"
+        points: 10
+        submission_types: "written"
   - week: "13"
     date: "2"
     title: "Lab: 1 Bit ALU"
@@ -543,8 +590,16 @@ schedule:
         rlink: false
   - week: "13"
     date: "3"
-    title: "The MIPS Single Cycle Design"
+    title: "Pipelining the MIPS Datapath"
+    link: "./Activities/MIPSPipeline"
+    readings:
+      - rtitle: "COD Chapter 4.6-4.8"
+        rlink: false
     deliverables:
+      - dtitle: "Lab: Tracing the Single Cycle Datapath Due"
+        dlink: "./Labs/SingleCycle"
+        points: 100
+        rubricpath: "_pages/Labs/lab-singlecycle.md"
       - dtitle: "Assignment: Single Cycle Datapath and Control Handed Out"
         dlink: "./Assignments/SingleCycle"
         points: 100
@@ -570,11 +625,23 @@ schedule:
         rubricpath: "_pages/Labs/lab-alu4bit.md"    
   - week: "14"
     date: "3"
-    title: "Review"  
+    title: "MIPS Pipeline Hazards"
+    link: "./Activities/MIPSPipelineHazards"
+    readings:
+      - rtitle: "COD Chapter 4.9"
+        rlink: false
   - week: "15"
     date: "0"
-    title: "Review"
+    title: "The Memory Hierarchy: Virtual Memory"
+    link: "./Activities/VirtualMemory"
+    readings:
+      - rtitle: "COD Chapter 5.7"
+        rlink: false
     deliverables:
+      - dtitle: "In-Class Assessment: Pipelining"
+        dlink: "./Assignments/Participation/PipelineAssessment"
+        points: 10
+        submission_types: "written"
       - dtitle: "Final Project: Project and Presentation Due"
         dlink: "Projects/Final"
         points: 100

@@ -85,6 +85,77 @@ For the 1-bit ALU port maps, you should wire:
 1. Each bit of `a` and `b` to each 1-bit ALU
 2. The `ALUOp` port to all of the 1-bit ALUs
 
+### Wiring Signals Individually
+
+Let's make the "four port maps" approach concrete.  Suppose your 1-bit ALU from the last lab has ports `a`, `b`, `carryin`, `bInvert`, `op`, `z`, `carryout`, `zero`, `less`, and `overflow`.  Inside your `ALU4` architecture, declare the internal signals for the results and the ripple-carry chain:
+
+```vhdl
+signal results : std_logic_vector(3 downto 0);
+signal carry   : std_logic_vector(4 downto 0);  -- carry(0) in, carry(4) out
+```
+
+The key idea is exactly the one you used to chain two half adders into a full adder: the carry **out** of each slice becomes the carry **in** of the next.  With a 5-bit `carry` vector, slice `i` reads `carry(i)` and writes `carry(i+1)`, so the whole chain is just consistent indexing.  Here are slices 0 and 1 spelled out with named association (slices 2 and 3 follow the same pattern):
+
+```vhdl
+slice0: alu1bit port map (
+    a        => a(0),        -- bit 0 of the 4-bit input a
+    b        => b(0),        -- bit 0 of the 4-bit input b
+    carryin  => carry(0),    -- the ALU's overall carry-in enters the chain here
+    bInvert  => bInvert,     -- one control wire fans out to every slice
+    op       => ALUOp,       -- likewise: all slices perform the same operation
+    z        => results(0),  -- this slice computes result bit 0
+    carryout => carry(1)     -- ... and hands its carry to slice 1
+);
+
+slice1: alu1bit port map (
+    a        => a(1),
+    b        => b(1),
+    carryin  => carry(1),    -- <-- the same signal slice0 wrote: this IS the ripple wire
+    bInvert  => bInvert,
+    op       => ALUOp,
+    z        => results(1),
+    carryout => carry(2)     -- ... on to slice 2
+);
+```
+
+Line by line, notice:
+
+* `a => a(0)` — the left side is the 1-bit ALU's *port* named `a` (a single `std_logic`); the right side is bit 0 of the 4-bit ALU's *input vector* also named `a`.  The names coincide, but VHDL keeps them straight because the left of `=>` always refers to the component's formal port.
+* `carryin => carry(0)` / `carryout => carry(1)` in slice 0, then `carryin => carry(1)` in slice 1 — `carry(1)` appears as an **output** of slice 0 and an **input** of slice 1.  That shared signal is the physical wire connecting the two slices, just like the `signal x` trick from the adder lab.
+* `bInvert => bInvert` and `op => ALUOp` — control inputs aren't per-bit; the same wire fans out to all four slices so they all do the same operation.
+* The unused per-slice outputs (`zero`, `less`, `overflow` on the middle slices) can be mapped to `open` (VHDL's keyword for "leave this output pin disconnected"), or to throwaway signals.
+
+Finally, connect the chain's endpoints to the outside world: wire `carry(0)` from your ALU-level carry-in (after the subtraction modification below, from `bInvert`), and `CarryOut <= carry(4);` at the top, along with `result <= results;`.
+
+### Using for ... generate
+
+Those four port maps are identical except for the index — which is exactly the situation `for ... generate` exists for.  Here is the generate version:
+
+```vhdl
+gen_alu: for i in 0 to 3 generate
+    slice: alu1bit port map (
+        a        => a(i),
+        b        => b(i),
+        carryin  => carry(i),
+        bInvert  => bInvert,
+        op       => ALUOp,
+        z        => results(i),
+        carryout => carry(i+1)
+    );
+end generate;
+```
+
+Line by line:
+
+1. `gen_alu: for i in 0 to 3 generate` — the label (`gen_alu:`) is **required** on a generate statement (unlike most VHDL statements, you can't omit it).  `i` is the generate parameter, ranging over 0 through 3.
+2. Crucially, this is **not a runtime loop**.  `i` is evaluated at *elaboration* (compile) time: the compiler literally stamps out four separate copies of the `alu1bit` hardware, one per value of `i`, exactly as if you had written the four port maps by hand.  Nothing "iterates" while the circuit runs — all four slices exist simultaneously and operate in parallel.  (This is a good mental checkpoint: VHDL describes *hardware*, not a program that executes top to bottom.)
+3. `slice: alu1bit port map (...)` — each stamped-out copy gets the label `slice`, automatically disambiguated by index (you'll see `gen_alu(0).slice`, `gen_alu(1).slice`, ... in GTKWave's SST panel).
+4. `a => a(i), b => b(i), z => results(i)` — the only things that vary between copies are the vector indices, which is what makes the loop body writable once.
+5. `carryin => carry(i), carryout => carry(i+1)` — the ripple chain again: copy `i` writes `carry(i+1)`, which copy `i+1` reads.  The `i+1` is computed at compile time, so this is legal and cheap.
+6. `end generate;` — closes the generate block (you may also write `end generate gen_alu;`).
+
+What about the boundary slices?  Slice 0's `carryin` is `carry(0)`, which you connect *outside* the loop to the ALU's overall carry-in (or to `bInvert`, per the subtraction modification below) with a plain concurrent assignment like `carry(0) <= bInvert;`.  Similarly, the top of the chain is read outside the loop: `CarryOut <= carry(4);`.  If the MSB slice needs genuinely different wiring (for example, only slice 3's `overflow` and per-slice carry signals matter for the flag logic), you have two options: keep the uniform loop and simply *use* the signals you need by index (e.g., compute overflow from `carry(3)` and `carry(4)` — nothing requires you to consume every slice's outputs), or write an `if i = 3 generate ... end generate;` block *inside* the outer loop to give the top slice its own port map.  For this lab, indexing into the `carry` vector is the simpler path.
+
 ### Modifications for ALU status flags
 
 #### Modification 1: Subtraction
@@ -105,3 +176,66 @@ zero : out std_logic;
 ```
 
 Create and use a 4-bit `or` gate, and a `not` gate, to bitwise `or` together all four bits of your `results` signal, and invert that.  Your inverted output writes to the `zero` flag.
+
+### Flag Formulas for the 4-Bit ALU
+
+Here are all four flag formulas in one place, using the `results` and `carry(4 downto 0)` chain naming from above.  (These are the behavioral one-liners; where the lab asks you to build the logic structurally from gates — as with the extra-credit zero flag — the formula tells you exactly which gates to wire.)
+
+**Zero** — the result is zero exactly when no bit is a 1, so OR all the bits ("is any bit set?") and invert:
+
+```vhdl
+zero <= not (results(3) or results(2) or results(1) or results(0));
+```
+
+Worked example: `0101 - 0101` (5 − 5, i.e. `0101 + 1010 + 1`) produces `results = "0000"`; the OR of the bits is 0, so `zero = 1`.  Any other result has at least one 1, making the OR 1 and `zero` 0.
+
+**Overflow** — the carry *into* the MSB xor the carry *out of* the MSB.  In the chain naming, the carry into slice 3 is `carry(3)` and the carry out of slice 3 is `carry(4)`:
+
+```vhdl
+overflow <= carry(3) xor carry(4);
+```
+
+Worked example: `0111 + 0001` (7 + 1).  The low bits ripple a carry all the way up, so `carry(3) = 1`; the MSB computes `0 + 0 + 1 = 1` with no carry out, so `carry(4) = 0`.  `1 xor 0 = 1`: overflow — and sure enough the result `1000` reads as −8, not 8.
+
+**Negative (less)** — the sign bit of a two's complement number is its MSB:
+
+```vhdl
+negative <= results(3);
+```
+
+Worked example: `0011 - 0101` (3 − 5) gives `results = "1110"` (−2); `results(3) = 1` correctly reports a negative result, i.e., 3 < 5.  (In this lab's `less` modification, you xor this bit with `ovf` so the answer stays correct even when the subtraction itself overflows.)
+
+**Carry-out** — simply the top of the ripple chain:
+
+```vhdl
+CarryOut <= carry(4);
+```
+
+Worked example: `1111 + 0001` (unsigned 15 + 1) produces `results = "0000"` with `carry(4) = 1` — the answer didn't fit in 4 unsigned bits.  Note that overflow is 0 here (`carry(3) = 1`, `carry(4) = 1`, and `1 xor 1 = 0`): as a *signed* computation this was −1 + 1 = 0, which is perfectly fine.  Carry-out flags unsigned wraparound; overflow flags signed wraparound — the `0111 + 0001` example above shows the opposite case (overflow = 1, carryout = 0).
+
+### Testing the 4-Bit ALU
+
+You don't need a new testbench design — reuse the 1-bit ALU testbench pattern from the previous lab, with two changes: the stimulus signals become `std_logic_vector(3 downto 0)` (so you assign string literals like `"0111"` instead of `'0'`/`'1'`), and you should assert the flag outputs alongside the result.  For example:
+
+```vhdl
+-- ADD 7 + 1: expect signed overflow
+ta <= "0111"; tb <= "0001"; tbInvert <= '0'; tALUOp <= "10";
+wait for 30 ns;
+assert tresult = "1000" report "ADD 7+1 result failed";
+assert toverflow = '1'  report "ADD 7+1 should overflow";
+
+-- ADD 15 + 1: expect carry-out but no overflow
+ta <= "1111"; tb <= "0001"; tbInvert <= '0'; tALUOp <= "10";
+wait for 30 ns;
+assert tresult = "0000"   report "ADD 15+1 result failed";
+assert tCarryOut = '1'    report "ADD 15+1 should carry out";
+assert toverflow = '0'    report "ADD 15+1 should not overflow";
+
+-- SUB 5 - 5: expect a zero result (and the zero flag, if you did the extra credit)
+ta <= "0101"; tb <= "0101"; tbInvert <= '1'; tALUOp <= "10";
+wait for 30 ns;
+assert tresult = "0000" report "SUB 5-5 result failed";
+assert tzero = '1'      report "SUB 5-5 should set the zero flag";
+```
+
+(Adjust the `ALUOp` codes and signal names to match your own design — for instance, if your mux passes the adder on `"10"` as shown here, or on a different code, use yours.  As always, allow the full `wait for 30 ns` so the carry has time to ripple through all four slices' gate delays before you assert.)

@@ -114,3 +114,75 @@ The general strategy is as follows:
 9. Copy your answer into the `$a0` register, and perform a `syscall` number 1 to print an integer (the one stored in `$a0`).  This will print your result.
 10. Perform a `syscall` number 10 to quit the program.
 11. In the `.data` section, create two strings to hold your prompt messages (including a `\n` character for each).
+
+### Memory Layout Sketch
+
+As part of your readme, include a **sketch of the memory layout of your MIPS program**.  Every MIPS program is laid out in memory according to a standard convention:
+
+- The **text segment** (your code -- everything after `.text`) begins at address `0x00400000`.
+- The **static data segment** (everything you declare after `.data`, including your `.asciiz` string literals) begins at address `0x10010000`.
+- The **heap** (dynamically allocated memory) sits just above the static data and **grows upward** toward higher addresses.
+- The **stack** starts near `0x7FFFFFFC` and **grows downward** toward lower addresses.
+
+In your sketch, label where each of **your** labels lives: your `main:` label belongs in the text segment, and each of your prompt strings belongs in the data segment.  Also label which segment each of the following points into: the stack pointer `$sp` (the stack) and the program counter `PC` (the text segment, at whichever instruction is currently executing).
+
+Here is a fully worked example for a tiny "hello world" program whose code is at `main:` in the text segment and whose string is at `msg:` in the data segment:
+
+```
+        .data
+msg:    .asciiz "Hello, world!\n"
+
+        .text
+        .globl main
+main:   li $v0, 4
+        la $a0, msg
+        syscall
+        li $v0, 10
+        syscall
+```
+
+```
+High addresses
+0x7FFFFFFC  +----------------------------+  <-- $sp starts here
+            |           Stack            |
+            |   (grows DOWNWARD)  |      |
+            |                     v      |
+            |............................|
+            |                            |
+            |      (unused memory)       |
+            |                            |
+            |............................|
+            |                     ^      |
+            |   (grows UPWARD)    |      |
+            |           Heap             |
+            +----------------------------+
+0x10010000  |     Static Data (.data)    |
+            |  msg: "Hello, world!\n"    |  <-- msg is at 0x10010000
+            |  (first .data label gets   |
+            |   the first data address)  |
+            +----------------------------+
+            |                            |
+0x00400024  |   main: li $v0, 4          |  <-- your code starts here*
+            |         la $a0, msg        |  <-- PC points somewhere in
+            |         syscall            |      this text segment as
+            |         li $v0, 10         |      your program runs
+            |         syscall            |
+0x00400000  +--- Text Segment (.text) ---+
+Low addresses
+
+* SPIM places a few startup instructions at 0x00400000 before
+  jumping to your main label, so main may begin at 0x00400024;
+  in MARS, main may begin right at 0x00400000.
+```
+
+Notice that because `msg:` is the first (and only) label in the `.data` section, it is placed at the very start of the static data segment, `0x10010000`.  In *your* program, you have two prompt strings; the first begins at `0x10010000`, and the second begins right after the first string's characters (including its invisible terminating `\0` byte).
+
+You can **verify these addresses in your MIPS simulator**: look at the data segment and text segment displays (in JsSpim and QtSpim, these are shown as panes; in MARS, use the Data Segment window and the Text Segment window).  Single-step your program and watch the `PC` and `$sp` registers to confirm which segments they point into.
+
+Answer these questions in your readme along with your sketch:
+
+**What address does your first prompt string label get in the simulator, and why does `la $a0, msg` load exactly that value into `$a0`?**
+
+**At what address does your second string begin?  Explain how the length of the first string (don't forget the `\0` terminator!) determines this address.**
+
+This sketch and your answers are assessed as part of the **Writeup and Submission** portion of the rubric.

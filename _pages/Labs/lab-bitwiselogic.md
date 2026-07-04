@@ -100,3 +100,96 @@ Write a C program to compute the following using bitwise operators, and submit t
 Write a program to input an IP address and a netmask, and print out the decimal values of the network address and the computer address using the bitwise logical operators.  (hint: if you AND 24 1's and 8 0's with a value, you'll get the first 24 bits of that value).  To determine an integer value of an IP address, convert each decimal octet to an 8-bit binary value (for example, 192, 168, 1, and 12).  Append these values together.  The netmask can be an integer value between 1 and 31.  One challenge here is writing a loop that generates a bit sequence of, say, 24 bits (for a 24-bit netmask).  Consider a loop that computes the bitwise OR of a value with 1.  That shifts in a 1 in the least significant digit place.  Then, shift this value left by 1.  Repeat, and you've shifted in as many 1 bits as you like! 
 
 To extract the octets from a 32-bit IP address (i.e., the decimal IP address numbers), you can AND the IP address with 255 (0xFF) to obtain the least significant octet.  You can AND it with 0xFF00 to get the next least significant octet, but be sure to shift it right to get rid of the eight 0 bits on the right that result from performing and AND with 0x00.  Repeat for the other two octets!
+
+### Worked Example: Netmasks and the AND Mask
+
+Let's decompose the address `192.168.1.12/24` end-to-end, one micro-step at a time, so you can see every intermediate value.  Work through this by hand before you write any code!
+
+1. **Convert each octet to 8-bit binary:**
+
+    ```
+    192 = 1100 0000  (0xC0)
+    168 = 1010 1000  (0xA8)
+      1 = 0000 0001  (0x01)
+     12 = 0000 1100  (0x0C)
+    ```
+
+2. **Assemble the four octets into one 32-bit value.**  The first octet is the most significant byte:
+
+    ```
+    1100 0000  1010 1000  0000 0001  0000 1100
+    = 0xC0A8010C
+    ```
+
+3. **Build the /24 mask by shifting.**  A /24 netmask means the first 24 bits are 1's and the last 32 &minus; 24 = 8 bits are 0's.  Start with all 32 bits set (`0xFFFFFFFF`) and shift left by 8; the shift pushes 8 zeros in from the right:
+
+    ```
+    0xFFFFFFFF << 8  =  0xFFFFFF00
+    = 1111 1111  1111 1111  1111 1111  0000 0000
+    ```
+
+    In general, the mask for a netmask of `n` bits is `0xFFFFFFFF << (32 - n)`.
+
+4. **AND the address with the mask** to get the network address.  Line the bits up and AND each column (a bit survives only where the mask has a 1):
+
+    ```
+      1100 0000  1010 1000  0000 0001  0000 1100   (0xC0A8010C = 192.168.1.12)
+    & 1111 1111  1111 1111  1111 1111  0000 0000   (0xFFFFFF00 = /24 mask)
+    -----------------------------------------------
+      1100 0000  1010 1000  0000 0001  0000 0000   (0xC0A80100)
+    ```
+
+    Converting each octet of `0xC0A80100` back to decimal gives the **network address**: `192.168.1.0`.
+
+5. **Find the host (computer) part by inverting the mask.**  `~mask` flips every bit, so `~0xFFFFFF00 = 0x000000FF` -- 1's exactly where the *host* bits are:
+
+    ```
+      1100 0000  1010 1000  0000 0001  0000 1100   (0xC0A8010C)
+    & 0000 0000  0000 0000  0000 0000  1111 1111   (~mask = 0x000000FF)
+    -----------------------------------------------
+      0000 0000  0000 0000  0000 0000  0000 1100   (0x0000000C = 12)
+    ```
+
+    The **host address** is `12`, just as we expected from `192.168.1.12/24`.
+
+#### A Second Example: A Mask That Splits an Octet
+
+Netmasks are not always a multiple of 8, so the dividing line can fall *inside* an octet.  Consider `172.16.44.9/20`:
+
+```
+172 = 1010 1100 (0xAC)     16 = 0001 0000 (0x10)
+ 44 = 0010 1100 (0x2C)      9 = 0000 1001 (0x09)
+
+Address: 1010 1100  0001 0000  0010 1100  0000 1001  = 0xAC102C09
+
+/20 mask = 0xFFFFFFFF << (32 - 20) = 0xFFFFFFFF << 12 = 0xFFFFF000
+         = 1111 1111  1111 1111  1111 0000  0000 0000
+
+  1010 1100  0001 0000  0010 1100  0000 1001   (0xAC102C09 = 172.16.44.9)
+& 1111 1111  1111 1111  1111 0000  0000 0000   (0xFFFFF000 = /20 mask)
+------------------------------------------------
+  1010 1100  0001 0000  0010 0000  0000 0000   (0xAC102000 = 172.16.32.0)
+
+Host part = addr & ~mask = 0xAC102C09 & 0x00000FFF = 0xC09 = 3081
+```
+
+Notice what happened to the third octet: the mask keeps only its top 4 bits, so `44` (`0010 1100`) becomes `32` (`0010 0000`).  The network address is `172.16.32.0`, and the host number is `3081` -- the low 12 bits, which span *parts of two octets*.  This is why your program must work on the whole 32-bit value rather than octet by octet!
+
+#### Algorithm Sketch
+
+Here is a plan for your program (guidance only -- the code is up to you):
+
+1. Read the four octets of the IP address and the netmask value (1 to 31) from the user.
+2. Pack the octets into a single 32-bit value with shifts and ORs: `value = (o1 << 24) | (o2 << 16) | (o3 << 8) | o4`.
+3. Build the mask, either with `0xFFFFFFFF << (32 - n)` or with the shift-in-a-1 loop described above.
+4. Compute the network address with `value & mask`, and the host address with `value & ~mask`.
+5. Print the network address back out in dotted form by extracting each octet with a shift and an AND: for example, the first octet is `(network >> 24) & 0xFF`, the second is `(network >> 16) & 0xFF`, and so on.
+6. Print the host address as a decimal integer.
+
+#### Common Pitfalls
+
+> **Watch out for these frequent mistakes:**
+>
+> - **Signed shifts and the high bit:** In C, right-shifting a *signed* `int` whose top bit is 1 (like `0xFFFFFFFF`, or any address starting with an octet of 128 or more) may shift in copies of the sign bit rather than zeros.  Declare your address and mask variables as `unsigned int` to get the behavior you expect.
+> - **Operator precedence:** In C, `==` binds *tighter* than `&`, so `x & mask == 0` actually means `x & (mask == 0)`!  Always parenthesize: `(x & mask) == 0`.
+> - **Printing octets:** After shifting an octet down (for example, `value >> 16`), the bits of the *higher* octets are still there to its left.  Always mask with `0xFF` after the shift -- `(value >> 16) & 0xFF` -- or your "octet" can print as a number larger than 255.

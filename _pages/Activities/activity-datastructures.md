@@ -203,6 +203,141 @@ info:
       questions:
         - "In your own words, what is a linked list?"
         - "Modify this program by adding and calling a function to find and return the address of the node with the value 2."
+
+    - model: |
+        <style type="text/css">
+        .tg  {border-collapse:collapse;border-spacing:0;}
+        .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}
+        .tg .tg-0lax{text-align:left;vertical-align:top}
+        </style>
+        <p>A one-page summary of data structures in MIPS.</p>
+        <p><strong>Key address formulas:</strong></p>
+        <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-1wig">Structure</th>
+            <th class="tg-1wig">Address formula</th>
+            <th class="tg-1wig">Micro-example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-1wig">Word array</td>
+            <td class="tg-0lax">address of arr[i] = base + 4 &times; i</td>
+            <td class="tg-0lax">arr at <code>0x10010000</code>: arr[3] lives at <code>0x1001000C</code>; compute 4i with <code>sll $t4, $t2, 2</code></td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">String (bytes)</td>
+            <td class="tg-0lax">address of s[i] = base + 1 &times; i</td>
+            <td class="tg-0lax">s at <code>0x10010000</code>: s[3] lives at <code>0x10010003</code>; step with <code>addi $t0, $t0, 1</code> and read with <code>lb</code></td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">Linked list node (value, next)</td>
+            <td class="tg-0lax">value at node + 0; next pointer at node + 4</td>
+            <td class="tg-0lax"><code>lw $s2, 0($s1)</code> reads the value; <code>lw $s1, 4($s1)</code> follows the arrow</td>
+          </tr>
+        </tbody>
+        </table>
+        <br>
+        <p><strong>Key rules:</strong></p>
+        <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-1wig">Rule</th>
+            <th class="tg-1wig">Micro-example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-0lax">Arrays end when a separately stored <em>size</em> counter runs out; strings end at a 0 byte (the null terminator).</td>
+            <td class="tg-0lax">Loop on <code>beq $t2, $t1, done</code> (i == size) vs. <code>beq $t1, $zero, done</code> (char == 0)</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax"><code>lb</code>/<code>sb</code> move 1 byte; <code>lw</code>/<code>sw</code> move 4 bytes and need word-aligned addresses.</td>
+            <td class="tg-0lax">Characters use <code>lb</code>; integers and pointers use <code>lw</code></td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">A pointer is just an address in a register; NULL is 0, and <code>$zero</code> makes the test easy.</td>
+            <td class="tg-0lax"><code>beq $s1, $zero, finished</code> stops a list traversal</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">Array elements are contiguous (jump by index arithmetic); list nodes can live anywhere (follow next pointers one at a time).</td>
+            <td class="tg-0lax">arr[7] is one multiply-and-add away; node 7 takes seven <code>lw ... 4(...)</code> hops</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">ASCII arithmetic works on characters like numbers: 'a' - 'A' = 32.</td>
+            <td class="tg-0lax">Uppercase a letter with <code>addi $t1, $t1, -32</code></td>
+          </tr>
+        </tbody>
+        </table>
+        <br>
+        <p><strong>The linked list from this activity, drawn in memory</strong> (each node is value at offset 0, next at offset 4; the list reads 1 &rarr; 2 &rarr; 3):</p>
+        <pre>
+        heap base = &amp;heap (say 0x10010000)
+
+        address        contents        meaning
+        -----------    ------------    -------------------------------
+        heap + 0       3               node C value
+        heap + 4       0               node C next = NULL (end of list)
+        heap + 8       2               node B value
+        heap + 12      heap + 0        node B next --> node C
+        heap + 16      1               node A value  (head of the list)
+        heap + 20      heap + 8        node A next --> node B
+
+        head = heap + 16:   [1 | *]--&gt;[2 | *]--&gt;[3 | NULL]
+        </pre>
+        <p><strong>Glossary:</strong></p>
+        <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-1wig">Term</th>
+            <th class="tg-1wig">One-line definition</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-1wig">Array</td>
+            <td class="tg-0lax">A block of equal-size elements stored back to back, indexed by base + size &times; i.</td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">String</td>
+            <td class="tg-0lax">An array of 1-byte characters ending with a 0 byte instead of a stored length.</td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">Null terminator</td>
+            <td class="tg-0lax">The 0 byte that marks the end of a string (<code>.asciiz</code> adds it for you).</td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">Pointer</td>
+            <td class="tg-0lax">A register or memory word holding an address; dereference it with <code>lw</code>/<code>lb</code>.</td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">Linked list</td>
+            <td class="tg-0lax">Nodes scattered in memory, each holding a value and the address of the next node.</td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">Node</td>
+            <td class="tg-0lax">One element of a list: here two words, value at offset 0 and next at offset 4.</td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">Traversal</td>
+            <td class="tg-0lax">Visiting each element in order: increment an index (array) or follow next pointers (list) until NULL.</td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">Heap</td>
+            <td class="tg-0lax">The memory region for dynamically created data, like our hand-built list nodes.</td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">Byte vs. word addressing</td>
+            <td class="tg-0lax">Addresses count bytes, so consecutive words are 4 apart -- the reason for the <code>sll ... 2</code>.</td>
+          </tr>
+        </tbody>
+        </table>
+      title: "Key Formulas and Concepts Recap"
         
 tags:
   - mips

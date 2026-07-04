@@ -14,22 +14,22 @@ info:
   rubric:
     - weight: 60
       description: Algorithm Implementation
-      preemerging: The algorithm fails on the test inputs due to major issues, or the program fails to compile and/or run
-      beginning: The algorithm fails on the test inputs due to one or more minor issues
-      progressing: The algorithm is implemented to solve the problem correctly according to given test inputs, but would fail if executed in a general case due to a minor issue or omission in the algorithm design or implementation, including a Makefile
-      proficient: A reasonable algorithm is implemented to solve the problem which correctly solves the problem according to the given test inputs, and would be reasonably expected to solve the problem in the general case
+      preemerging: The programs do not compile or run via the Makefile, crash (for example, from dereferencing an unchecked or freed pointer), or fewer than three of the five required parts are attempted
+      beginning: The five parts compile and run, but one or more produces incorrect behavior due to a minor issue (for example, a missing null terminator in the strncpy part, an off-by-one in the malloc'd array bounds, or the sort using x[i] indexing instead of pointer arithmetic)
+      progressing: All five parts work on the tested inputs -- the malloc'd int array, the char** of strncpy'd strings, the pointer-arithmetic sort, the linked list sort, and the realloc-based growable array with add/remove/get -- but a general case would fail (for example, malloc return values are not checked for NULL, some allocations are never freed, the linked list sort swaps values rather than nodes, or the timing comparison of +1 vs. doubling growth is missing), or the Makefile does not both compile and run the programs
+      proficient: All five parts work in the general case with every malloc/realloc checked for NULL and every allocation freed; the sort operates through pointer arithmetic (*(a+i), not a[i]); the linked list sort relinks the actual nodes; the growable array supports add, remove, and get, grows by both +1 and doubling, and the timing of both strategies for 100000+ adds is reported; and a Makefile compiles and runs everything
     - weight: 30
       description: Code Quality and Documentation
-      preemerging: Code commenting and structure are absent, or code structure departs significantly from best practice, and/or the code departs significantly from the style guide
-      beginning: Code commenting and structure is limited in ways that reduce the readability of the program, and/or there are minor departures from the style guide
-      progressing: Code documentation is present that re-states the explicit code definitions, and/or code is written that mostly adheres to the style guide
-      proficient: Code is documented at non-trivial points in a manner that enhances the readability of the program, and code is written according to the style guide
+      preemerging: Code commenting and structure are absent, the five parts are an undifferentiated block of code, and/or the code departs significantly from the style guide
+      beginning: Comments are sparse or restate the code (for example, "call malloc"), and/or there are minor departures from the style guide that reduce readability
+      progressing: Each part is organized into its own function or program with comments describing what it does, and the code mostly adheres to the style guide, but comments restate definitions rather than explaining the pointer and memory reasoning
+      proficient: Each part is cleanly separated, comments explain the memory behavior at non-trivial points (what is allocated, who owns it, when it is freed, and how the pointer arithmetic or node relinking works), and the code follows the style guide
     - weight: 10
       description: Writeup and Submission
-      preemerging: An incomplete submission is provided
-      beginning: The program is submitted, but not according to the directions in one or more ways (for example, because it is lacking a readme writeup)
-      progressing: The program is submitted according to the directions with a minor omission or correction needed, and with at least superficial responses to the bolded questions throughout
-      proficient: The program is submitted according to the directions, including a readme writeup describing the solution, and thoughtful answers to the bolded questions throughout
+      preemerging: An incomplete submission is provided; the readme is missing
+      beginning: The programs are submitted, but not according to the directions in one or more ways (for example, the readme is missing, or the Makefile is not included)
+      progressing: The programs are submitted according to the directions with a minor omission or correction needed, and the readme describes the solution and reports the part 5 timing observations at least superficially
+      proficient: The programs are submitted according to the directions, including a readme that describes each part, explains how to build and run everything via the Makefile, reports the measured times for the +1 versus doubling growth strategies in part 5, and gives a thoughtful answer to why the two strategies differ (the bolded "What do you observe?" question)
 
   readings:
     - rlink: https://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/
@@ -40,6 +40,12 @@ info:
       rtitle: "<code>strncpy</code> Reference"
     - rlink: https://www.learn-c.org/en/Linked_lists
       rtitle: "Linked Lists in C"
+    - rlink: https://makefiletutorial.com/
+      rtitle: Makefile Tutorial by Example
+    - rlink: https://www.gnu.org/software/make/manual/html_node/Introduction.html
+      rtitle: "GNU Make Manual: Introduction"
+    - rlink: https://www.gnu.org/software/libc/manual/html_node/Consistency-Checking.html
+      rtitle: "Unit Testing in C with <code>assert.h</code>"
 
 tags:
   - programming
@@ -47,6 +53,10 @@ tags:
   - pointers
 
 ---
+
+### Purpose
+
+This assignment builds the C and pointer skills that let you see memory the way the hardware does: as addresses you allocate, dereference, and release yourself.  Dynamic allocation, pointer arithmetic, and node-based structures are exactly the mechanisms we will revisit when we study how the stack, heap, and caches behave, and the timing experiment in part 5 previews how memory behavior drives performance.
 
 In this assignment, you will practice allocating memory dynamically on the heap, and then access the variables you allocate through the pointers they return.
 
@@ -99,7 +109,7 @@ int main(void) {
 }
 ```
 
-### What to Do
+### Task
 
 Write a program with 5 functions, or 5 different programs, to accomplish each of the below functionality.  When finished, create a Makefile that compiles and runs the program(s).
 
@@ -119,3 +129,7 @@ Write a program with 5 functions, or 5 different programs, to accomplish each of
     * When adding beyond the end of the array, reallocate space such that the array contains one more element.  
     * Time your program for adding 100000 elements (or more).  
     * Finally, modify the program such that it increases in size by a factor of 2 times the previous size (use an `if` statement to select between doubling and increasing by 1, so that you don't lost your previous work).  Time it again.  What do you observe?
+
+### Testing Your Work
+
+Write a small unit test for each function as you go -- a `sort()` test with an already-sorted array, a reverse-sorted array, and a one-element array will catch most pointer arithmetic bugs, and `assert` from `assert.h` is all you need (see the readings above).  Automate the build with your Makefile, and consider adding a `make test` target that compiles and runs your tests so that one command verifies everything before you submit.
