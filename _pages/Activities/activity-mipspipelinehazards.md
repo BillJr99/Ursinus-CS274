@@ -87,6 +87,141 @@ info:
       questions:
         - "How many penalty cycles result from stalling the pipeline, on average, per instruction?"          
 
+    - model: |
+        <style type="text/css">
+        .tg  {border-collapse:collapse;border-spacing:0;}
+        .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}
+        .tg .tg-0lax{text-align:left;vertical-align:top}
+        </style>
+        <p>A one-page summary of pipeline hazards and their fixes.</p>
+        <p><strong>The three hazard types and their mitigations:</strong></p>
+        <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-1wig">Hazard</th>
+            <th class="tg-1wig">Cause</th>
+            <th class="tg-1wig">Micro-example</th>
+            <th class="tg-1wig">Mitigations</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-1wig">Structural</td>
+            <td class="tg-0lax">Two instructions need the same hardware in the same cycle</td>
+            <td class="tg-0lax">One memory for both fetch and data access</td>
+            <td class="tg-0lax">Duplicate hardware (separate instruction and data memories)</td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">Data</td>
+            <td class="tg-0lax">An instruction reads a register a prior in-flight instruction hasn't written yet</td>
+            <td class="tg-0lax"><code>add $s0, ...</code> immediately followed by <code>and $t0, $s0, ...</code></td>
+            <td class="tg-0lax">Forwarding from EX/MEM or MEM/WB; a one-cycle stall for load-use</td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">Control</td>
+            <td class="tg-0lax">The next PC isn't known until a branch resolves</td>
+            <td class="tg-0lax"><code>beq</code> resolved in EX while two younger instructions are already fetched</td>
+            <td class="tg-0lax">Predict not taken and squash on a taken branch; early branch resolution; branch delay slot</td>
+          </tr>
+        </tbody>
+        </table>
+        <br>
+        <p><strong>Key rules and formulas:</strong></p>
+        <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-1wig">Rule / Formula</th>
+            <th class="tg-1wig">Micro-example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-0lax">Forward from EX/MEM when EX/MEM.RegWrite = 1, EX/MEM.rd = ID/EX.rs (or rt), and EX/MEM.rd &ne; 0; otherwise check MEM/WB the same way.  EX/MEM (the newer value) wins ties.</td>
+            <td class="tg-0lax">Back-to-back <code>add $s0,...</code> then <code>sub ..., $s0, ...</code>: ForwardA = 10</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">Load-use rule: a value loaded by <code>lw</code> is not available until after MEM, so a dependent instruction in the very next slot always costs one stall cycle (then forward).</td>
+            <td class="tg-0lax"><code>lw $t0, 0($s1)</code> then <code>add $t2, $t0, $t3</code>: 1 bubble</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">Stall detection: stall if ID/EX.MemRead = 1 and ID/EX.rt matches IF/ID.rs or IF/ID.rt (zero the ID/EX control bits, freeze PC and IF/ID).</td>
+            <td class="tg-0lax">The <code>lw</code>/<code>add</code> pair above trips this test in the <code>add</code>'s decode cycle</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">Average stall cycles per instruction = sum of (frequency &times; hazard rate &times; penalty).</td>
+            <td class="tg-0lax">25% loads &times; 10% hazards &times; 1 cycle = 0.025 cycles/instruction from loads</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">Real CPI = 1 + average stall cycles per instruction.</td>
+            <td class="tg-0lax">1 + 0.025 (loads) + 0.25 &times; 50% &times; penalty (branches) + ...</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">Forwarding fixes most data hazards with zero cost; stalls and squashes are the fallback when the value literally does not exist yet.</td>
+            <td class="tg-0lax">R-type-to-R-type dependences never stall with forwarding</td>
+          </tr>
+        </tbody>
+        </table>
+        <br>
+        <p><strong>A load-use stall, pictured:</strong></p>
+        <pre>
+        cycle:              1    2    3    4    5    6    7
+        lw  $t0, 0($s1)     IF   ID   EX   MEM  WB
+        add $t2, $t0, $t3        IF   ID   **   EX   MEM  WB
+                                           stall, then forward MEM/WB -> EX
+        </pre>
+        <p><strong>Glossary:</strong></p>
+        <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-1wig">Term</th>
+            <th class="tg-1wig">One-line definition</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-1wig">Forwarding (bypassing)</td>
+            <td class="tg-0lax">Routing a result from a pipeline register straight to the ALU input, skipping the register file.</td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">Stall</td>
+            <td class="tg-0lax">Holding an instruction in place for a cycle by freezing the PC and IF/ID and inserting a bubble.</td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">Bubble (no-op)</td>
+            <td class="tg-0lax">A pipeline slot whose control signals are all zeroed so it changes no state.</td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">Squash (flush)</td>
+            <td class="tg-0lax">Canceling already-fetched instructions after a taken branch, before they write anything.</td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">Load-use hazard</td>
+            <td class="tg-0lax">A data hazard where the very next instruction needs a value still being loaded from memory.</td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">Branch prediction</td>
+            <td class="tg-0lax">Guessing a branch's outcome (e.g. &quot;not taken&quot;) so fetching can continue; wrong guesses are squashed.</td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">Branch delay slot</td>
+            <td class="tg-0lax">An instruction slot after a branch that executes regardless; the compiler tries to fill it with useful work.</td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">Hazard detection unit</td>
+            <td class="tg-0lax">Logic in ID that spots load-use hazards and triggers the stall.</td>
+          </tr>
+          <tr>
+            <td class="tg-1wig">Forwarding unit</td>
+            <td class="tg-0lax">Logic in EX that compares register numbers across pipeline registers and steers the ALU input muxes.</td>
+          </tr>
+        </tbody>
+        </table>
+      title: "Key Formulas and Concepts Recap"
+
   additional_reading:
     - link: "https://hackmd.io/@yW7HKRexRASTmH3kBDXQpQ/Sy395BDg5"
       title: MIPS Architecture Notes        
