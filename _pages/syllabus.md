@@ -331,6 +331,7 @@ schedule:
   - week: "4"
     date: "3"
     title: "MIPS Procedures"
+    link: "./Activities/MIPSProcedures"
     deliverables:
       - dtitle: "Programming Assignment: MIPS Programming Handed Out"
         dlink: "./Assignments/MIPSProgramming"
@@ -470,6 +471,10 @@ schedule:
   - week: "10"
     date: "1"
     title: "Computer Arithmetic: Floating Point"
+    link: "./Activities/ComputerArithmeticFloatingPoint"
+    readings:
+      - rtitle: "COD Chapter 3.5"
+        rlink: false
   - week: "10"
     date: "2"
     title: "Lab: Computer Arithmetic"

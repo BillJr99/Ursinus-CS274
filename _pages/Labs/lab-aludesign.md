@@ -118,7 +118,7 @@ This testbench has no pins of its own, but rather creates signals for the pins o
 
 #### Structural Circuit Definitions
 
-An important feature of VHDL is that it allows you to import other components and wire them directly, rather than having to define everything behavrioally through potentially complex boolean logic formulas.
+An important feature of VHDL is that it allows you to import other components and wire them directly, rather than having to define everything behaviorally through potentially complex boolean logic formulas.
 
 For example, suppose you've created the `and` gate above and a similar `xor` gate.  You could combine them by simulating the wiring using a structural definition to create a half adder:
 

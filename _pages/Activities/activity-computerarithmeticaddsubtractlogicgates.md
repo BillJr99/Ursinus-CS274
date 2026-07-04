@@ -67,7 +67,7 @@ info:
       title: Overflow Detection
       questions:
         - Given that overflow occurs when the sign bit of the sum differs from the sign bit of the two inputs.
-        - "Generate examples of overflow when adding values of like signs together (both positive and negative).  Generate examples of non-overview (for both positive and negative).  Finally, generate an example adding a positive and negative value together.  What do their carry bits have in common in the most significant bit?"
+        - "Generate examples of overflow when adding values of like signs together (both positive and negative).  Generate examples of non-overflow (for both positive and negative).  Finally, generate an example adding a positive and negative value together.  What do their carry bits have in common in the most significant bit?"
         - "Generalize how you can detect overflow by using only the carry in and carry out bits in the most significant digit.  Now, write this down in a truth table and draw a circuit for overflow detection." 
         - "What is the effect of declaring a variable as an <code>unsigned int</code> as opposed to an <code>int</code>?"
 
