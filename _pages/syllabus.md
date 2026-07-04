@@ -558,7 +558,7 @@ schedule:
   - week: "13"
     date: "0"
     title: "The MIPS Multicycle Datapath"
-    link: "./Activities/MIPSMulticycle"
+    link: "./Activities/MIPSMultiCycle"
     deliverables:
       - dtitle: "In-Class Assessment: The Single Cycle Datapath"
         dlink: "./Assignments/Participation/SingleCycleAssessment"
