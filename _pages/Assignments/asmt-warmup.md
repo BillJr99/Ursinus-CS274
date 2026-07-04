@@ -18,7 +18,13 @@ tags:
   
 ---
 
-The purpose of this assignment is to get us set up for the course, both by getting to know each other better, and by setting up the software environment.
+### Purpose
+
+The purpose of this assignment is to get us set up for the course, both by getting to know each other better, and by setting up the software environment.  Taking a few minutes now to learn how we will communicate, where course materials live, and what the syllabus expects will pay off all semester.
+
+### Task
+
+Complete each of the parts below: the personal survey, the office hours poll, the class notebook setup, and the syllabus questions.  Per the submission note above, send your responses via {{ page.info.chatname }} as directed in each part; there is nothing to submit to Canvas.
 
 ## Personal Survey (5 Pts)
 

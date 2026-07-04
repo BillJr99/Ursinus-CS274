@@ -13,39 +13,45 @@ info:
   rubric:
     - weight: 40
       description: Algorithm Implementation
-      preemerging: The algorithm fails on the test inputs due to major issues, or the program fails to compile and/or run
-      beginning: The algorithm fails on the test inputs due to one or more minor issues
-      progressing: The algorithm is implemented to solve the problem correctly according to given test inputs, but includes only a single class, or would fail if executed in a general case due to a minor issue or omission in the algorithm design or implementation
-      proficient: A reasonable algorithm with at least two peers is implemented to solve the problem which correctly solves the problem according to the given test inputs, and would be reasonably expected to solve the problem in the general case
+      preemerging: The circuit, microcontroller program, or VHDL simulation does not perform the task proposed and approved in the project proposal, or cannot be demonstrated or simulated at all
+      beginning: The system performs the proposed task in a demonstration or simulation, but fails on one or more of its intended cases due to a minor issue (for example, a miswired signal, an incorrect control input, or a timing issue in the simulation)
+      progressing: The system correctly performs the proposed task as demonstrated or simulated, but only for a narrow fixed case, or version control history (or initialed code sections) does not show meaningful check-ins from every team member
+      proficient: The system correctly performs the proposed task in the general cases described in the proposal, is demonstrated working (live, recorded, or in simulation), and the version control history (or commented code sections) shows meaningful contributions checked in by every team member
     - weight: 20
       description: Protocol Description
-      preemerging: Neither the workflow nor the message units are described at an adequate level of detail to comprehend the protocol
-      beginning: Either the workflow or the message units are described adequately
-      progressing: The protocol was described to include the message units and workflow at an adequate level of detail to comprehend the protocol
-      proficient: The protocol was described to include the message units and workflow at a level of detail that another person could implement
+      preemerging: Neither the components of the design nor how information flows between them (signals, buses, register transfers, or messages) is described at a level of detail adequate to comprehend how the system operates
+      beginning: Either the components (units of the circuit, program, or VHDL entities) or the flow of information between them is described adequately, but not both
+      progressing: The writeup describes both the components and the flow of information between them (for example, the control and data signals between units, or the message exchanges with the microcontroller) at an adequate level of detail to comprehend the system's operation
+      proficient: The writeup describes the components and the flow of information between them precisely enough that a classmate could rebuild the system from the tutorial alone, including pin/signal assignments or entity interfaces, the sequence of operations, and a diagram of the design
     - weight: 20
       description: Code Quality and Documentation
-      preemerging: Code commenting and structure are absent, or code structure departs significantly from best practice, and/or the code departs significantly from the style guide
-      beginning: Code commenting and structure is limited in ways that reduce the readability of the program, and/or there are minor departures from the style guide
-      progressing: Code documentation is present that re-states the explicit code definitions, and/or code is written that mostly adheres to the style guide
-      proficient: Code is documented at non-trivial points in a manner that enhances the readability of the program, and code is written according to the style guide
+      preemerging: Code (or VHDL) commenting and structure are absent, the circuit or design has no labeling or schematic, and/or the work departs significantly from the style guide
+      beginning: Comments and labeling are sparse or restate the statements themselves, and/or there are minor departures from the style guide that reduce the readability of the code, VHDL, or schematic
+      progressing: The code or VHDL is organized into functions, modules, or entities with comments describing what each does, and mostly adheres to the style guide, but comments restate definitions rather than explaining the design decisions
+      proficient: The code or VHDL is organized into well-named functions, modules, or entities, comments explain the architectural role of each part (what hardware behavior it implements and why), the schematic or wiring is labeled, and the work follows the style guide
     - weight: 10
       description: Presentation and Participation
       preemerging: No presentation was provided, the presentation could not be viewed, or the presentation was not on the subject of the final project; one or more students did not participate in the project and the matter was not addressed by the team to the instructor
-      beginning: A presentation was provided that summarizes the project, but does not provide a demo or discuss broader impacts; each student participated in a meangful way
-      progressing: A presentation was provided that summarizes the project, provides a demo, and discusses broader impacts; all students participated in either the project or the presentation
-      proficient: A presentation was provided that that summarizes the project, provides a demo, discusses broader impacts, and highlights challenges overcome and methodologies for developing the system as a group; all students participated in both the project and the presentation
+      beginning: A presentation was provided that summarizes the project, but does not provide a demo of the working system or discuss broader impacts; each student participated in a meaningful way
+      progressing: A presentation was provided that summarizes the project, provides a demo (live, recorded, or simulated), and discusses broader impacts; all students participated in either the project or the presentation
+      proficient: A presentation was provided that summarizes the project, provides a demo, discusses broader impacts, and highlights the challenges the team overcame and how the group organized its development; every student had a speaking role and contributed to both the project and the presentation
     - weight: 10
       description: Writeup and Submission
-      preemerging: An incomplete submission is provided
-      beginning: The program is submitted, but not according to the directions in one or more ways (for example, because it is lacking a readme writeup)
-      progressing: The program is submitted according to the directions with a minor omission or correction needed
-      proficient: The program is submitted according to the directions, including a readme writeup describing the solution
+      preemerging: An incomplete submission is provided; the tutorial writeup is missing
+      beginning: The project is submitted, but not according to the directions in one or more ways (for example, the tutorial writeup is missing, or code and design files are not included)
+      progressing: The project is submitted according to the directions with a minor omission or correction needed, and the tutorial writeup would allow a classmate to follow the design with some effort
+      proficient: The project is submitted according to the directions, including a tutorial-style writeup with the parts/tools used, the schematic or design files, step-by-step reproduction instructions, and a description of the solution that a classmate could follow to rebuild it
 
 tags:
   - project
   
 ---
+
+### Purpose
+
+This project is your opportunity to unify the concepts of the course -- digital logic, datapaths, memory, and control -- in a hardware or hardware-simulation artifact of your own design.  Along the way you will practice the collaborative skills of real systems work: proposing a design, dividing responsibilities, coordinating through version control, and presenting your work as a reproducible tutorial.
+
+### Task
 
 In this project, you will propose a topic of your choosing and a group of at least 2 and up to 3 total members.  The project must be approved by the instructor before it may commence, but the topic is entirely up to you.  Multidisciplinary projects with a broader impact are encouraged, and you are welcome to collaborate with a stakeholder outside the department for inspiration on potential projects (this person is not to contribute code, only disciplinary context).
 
