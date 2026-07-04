@@ -224,6 +224,66 @@ info:
       questions:
         - "What is your CPI with and without your secondary cache?"
 
+    - model: |
+        <div align="center">
+        A quick-reference recap of the key rules from this activity.  Try to reproduce each one from memory before peeking!
+        </div>
+        <br>
+        <strong>Key Rules and Formulas</strong>
+        <ul>
+        <li><strong>Address bit-splitting</strong>: offset bits = <code>log2(block size)</code>; index bits = <code>log2(number of sets)</code>; tag bits = the rest of the address.  For byte addresses with word-sized data, the lowest <code>log2(4) = 2</code> bits are the byte-within-word offset.</li>
+        <li><strong>Number of sets</strong>: <code>sets = cache size / (block size * associativity)</code>.  A direct mapped cache has associativity 1 (sets = number of blocks); a fully associative cache has one set (0 index bits - only tag and offset).</li>
+        <li><strong>Micro-example (direct mapped)</strong>: 1024 one-word blocks, 32-bit byte address: (1) offset = 2 bits (bytes in a word); (2) index = <code>log2(1024) = 10</code> bits; (3) tag = <code>32 - 10 - 2 = 20</code> bits.</li>
+        <li><strong>Micro-example (set associative)</strong>: 4-way, 8-word (32-byte) blocks, 1 MB total: (1) block offset = <code>log2(32) = 5</code> bits; (2) sets = <code>2^20 / (32 * 4) = 8192</code>, so index = 13 bits; (3) tag = <code>32 - 13 - 5 = 14</code> bits.</li>
+        <li><strong>Which block?</strong> block address = <code>address / block size</code>; set number = <code>block address mod number of sets</code>.  Micro-example: address 22 = <code>10110</code>, 8 one-word blocks: index = low 3 block bits = <code>110</code>, tag = <code>10</code>.</li>
+        <li><strong>AMAT</strong> (average memory access time) <code>= hit time + miss rate * miss penalty</code>.  Micro-example: 0.2 ns hit, 2% miss rate, 100 ns penalty: (1) <code>0.02 * 100 = 2 ns</code>; (2) <code>AMAT = 0.2 + 2 = 2.2 ns</code>.  A second-level cache replaces most of that 100 ns penalty with a much shorter L2 hit time.</li>
+        <li><strong>Locality</strong>: temporal (reuse the same address soon) is exploited by keeping recently used blocks; spatial (use neighboring addresses) is exploited by multiword blocks that load neighbors in with each miss.</li>
+        <li><strong>Write policies</strong>: write-through updates cache and memory on every write (simple, but slow writes); write-back writes only the cache, marks the block dirty, and copies it down when the block is evicted (fast writes, must track dirty blocks).</li>
+        </ul>
+        <br>
+        <pre>
+        32-bit address, direct mapped, 1024 one-word blocks:
+
+        |        tag (20 bits)        | index (10) | byte offset (2) |
+         31 ........................ 12 11 ...... 2  1 ............ 0
+
+        tag    --> compared against the tag stored in the indexed row
+        index  --> selects the cache row (set)
+        offset --> selects the byte/word within the block
+        </pre>
+        <br>
+        <strong>Glossary</strong>
+        <style type="text/css">
+        .tg  {border-collapse:collapse;border-spacing:0;}
+        .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}
+        .tg .tg-0lax{text-align:left;vertical-align:top}
+        </style>
+        <table class="tg">
+        <thead>
+          <tr><th class="tg-1wig">Term</th><th class="tg-1wig">Meaning</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="tg-0lax">Hit / Miss</td><td class="tg-0lax">The requested word is / is not present in the cache</td></tr>
+          <tr><td class="tg-0lax">Block (line)</td><td class="tg-0lax">The unit of transfer between cache and memory (one or more words)</td></tr>
+          <tr><td class="tg-0lax">Index</td><td class="tg-0lax">Address bits selecting which set (row) a block maps to</td></tr>
+          <tr><td class="tg-0lax">Tag</td><td class="tg-0lax">The remaining upper address bits, stored to verify which block occupies a row</td></tr>
+          <tr><td class="tg-0lax">Valid bit</td><td class="tg-0lax">Marks whether a row actually holds data yet</td></tr>
+          <tr><td class="tg-0lax">Associativity</td><td class="tg-0lax">How many places (ways) a block may live within its set</td></tr>
+          <tr><td class="tg-0lax">Miss penalty</td><td class="tg-0lax">Extra time to fetch a block from the next lower level on a miss</td></tr>
+          <tr><td class="tg-0lax">LRU replacement</td><td class="tg-0lax">Evicting the least recently used block in a set, betting on temporal locality</td></tr>
+          <tr><td class="tg-0lax">Write-through / write-back</td><td class="tg-0lax">Writing to memory on every store vs. only when a dirty block is evicted</td></tr>
+          <tr><td class="tg-0lax">Stride</td><td class="tg-0lax">The distance between successive memory accesses (stride 1 maximizes spatial locality)</td></tr>
+        </tbody>
+        </table>
+      title: "Key Formulas and Concepts Recap"
+      questions:
+        - "Without looking, split a 32-bit address for a direct mapped cache with 256 four-word (16-byte) blocks: how many offset, index, and tag bits?"
+        - "Compute the AMAT for a 1 ns hit time, 5% miss rate, and 80 ns miss penalty."
+
   additional_reading:
     - link: https://drdobbs.com/parallel/eliminate-false-sharing/217500206
       title: "Cache Coherence Across Cores: False Cache Sharing"

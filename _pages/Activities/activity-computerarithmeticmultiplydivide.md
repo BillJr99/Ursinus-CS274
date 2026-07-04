@@ -55,6 +55,64 @@ info:
         - "Draw the updated hardware diagram for this algorithm."
         - "How do these improvements compare to those you saw with the multiplier circuit and algorithm?"            
 
+    - model: |
+        <div align="center">
+        A quick-reference recap of the key rules from this activity.  Try to reproduce each one from memory before peeking!
+        </div>
+        <br>
+        <strong>Key Rules and Formulas</strong>
+        <ul>
+        <li><strong>Result sizes</strong>: multiplying two n-bit values needs up to 2n bits (e.g. <code>1111 * 1111 = 15 * 15 = 225 = 1110 0001</code>, 8 bits); division of n-bit values yields an n-bit quotient and an n-bit remainder.  MIPS holds these 64 bits in the <code>hi</code>/<code>lo</code> register pair.</li>
+        <li><strong>Shift-and-add multiplication</strong>: for each bit of the multiplier from LSB to MSB: (1) if the bit is 1, add the multiplicand to the product; (2) shift the multiplicand left (or, in the improved version, shift the product right); (3) shift the multiplier right.  Repeat n times.</li>
+        <li><strong>Multiply/divide by powers of two with shifts</strong>: <code>x &lt;&lt; k</code> = <code>x * 2^k</code> and <code>x &gt;&gt; k</code> = <code>x / 2^k</code>.  Micro-example: <code>x * 3 = (x &lt;&lt; 1) + x</code>.</li>
+        <li><strong>Restoring division</strong>: repeatedly subtract the divisor from the remainder; if the result is negative, add the divisor back (restore) and shift a 0 into the quotient, otherwise shift in a 1; shift the divisor right (or remainder left) and repeat.</li>
+        <li><strong>Division sanity check</strong>: <code>dividend = quotient * divisor + remainder</code>, with <code>0 &lt;= remainder &lt; divisor</code>.  Micro-example: <code>0110 / 0011</code>: 6 = 2 * 3 + 0, so quotient <code>0010</code>, remainder <code>0000</code>.</li>
+        <li><strong>Hardware improvement idea</strong>: a 32-bit ALU suffices for 64-bit products because each step only ever adds 32 bits; shifting the product register right lets the multiplier share the product register's unused half.</li>
+        <li><strong>MIPS instructions</strong>: <code>mult</code>/<code>multu</code> and <code>div</code>/<code>divu</code> compute into <code>hi</code> (upper product bits / remainder) and <code>lo</code> (lower product bits / quotient); <code>mfhi</code>/<code>mflo</code> move the results into general-purpose registers; <code>sll</code>/<code>srl</code> shift.</li>
+        </ul>
+        <br>
+        <strong>Worked Step Table: 0010 x 0011 (2 x 3) by shift-and-add</strong>
+        <pre>
+        Step | Multiplier | Multiplicand | Action                  | Product
+         0   |    0011    |  0000 0010   | initialize              | 0000 0000
+         1   |    0011    |  0000 0010   | LSB=1: add multiplicand | 0000 0010
+             |    0001    |  0000 0100   | shift both              |
+         2   |    0001    |  0000 0100   | LSB=1: add multiplicand | 0000 0110
+             |    0000    |  0000 1000   | shift both              |
+         3-4 |    0000    |     ...      | LSB=0: shift only       | 0000 0110
+        Result: 0000 0110 = 6.  Correct: 2 x 3 = 6!
+        </pre>
+        <br>
+        <strong>Glossary</strong>
+        <style type="text/css">
+        .tg  {border-collapse:collapse;border-spacing:0;}
+        .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}
+        .tg .tg-0lax{text-align:left;vertical-align:top}
+        </style>
+        <table class="tg">
+        <thead>
+          <tr><th class="tg-1wig">Term</th><th class="tg-1wig">Meaning</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="tg-0lax">Multiplicand</td><td class="tg-0lax">The value being multiplied (added repeatedly)</td></tr>
+          <tr><td class="tg-0lax">Multiplier</td><td class="tg-0lax">The value whose bits decide whether to add at each step</td></tr>
+          <tr><td class="tg-0lax">Product</td><td class="tg-0lax">The result register, up to 2n bits wide</td></tr>
+          <tr><td class="tg-0lax">Dividend</td><td class="tg-0lax">The value being divided</td></tr>
+          <tr><td class="tg-0lax">Divisor</td><td class="tg-0lax">The value divided by</td></tr>
+          <tr><td class="tg-0lax">Quotient / Remainder</td><td class="tg-0lax">The whole-number result and what is left over</td></tr>
+          <tr><td class="tg-0lax">Restoring division</td><td class="tg-0lax">Division that adds the divisor back after a subtraction goes negative</td></tr>
+          <tr><td class="tg-0lax">hi / lo</td><td class="tg-0lax">MIPS registers holding the upper/lower product halves, or remainder/quotient</td></tr>
+          <tr><td class="tg-0lax">Booth's algorithm</td><td class="tg-0lax">A signed multiplication algorithm that recodes runs of 1s (see additional reading)</td></tr>
+        </tbody>
+        </table>
+      title: "Key Formulas and Concepts Recap"
+      questions:
+        - "Without looking, multiply 0011 by 0101 with the step table method, then check your answer in decimal (3 x 5 = 15)."
+
   additional_reading:
     - link: https://en.wikipedia.org/wiki/Booth%27s_multiplication_algorithm
       title: Booth's Multiplication Algorithm for Signed Values

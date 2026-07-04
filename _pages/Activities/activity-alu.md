@@ -367,6 +367,65 @@ info:
         - "Sketch a &quot;carry lookahead&quot; circuit that outputs all 32 carry bits."
         - "Design an ALU that adds all 32 bits in parallel using this carry lookahead circuit." 
 
+    - model: |
+        <div align="center">
+        A quick-reference recap of the key rules from this activity.  Try to reproduce each one from memory before peeking!
+        </div>
+        <br>
+        <strong>Key Rules and Formulas</strong>
+        <ul>
+        <li><strong>1-bit full adder</strong>: <code>sum = (A XOR B) XOR carryIn</code>; <code>carryOut = ((A XOR B) AND carryIn) OR (A AND B)</code>.  Micro-example: <code>A=1, B=0, carryIn=1</code> gives <code>sum = 1 XOR 1 = 0</code>, <code>carryOut = (1 AND 1) OR 0 = 1</code>.</li>
+        <li><strong>1-bit ALU</strong>: compute <code>A AND B</code>, <code>A OR B</code>, and the adder's sum in parallel, and use a multiplexor with select lines (00 = AND, 01 = OR, 10 = add) to pick the operation's output.</li>
+        <li><strong>32-bit ALU</strong>: chain 32 one-bit ALUs; each carryOut feeds the next bit's carryIn, and all bits share the operation select lines.</li>
+        <li><strong>Subtraction</strong>: <code>A - B = A + ~B + 1</code>: set <code>bInvert = 1</code> to select the inverted B input, and set the ones-place <code>carryIn = 1</code> to supply the &quot;+1&quot; of the two's complement for free.</li>
+        <li><strong>Overflow</strong>: <code>overflow = carryIn XOR carryOut</code> at the most significant bit.</li>
+        <li><strong>Zero status bit</strong>: <code>zero = NOT(result31 OR result30 OR ... OR result0)</code> - OR every result bit and negate (a NOR of all 32 bits).</li>
+        <li><strong>Less / set-on-less-than</strong>: subtract <code>B</code> from <code>A</code>; the sign bit of the result feeds the <code>less</code> output of bit 0.  If overflow occurred, the sign bit is wrong, so correct it: <code>less = sign XOR overflow</code>.</li>
+        <li><strong>Carry lookahead</strong>: define <code>g = A AND B</code> (generate) and <code>p = A XOR B</code> (propagate); then <code>carryOut_i+1 = g_i OR (p_i AND carryIn_i)</code>.  Expanding lets all carries be computed in parallel instead of rippling.  Micro-example: <code>c1 = g0 + p0*c0</code>; <code>c2 = g1 + p1*g0 + p1*p0*c0</code>.</li>
+        </ul>
+        <br>
+        <pre>
+        1-bit ALU (bit i):
+                    bInvert     operation (2 bits)
+                       |            |
+          A_i ====+==[AND]==+
+                  |  [OR ]==+==[ MUX ]== result_i
+          B_i =[inv?]=+==[ADD]==+
+                           |  |
+                    carryIn_i  carryOut_i --> to bit i+1
+        </pre>
+        <br>
+        <strong>Glossary</strong>
+        <style type="text/css">
+        .tg  {border-collapse:collapse;border-spacing:0;}
+        .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}
+        .tg .tg-0lax{text-align:left;vertical-align:top}
+        </style>
+        <table class="tg">
+        <thead>
+          <tr><th class="tg-1wig">Term</th><th class="tg-1wig">Meaning</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="tg-0lax">ALU</td><td class="tg-0lax">Arithmetic Logic Unit: computes AND, OR, add, subtract, and comparisons</td></tr>
+          <tr><td class="tg-0lax">Multiplexor (mux)</td><td class="tg-0lax">A selector circuit: select bits choose which input passes through</td></tr>
+          <tr><td class="tg-0lax">bInvert</td><td class="tg-0lax">Control line that swaps B for its bitwise inverse (for subtraction)</td></tr>
+          <tr><td class="tg-0lax">Status bits</td><td class="tg-0lax">Extra ALU outputs (zero, less, overflow) that the instruction set uses for branches and slt</td></tr>
+          <tr><td class="tg-0lax">Zero bit</td><td class="tg-0lax">1 when all result bits are 0; used by beq/bne</td></tr>
+          <tr><td class="tg-0lax">Less bit</td><td class="tg-0lax">1 when A &lt; B, taken from the (overflow-corrected) sign of A - B</td></tr>
+          <tr><td class="tg-0lax">Ripple-carry adder</td><td class="tg-0lax">Adder whose carries pass sequentially from bit to bit (slow: 32 stages)</td></tr>
+          <tr><td class="tg-0lax">Generate (g)</td><td class="tg-0lax">A AND B: this column produces a carry no matter what comes in</td></tr>
+          <tr><td class="tg-0lax">Propagate (p)</td><td class="tg-0lax">A XOR B: this column passes an incoming carry along</td></tr>
+          <tr><td class="tg-0lax">Carry lookahead adder</td><td class="tg-0lax">Adder computing all carries in parallel from g and p terms</td></tr>
+        </tbody>
+        </table>
+      title: "Key Formulas and Concepts Recap"
+      questions:
+        - "Without looking, write the settings of <code>bInvert</code>, <code>carryIn</code>, and <code>operation</code> needed to compute <code>A - B</code>, and the formula for the overflow bit."
+
 tags:
   - arithmetic
   - alu
