@@ -10,14 +10,15 @@ info:
   goals:
     - To write, compile, and execute programs in C
     - To dynamically allocate and utilize memory
+    - To reason about how signed vs. unsigned integer types (int vs. size_t) affect memory safety
 
   rubric:
     - weight: 60
       description: Algorithm Implementation
-      preemerging: The programs do not compile or run via the Makefile, crash (for example, from dereferencing an unchecked or freed pointer), or fewer than three of the five required parts are attempted
-      beginning: The five parts compile and run, but one or more produces incorrect behavior due to a minor issue (for example, a missing null terminator in the strncpy part, an off-by-one in the malloc'd array bounds, or the sort using x[i] indexing instead of pointer arithmetic)
-      progressing: All five parts work on the tested inputs -- the malloc'd int array, the char** of strncpy'd strings, the pointer-arithmetic sort, the linked list sort, and the realloc-based growable array with add/remove/get -- but a general case would fail (for example, malloc return values are not checked for NULL, some allocations are never freed, the linked list sort swaps values rather than nodes, or the timing comparison of +1 vs. doubling growth is missing), or the Makefile does not both compile and run the programs
-      proficient: All five parts work in the general case with every malloc/realloc checked for NULL and every allocation freed; the sort operates through pointer arithmetic (*(a+i), not a[i]); the linked list sort relinks the actual nodes; the growable array supports add, remove, and get, grows by both +1 and doubling, and the timing of both strategies for 100000+ adds is reported; and a Makefile compiles and runs everything
+      preemerging: The programs do not compile or run via the Makefile, crash (for example, from dereferencing an unchecked or freed pointer), or fewer than four of the six required parts are attempted
+      beginning: The six parts compile and run, but one or more produces incorrect behavior due to a minor issue (for example, a missing null terminator in the strncpy part, an off-by-one in the malloc'd array bounds, or the sort using x[i] indexing instead of pointer arithmetic)
+      progressing: All six parts work on the tested inputs -- the malloc'd int array, the char** of strncpy'd strings, the pointer-arithmetic sort, the linked list sort, the realloc-based growable array with add/remove/get, and the signed/unsigned size-safeguard replication -- but a general case would fail (for example, malloc return values are not checked for NULL, some allocations are never freed, the linked list sort swaps values rather than nodes, or the timing comparison of +1 vs. doubling growth is missing), or the Makefile does not both compile and run the programs
+      proficient: All six parts work in the general case with every malloc/realloc checked for NULL and every allocation freed; the sort operates through pointer arithmetic (*(a+i), not a[i]); the linked list sort relinks the actual nodes; the growable array supports add, remove, and get, grows by both +1 and doubling, and the timing of both strategies for 100000+ adds is reported; the size-safeguard replication reproduces the out-of-bounds copy with a negative length and is then fixed by using an unsigned size; and a Makefile compiles and runs everything
     - weight: 30
       description: Code Quality and Documentation
       preemerging: Code commenting and structure are absent, the five parts are an undifferentiated block of code, and/or the code departs significantly from the style guide
@@ -29,7 +30,7 @@ info:
       preemerging: An incomplete submission is provided; the readme is missing
       beginning: The programs are submitted, but not according to the directions in one or more ways (for example, the readme is missing, or the Makefile is not included)
       progressing: The programs are submitted according to the directions with a minor omission or correction needed, and the readme describes the solution and reports the part 5 timing observations at least superficially
-      proficient: The programs are submitted according to the directions, including a readme that describes each part, explains how to build and run everything via the Makefile, reports the measured times for the +1 versus doubling growth strategies in part 5, and gives a thoughtful answer to why the two strategies differ (the bolded "What do you observe?" question)
+      proficient: The programs are submitted according to the directions, including a readme that describes each part, explains how to build and run everything via the Makefile, reports the measured times for the +1 versus doubling growth strategies in part 5, gives a thoughtful answer to why the two strategies differ (the bolded "What do you observe?" question), and gives a thoughtful answer to why declaring a size as int instead of size_t is unsafe (the bolded question in part 6)
 
   readings:
     - rlink: https://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/
@@ -46,6 +47,8 @@ info:
       rtitle: "GNU Make Manual: Introduction"
     - rlink: https://www.gnu.org/software/libc/manual/html_node/Consistency-Checking.html
       rtitle: "Unit Testing in C with <code>assert.h</code>"
+    - rlink: https://www.youtube.com/watch?v=14q9KLkbRT8
+      rtitle: "Video: Every Developer Should Know This Type Of Bug (signed/unsigned size bug)"
 
 tags:
   - programming
@@ -111,7 +114,7 @@ int main(void) {
 
 ### Task
 
-Write a program with 5 functions, or 5 different programs, to accomplish each of the below functionality.  When finished, create a Makefile that compiles and runs the program(s).
+Write a program with 6 functions, or 6 different programs, to accomplish each of the below functionality.  When finished, create a Makefile that compiles and runs the program(s).
 
 1. Define an `int*` pointer variable, and create an array of 10 integers using `malloc()`.  Then, assign values to that array, print their values, and `free()` the integers.
 
@@ -130,6 +133,31 @@ Write a program with 5 functions, or 5 different programs, to accomplish each of
     * Time your program for adding 100000 elements (or more).  
     * Finally, modify the program such that it increases in size by a factor of 2 times the previous size (use an `if` statement to select between doubling and increasing by 1, so that you don't lost your previous work).  Time it again.  What do you observe?
 
+6. **Signed vs. unsigned sizes: confirm a real vulnerability.**  Every size you passed above (`int size` in your `sort()`, the array lengths) was an `int`.  The C library never does this: `malloc`, `memcpy`, and `strncpy` all take their sizes as `size_t`, an *unsigned* type.  This part shows why, using a simplified version of a real bug found in the FreeBSD kernel.  Watch the short video below first:
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/14q9KLkbRT8" title="Every Developer Should Know This Type Of Bug" frameborder="0" allowfullscreen></iframe>
+
+    The kernel lets a user program copy *at most* some number of bytes out of a fixed 1&nbsp;KB buffer, and must never copy more.  A simplified version of the safeguard:
+
+    ```c
+    #include <string.h>
+
+    char kbuf[1024];   // the only region the user is allowed to read
+
+    void copy_from_kernel(void* dst, int len) {
+        int max = sizeof(kbuf);                    // 1024, kept in a signed int
+        int safe_len = (len > max) ? max : len;    // "never copy more than 1024"
+        memcpy(dst, kbuf, safe_len);               // but memcpy's size is a size_t (unsigned)
+    }
+    ```
+
+    * Build a small program around this function.  Fill `kbuf` with a known pattern, and place a second array right after it (call it `secret`) filled with a *different* pattern, so you can tell if a copy ran past the end of `kbuf`.
+    * Call `copy_from_kernel` with a sensible positive `len` (say `64`) and confirm it behaves.  Then **call it with a negative `len`, such as `-1`.**  Print `safe_len`, and observe how many bytes actually get copied (running under `valgrind` or with AddressSanitizer, `-fsanitize=address`, makes the over-read obvious; otherwise you will see the leaked `secret` bytes or a crash).
+    * **Trace what happens to the `len > max` check when `len` is negative, and what value `memcpy` actually receives as its size.**  Confirm the bug: the "safe" length passes the check and is then reinterpreted as an enormous unsigned number.
+    * In your readme, **explain why it is unsafe to declare a size as `int` instead of `size_t`.**  Reference the two's-complement bit pattern of `-1` and what that same pattern means when read as an unsigned `size_t` (recall the number-systems material).  Then fix the function so the bug cannot happen, and explain why your fix works.
+
+    *Hint: `sizeof` already returns a `size_t`.  Try changing `int max` to `size_t max` and re-running your negative-length test -- note how the comparison's behavior changes, and decide whether that alone is a complete fix.*
+
 ### Testing Your Work
 
-Write a small unit test for each function as you go -- a `sort()` test with an already-sorted array, a reverse-sorted array, and a one-element array will catch most pointer arithmetic bugs, and `assert` from `assert.h` is all you need (see the readings above).  Automate the build with your Makefile, and consider adding a `make test` target that compiles and runs your tests so that one command verifies everything before you submit.
+Write a small unit test for each function as you go -- a `sort()` test with an already-sorted array, a reverse-sorted array, and a one-element array will catch most pointer arithmetic bugs, and `assert` from `assert.h` is all you need (see the readings above).  Automate the build with your Makefile, and consider adding a `make test` target that compiles and runs your tests so that one command verifies everything before you submit.  Part 6's test is a *negative* one: your fixed `copy_from_kernel` should refuse (or safely clamp) a negative length instead of copying `SIZE_MAX` bytes.
