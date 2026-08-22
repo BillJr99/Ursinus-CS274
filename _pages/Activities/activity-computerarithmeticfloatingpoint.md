@@ -235,7 +235,7 @@ info:
     - link: https://www.itu.dk/~sestoft/bachelor/IEEE754_article.pdf
       title: "What Every Computer Scientist Should Know about Floating Point"
     - title: "Floating Point Standard Example"
-      link: "FloatingPointStandard" 
+      link: "../files/replit/FloatingPointStandard.zip" 
       
 tags:
   - arithmetic

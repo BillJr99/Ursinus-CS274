@@ -186,7 +186,7 @@ schedule:
   - week: "0"
     date: "1"
     title: "Course Overview"
-    link: "../Ursinus-CS274-Overview"
+    link: "https://www.billmongan.com/Ursinus-CS274-Overview"
     readings:
       - rtitle: "Why the First Computers were Made out of Light Bulbs"
         rlink: "https://www.youtube.com/watch?v=FU_YFpfDqqA"
