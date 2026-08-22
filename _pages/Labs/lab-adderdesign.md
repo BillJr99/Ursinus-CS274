@@ -49,7 +49,7 @@ tags:
 
 In this lab, you will use a tool called [ghdl](http://ghdl.free.fr/download.html) to compile Virtual Hardware Description Language (VHDL) code that describes circuit wirings for various logic components.  On Mac OS systems, you can install ghdl using [homebrew](https://brew.sh/) via this command: `brew install --cask ghdl gtkwave`, and on Linux, you can install using this command: `sudo apt-get install ghdl gtkwave` (these will also install the gtkwave system that Windows users will download later in this lab).  Alternatively, if you have any difficulty running these tools locally, you can run many ghdl commands through the VHDL example shown below:
 
-<iframe height="500px" width="100%" src="https://www.billmongan.com/Ursinus-CS274/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-CS274%2Fgh-pages%2Ffiles%2Freplit%2FVHDLExample.zip&title=VHDL%20Example" scrolling="yes" frameborder="no" allowfullscreen="true" sandbox="allow-scripts allow-same-origin"></iframe>
+<iframe height="500px" width="100%" src="{{ site.baseurl }}/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-CS274%2Fgh-pages%2Ffiles%2Freplit%2FVHDLExample.zip&title=VHDL%20Example" scrolling="yes" frameborder="no" allowfullscreen="true" sandbox="allow-scripts allow-same-origin"></iframe>
 
 
 Using these tools, you will implement an adder circuit using the VHDL language.
