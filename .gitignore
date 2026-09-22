@@ -14,3 +14,4 @@ setformprocessorasmtid.s
 /files/algs/*.aux
 /files/algs/*.log
 Thumbs.db
+/*.sh
