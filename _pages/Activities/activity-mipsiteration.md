@@ -10,6 +10,7 @@ info:
 
   models:
     - model: |
+        <!-- run: id=cs274-activity-mipsiteration-1 viz=mips -->
         <script type="syntaxhighlighter" class="brush: mips"><![CDATA[        
         .text
         .globl main
@@ -54,6 +55,7 @@ info:
             wrong: .asciiz "Not quite!\n"
             right: .asciiz "You guessed it!\n"
         ]]></script>
+        <a href="https://billjr99.github.io/Ursinus-CS274/viz/#cs274-activity-mipsiteration-1">Visualize this example</a> <!-- code-viz link -->
         </div>
       title: An iterative MIPS program
       questions:

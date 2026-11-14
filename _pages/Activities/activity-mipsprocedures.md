@@ -12,6 +12,7 @@ info:
 
   models: 
     - model: |
+        <!-- run: id=cs274-activity-mipsprocedures-1 viz=mips -->
         <script type="syntaxhighlighter" class="brush: mips"><![CDATA[        
         .text
         .globl main
@@ -58,6 +59,7 @@ info:
         .data
         input: .asciiz "Enter an integer\n"        
         ]]></script>
+        <a href="https://billjr99.github.io/Ursinus-CS274/viz/#cs274-activity-mipsprocedures-1">Visualize this example</a> <!-- code-viz link -->
       title: MIPS Procedures
       questions:
         - "Why was it important to set <code>a0</code> prior to executing <code>syscall 1</code> above?"
@@ -67,6 +69,7 @@ info:
         - "Why is the <code>syscall 10</code> call important in this code?  What would happen if it was not present?"
         
     - model: |
+        <!-- run: id=cs274-activity-mipsprocedures-2 viz=mips -->
         <script type="syntaxhighlighter" class="brush: mips"><![CDATA[        
         .text
         .globl main
@@ -89,6 +92,7 @@ info:
         val1: .word 5
         val2: .word 6
         ]]></script>
+        <a href="https://billjr99.github.io/Ursinus-CS274/viz/#cs274-activity-mipsprocedures-2">Visualize this example</a> <!-- code-viz link -->
       title: Writing Procedures
       questions:
         - What does this program do?

@@ -16,6 +16,7 @@ info:
     - model: |
         <a href="https://tinyurl.com/arraylistvector" target="_blank">Open the code visualizer below in a new window!</a>
         <br>
+        <!-- run: id=cs274-activity-virtualmemory5-1 viz=c -->
         <script type="syntaxhighlighter" class="brush: c"><![CDATA[
         #include <stdio.h>
         #include <stdlib.h>
@@ -105,6 +106,7 @@ info:
             return 0;
         }
         ]]></script>        
+        <a href="https://billjr99.github.io/Ursinus-CS274/viz/#cs274-activity-virtualmemory5-1">Visualize this example</a> <!-- code-viz link -->
       title: "Stack and Heap Access"
       questions:
         - "Trace through a few iterations of the program.  What happens to the local variables of each function as it is called?"

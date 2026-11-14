@@ -57,6 +57,7 @@ In this lab, you will use a tool called [ghdl](http://ghdl.free.fr/download.html
 
 A basic circuit can be expressed using the VHDL language as follows:
 
+<!-- run: id=cs274-lab-aludesign-1 viz=wave -->
 ```vhdl
 library ieee;
 use ieee.std_logic_1164.all;
@@ -73,11 +74,13 @@ begin
     z <= a and b after 2 ns;
 end;
 ```
+[Visualize this example](https://billjr99.github.io/Ursinus-CS274/viz/#cs274-lab-aludesign-1) <!-- code-viz link -->
 
 This `and` gate features two input pins and a single output pin.  Its behavior is defined using the logic formula `a and b` with an optional 2 ns delay (to simulate propagation delay).
 
 To test a circuit, you can create a `testbench` that actuates the circuit with values you can specify:
 
+<!-- run: id=cs274-lab-aludesign-2 viz=wave setup=cs274-lab-aludesign-1 -->
 ```vhdl
 library ieee;
 use ieee.std_logic_1164.all;
@@ -113,6 +116,7 @@ begin
     end process;
 end;
 ```
+[Visualize this example](https://billjr99.github.io/Ursinus-CS274/viz/#cs274-lab-aludesign-2) <!-- code-viz link -->
 
 This testbench has no pins of its own, but rather creates signals for the pins of the circuit it is testing (`input` and `output`).  It imports the `and2` circuit, and starts a process to test each set of values and assert their output.
 

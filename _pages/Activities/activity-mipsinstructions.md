@@ -17,6 +17,7 @@ info:
         <div align="center">
         <code>A = 5 + 10</code>
         <br>
+        <!-- run: id=cs274-activity-mipsinstructions-1 viz=mips -->
         <script type="syntaxhighlighter" class="brush: mips"><![CDATA[        
         .text
     
@@ -31,6 +32,7 @@ info:
             li $v0, 10
             syscall    
         ]]></script>
+        <a href="https://billjr99.github.io/Ursinus-CS274/viz/#cs274-activity-mipsinstructions-1">Visualize this example</a> <!-- code-viz link -->
         </div>
       title: A First Program
       questions:
@@ -565,6 +567,7 @@ info:
         <div align="center">
         <code>printf("Hello, world!");</code>
         <br>
+        <!-- run: id=cs274-activity-mipsinstructions-2 viz=mips -->
         <script type="syntaxhighlighter" class="brush: mips"><![CDATA[        
                 .text
             
@@ -583,6 +586,7 @@ info:
                 .data
         msg:    .asciiz "Hello, world!"  
         ]]></script>
+        <a href="https://billjr99.github.io/Ursinus-CS274/viz/#cs274-activity-mipsinstructions-2">Visualize this example</a> <!-- code-viz link -->
         </div>
       title: System Calls
       questions:

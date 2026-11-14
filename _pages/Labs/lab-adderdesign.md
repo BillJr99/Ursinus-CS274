@@ -95,6 +95,7 @@ Don't let tool installation stop you!  The [EDA Playground](https://edaplaygroun
 
 A basic circuit can be expressed using the VHDL language as follows:
 
+<!-- run: id=cs274-lab-adderdesign-1 viz=wave -->
 ```vhdl
 library ieee;
 use ieee.std_logic_1164.all;
@@ -112,11 +113,13 @@ begin
     z <= a and b after 2 ns;
 end;
 ```
+[Visualize this example](https://billjr99.github.io/Ursinus-CS274/viz/#cs274-lab-adderdesign-1) <!-- code-viz link -->
 
 This `and` gate features two input pins and a single output pin.  Its behavior is defined using the logic formula `a and b` with an optional 2 ns delay (to simulate propagation delay).
 
 To test a circuit, you can create a `testbench` that actuates the circuit with values you can specify:
 
+<!-- run: id=cs274-lab-adderdesign-2 viz=wave setup=cs274-lab-adderdesign-1 -->
 ```vhdl
 library ieee;
 use ieee.std_logic_1164.all;
@@ -152,6 +155,7 @@ begin
     end process;
 end;
 ```
+[Visualize this example](https://billjr99.github.io/Ursinus-CS274/viz/#cs274-lab-adderdesign-2) <!-- code-viz link -->
 
 This testbench has no pins of its own, but rather creates signals for the pins of the circuit it is testing (`input` and `output`).  It imports the `and2` circuit, and starts a process to test each set of values and assert their output.
 
@@ -347,6 +351,7 @@ If you have trouble using the tools, the [EDA Playground](https://edaplayground.
 
 Here is an example, using a 3-input and gate that structurally wires together two 2-input and gates:
 
+<!-- run: id=cs274-lab-adderdesign-3 viz=wave -->
 ```vhdl
 library ieee;
 use ieee.std_logic_1164.all;
@@ -390,9 +395,11 @@ begin
     z <= a and b after 2 ns;
 end;
 ```
+[Visualize this example](https://billjr99.github.io/Ursinus-CS274/viz/#cs274-lab-adderdesign-3) <!-- code-viz link -->
 
 Here is the testbench for that entity:
 
+<!-- run: id=cs274-lab-adderdesign-4 viz=wave setup=cs274-lab-adderdesign-3 -->
 ```vhdl
 library ieee;
 use ieee.std_logic_1164.all;
@@ -434,3 +441,4 @@ begin
     end process;
 end;
 ```
+[Visualize this example](https://billjr99.github.io/Ursinus-CS274/viz/#cs274-lab-adderdesign-4) <!-- code-viz link -->

@@ -13,6 +13,7 @@ info:
 
   models:
     - model: |
+        <!-- run: id=cs274-activity-datastructures-1 viz=mips -->
         <script type="syntaxhighlighter" class="brush: mips"><![CDATA[        
             .text
         
@@ -45,11 +46,13 @@ info:
                 .data
         msg:    .asciiz "Hello, world!"  
         ]]></script>
+        <a href="https://billjr99.github.io/Ursinus-CS274/viz/#cs274-activity-datastructures-1">Visualize this example</a> <!-- code-viz link -->
       title: MIPS Strings
       questions:
         - "What is the difference between the <code>lb</code> instruction and the <code>lw</code> instruction?"
         - "Modify this program to convert each character of a String to uppercase, and then to lowercase."
     - model: |
+        <!-- run: id=cs274-activity-datastructures-2 viz=mips -->
         <script type="syntaxhighlighter" class="brush: mips"><![CDATA[        
             .text
         
@@ -100,12 +103,14 @@ info:
         arr:    .word 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
         size:   .word 10   
         ]]></script>
+        <a href="https://billjr99.github.io/Ursinus-CS274/viz/#cs274-activity-datastructures-2">Visualize this example</a> <!-- code-viz link -->
       title: MIPS Arrays
       questions:
         - "Now that you know what an array is, what is a string?"
         - "What is the difference between a string and an array, in terms of its size and how it is terminated?"
         - "Why was it necessary to multiply <code>i</code> by 4 before adding it to the base address of the array?"      
     - model: |
+        <!-- run: id=cs274-activity-datastructures-3 viz=mips -->
         <script type="syntaxhighlighter" class="brush: mips"><![CDATA[        
                 .text
             
@@ -199,6 +204,7 @@ info:
                 .data
         heap:   .space 80
         ]]></script>
+        <a href="https://billjr99.github.io/Ursinus-CS274/viz/#cs274-activity-datastructures-3">Visualize this example</a> <!-- code-viz link -->
       title: Linked Lists in MIPS
       questions:
         - "In your own words, what is a linked list?"

@@ -69,6 +69,7 @@ If you program in Java, you may be familiar with the `ArrayList`, which seems to
 
 The `malloc` function creates memory on the heap, and returns to you the address of the variable or start of the array.  It returns `NULL` if it fails (for example, due to being out of memory), so be sure to check (and exit) if your variable is equal to `NULL`!  For example:
 
+<!-- run: id=cs274-assignment-cprogrammingpointers-1 viz=c -->
 ```c
 #include <stdlib.h>
 #include <stdio.h>
@@ -88,9 +89,11 @@ int main(void) {
     free(x); // it is up to you to de-allocate all variables you allocate
 }
 ```
+[Visualize this example](https://billjr99.github.io/Ursinus-CS274/viz/#cs274-assignment-cprogrammingpointers-1) <!-- code-viz link -->
 
 You can declare an array by calling `malloc` with a larger size parameter:
 
+<!-- run: id=cs274-assignment-cprogrammingpointers-2 viz=c -->
 ```c
 #include <stdlib.h>
 #include <stdio.h>
@@ -111,6 +114,7 @@ int main(void) {
     free(x);
 }
 ```
+[Visualize this example](https://billjr99.github.io/Ursinus-CS274/viz/#cs274-assignment-cprogrammingpointers-2) <!-- code-viz link -->
 
 ### Task
 

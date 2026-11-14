@@ -274,6 +274,7 @@ info:
         <div align="center">
         <code>printf("Hello, world!");</code>
         <br>
+        <!-- run: id=cs274-activity-machinelanguage-1 viz=mips -->
         <script type="syntaxhighlighter" class="brush: mips"><![CDATA[        
                 .text
             
@@ -292,6 +293,7 @@ info:
             addi $v0, $a0, 1 # what is this address?
             jr $ra
         ]]></script>
+        <a href="https://billjr99.github.io/Ursinus-CS274/viz/#cs274-activity-machinelanguage-1">Visualize this example</a> <!-- code-viz link -->
         </div>
       title: Translating jump instructions
       questions:

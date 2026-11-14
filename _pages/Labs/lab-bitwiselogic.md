@@ -48,6 +48,7 @@ tags:
 
 Consider the following C program, which computes bitwise logical operations:
 
+<!-- run: id=cs274-lab-bitwiselogic-1 viz=c -->
 ```c
 #include <stdio.h>
 
@@ -82,6 +83,7 @@ int main(void) {
   print_bin(c >> 1);
 }
 ```
+[Visualize this example](https://billjr99.github.io/Ursinus-CS274/viz/#cs274-lab-bitwiselogic-1) <!-- code-viz link -->
 
 In this lab, you will use combinations of these operations to compute several logical bitwise operations on variables that you can set.
 

@@ -24,6 +24,7 @@ info:
         }
         ]]></script>
         <br>        
+        <!-- run: id=cs274-activity-virtualmemory3-1 viz=mips -->
         <script type="syntaxhighlighter" class="brush: mips"><![CDATA[
         .data 
         str1: .asciiz "Five plus two is: "
@@ -58,6 +59,7 @@ info:
             li $v0, 10
             syscall        
         ]]></script>
+        <a href="https://billjr99.github.io/Ursinus-CS274/viz/#cs274-activity-virtualmemory3-1">Visualize this example</a> <!-- code-viz link -->
         <br>
         <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
         <div style="width: 100%; display: table-row;">
