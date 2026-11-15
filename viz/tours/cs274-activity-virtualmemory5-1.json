@@ -1,0 +1,78 @@
+{
+ "code": "#include <stdio.h>\n#include <stdlib.h>\n\nint capacity = 0; // how many elements are in the vector now?\nint size = 10; // what is the allocated size of the vector in elements?\nconst int N = 30; // how many elements will we insert?\n\n/* Given a vector and a new size, reallocate the vector.  \n * We assume that this is a vector of integers; therefore,\n * the allocated size will be newSize * sizeof(int).  \n * Return the new vector address, since reallocation can \n * cause the allocated memory to relocate to a new address\n * with enough free contiguous space to reside.\n */\nint* resize(int* vector, int newSize) {\n    if(vector == NULL) return NULL;\n\n    size = newSize;\n    vector = (int*) realloc(vector, newSize * sizeof(int));\n\n    if(vector == NULL) {\n        perror(\"Failed to resize\");\n        return NULL;\n    }\n\n    return vector;\n}\n\n/* Given a value, push the value to the back of the vector,\n * resizing the vector to double its size whenever it becomes\n * full.  Fun fact - this is how the Java ArrayList works!\n */\nint* push(int val, int* vector) {\n    printf(\"Pushing %d\\n\", val);\n    if(vector == NULL) return NULL;\n\n    if(capacity >= size) {\n        vector = resize(vector, 2 * size);\n        if(vector == NULL) return NULL;\n    }\n\n    capacity = capacity + 1;\n    vector[capacity-1] = val;\n\n    return vector;\n}\n\n/* Iteratively print each value of the vector. */\nvoid printList(int* vector) {\n    int i = 0;\n\n    for(i = 0; i < capacity - 1; i++) {\n        printf(\"%d \", vector[i]);\n    }\n\n    printf(\"\\n\");\n}\n\nint main(void) {\n    // Create the vector\n    int* vec = (int*) malloc(size * sizeof(int));\n\n    if(vec == NULL) {\n        perror(\"Failed to allocate vector\");\n        return -1;\n    }\n\n    // Push N values to the vector\n    int i = 0;\n\n    for(i = 0; i < N; i++) {\n        vec = push(i, vec);\n\n        if(vec == NULL) {\n            printf(\"NULL vector during allocation\\n\");\n            return -2;\n        }\n    }\n\n    // Print the vector\n    printList(vec);\n\n    // Don't forget to free the variable!\n    free(vec);\n\n    return 0;\n}",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "example": "cs274-activity-virtualmemory5-1",
+ "lang": "c",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "description": "Lines 1-10 set things up.",
+   "kind": "reveal",
+   "lines": "1-10"
+  },
+  {
+   "description": "Lines 11-14 continue the example.",
+   "kind": "reveal",
+   "lines": "11-14"
+  },
+  {
+   "description": "Lines 15-27 define `resize`.",
+   "kind": "reveal",
+   "lines": "15-27"
+  },
+  {
+   "description": "Line 16 makes a decision.",
+   "kind": "focus",
+   "lines": "16"
+  },
+  {
+   "description": "Line 26 returns a value.",
+   "kind": "focus",
+   "lines": "26"
+  },
+  {
+   "description": "Lines 28-32 continue the example.",
+   "kind": "reveal",
+   "lines": "28-32"
+  },
+  {
+   "description": "Lines 33-46 define `push`.",
+   "kind": "reveal",
+   "lines": "33-46"
+  },
+  {
+   "description": "Line 45 returns a value.",
+   "kind": "focus",
+   "lines": "45"
+  },
+  {
+   "description": "Lines 47-48 continue the example.",
+   "kind": "reveal",
+   "lines": "47-48"
+  },
+  {
+   "description": "Lines 49-57 define `printList`.",
+   "kind": "reveal",
+   "lines": "49-57"
+  },
+  {
+   "description": "Lines 59-87 define `main`.",
+   "kind": "reveal",
+   "lines": "59-87"
+  },
+  {
+   "description": "Line 71 starts a loop.",
+   "kind": "focus",
+   "lines": "71"
+  },
+  {
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "kind": "run",
+   "lines": "87",
+   "trace_step": 385
+  }
+ ],
+ "title": "Example cs274-activity-virtualmemory5-1",
+ "version": 1
+}

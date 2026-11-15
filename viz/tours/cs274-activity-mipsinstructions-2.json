@@ -1,0 +1,33 @@
+{
+ "code": "        .text\n\n        .globl main\n\nmain:\n    # print\n    li $v0, 4\n    la $a0, msg\n    syscall\n\n    # exit\n    li $v0, 10\n    syscall\n\n        .data\nmsg:    .asciiz \"Hello, world!\"  ",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "example": "cs274-activity-mipsinstructions-2",
+ "lang": "mips",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "description": "Lines 1-4 set things up.",
+   "kind": "reveal",
+   "lines": "1-4"
+  },
+  {
+   "description": "Lines 5-15 are the code under the label `main`.",
+   "kind": "reveal",
+   "lines": "5-15"
+  },
+  {
+   "description": "Line 16 holds the data labeled `msg`.",
+   "kind": "reveal",
+   "lines": "16"
+  },
+  {
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "kind": "run",
+   "lines": "13",
+   "trace_step": 4
+  }
+ ],
+ "title": "exit",
+ "version": 1
+}

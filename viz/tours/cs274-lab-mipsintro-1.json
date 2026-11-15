@@ -1,0 +1,28 @@
+{
+ "code": "        .data\nmsg:   .asciiz \"Please enter the number of words per sentence:\\n\"\n\n        .text\n# what you had before!\nli $v0, 4\nla $a0, msg\nsyscall",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "example": "cs274-lab-mipsintro-1",
+ "lang": "mips",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "description": "Line 1 sets things up.",
+   "kind": "reveal",
+   "lines": "1"
+  },
+  {
+   "description": "Lines 2-8 are the code under the label `msg`.",
+   "kind": "reveal",
+   "lines": "2-8"
+  },
+  {
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "kind": "run",
+   "lines": "8",
+   "trace_step": 2
+  }
+ ],
+ "title": "Reading User Input",
+ "version": 1
+}

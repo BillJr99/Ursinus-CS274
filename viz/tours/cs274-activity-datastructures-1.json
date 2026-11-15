@@ -1,0 +1,48 @@
+{
+ "code": "    .text\n\n    .globl main\n\nmain:\n    la $t0, msg     # t0 = the address of the string\n\n# for each character in the string (strings end with a 0 null terminator!)    \nloop:\n    # load the character (lb == load byte, similar to load word but 1 byte instead of 4)\n    lb $t1, 0($t0)  \n\n    # are we at the end of the string?\n    beq $t1, $zero, finished \n\n    # if not, print the char\n    li $v0, 11\n    addi $a0, $t1, 0 # set a0 to the current character in t1\n    syscall\n\n    addi $t0, $t0, 1 # move to the next character in the string\n    j loop           # and continue\n\nfinished:\n    # exit\n    li $v0, 10\n    syscall\n\n        .data\nmsg:    .asciiz \"Hello, world!\"  ",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "example": "cs274-activity-datastructures-1",
+ "lang": "mips",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "description": "Lines 1-4 set things up.",
+   "kind": "reveal",
+   "lines": "1-4"
+  },
+  {
+   "description": "Lines 5-8 are the code under the label `main`.",
+   "kind": "reveal",
+   "lines": "5-8"
+  },
+  {
+   "description": "Lines 9-22 are the code under the label `loop`.",
+   "kind": "reveal",
+   "lines": "9-22"
+  },
+  {
+   "description": "Line 9 starts a loop.",
+   "kind": "focus",
+   "lines": "9"
+  },
+  {
+   "description": "Lines 24-29 are the code under the label `finished`.",
+   "kind": "reveal",
+   "lines": "24-29"
+  },
+  {
+   "description": "Line 30 holds the data labeled `msg`.",
+   "kind": "reveal",
+   "lines": "30"
+  },
+  {
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "kind": "run",
+   "lines": "27",
+   "trace_step": 95
+  }
+ ],
+ "title": "Example cs274-activity-datastructures-1",
+ "version": 1
+}

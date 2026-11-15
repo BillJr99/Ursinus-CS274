@@ -1,0 +1,53 @@
+{
+ "code": "    .text\n\n    .globl main\n\nmain:\n    la $t0, arr     # t0 = the address of the array\n\n    # set t1 to the value at the address size\n    la $t1, size \n    lw $t1, 0($t1)\n\n    # let t2 be i = 0\n    li $t2, 0\n\n    # let s0 be our sum\n    li $s0, 0\n\n# for each word in the array (strings end with a 0 null terminator!)    \nloop:\n    # are we at the end of the array? if i (t2) == size (t1), we are\n    beq $t2, $t1, finished \n\n    # set the address to 4 * i + the base address of the array\n    sll $t4, $t2, 2\n    add $t3, $t0, $t4\n\n    # load the word \n    lw $t5, 0($t3)  \n\n    # and add it to our running sum\n    add $s0, $s0, $t5\n\n    addi $t2, $t2, 1 # i++\n    j loop           # and continue\n\nfinished:\n    # print the sum\n    li $v0, 1\n    addi $a0, $s0, 0 # set a0 to the sum in s0\n    syscall\n\n    # exit\n    li $v0, 10\n    syscall\n\n        .data\narr:    .word 1, 2, 3, 4, 5, 6, 7, 8, 9, 10\nsize:   .word 10   ",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "example": "cs274-activity-datastructures-2",
+ "lang": "mips",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "description": "Lines 1-4 set things up.",
+   "kind": "reveal",
+   "lines": "1-4"
+  },
+  {
+   "description": "Lines 5-18 are the code under the label `main`.",
+   "kind": "reveal",
+   "lines": "5-18"
+  },
+  {
+   "description": "Lines 19-34 are the code under the label `loop`.",
+   "kind": "reveal",
+   "lines": "19-34"
+  },
+  {
+   "description": "Line 19 starts a loop.",
+   "kind": "focus",
+   "lines": "19"
+  },
+  {
+   "description": "Lines 36-46 are the code under the label `finished`.",
+   "kind": "reveal",
+   "lines": "36-46"
+  },
+  {
+   "description": "Line 47 holds the data labeled `arr`.",
+   "kind": "reveal",
+   "lines": "47"
+  },
+  {
+   "description": "Line 48 holds the data labeled `size`.",
+   "kind": "reveal",
+   "lines": "48"
+  },
+  {
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "kind": "run",
+   "lines": "44",
+   "trace_step": 80
+  }
+ ],
+ "title": "exit",
+ "version": 1
+}

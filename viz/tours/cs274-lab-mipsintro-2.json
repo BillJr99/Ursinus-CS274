@@ -1,0 +1,33 @@
+{
+ "code": "        .data\nmsg:    .asciiz \"Hello, world!\\n\"\n\n        .text\n        .globl main\nmain:   li $v0, 4\n        la $a0, msg\n        syscall\n        li $v0, 10\n        syscall",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "example": "cs274-lab-mipsintro-2",
+ "lang": "mips",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "description": "Line 1 sets things up.",
+   "kind": "reveal",
+   "lines": "1"
+  },
+  {
+   "description": "Lines 2-5 hold the data labeled `msg`.",
+   "kind": "reveal",
+   "lines": "2-5"
+  },
+  {
+   "description": "Lines 6-10 are the code under the label `main`.",
+   "kind": "reveal",
+   "lines": "6-10"
+  },
+  {
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "kind": "run",
+   "lines": "10",
+   "trace_step": 4
+  }
+ ],
+ "title": "Memory Layout Sketch",
+ "version": 1
+}

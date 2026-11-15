@@ -1,0 +1,33 @@
+{
+ "code": "        .text\n\n        .globl main\n\nmain: \n    # print\n    li $a0, 4       # suppose this is address 0x00400024\n    jal procedure   # what is this instruction in binary?\n\n    # exit\n    li $v0, 10\n    syscall\n\nprocedure: \n    addi $v0, $a0, 1 # what is this address?\n    jr $ra",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "example": "cs274-activity-machinelanguage-1",
+ "lang": "mips",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "description": "Lines 1-4 set things up.",
+   "kind": "reveal",
+   "lines": "1-4"
+  },
+  {
+   "description": "Lines 5-12 are the code under the label `main`.",
+   "kind": "reveal",
+   "lines": "5-12"
+  },
+  {
+   "description": "Lines 14-16 are the code under the label `procedure`.",
+   "kind": "reveal",
+   "lines": "14-16"
+  },
+  {
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "kind": "run",
+   "lines": "12",
+   "trace_step": 5
+  }
+ ],
+ "title": "Example cs274-activity-machinelanguage-1",
+ "version": 1
+}

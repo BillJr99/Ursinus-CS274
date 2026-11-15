@@ -1,0 +1,42 @@
+{
+ "code": "library ieee;\nuse ieee.std_logic_1164.all;\n\nentity and3 is\n    port (\n        a  : in  std_logic;\n        b  : in  std_logic;\n        c  : in std_logic;\n        z : out std_logic);\nend and3;\n\narchitecture structural of and3 is\n\n  component and2\n\t  port(a,b : in std_logic;\n\t  z   : out std_logic);\n  end component;\n  \n  signal sig : std_logic;\nbegin\n\n\tA1 : and2 port map(a => a, b => b, z => sig);\n\tA2 : and2 port map(a => c, b => sig, z => z);\n    \nend;\n\n-- This section could go into its own file instead\nlibrary ieee;\nuse ieee.std_logic_1164.all;\n\nentity and2 is\n    port (\n        a  : in  std_logic;\n        b  : in  std_logic;\n        z : out std_logic);\nend and2;\n\narchitecture behavioral of and2 is\nbegin\n    z <= a and b after 2 ns;\nend;",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "example": "cs274-lab-adderdesign-3",
+ "lang": "vhdl",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "description": "Lines 1-3 set things up.",
+   "kind": "reveal",
+   "lines": "1-3"
+  },
+  {
+   "description": "Lines 4-10 define the `and3`.",
+   "kind": "reveal",
+   "lines": "4-10"
+  },
+  {
+   "description": "Line 12 defines the `structural`.",
+   "kind": "reveal",
+   "lines": "12"
+  },
+  {
+   "description": "Lines 14-29 define the `and2`.",
+   "kind": "reveal",
+   "lines": "14-29"
+  },
+  {
+   "description": "Lines 31-36 define the `and2`.",
+   "kind": "reveal",
+   "lines": "31-36"
+  },
+  {
+   "description": "Lines 38-41 define the `behavioral`.",
+   "kind": "reveal",
+   "lines": "38-41"
+  }
+ ],
+ "title": "Online VHDL Editor",
+ "version": 1
+}

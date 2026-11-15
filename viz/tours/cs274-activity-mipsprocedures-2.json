@@ -1,0 +1,38 @@
+{
+ "code": ".text\n.globl main\n\nmain:\n    la $t0, val1\n    la $t1, val2\n\n    lw $t2, 0($t0)\n    lw $t3, 0($t1)\n\n    sw $t2, 0($t1)\n    sw $t3, 0($t0)\n\n    # exit\n    li $v0, 10\n    syscall  \n\n.data\nval1: .word 5\nval2: .word 6",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "example": "cs274-activity-mipsprocedures-2",
+ "lang": "mips",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "description": "Lines 1-3 set things up.",
+   "kind": "reveal",
+   "lines": "1-3"
+  },
+  {
+   "description": "Lines 4-18 are the code under the label `main`.",
+   "kind": "reveal",
+   "lines": "4-18"
+  },
+  {
+   "description": "Line 19 holds the data labeled `val1`.",
+   "kind": "reveal",
+   "lines": "19"
+  },
+  {
+   "description": "Line 20 holds the data labeled `val2`.",
+   "kind": "reveal",
+   "lines": "20"
+  },
+  {
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "kind": "run",
+   "lines": "16",
+   "trace_step": 7
+  }
+ ],
+ "title": "return",
+ "version": 1
+}
