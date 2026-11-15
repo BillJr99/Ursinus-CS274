@@ -1,33 +1,33 @@
 {
  "code": "        .data\nmsg:    .asciiz \"Hello, world!\\n\"\n\n        .text\n        .globl main\nmain:   li $v0, 4\n        la $a0, msg\n        syscall\n        li $v0, 10\n        syscall",
- "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "description": "You can follow a complete entry point through two syscall services.",
  "example": "cs274-lab-mipsintro-2",
  "lang": "mips",
  "reviewed": false,
- "source": "skeleton",
+ "source": "draft: codex free model",
  "steps": [
   {
-   "description": "Line 1 sets things up.",
+   "description": "msg stores a null-terminated greeting in the data section. You declare main as a global label in the text section.",
    "kind": "reveal",
-   "lines": "1"
+   "lines": "1-5"
   },
   {
-   "description": "Lines 2-5 hold the data labeled `msg`.",
+   "description": "main loads service number 4 into $v0. You place the greeting's address in $a0 for the print-string service.",
    "kind": "reveal",
-   "lines": "2-5"
+   "lines": "6-7"
   },
   {
-   "description": "Lines 6-10 are the code under the label `main`.",
-   "kind": "reveal",
-   "lines": "6-10"
+   "answer": "No. The instruction before it changes $v0 to 10, selecting the exit service.",
+   "kind": "predict",
+   "lines": "8-10",
+   "question": "Does the final syscall use the same service as the first one?"
   },
   {
-   "description": "This is the end of the run: the final state, and all of the output.",
-   "kind": "run",
-   "lines": "10",
-   "trace_step": 4
+   "description": "You see the Hello, world greeting from the first syscall. The next service exits the program after that output.",
+   "kind": "reveal",
+   "lines": "8-10"
   }
  ],
- "title": "Memory Layout Sketch",
+ "title": "Printing and exiting in MIPS",
  "version": 1
 }

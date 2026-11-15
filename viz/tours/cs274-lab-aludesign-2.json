@@ -1,37 +1,33 @@
 {
  "code": "library ieee;\nuse ieee.std_logic_1164.all;\n\nentity and2_tb is\nend and2_tb;\n\narchitecture behavior of and2_tb is\n    component and2 is\n    port (\n        a  : in  std_logic;\n        b  : in  std_logic;\n        z : out std_logic);    \n    end component;\n    \n    signal input  : std_logic_vector(1 downto 0);\n    signal output : std_logic;\nbegin\n    test1: and2 port map (\n        a => input(0),\n        b => input(1),\n        z => output\n    );\n\n    tb_proc: process\n    begin\n        input <= \"00\"; wait for 30 ns; assert output = '0' report \"0&0 failed\";\n        input <= \"01\"; wait for 30 ns; assert output = '0' report \"0&1 failed\";\n        input <= \"10\"; wait for 30 ns; assert output = '0' report \"1&0 failed\";\n        input <= \"11\"; wait for 30 ns; assert output = '1' report \"1&1 failed\";\n        report \"Testbench finished\";\n        wait;\n    end process;\nend;",
- "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "description": "You can follow testbench wiring and assertions for the AND gate.",
  "example": "cs274-lab-aludesign-2",
  "lang": "vhdl",
  "reviewed": false,
- "source": "skeleton",
+ "source": "draft: codex free model",
  "steps": [
   {
-   "description": "Lines 1-3 set things up.",
+   "description": "and2_tb declares no external ports. You create internal input and output signals for the and2 component.",
    "kind": "reveal",
-   "lines": "1-3"
+   "lines": "1-16"
   },
   {
-   "description": "Lines 4-5 define the `and2_tb`.",
+   "description": "The port map connects input(0) to a, input(1) to b and the component's z to output. The test process drives these signals.",
    "kind": "reveal",
-   "lines": "4-5"
+   "lines": "17-22"
   },
   {
-   "description": "Line 7 defines the `behavior`.",
-   "kind": "reveal",
-   "lines": "7"
+   "answer": "Only 11 expects one. The other three assertions expect zero.",
+   "kind": "predict",
+   "lines": "24-29",
+   "question": "Which supplied input combination expects output equal to one?"
   },
   {
-   "description": "Lines 8-33 define the `and2`.",
+   "description": "The process applies all four combinations and checks each result. You see Testbench finished in the supplied output, with no assertion-failure messages shown.",
    "kind": "reveal",
-   "lines": "8-33"
-  },
-  {
-   "description": "This is the end of the run: the final state, and all of the output.",
-   "kind": "run",
-   "trace_step": 5
+   "lines": "24-33"
   }
  ],
- "title": "Background: VHDL",
+ "title": "Checking all two-input combinations",
  "version": 1
 }
