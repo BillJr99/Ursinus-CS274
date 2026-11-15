@@ -1,0 +1,31 @@
+{
+ "version": 1,
+ "example": "cs274-activity-virtualmemory3-1",
+ "title": "Example cs274-activity-virtualmemory3-1",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "kind": "reveal",
+   "lines": "1",
+   "description": "Line 1 sets things up."
+  },
+  {
+   "kind": "reveal",
+   "lines": "2-4",
+   "description": "Lines 2-4 hold the data labeled `str1`."
+  },
+  {
+   "kind": "reveal",
+   "lines": "5-32",
+   "description": "Lines 5-32 are the code under the label `main`."
+  },
+  {
+   "kind": "run",
+   "trace_step": 13,
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "lines": "32"
+  }
+ ]
+}

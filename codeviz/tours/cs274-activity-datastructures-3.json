@@ -1,0 +1,51 @@
+{
+ "version": 1,
+ "example": "cs274-activity-datastructures-3",
+ "title": "exit",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "kind": "reveal",
+   "lines": "1-4",
+   "description": "Lines 1-4 set things up."
+  },
+  {
+   "kind": "reveal",
+   "lines": "5-44",
+   "description": "Lines 5-44 are the code under the label `main`."
+  },
+  {
+   "kind": "reveal",
+   "lines": "46-59",
+   "description": "Lines 46-59 are the code under the label `suml`."
+  },
+  {
+   "kind": "reveal",
+   "lines": "61-75",
+   "description": "Lines 61-75 are the code under the label `loop`."
+  },
+  {
+   "kind": "focus",
+   "lines": "61",
+   "description": "Line 61 starts a loop."
+  },
+  {
+   "kind": "reveal",
+   "lines": "77-90",
+   "description": "Lines 77-90 are the code under the label `finished`."
+  },
+  {
+   "kind": "reveal",
+   "lines": "91",
+   "description": "Line 91 holds the data labeled `heap`."
+  },
+  {
+   "kind": "run",
+   "trace_step": 50,
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "lines": "44"
+  }
+ ]
+}

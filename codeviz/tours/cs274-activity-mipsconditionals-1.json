@@ -1,0 +1,51 @@
+{
+ "version": 1,
+ "example": "cs274-activity-mipsconditionals-1",
+ "title": "Example cs274-activity-mipsconditionals-1",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "kind": "reveal",
+   "lines": "1-3",
+   "description": "Lines 1-3 set things up."
+  },
+  {
+   "kind": "reveal",
+   "lines": "4-26",
+   "description": "Lines 4-26 are the code under the label `main`."
+  },
+  {
+   "kind": "reveal",
+   "lines": "28-33",
+   "description": "Lines 28-33 are the code under the label `correct`."
+  },
+  {
+   "kind": "reveal",
+   "lines": "35-40",
+   "description": "Lines 35-40 are the code under the label `exit`."
+  },
+  {
+   "kind": "reveal",
+   "lines": "41",
+   "description": "Line 41 holds the data labeled `input`."
+  },
+  {
+   "kind": "reveal",
+   "lines": "42",
+   "description": "Line 42 holds the data labeled `wrong`."
+  },
+  {
+   "kind": "reveal",
+   "lines": "43",
+   "description": "Line 43 holds the data labeled `right`."
+  },
+  {
+   "kind": "run",
+   "trace_step": 12,
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "lines": "38"
+  }
+ ]
+}
