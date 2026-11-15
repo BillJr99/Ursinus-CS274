@@ -1,31 +1,43 @@
 {
- "version": 1,
- "example": "cs274-activity-mipsinstructions-2",
- "title": "exit",
- "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
- "reviewed": false,
- "source": "skeleton",
- "steps": [
-  {
-   "kind": "reveal",
-   "lines": "1-4",
-   "description": "Lines 1-4 set things up."
-  },
-  {
-   "kind": "reveal",
-   "lines": "5-15",
-   "description": "Lines 5-15 are the code under the label `main`."
-  },
-  {
-   "kind": "reveal",
-   "lines": "16",
-   "description": "Line 16 holds the data labeled `msg`."
-  },
-  {
-   "kind": "run",
-   "trace_step": 4,
-   "description": "This is the end of the run: the final state, and all of the output.",
-   "lines": "13"
-  }
- ]
+  "version": 1,
+  "example": "cs274-activity-mipsinstructions-2",
+  "title": "System Calls and Data Directives in MIPS",
+  "description": "Use .data and .asciiz to store a string in memory, then invoke syscall 4 and syscall 10 from main.",
+  "reviewed": false,
+  "source": "draft: agy free model",
+  "steps": [
+    {
+      "kind": "reveal",
+      "lines": "1-10",
+      "description": "In `main`, `li $v0, 4` loads `4` into `$v0`, `la $a0, msg` loads the memory address of label `msg` into `$a0`, and `syscall` runs on line 9."
+    },
+    {
+      "kind": "reveal",
+      "lines": "11-16",
+      "description": "Lines 12-13 load `10` into `$v0` and invoke `syscall` again, while `.data` at lines 15-16 defines `msg` as a null-terminated `.asciiz` string `\"Hello, world!\"`."
+    },
+    {
+      "kind": "focus",
+      "lines": "7-9,15-16",
+      "description": "Notice how `la $a0, msg` passes the address of `msg` in the `.data` segment via `$a0`, while `$v0` selects which `syscall` operation to perform."
+    },
+    {
+      "kind": "predict",
+      "question": "What does `la $a0, msg` on line 8 place into register `$a0`?",
+      "answer": "The memory address where the string `\"Hello, world!\"` starts in the `.data` section.",
+      "lines": "8,16"
+    },
+    {
+      "kind": "run",
+      "trace_step": 2,
+      "lines": "9",
+      "description": "With `$v0 = 4` and `$a0` holding the address of `msg`, `syscall` prints `Hello, world!`."
+    },
+    {
+      "kind": "run",
+      "trace_step": 4,
+      "lines": "13",
+      "description": "With `$v0 = 10`, the second `syscall` terminates the program."
+    }
+  ]
 }

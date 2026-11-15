@@ -1,26 +1,43 @@
 {
- "version": 1,
- "example": "cs274-activity-mipsinstructions-1",
- "title": "Example cs274-activity-mipsinstructions-1",
- "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
- "reviewed": false,
- "source": "skeleton",
- "steps": [
-  {
-   "kind": "reveal",
-   "lines": "1-4",
-   "description": "Lines 1-4 set things up."
-  },
-  {
-   "kind": "reveal",
-   "lines": "5-12",
-   "description": "Lines 5-12 are the code under the label `main`."
-  },
-  {
-   "kind": "run",
-   "trace_step": 4,
-   "description": "This is the end of the run: the final state, and all of the output.",
-   "lines": "12"
-  }
- ]
+  "version": 1,
+  "example": "cs274-activity-mipsinstructions-1",
+  "title": "A First MIPS Program: Adding Two Registers",
+  "description": "Load immediate integers into registers $t0 and $t1, add them into $t2, and exit with syscall 10.",
+  "reviewed": false,
+  "source": "draft: agy free model",
+  "steps": [
+    {
+      "kind": "reveal",
+      "lines": "1-8",
+      "description": "Under `.text` and `main:`, `li $t0, 5` loads 5 into `$t0`, `li $t1, 10` loads 10 into `$t1`, and `add $t2, $t0, $t1` stores their sum in `$t2`."
+    },
+    {
+      "kind": "reveal",
+      "lines": "9-12",
+      "description": "Lines 11-12 load service code `10` into `$v0` and invoke `syscall` to terminate the program."
+    },
+    {
+      "kind": "focus",
+      "lines": "6-8",
+      "description": "Notice the operand order in `add $t2, $t0, $t1`: the destination register `$t2` comes first, followed by the two source registers `$t0` and `$t1`."
+    },
+    {
+      "kind": "predict",
+      "question": "What value is stored in `$t2` after line 8 (`add $t2, $t0, $t1`) executes, and does the program print anything to the console?",
+      "answer": "`$t2` holds 15 (`5 + 10`), and nothing is printed because the program only runs syscall 10 (exit).",
+      "lines": "6-12"
+    },
+    {
+      "kind": "run",
+      "trace_step": 2,
+      "lines": "8",
+      "description": "Line 8 adds `$t0` (5) and `$t1` (10) and writes `15` into `$t2`."
+    },
+    {
+      "kind": "run",
+      "trace_step": 4,
+      "lines": "12",
+      "description": "With `$v0` set to 10, `syscall` exits the program."
+    }
+  ]
 }
