@@ -1,53 +1,50 @@
 {
  "code": "    .text\n\n    .globl main\n\nmain:\n    la $t0, arr     # t0 = the address of the array\n\n    # set t1 to the value at the address size\n    la $t1, size \n    lw $t1, 0($t1)\n\n    # let t2 be i = 0\n    li $t2, 0\n\n    # let s0 be our sum\n    li $s0, 0\n\n# for each word in the array (strings end with a 0 null terminator!)    \nloop:\n    # are we at the end of the array? if i (t2) == size (t1), we are\n    beq $t2, $t1, finished \n\n    # set the address to 4 * i + the base address of the array\n    sll $t4, $t2, 2\n    add $t3, $t0, $t4\n\n    # load the word \n    lw $t5, 0($t3)  \n\n    # and add it to our running sum\n    add $s0, $s0, $t5\n\n    addi $t2, $t2, 1 # i++\n    j loop           # and continue\n\nfinished:\n    # print the sum\n    li $v0, 1\n    addi $a0, $s0, 0 # set a0 to the sum in s0\n    syscall\n\n    # exit\n    li $v0, 10\n    syscall\n\n        .data\narr:    .word 1, 2, 3, 4, 5, 6, 7, 8, 9, 10\nsize:   .word 10   ",
- "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "description": "Use a loop and scaled indexing (sll by 2) to sum a 10-element word array in MIPS assembly.",
  "example": "cs274-activity-datastructures-2",
  "lang": "mips",
  "reviewed": false,
- "source": "skeleton",
+ "source": "draft: agy free model + edit: codex",
  "steps": [
   {
-   "description": "Lines 1-4 set things up.",
+   "description": "In `main`, load the base address of `arr` into `$t0` and the array length (`size`, which is 10) into `$t1`. Initialize the loop index `i` in `$t2` to 0 and the running sum in `$s0` to 0.",
    "kind": "reveal",
-   "lines": "1-4"
+   "lines": "1-17"
   },
   {
-   "description": "Lines 5-18 are the code under the label `main`.",
+   "description": "In `loop`, stop and branch to `finished` when `i == size` (`beq $t2, $t1, finished`). Otherwise, multiply `i` by 4 (`sll $t4, $t2, 2`) and add that byte offset to the base address in `$t0`. Load `arr[i]` into `$t5`, add it to `$s0`, increment `i`, and jump back to `loop`.",
    "kind": "reveal",
-   "lines": "5-18"
+   "lines": "18-35"
   },
   {
-   "description": "Lines 19-34 are the code under the label `loop`.",
+   "description": "At `finished`, print the final sum in `$s0` using syscall 1 and exit using syscall 10. The `.data` section defines the 10-word array `arr` (1 through 10) and `size: .word 10`.",
    "kind": "reveal",
-   "lines": "19-34"
+   "lines": "36-48"
   },
   {
-   "description": "Line 19 starts a loop.",
+   "description": "Each 32-bit word takes 4 bytes. Shifting the index left by 2 bits (`sll $t4, $t2, 2`) computes `4 * i`. Adding `$t0` produces the exact memory address `&arr[i]` for `lw`.",
    "kind": "focus",
-   "lines": "19"
+   "lines": "24-28"
   },
   {
-   "description": "Lines 36-46 are the code under the label `finished`.",
-   "kind": "reveal",
-   "lines": "36-46"
+   "answer": "55 (the sum of the integers from 1 through 10).",
+   "kind": "predict",
+   "lines": "38-40",
+   "question": "What sum is printed when the loop finishes adding all 10 elements of `arr`?"
   },
   {
-   "description": "Line 47 holds the data labeled `arr`.",
-   "kind": "reveal",
-   "lines": "47"
-  },
-  {
-   "description": "Line 48 holds the data labeled `size`.",
-   "kind": "reveal",
-   "lines": "48"
-  },
-  {
-   "description": "This is the end of the run: the final state, and all of the output.",
+   "description": "On the first iteration (`i = 0`), load `arr[0]` (1) from memory into `$t5`.",
    "kind": "run",
-   "lines": "44",
-   "trace_step": 80
+   "lines": "28",
+   "trace_step": 8
+  },
+  {
+   "description": "After all 10 elements have been added to `$s0`, syscall 1 prints `55`.",
+   "kind": "run",
+   "lines": "40",
+   "trace_step": 78
   }
  ],
- "title": "exit",
+ "title": "Summing an Array in MIPS Assembly",
  "version": 1
 }

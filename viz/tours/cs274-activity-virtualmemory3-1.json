@@ -1,33 +1,50 @@
 {
  "code": ".data \nstr1: .asciiz \"Five plus two is: \"\n\n.text\nmain:\n    # Make room on the stack\n    sub $sp, $sp, 4 \n\n    # Load the values 5 and 2 and add them together\n    li $t0, 5\n    li $t1, 2\n    add $t2, $t0, $t1\n\n    # Store the result on the stack\n    sw $t2, 0($sp)\n\n    # Print the string at the address specified by str1\n    li $v0, 4\n    la $a0, str1\n    syscall\n\n    # Print the sum from the stack\n    li $v0, 1\n    lw $a0, 0($sp)\n    syscall\n\n    # Pop the stack back to the way we found it\n    add $sp, $sp, 4\n\n    # ... and quit!\n    li $v0, 10\n    syscall        ",
- "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "description": "Subtract 4 from $sp, store 5 + 2 at 0($sp), print a label string from .data, reload 0($sp) into $a0 to print the sum, and restore $sp.",
  "example": "cs274-activity-virtualmemory3-1",
  "lang": "mips",
  "reviewed": false,
- "source": "skeleton",
+ "source": "draft: agy free model + edit: codex",
  "steps": [
   {
-   "description": "Line 1 sets things up.",
+   "description": "Define `str1` in `.data`, then in `main` subtract 4 from `$sp`, compute `5 + 2` into `$t2`, and store `$t2` at `0($sp)` with `sw $t2, 0($sp)`.",
    "kind": "reveal",
-   "lines": "1"
+   "lines": "1-16"
   },
   {
-   "description": "Lines 2-4 hold the data labeled `str1`.",
+   "description": "Use syscall 4 to print `str1` (`\"Five plus two is: \"`), then load `0($sp)` into `$a0` with `lw $a0, 0($sp)` and print that integer with syscall 1.",
    "kind": "reveal",
-   "lines": "2-4"
+   "lines": "17-26"
   },
   {
-   "description": "Lines 5-32 are the code under the label `main`.",
+   "description": "Add 4 back to `$sp` on line 28 to restore `$sp`, then exit with syscall 10.",
    "kind": "reveal",
-   "lines": "5-32"
+   "lines": "27-32"
   },
   {
-   "description": "This is the end of the run: the final state, and all of the output.",
+   "description": "Trace `$sp` across the program: `sub $sp, $sp, 4` reserves 4 bytes. `sw $t2, 0($sp)` writes `$t2` there, and `lw $a0, 0($sp)` reads it back into `$a0`. Finally, `add $sp, $sp, 4` restores `$sp`.",
+   "kind": "focus",
+   "lines": "7,15,24,28"
+  },
+  {
+   "answer": "It loads `7` (stored by `sw $t2, 0($sp)` on line 15), and the two syscalls print `Five plus two is: 7`.",
+   "kind": "predict",
+   "lines": "10-15,18-25",
+   "question": "What value does `lw $a0, 0($sp)` on line 24 load into `$a0`, and what full output do the two print syscalls produce?"
+  },
+  {
+   "description": "After computing `$t2 = 7`, `sw $t2, 0($sp)` stores `7` at the address in `$sp`.",
    "kind": "run",
-   "lines": "32",
-   "trace_step": 13
+   "lines": "15",
+   "trace_step": 4
+  },
+  {
+   "description": "After printing `Five plus two is: ` and reloading `7` from `0($sp)` into `$a0`, syscall 1 prints `7`.",
+   "kind": "run",
+   "lines": "25",
+   "trace_step": 10
   }
  ],
- "title": "Example cs274-activity-virtualmemory3-1",
+ "title": "Storing and Loading a Local Sum with $sp",
  "version": 1
 }

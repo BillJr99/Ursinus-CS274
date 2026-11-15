@@ -1,58 +1,50 @@
 {
  "code": ".text\n.globl main\n\nmain:\n    # print user prompt string\n    li $v0, 4\n    la $a0, input\n    syscall    \n\nguess:\n    # read integer - will be copied to v0\n    li $v0, 5\n    syscall\n\n    # our secret number is 7!\n    li $s0, 7\n\n    # if v0 == our secret number s0\n    beq $s0, $v0, correct\n\n    # incorrect code\n    li $v0, 4\n    la $a0, wrong\n    syscall       \n\n    # loop until the user gets it right\n    j guess\n\ncorrect:\n    li $v0, 4\n    la $a0, right\n    syscall       \n\nexit:\n    # exit\n    li $v0, 10\n    syscall  \n\n.data\n    input: .asciiz \"Can you guess my secret number between 1 and 10?  Enter it below\\n\"\n    wrong: .asciiz \"Not quite!\\n\"\n    right: .asciiz \"You guessed it!\\n\"",
- "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "description": "Use a backward jump (j guess) and a conditional branch (beq) to repeat the integer-reading block until the guess equals 7.",
  "example": "cs274-activity-mipsiteration-1",
  "lang": "mips",
  "reviewed": false,
- "source": "skeleton",
+ "source": "draft: agy free model + edit: codex",
  "steps": [
   {
-   "description": "Lines 1-3 set things up.",
+   "description": "In `main`, print the initial `input` prompt string once using syscall 4.",
    "kind": "reveal",
-   "lines": "1-3"
+   "lines": "1-9"
   },
   {
-   "description": "Lines 4-8 are the code under the label `main`.",
+   "description": "At `guess:`, read an integer with syscall 5 into `$v0` and load `7` into `$s0`. Branch to `correct` if `$s0 == $v0`. Otherwise print `wrong` (`\"Not quite!\\n\"`) and jump back to `guess` with `j guess`.",
    "kind": "reveal",
-   "lines": "4-8"
+   "lines": "10-28"
   },
   {
-   "description": "Lines 10-27 are the code under the label `guess`.",
+   "description": "When `beq` branches to `correct:`, print `right` (`\"You guessed it!\\n\"`) and fall through to `exit:` to terminate with syscall 10.",
    "kind": "reveal",
-   "lines": "10-27"
+   "lines": "29-42"
   },
   {
-   "description": "Lines 29-32 are the code under the label `correct`.",
-   "kind": "reveal",
-   "lines": "29-32"
+   "description": "Notice how placing the `guess:` label before syscall 5 and `j guess` after printing `wrong` turns the conditional check into a loop that repeats until `$v0` equals `$s0`.",
+   "kind": "focus",
+   "lines": "10-13,19,27"
   },
   {
-   "description": "Lines 34-39 are the code under the label `exit`.",
-   "kind": "reveal",
-   "lines": "34-39"
+   "answer": "Jumping back to line 10 reads a new guess with syscall 5 without re-printing the initial `input` prompt string on lines 6-8.",
+   "kind": "predict",
+   "lines": "6-13,27",
+   "question": "Why is the `guess:` label placed at line 10 instead of line 4 (`main:`)?"
   },
   {
-   "description": "Line 40 holds the data labeled `input`.",
-   "kind": "reveal",
-   "lines": "40"
-  },
-  {
-   "description": "Line 41 holds the data labeled `wrong`.",
-   "kind": "reveal",
-   "lines": "41"
-  },
-  {
-   "description": "Line 42 holds the data labeled `right`.",
-   "kind": "reveal",
-   "lines": "42"
-  },
-  {
-   "description": "This is the end of the run: the final state, and all of the output.",
+   "description": "`beq $s0, $v0, correct` compares `$s0` (7) against `$v0`; when they differ, execution continues to line 22.",
    "kind": "run",
-   "lines": "22",
-   "trace_step": 799
+   "lines": "19",
+   "trace_step": 6
+  },
+  {
+   "description": "After printing `Not quite!`, `j guess` jumps back to line 10 to read the next guess.",
+   "kind": "run",
+   "lines": "27",
+   "trace_step": 10
   }
  ],
- "title": "Example cs274-activity-mipsiteration-1",
+ "title": "Repeating a Guess Loop with Labels and Jumps in MIPS",
  "version": 1
 }
