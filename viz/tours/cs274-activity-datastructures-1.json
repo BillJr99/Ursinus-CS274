@@ -1,0 +1,39 @@
+{
+ "code": "    .text\n\n    .globl main\n\nmain:\n    la $t0, msg     # t0 = the address of the string\n\n# for each character in the string (strings end with a 0 null terminator!)    \nloop:\n    # load the character (lb == load byte, similar to load word but 1 byte instead of 4)\n    lb $t1, 0($t0)  \n\n    # are we at the end of the string?\n    beq $t1, $zero, finished \n\n    # if not, print the char\n    li $v0, 11\n    addi $a0, $t1, 0 # set a0 to the current character in t1\n    syscall\n\n    addi $t0, $t0, 1 # move to the next character in the string\n    j loop           # and continue\n\nfinished:\n    # exit\n    li $v0, 10\n    syscall\n\n        .data\nmsg:    .asciiz \"Hello, world!\"  ",
+ "description": "Load the base address of an .asciiz string into $t0, read one byte at a time with lb, and loop until the 0 null terminator is reached.",
+ "example": "cs274-activity-datastructures-1",
+ "lang": "mips",
+ "reviewed": false,
+ "source": "draft: agy free model + edit: codex",
+ "steps": [
+  {
+   "description": "Declare msg: .asciiz \"Hello, world!\" in the .data segment on lines 29-30, and load its starting memory address into $t0 with la $t0, msg on line 6.",
+   "kind": "reveal",
+   "lines": "1-7,29-30"
+  },
+  {
+   "description": "At loop, use lb $t1, 0($t0) on line 11 to load a single 1-byte character from address $t0 into $t1. Branch to finished with beq $t1, $zero, finished when that byte is the 0 null terminator.",
+   "kind": "reveal",
+   "lines": "8-15"
+  },
+  {
+   "answer": "Each ASCII character occupies 1 byte in memory (loaded with lb), so advancing $t0 by 1 byte moves the pointer to the very next character.",
+   "kind": "predict",
+   "lines": "11,16-22",
+   "question": "Why does line 21 add 1 to $t0 (addi $t0, $t0, 1) instead of 4?"
+  },
+  {
+   "description": "Print the character in $t1 using syscall 11, increment the pointer $t0 by 1 byte on line 21, jump back to loop, and exit with syscall 10 at finished.",
+   "kind": "reveal",
+   "lines": "16-28"
+  },
+  {
+   "description": "Watch lb $t1, 0($t0) load the first byte ('H', ASCII 72) from the address in $t0.",
+   "kind": "run",
+   "lines": "11",
+   "trace_step": 1
+  }
+ ],
+ "title": "Traversing a Null-Terminated String in MIPS",
+ "version": 1
+}

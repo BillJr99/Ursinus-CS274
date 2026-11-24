@@ -1,0 +1,33 @@
+{
+ "code": "library ieee;\nuse ieee.std_logic_1164.all;\n\nentity and2 is\n    port (\n        a  : in  std_logic;\n        b  : in  std_logic;\n        z : out std_logic);\nend and2;\n\narchitecture behavioral of and2 is\nbegin\n    z <= a and b after 2 ns;\nend;",
+ "description": "You can separate a circuit's interface from its behavior.",
+ "example": "cs274-lab-aludesign-1",
+ "lang": "vhdl",
+ "reviewed": false,
+ "source": "draft: codex free model",
+ "steps": [
+  {
+   "description": "The library supplies std_logic. You declare a and b as inputs and z as the output of and2.",
+   "kind": "reveal",
+   "lines": "1-9"
+  },
+  {
+   "description": "The behavioral architecture supplies the entity's implementation. You can read its signal assignment below begin.",
+   "kind": "reveal",
+   "lines": "11-12"
+  },
+  {
+   "answer": "The expression a and b determines z, so its binary result is one only when both inputs are one.",
+   "kind": "predict",
+   "lines": "13",
+   "question": "Which expression determines z?"
+  },
+  {
+   "description": "You have an entity and its AND behavior. The supplied output reports successful analysis and explains that this block has no testbench to simulate.",
+   "kind": "reveal",
+   "lines": "13-14"
+  }
+ ],
+ "title": "Reading an AND gate entity",
+ "version": 1
+}

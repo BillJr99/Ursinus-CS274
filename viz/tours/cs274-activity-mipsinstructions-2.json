@@ -1,0 +1,45 @@
+{
+ "code": "        .text\n\n        .globl main\n\nmain:\n    # print\n    li $v0, 4\n    la $a0, msg\n    syscall\n\n    # exit\n    li $v0, 10\n    syscall\n\n        .data\nmsg:    .asciiz \"Hello, world!\"  ",
+ "description": "Use .data and .asciiz to store a string in memory, then invoke syscall 4 and syscall 10 from main.",
+ "example": "cs274-activity-mipsinstructions-2",
+ "lang": "mips",
+ "reviewed": false,
+ "source": "draft: agy free model",
+ "steps": [
+  {
+   "description": "In `main`, `li $v0, 4` loads `4` into `$v0`, `la $a0, msg` loads the memory address of label `msg` into `$a0`, and `syscall` runs on line 9.",
+   "kind": "reveal",
+   "lines": "1-10"
+  },
+  {
+   "description": "Lines 12-13 load `10` into `$v0` and invoke `syscall` again, while `.data` at lines 15-16 defines `msg` as a null-terminated `.asciiz` string `\"Hello, world!\"`.",
+   "kind": "reveal",
+   "lines": "11-16"
+  },
+  {
+   "description": "Notice how `la $a0, msg` passes the address of `msg` in the `.data` segment via `$a0`, while `$v0` selects which `syscall` operation to perform.",
+   "kind": "focus",
+   "lines": "7-9,15-16"
+  },
+  {
+   "answer": "The memory address where the string `\"Hello, world!\"` starts in the `.data` section.",
+   "kind": "predict",
+   "lines": "8,16",
+   "question": "What does `la $a0, msg` on line 8 place into register `$a0`?"
+  },
+  {
+   "description": "With `$v0 = 4` and `$a0` holding the address of `msg`, `syscall` prints `Hello, world!`.",
+   "kind": "run",
+   "lines": "9",
+   "trace_step": 2
+  },
+  {
+   "description": "With `$v0 = 10`, the second `syscall` terminates the program.",
+   "kind": "run",
+   "lines": "13",
+   "trace_step": 4
+  }
+ ],
+ "title": "System Calls and Data Directives in MIPS",
+ "version": 1
+}

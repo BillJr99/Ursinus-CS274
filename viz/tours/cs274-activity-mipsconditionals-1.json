@@ -1,0 +1,50 @@
+{
+ "code": ".text\n.globl main\n\nmain:\n    # print user prompt string\n    li $v0, 4\n    la $a0, input\n    syscall    \n\n    # read integer - will be copied to v0\n    li $v0, 5\n    syscall\n\n    # our secret number is 7!\n    li $s0, 7\n\n    # if v0 == our secret number s0\n    beq $s0, $v0, correct\n\n    # incorrect code\n    li $v0, 4\n    la $a0, wrong\n    syscall       \n\n    # but skip the correct code!\n    j exit\n\ncorrect:\n    li $v0, 4\n    la $a0, right\n    syscall \n\n    # What would you add here to print \"The secret number was: \" followed by the integer 7, followed by a newline?\n\nexit:\n    # exit\n    li $v0, 10\n    syscall  \n\n.data\n    input: .asciiz \"Can you guess my secret number between 1 and 10?  Enter it below\\n\"\n    wrong: .asciiz \"Not quite!\\n\"\n    right: .asciiz \"You guessed it!\\n\"   ",
+ "description": "Use beq and an unconditional jump j to branch between two outcomes when comparing a user guess against a secret number.",
+ "example": "cs274-activity-mipsconditionals-1",
+ "lang": "mips",
+ "reviewed": false,
+ "source": "draft: agy free model + edit: codex",
+ "steps": [
+  {
+   "description": "In `main`, print the prompt string `input` with syscall 4, read an integer from the user into `$v0` with syscall 5, and load the secret number `7` into `$s0`.",
+   "kind": "reveal",
+   "lines": "1-16"
+  },
+  {
+   "description": "`beq $s0, $v0, correct` compares `$s0` and `$v0` and branches to `correct` if they are equal. Otherwise execution continues to lines 21-23 to print `wrong` and then jumps to `exit` on line 26.",
+   "kind": "reveal",
+   "lines": "17-27"
+  },
+  {
+   "description": "The `correct:` label prints the string `right`, `exit:` terminates the program with syscall 10, and `.data` defines the three null-terminated `.asciiz` strings.",
+   "kind": "reveal",
+   "lines": "28-43"
+  },
+  {
+   "description": "Look at how the two branches are laid out: when `beq` does not branch, the fall-through block prints `wrong` and uses `j exit` to jump past the `correct:` label.",
+   "kind": "focus",
+   "lines": "18,21-26,28-31"
+  },
+  {
+   "answer": "Line 21 (`li $v0, 4`), which begins the syscall sequence to print the `wrong` string `\"Not quite!\\n\"`.",
+   "kind": "predict",
+   "lines": "18,21-23",
+   "question": "If the integer in `$v0` after syscall 5 is not 7, which instruction executes immediately after `beq $s0, $v0, correct` on line 18?"
+  },
+  {
+   "description": "At line 18, `beq` compares `$s0` (7) with `$v0`; since they are not equal in this run, the branch is not taken.",
+   "kind": "run",
+   "lines": "18",
+   "trace_step": 6
+  },
+  {
+   "description": "Line 23 executes syscall 4 to print `Not quite!`, and line 26 then jumps to `exit`.",
+   "kind": "run",
+   "lines": "23",
+   "trace_step": 9
+  }
+ ],
+ "title": "An if/else Statement in MIPS Assembly",
+ "version": 1
+}

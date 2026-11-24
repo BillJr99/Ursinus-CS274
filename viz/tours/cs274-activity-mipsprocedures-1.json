@@ -1,0 +1,50 @@
+{
+ "code": ".text\n.globl main\n\nmain:\n    # print user prompt string\n    li $v0, 4\n    la $a0, input\n    syscall    \n\n    # read integer - will be copied to v0\n    li $v0, 5\n    syscall\n\n    # call procedure\n    addi $a0, $v0, 0 # set a0 to the v0 value that the user just typed in\n    jal add5\n\n    # print the answer: be sure to set a0 before v0 so we don't lose it!\n    addi $a0, $v0, 0 # print the value that add5 just returned as v0\n    li $v0, 1\n    syscall\n\n    # exit\n    li $v0, 10\n    syscall  \n\nadd5:\n    # Save one register on the stack\n    addi $sp, $sp, -4\n    sw $s0, 0($sp)\n\n    # add 5 to the input argument, and set it to the return value\n    li $s0, 5\n    add $v0, $a0, $s0\n\n    # Restore the register from the stack\n    lw $s0, 0($sp)\n    addi $sp, $sp, 4\n\n    # return\n    jr $ra\n\n.data\ninput: .asciiz \"Enter an integer\\n\"        ",
+ "description": "Pass an integer in $a0 to a procedure add5, save and restore $s0 on the stack, and return the result in $v0.",
+ "example": "cs274-activity-mipsprocedures-1",
+ "lang": "mips",
+ "reviewed": false,
+ "source": "draft: agy free model + edit: codex",
+ "steps": [
+  {
+   "description": "In `main`, print the prompt `\"Enter an integer\\n\"` with syscall 4, read an integer into `$v0` with syscall 5, copy that value into `$a0`, and call `jal add5`.",
+   "kind": "reveal",
+   "lines": "1-17"
+  },
+  {
+   "description": "When `add5` returns, copy its result from `$v0` into `$a0`, print the integer with syscall 1, and exit with syscall 10.",
+   "kind": "reveal",
+   "lines": "18-26"
+  },
+  {
+   "description": "Inside `add5`, adjust `$sp` by `-4` and store `$s0` at `0($sp)`. Load `5` into `$s0` and compute `$v0 = $a0 + $s0`. Then reload `$s0` from `0($sp)`, add `4` back to `$sp`, and return via `jr $ra`.",
+   "kind": "reveal",
+   "lines": "27-44"
+  },
+  {
+   "description": "Compare the prologue (lines 29-30) and epilogue (lines 37-38) of `add5`. `sw $s0, 0($sp)` writes `$s0` onto the stack before line 33 modifies `$s0`. `lw $s0, 0($sp)` restores the original value before `jr $ra`.",
+   "kind": "focus",
+   "lines": "29-30,37-38"
+  },
+  {
+   "answer": "Line 34 computes `0 + 5 = 5` in `$v0`, and line 21 prints `5`.",
+   "kind": "predict",
+   "lines": "15-21,33-34",
+   "question": "In a run where syscall 5 places `0` into `$v0`, what value does `add $v0, $a0, $s0` on line 34 compute, and what is printed at line 21?"
+  },
+  {
+   "description": "Inside `add5`, `add $v0, $a0, $s0` adds `$a0` (0) and `$s0` (5), placing `5` in `$v0`.",
+   "kind": "run",
+   "lines": "34",
+   "trace_step": 10
+  },
+  {
+   "description": "After `jr $ra` returns to `main`, syscall 1 prints `5`.",
+   "kind": "run",
+   "lines": "21",
+   "trace_step": 16
+  }
+ ],
+ "title": "Calling a Procedure and Using the Stack in MIPS",
+ "version": 1
+}

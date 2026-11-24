@@ -1,0 +1,79 @@
+[
+ {
+  "id": "cs274-addnum",
+  "viz": "mips",
+  "lang": "mips",
+  "file": "files/mips/addnum.s",
+  "input": ""
+ },
+ {
+  "id": "cs274-array",
+  "viz": "mips",
+  "lang": "mips",
+  "file": "files/mips/array.s",
+  "input": ""
+ },
+ {
+  "id": "cs274-conditional",
+  "viz": "mips",
+  "lang": "mips",
+  "file": "files/mips/conditional.s",
+  "input": "7"
+ },
+ {
+  "id": "cs274-helloworld",
+  "viz": "mips",
+  "lang": "mips",
+  "file": "files/mips/helloworld.s",
+  "input": ""
+ },
+ {
+  "id": "cs274-linkedlist",
+  "viz": "mips",
+  "lang": "mips",
+  "file": "files/mips/linkedlist.s",
+  "input": ""
+ },
+ {
+  "id": "cs274-loop",
+  "viz": "mips",
+  "lang": "mips",
+  "file": "files/mips/loop.s",
+  "input": "3\n7"
+ },
+ {
+  "id": "cs274-procedure",
+  "viz": "mips",
+  "lang": "mips",
+  "file": "files/mips/procedure.s",
+  "input": "5"
+ },
+ {
+  "id": "cs274-string",
+  "viz": "mips",
+  "lang": "mips",
+  "file": "files/mips/string.s",
+  "input": ""
+ },
+ {
+  "id": "cs274-sum",
+  "viz": "mips",
+  "lang": "mips",
+  "file": "files/mips/sum.asm",
+  "input": ""
+ },
+ {
+  "id": "cs274-swap",
+  "viz": "mips",
+  "lang": "mips",
+  "file": "files/mips/swap.s",
+  "input": ""
+ },
+ {
+  "id": "cs274-vhdlexample",
+  "viz": "wave",
+  "lang": "vhdl",
+  "file": "files/replits/VHDLExample.zip",
+  "input": ""
+ }
+]

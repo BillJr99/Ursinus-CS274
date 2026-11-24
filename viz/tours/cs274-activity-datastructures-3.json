@@ -1,0 +1,50 @@
+{
+ "code": "        .text\n\n        .globl main\n\nmain:\n    # t1 is the address of the heap where our malloc'd linked list nodes will go\n    la $t1, heap\n\n    # Create a linked list node\n    li $s0, 3               # value = 3\n    addi $s1, $zero, 0      # next = null\n    # store on the heap, data first, then the next pointer\n    sw $s0, 0($t1)          \n    sw $s1, 4($t1)\n\n    # repeat for the second node\n    li $s0, 2               # value = 2\n    addi $s1, $t1, 0        # next = the base address of the heap (&heap), the location of the beginning of the first node\n    # store on the heap, data first, then the next pointer\n    sw $s0, 8($t1)          \n    sw $s1, 12($t1)    \n\n    # repeat for the third node\n    li $s0, 1               # value = 2\n    addi $s1, $t1, 8        # next = the base address of the heap (&heap) + 8, the location of the beginning of the second node\n    # store on the heap, data first, then the next pointer\n    sw $s0, 16($t1)          \n    sw $s1, 20($t1)        \n\n    # set the address of the beginning of the list (the third node we created)\n    addi $a0, $t1, 16\n    jal suml\n\n    # set t0 to our answer from the return register (so we can overwrite v0 for the syscall)\n    addi $t0, $v0, 0\n\n    # print the sum\n    li $v0, 1\n    addi $a0, $t0, 0 # set a0 to the sum in t0 returned from the suml procedure as v0\n    syscall\n\n    # exit\n    li $v0, 10\n    syscall\n\nsuml:\n    # save to the stack\n    # since this function doesn't call any other procedures, saving ra isn't necessary, but good practice and good review!\n    addi $sp, $sp, -16\n    sw $ra, 0($sp)\n    sw $s0, 4($sp)\n    sw $s1, 8($sp)\n    sw $s2, 12($sp)\n\n    # set sum to 0\n    li $s0, 0\n\n    # set s1 to the address of the list\n    addi $s1, $a0, 0\n\nloop:    \n    # traverse the list\n    # if list is NULL, return\n    beq $s1, $zero, finished\n\n    # load the value from the list, which is the first position in each node\n    lw $s2, 0($s1)\n\n    # add the value to our running sum\n    add $s0, $s0, $s2\n\n    # load the next pointer into the current node pointer, which is the second position in each node\n    # and repeat\n    lw $s1, 4($s1)\n    j loop\n\nfinished:\n    addi $v0, $s0, 0 # set v0 to our result = s0\n\n    # restore from the stack\n    lw $ra, 0($sp)\n    lw $s0, 4($sp)\n    lw $s1, 8($sp)\n    lw $s2, 12($sp)\n    addi $sp, $sp, 16\n\n    # return \n    jr $ra\n\n        .data\nheap:   .space 80",
+ "description": "Build a three-node linked list in memory and traverse its next pointers in a procedure to sum the node values.",
+ "example": "cs274-activity-datastructures-3",
+ "lang": "mips",
+ "reviewed": false,
+ "source": "draft: agy free model + edit: codex",
+ "steps": [
+  {
+   "description": "In `main`, load `heap`'s base address into `$t1` and store three 8-byte nodes, each holding a 4-byte value followed by a 4-byte `next` pointer. Node 1 at `0($t1)` holds value 3, next 0; node 2 at `8($t1)` holds value 2, next `&heap`. Node 3 at `16($t1)` holds value 1, next `&heap + 8`.",
+   "kind": "reveal",
+   "lines": "1-29"
+  },
+  {
+   "description": "Pass the head node address (`$t1 + 16`) in `$a0` to `jal suml`. Copy the returned sum from `$v0` into `$t0`, print it with syscall 1, and exit with syscall 10.",
+   "kind": "reveal",
+   "lines": "30-45"
+  },
+  {
+   "description": "In `suml`, save `$ra`, `$s0`, `$s1`, and `$s2` on the stack and set running sum `$s0 = 0` and current pointer `$s1 = $a0`. Loop until `$s1 == 0`: load `0($s1)` into `$s2`, add to `$s0`, and advance `$s1` via `lw $s1, 4($s1)`. Then restore the stack and return `$v0`.",
+   "kind": "reveal",
+   "lines": "46-91"
+  },
+  {
+   "description": "Look at how the traversal steps from one node to the next. `lw $s2, 0($s1)` reads the current node's data field. `lw $s1, 4($s1)` overwrites `$s1` with the `next` pointer stored 4 bytes past the start of the node.",
+   "kind": "focus",
+   "lines": "64-75"
+  },
+  {
+   "answer": "It starts at the third node (`16($t1)`) and visits values 1, then 2, then 3, printing 6.",
+   "kind": "predict",
+   "lines": "31-32,64-75",
+   "question": "In what order does `suml` visit the three node values, and what sum does the program print?"
+  },
+  {
+   "description": "After adding the head node's value (1) to `$s0`, `lw $s1, 4($s1)` loads the address of the second node (`&heap + 8`) into `$s1`.",
+   "kind": "run",
+   "lines": "74",
+   "trace_step": 25
+  },
+  {
+   "description": "Back in `main`, syscall 1 prints the returned sum `6`.",
+   "kind": "run",
+   "lines": "40",
+   "trace_step": 48
+  }
+ ],
+ "title": "Linked Lists in MIPS Assembly",
+ "version": 1
+}

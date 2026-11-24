@@ -1,0 +1,33 @@
+{
+ "code": "#include <stdlib.h>\n#include <stdio.h>\n\nint main(void) {\n    // malloc's 1 integer, casts the return value to a pointer to the array (int*), and assigns it to x\n    int* x = (int*) malloc(1 * sizeof(int));\n\n    if(x == NULL) {\n        perror(\"Error allocating array x\"); // perror is like printf but also prints the error message\n    }\n    \n    *x = 5;\n    \n    printf(\"%d\\n\", *x);\n    \n    free(x); // it is up to you to de-allocate all variables you allocate\n}",
+ "description": "You can follow a heap address through a write, a read and release.",
+ "example": "cs274-assignment-cprogrammingpointers-1",
+ "lang": "c",
+ "reviewed": false,
+ "source": "draft: codex free model",
+ "steps": [
+  {
+   "description": "malloc requests enough bytes for one integer. You store its returned address in the integer pointer x.",
+   "kind": "reveal",
+   "lines": "1-6"
+  },
+  {
+   "description": "The null check reports an allocation failure with perror. This branch contains no exit or return before the later dereference.",
+   "kind": "reveal",
+   "lines": "8-10"
+  },
+  {
+   "answer": "It reads 5, the integer stored through x at line 12.",
+   "kind": "predict",
+   "lines": "12-14",
+   "question": "On the successful allocation path, what value does *x read after the assignment?"
+  },
+  {
+   "description": "You see 5 printed in the supplied run. free releases the allocation after its last use.",
+   "kind": "reveal",
+   "lines": "12-17"
+  }
+ ],
+ "title": "Dereferencing one allocated integer",
+ "version": 1
+}

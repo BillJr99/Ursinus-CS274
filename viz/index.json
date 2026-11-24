@@ -1,0 +1,472 @@
+{
+ "course": "cs274",
+ "site": "https://billjr99.github.io/Ursinus-CS274",
+ "built": "2026-11-15 00:53",
+ "examples": [
+  {
+   "id": "cs274-activity-datastructures-1",
+   "viz": "mips",
+   "lang": "mips",
+   "page": "_pages/Activities/activity-datastructures.md",
+   "line": 17,
+   "page_url": "https://billjr99.github.io/Ursinus-CS274/Activities/activity-datastructures",
+   "error": null,
+   "steps": 96,
+   "modes": [
+    "run",
+    "explain"
+   ]
+  },
+  {
+   "id": "cs274-activity-datastructures-2",
+   "viz": "mips",
+   "lang": "mips",
+   "page": "_pages/Activities/activity-datastructures.md",
+   "line": 56,
+   "page_url": "https://billjr99.github.io/Ursinus-CS274/Activities/activity-datastructures",
+   "error": null,
+   "steps": 81,
+   "modes": [
+    "run",
+    "explain"
+   ]
+  },
+  {
+   "id": "cs274-activity-datastructures-3",
+   "viz": "mips",
+   "lang": "mips",
+   "page": "_pages/Activities/activity-datastructures.md",
+   "line": 114,
+   "page_url": "https://billjr99.github.io/Ursinus-CS274/Activities/activity-datastructures",
+   "error": null,
+   "steps": 51,
+   "modes": [
+    "run",
+    "explain"
+   ]
+  },
+  {
+   "id": "cs274-activity-machinelanguage-1",
+   "viz": "mips",
+   "lang": "mips",
+   "page": "_pages/Activities/activity-machinelanguage.md",
+   "line": 278,
+   "page_url": "https://billjr99.github.io/Ursinus-CS274/Activities/activity-machinelanguage",
+   "error": null,
+   "steps": 6,
+   "modes": [
+    "run",
+    "explain"
+   ]
+  },
+  {
+   "id": "cs274-activity-mipsconditionals-1",
+   "viz": "mips",
+   "lang": "mips",
+   "page": "_pages/Activities/activity-mipsconditionals.md",
+   "line": 14,
+   "page_url": "https://billjr99.github.io/Ursinus-CS274/Activities/activity-mipsconditionals",
+   "error": null,
+   "steps": 13,
+   "modes": [
+    "run",
+    "explain"
+   ]
+  },
+  {
+   "id": "cs274-activity-mipsinstructions-1",
+   "viz": "mips",
+   "lang": "mips",
+   "page": "_pages/Activities/activity-mipsinstructions.md",
+   "line": 21,
+   "page_url": "https://billjr99.github.io/Ursinus-CS274/Activities/activity-mipsinstructions",
+   "error": null,
+   "steps": 5,
+   "modes": [
+    "run",
+    "explain"
+   ]
+  },
+  {
+   "id": "cs274-activity-mipsinstructions-2",
+   "viz": "mips",
+   "lang": "mips",
+   "page": "_pages/Activities/activity-mipsinstructions.md",
+   "line": 571,
+   "page_url": "https://billjr99.github.io/Ursinus-CS274/Activities/activity-mipsinstructions",
+   "error": null,
+   "steps": 5,
+   "modes": [
+    "run",
+    "explain"
+   ]
+  },
+  {
+   "id": "cs274-activity-mipsiteration-1",
+   "viz": "mips",
+   "lang": "mips",
+   "page": "_pages/Activities/activity-mipsiteration.md",
+   "line": 14,
+   "page_url": "https://billjr99.github.io/Ursinus-CS274/Activities/activity-mipsiteration",
+   "error": null,
+   "steps": 800,
+   "modes": [
+    "run",
+    "explain"
+   ]
+  },
+  {
+   "id": "cs274-activity-mipsprocedures-1",
+   "viz": "mips",
+   "lang": "mips",
+   "page": "_pages/Activities/activity-mipsprocedures.md",
+   "line": 16,
+   "page_url": "https://billjr99.github.io/Ursinus-CS274/Activities/activity-mipsprocedures",
+   "error": null,
+   "steps": 19,
+   "modes": [
+    "run",
+    "explain"
+   ]
+  },
+  {
+   "id": "cs274-activity-mipsprocedures-2",
+   "viz": "mips",
+   "lang": "mips",
+   "page": "_pages/Activities/activity-mipsprocedures.md",
+   "line": 73,
+   "page_url": "https://billjr99.github.io/Ursinus-CS274/Activities/activity-mipsprocedures",
+   "error": null,
+   "steps": 8,
+   "modes": [
+    "run",
+    "explain"
+   ]
+  },
+  {
+   "id": "cs274-activity-virtualmemory3-1",
+   "viz": "mips",
+   "lang": "mips",
+   "page": "_pages/Activities/activity-virtualmemory3.md",
+   "line": 28,
+   "page_url": "https://billjr99.github.io/Ursinus-CS274/Activities/activity-virtualmemory3",
+   "error": null,
+   "steps": 14,
+   "modes": [
+    "run",
+    "explain"
+   ]
+  },
+  {
+   "id": "cs274-activity-virtualmemory5-1",
+   "viz": "c",
+   "lang": "c",
+   "page": "_pages/Activities/activity-virtualmemory5.md",
+   "line": 20,
+   "page_url": "https://billjr99.github.io/Ursinus-CS274/Activities/activity-virtualmemory5",
+   "error": null,
+   "steps": 386,
+   "modes": [
+    "run",
+    "explain"
+   ]
+  },
+  {
+   "id": "cs274-assignment-cprogrammingpointers-1",
+   "viz": "c",
+   "lang": "c",
+   "page": "_pages/Assignments/assignment-cprogrammingpointers.md",
+   "line": 73,
+   "page_url": "https://billjr99.github.io/Ursinus-CS274/Assignments/assignment-cprogrammingpointers",
+   "error": null,
+   "steps": 6,
+   "modes": [
+    "run",
+    "explain"
+   ]
+  },
+  {
+   "id": "cs274-assignment-cprogrammingpointers-2",
+   "viz": "c",
+   "lang": "c",
+   "page": "_pages/Assignments/assignment-cprogrammingpointers.md",
+   "line": 97,
+   "page_url": "https://billjr99.github.io/Ursinus-CS274/Assignments/assignment-cprogrammingpointers",
+   "error": null,
+   "steps": 7,
+   "modes": [
+    "run",
+    "explain"
+   ]
+  },
+  {
+   "id": "cs274-lab-adderdesign-1",
+   "viz": "wave",
+   "lang": "vhdl",
+   "page": "_pages/Labs/lab-adderdesign.md",
+   "line": 99,
+   "page_url": "https://billjr99.github.io/Ursinus-CS274/Labs/lab-adderdesign",
+   "error": null,
+   "steps": 0,
+   "modes": [
+    "run",
+    "explain"
+   ]
+  },
+  {
+   "id": "cs274-lab-adderdesign-2",
+   "viz": "wave",
+   "lang": "vhdl",
+   "page": "_pages/Labs/lab-adderdesign.md",
+   "line": 123,
+   "page_url": "https://billjr99.github.io/Ursinus-CS274/Labs/lab-adderdesign",
+   "error": null,
+   "steps": 6,
+   "modes": [
+    "run",
+    "explain"
+   ]
+  },
+  {
+   "id": "cs274-lab-adderdesign-3",
+   "viz": "wave",
+   "lang": "vhdl",
+   "page": "_pages/Labs/lab-adderdesign.md",
+   "line": 355,
+   "page_url": "https://billjr99.github.io/Ursinus-CS274/Labs/lab-adderdesign",
+   "error": null,
+   "steps": 0,
+   "modes": [
+    "run",
+    "explain"
+   ]
+  },
+  {
+   "id": "cs274-lab-adderdesign-4",
+   "viz": "wave",
+   "lang": "vhdl",
+   "page": "_pages/Labs/lab-adderdesign.md",
+   "line": 403,
+   "page_url": "https://billjr99.github.io/Ursinus-CS274/Labs/lab-adderdesign",
+   "error": null,
+   "steps": 12,
+   "modes": [
+    "run",
+    "explain"
+   ]
+  },
+  {
+   "id": "cs274-lab-aludesign-1",
+   "viz": "wave",
+   "lang": "vhdl",
+   "page": "_pages/Labs/lab-aludesign.md",
+   "line": 61,
+   "page_url": "https://billjr99.github.io/Ursinus-CS274/Labs/lab-aludesign",
+   "error": null,
+   "steps": 0,
+   "modes": [
+    "run",
+    "explain"
+   ]
+  },
+  {
+   "id": "cs274-lab-aludesign-2",
+   "viz": "wave",
+   "lang": "vhdl",
+   "page": "_pages/Labs/lab-aludesign.md",
+   "line": 84,
+   "page_url": "https://billjr99.github.io/Ursinus-CS274/Labs/lab-aludesign",
+   "error": null,
+   "steps": 6,
+   "modes": [
+    "run",
+    "explain"
+   ]
+  },
+  {
+   "id": "cs274-lab-bitwiselogic-1",
+   "viz": "c",
+   "lang": "c",
+   "page": "_pages/Labs/lab-bitwiselogic.md",
+   "line": 52,
+   "page_url": "https://billjr99.github.io/Ursinus-CS274/Labs/lab-bitwiselogic",
+   "error": null,
+   "steps": 552,
+   "modes": [
+    "run",
+    "explain"
+   ]
+  },
+  {
+   "id": "cs274-lab-mipsintro-1",
+   "viz": "mips",
+   "lang": "mips",
+   "page": "_pages/Labs/lab-mipsintro.md",
+   "line": 80,
+   "page_url": "https://billjr99.github.io/Ursinus-CS274/Labs/lab-mipsintro",
+   "error": null,
+   "steps": 3,
+   "modes": [
+    "run",
+    "explain"
+   ]
+  },
+  {
+   "id": "cs274-lab-mipsintro-2",
+   "viz": "mips",
+   "lang": "mips",
+   "page": "_pages/Labs/lab-mipsintro.md",
+   "line": 134,
+   "page_url": "https://billjr99.github.io/Ursinus-CS274/Labs/lab-mipsintro",
+   "error": null,
+   "steps": 5,
+   "modes": [
+    "run",
+    "explain"
+   ]
+  },
+  {
+   "id": "cs274-addnum",
+   "viz": "mips",
+   "lang": "mips",
+   "page": "files/mips/addnum.s",
+   "line": 1,
+   "page_url": "",
+   "error": null,
+   "steps": 5,
+   "modes": [
+    "run"
+   ]
+  },
+  {
+   "id": "cs274-array",
+   "viz": "mips",
+   "lang": "mips",
+   "page": "files/mips/array.s",
+   "line": 1,
+   "page_url": "",
+   "error": null,
+   "steps": 81,
+   "modes": [
+    "run"
+   ]
+  },
+  {
+   "id": "cs274-conditional",
+   "viz": "mips",
+   "lang": "mips",
+   "page": "files/mips/conditional.s",
+   "line": 1,
+   "page_url": "",
+   "error": null,
+   "steps": 12,
+   "modes": [
+    "run"
+   ]
+  },
+  {
+   "id": "cs274-helloworld",
+   "viz": "mips",
+   "lang": "mips",
+   "page": "files/mips/helloworld.s",
+   "line": 1,
+   "page_url": "",
+   "error": null,
+   "steps": 5,
+   "modes": [
+    "run"
+   ]
+  },
+  {
+   "id": "cs274-linkedlist",
+   "viz": "mips",
+   "lang": "mips",
+   "page": "files/mips/linkedlist.s",
+   "line": 1,
+   "page_url": "",
+   "error": null,
+   "steps": 51,
+   "modes": [
+    "run"
+   ]
+  },
+  {
+   "id": "cs274-loop",
+   "viz": "mips",
+   "lang": "mips",
+   "page": "files/mips/loop.s",
+   "line": 1,
+   "page_url": "",
+   "error": null,
+   "steps": 20,
+   "modes": [
+    "run"
+   ]
+  },
+  {
+   "id": "cs274-procedure",
+   "viz": "mips",
+   "lang": "mips",
+   "page": "files/mips/procedure.s",
+   "line": 1,
+   "page_url": "",
+   "error": null,
+   "steps": 19,
+   "modes": [
+    "run"
+   ]
+  },
+  {
+   "id": "cs274-string",
+   "viz": "mips",
+   "lang": "mips",
+   "page": "files/mips/string.s",
+   "line": 1,
+   "page_url": "",
+   "error": null,
+   "steps": 96,
+   "modes": [
+    "run"
+   ]
+  },
+  {
+   "id": "cs274-sum",
+   "viz": "mips",
+   "lang": "mips",
+   "page": "files/mips/sum.asm",
+   "line": 1,
+   "page_url": "",
+   "error": null,
+   "steps": 14,
+   "modes": [
+    "run"
+   ]
+  },
+  {
+   "id": "cs274-swap",
+   "viz": "mips",
+   "lang": "mips",
+   "page": "files/mips/swap.s",
+   "line": 1,
+   "page_url": "",
+   "error": null,
+   "steps": 8,
+   "modes": [
+    "run"
+   ]
+  },
+  {
+   "id": "cs274-vhdlexample",
+   "viz": "wave",
+   "lang": "vhdl",
+   "page": "files/replits/VHDLExample.zip",
+   "line": 1,
+   "page_url": "",
+   "error": null,
+   "steps": 6,
+   "modes": [
+    "run"
+   ]
+  }
+ ]
+}

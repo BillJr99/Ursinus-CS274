@@ -1,0 +1,33 @@
+{
+ "code": "library ieee;\nuse ieee.std_logic_1164.all;\n\nentity and2 is\n    port (\n        a  : in  std_logic;\n        b  : in  std_logic;\n        z : out std_logic);\nend and2;\n\narchitecture behavioral of and2 is\nbegin\n    -- This is a comment: set z to a and b with a 2ns delay\n    z <= a and b after 2 ns;\nend;",
+ "description": "You can read a VHDL entity and its behavioral assignment.",
+ "example": "cs274-lab-adderdesign-1",
+ "lang": "vhdl",
+ "reviewed": false,
+ "source": "draft: codex free model",
+ "steps": [
+  {
+   "description": "You import std_logic and declare and2. Its interface has two inputs, a and b, and one output, z.",
+   "kind": "reveal",
+   "lines": "1-9"
+  },
+  {
+   "description": "The architecture gives the entity a behavioral implementation. The comment introduces the assignment that follows.",
+   "kind": "reveal",
+   "lines": "11-13"
+  },
+  {
+   "answer": "It produces zero because both inputs must be one for the expression to produce one.",
+   "kind": "predict",
+   "lines": "14",
+   "question": "For binary inputs a equal to one and b equal to zero, what does the AND expression produce?"
+  },
+  {
+   "description": "You assign a and b to z with a concurrent signal assignment. The recorded output confirms analysis without errors and states that this block has no testbench simulation.",
+   "kind": "reveal",
+   "lines": "14-15"
+  }
+ ],
+ "title": "Declaring a two-input gate",
+ "version": 1
+}

@@ -1,0 +1,33 @@
+{
+ "code": "#include <stdlib.h>\n#include <stdio.h>\n\nint main(void) {\n    // malloc's 5 integers\n    int* x = (int*) malloc(5 * sizeof(int));\n\n    if(x == NULL) {\n        perror(\"Error allocating array x\"); // perror is like printf but also prints the error message\n    }\n    \n    x[0] = 6;\n    x[1] = 7;\n    \n    printf(\"%d\\n\", x[0]);\n    \n    free(x);\n}",
+ "description": "You can follow allocation, two writes and release through an integer pointer.",
+ "example": "cs274-assignment-cprogrammingpointers-2",
+ "lang": "c",
+ "reviewed": false,
+ "source": "draft: codex free model",
+ "steps": [
+  {
+   "description": "malloc requests space for five integers. You store the returned address in x.",
+   "kind": "reveal",
+   "lines": "1-6"
+  },
+  {
+   "description": "The null check prints an allocation error but continues afterward. On the supplied successful path, you assign 6 and 7 to the first two elements.",
+   "kind": "reveal",
+   "lines": "8-13"
+  },
+  {
+   "answer": "It selects x[0], so it prints 6.",
+   "kind": "predict",
+   "lines": "15",
+   "question": "Which assigned value does this printf select?"
+  },
+  {
+   "description": "You see 6 in the recorded output. The call to free then releases the allocation referenced by x.",
+   "kind": "reveal",
+   "lines": "15-18"
+  }
+ ],
+ "title": "Indexing an allocated integer array",
+ "version": 1
+}

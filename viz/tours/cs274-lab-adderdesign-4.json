@@ -1,0 +1,33 @@
+{
+ "code": "library ieee;\nuse ieee.std_logic_1164.all;\n\nentity and3_tb is\nend and3_tb;\n\narchitecture behavior of and3_tb is\n    component and3 is\n    port (\n        a  : in  std_logic;\n        b  : in  std_logic;\n        c  : in std_logic;\n        z : out std_logic);    \n    end component;\n    \n    signal input  : std_logic_vector(2 downto 0);\n    signal output : std_logic;\nbegin\n    test1: and3 port map (\n        a => input(0),\n        b => input(1),\n        c => input(2),\n        z => output\n    );\n\n    tb_proc: process\n    begin\n        input <= \"000\"; wait for 30 ns; assert output = '0' report \"0&0&0 failed\";\n        input <= \"001\"; wait for 30 ns; assert output = '0' report \"0&0&1 failed\";\n        input <= \"010\"; wait for 30 ns; assert output = '0' report \"0&1&0 failed\";\n        input <= \"011\"; wait for 30 ns; assert output = '0' report \"0&1&1 failed\";\n        input <= \"100\"; wait for 30 ns; assert output = '0' report \"0&0&0 failed\";\n        input <= \"101\"; wait for 30 ns; assert output = '0' report \"0&0&1 failed\";\n        input <= \"110\"; wait for 30 ns; assert output = '0' report \"0&1&0 failed\";\n        input <= \"111\"; wait for 30 ns; assert output = '1' report \"0&1&1 failed\";\n        report \"Testbench finished\";\n        wait;\n    end process;\nend;",
+ "description": "You can inspect eight input patterns and their expected output bits.",
+ "example": "cs274-lab-adderdesign-4",
+ "lang": "vhdl",
+ "reviewed": false,
+ "source": "draft: codex free model",
+ "steps": [
+  {
+   "description": "and3_tb declares the three-input component. You reserve a three-bit input vector and one output signal.",
+   "kind": "reveal",
+   "lines": "1-17"
+  },
+  {
+   "description": "The port map connects input bits 0, 1 and 2 to a, b and c. The output z feeds the testbench's output signal.",
+   "kind": "reveal",
+   "lines": "18-24"
+  },
+  {
+   "answer": "The assertion after assigning 111 expects one. All seven earlier input patterns expect zero.",
+   "kind": "predict",
+   "lines": "26-35",
+   "question": "Which assertion expects a one rather than a zero?"
+  },
+  {
+   "description": "You apply every three-bit binary combination before reporting completion. The supplied output shows Testbench finished with no shown assertion-failure message.",
+   "kind": "reveal",
+   "lines": "26-39"
+  }
+ ],
+ "title": "Testing the three-input gate",
+ "version": 1
+}

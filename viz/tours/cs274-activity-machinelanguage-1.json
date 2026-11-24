@@ -1,0 +1,45 @@
+{
+ "code": "        .text\n\n        .globl main\n\nmain: \n    # print\n    li $a0, 4       # suppose this is address 0x00400024\n    jal procedure   # what is this instruction in binary?\n\n    # exit\n    li $v0, 10\n    syscall\n\nprocedure: \n    addi $v0, $a0, 1 # what is this address?\n    jr $ra",
+ "description": "Trace how jal jumps to a procedure label and saves the return address in $ra so jr $ra can resume main.",
+ "example": "cs274-activity-machinelanguage-1",
+ "lang": "mips",
+ "reviewed": false,
+ "source": "draft: agy free model",
+ "steps": [
+  {
+   "description": "In `main`, load `4` into argument register `$a0` and execute `jal procedure` to jump to `procedure` while saving the return address in `$ra`.",
+   "kind": "reveal",
+   "lines": "1-9"
+  },
+  {
+   "description": "At `procedure`, add 1 to `$a0` and store the result in `$v0`, then jump back to the caller with `jr $ra` so `main` can load `10` into `$v0` and exit via `syscall`.",
+   "kind": "reveal",
+   "lines": "10-16"
+  },
+  {
+   "description": "Notice how `jal procedure` and `jr $ra` work as a pair: `jal` records the address of the instruction after line 8 in `$ra`, and `jr $ra` jumps back to that saved address.",
+   "kind": "focus",
+   "lines": "8,15-16"
+  },
+  {
+   "answer": "5, because `$a0` holds 4 and `addi` adds 1 to it.",
+   "kind": "predict",
+   "lines": "7,15",
+   "question": "What value does `addi $v0, $a0, 1` place in `$v0` before `jr $ra` returns to `main`?"
+  },
+  {
+   "description": "`jal procedure` has jumped to line 15 and saved the return address in `$ra`; line 15 now computes `$v0 = $a0 + 1` (5).",
+   "kind": "run",
+   "lines": "15",
+   "trace_step": 2
+  },
+  {
+   "description": "`jr $ra` returns control to line 11 in `main`, which loads syscall code 10 into `$v0` to exit.",
+   "kind": "run",
+   "lines": "11",
+   "trace_step": 4
+  }
+ ],
+ "title": "Jump and Link (jal) and Return (jr) Execution",
+ "version": 1
+}

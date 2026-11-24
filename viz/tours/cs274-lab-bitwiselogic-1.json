@@ -1,0 +1,38 @@
+{
+ "code": "#include <stdio.h>\n\n// https://www.codegrepper.com/profile/yasha\nvoid print_bin(unsigned int value)\n{\n    for (int i = 31; i >= 0; i--)\n        printf(\"%d\", (value & (1 << i)) >> i );\n    putc('\\n', stdout);\n}\n\nint main(void) {\n  int a = 0xaa;\n  int b = 0x55;\n\n  printf(\"%d: \", a);\n  print_bin(a);\n  \n  printf(\"%d: \", b);\n  print_bin(b);\n\n  print_bin(a & b); // and\n  print_bin(a | b); // or\n  print_bin(a ^ b); // xor \n  print_bin(~a); // not: note that the upper bits are assumed to be 0, and will be flipped!\n\n  int c = 2;\n  printf(\"%d: \", (c << 1)); // shift left\n  print_bin(c << 1);\n\n  printf(\"%d: \", (c >> 1)); // shift right\n  print_bin(c >> 1);\n}",
+ "description": "You can compare complementary bit patterns and their shifted values.",
+ "example": "cs274-lab-bitwiselogic-1",
+ "lang": "c",
+ "reviewed": false,
+ "source": "draft: codex free model + edit: codex",
+ "steps": [
+  {
+   "description": "print_bin scans bit positions from 31 down to zero. You can read its mask-and-shift expression as selecting one position per print.",
+   "kind": "reveal",
+   "lines": "1-9"
+  },
+  {
+   "description": "a is hexadecimal aa, printed as decimal 170, and b is printed as decimal 85. The recording shows complementary low-byte patterns.",
+   "kind": "reveal",
+   "lines": "11-19"
+  },
+  {
+   "answer": "AND produces all zeros. OR and XOR both produce eight ones in the low byte for these complementary inputs.",
+   "kind": "predict",
+   "lines": "21-23",
+   "question": "Which low-byte results does the recording show for AND, OR and XOR?"
+  },
+  {
+   "description": "You see the three results followed by the inverted pattern for a. The recorded inversion also sets the previously zero upper bits.",
+   "kind": "reveal",
+   "lines": "21-24"
+  },
+  {
+   "description": "The two shifts start from c equal to 2. You see 4 after the left shift and 1 after the right shift, each with its printed binary pattern.",
+   "kind": "reveal",
+   "lines": "26-32"
+  }
+ ],
+ "title": "Reading bitwise results",
+ "version": 1
+}
