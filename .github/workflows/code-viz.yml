@@ -55,6 +55,12 @@ jobs:
           def classify(event, before, after):
               if event != "push":
                   return True
+              if not before or before == "0" * 40:
+                  return True
+              try:
+                  before = git("rev-parse", "--verify", "--quiet", "--end-of-options", before + "^{commit}").strip()
+              except subprocess.CalledProcessError:
+                  return True
               viewer = {
                   b"viz/mode-terminal.js": b"3b45d9d61ccaa7d63e75d4744efd786a159dab04",
                   b"viz/mode-simulate.js": b"23221a6163f9e7a7e235579b4f08ee7cc2c99335",
